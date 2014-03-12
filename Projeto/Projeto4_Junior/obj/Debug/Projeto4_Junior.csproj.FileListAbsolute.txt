@@ -1,0 +1,11 @@
+c:\users\júnior\documents\visual studio 2013\Projects\Projeto4_Junior\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe.config
+C:\Users\Vanessa&Allan\Desktop\Projeto4_Junior\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe.config
+C:\Users\Vanessa&Allan\Desktop\Projeto4_Junior\Projeto4_Junior\obj\Debug\Projeto4_Junior.csprojResolveAssemblyReference.cache
+C:\Users\Vanessa&Allan\Desktop\Projeto4_Junior\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form1.resources
+C:\Users\Vanessa&Allan\Desktop\Projeto4_Junior\Projeto4_Junior\obj\Debug\Projeto4_Junior.Properties.Resources.resources
+C:\Users\Vanessa&Allan\Desktop\Projeto4_Junior\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache
+C:\Users\Vanessa&Allan\Desktop\Documentacao\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe.config
+C:\Users\Vanessa&Allan\Desktop\Documentacao\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csprojResolveAssemblyReference.cache
+C:\Users\Vanessa&Allan\Desktop\Documentacao\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form1.resources
+C:\Users\Vanessa&Allan\Desktop\Documentacao\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Properties.Resources.resources
+C:\Users\Vanessa&Allan\Desktop\Documentacao\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache
