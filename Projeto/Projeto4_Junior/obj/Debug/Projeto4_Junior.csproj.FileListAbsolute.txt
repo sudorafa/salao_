@@ -10,3 +10,9 @@ C:\Users\Vanessa&Allan\Desktop\Documentacao\Projeto\Projeto4_Junior\obj\Debug\Pr
 C:\Users\Vanessa&Allan\Desktop\Documentacao\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Properties.Resources.resources
 C:\Users\Vanessa&Allan\Desktop\Documentacao\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache
 C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe.config
+C:\Users\Estefano Emanoel\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe.config
+C:\Users\Estefano Emanoel\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csprojResolveAssemblyReference.cache
+C:\Users\Estefano Emanoel\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form1.resources
+C:\Users\Estefano Emanoel\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Properties.Resources.resources
+C:\Users\Estefano Emanoel\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_Index.resources
+C:\Users\Estefano Emanoel\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache

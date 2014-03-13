@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Projeto4_Junior
 {
-    public partial class Tela_Principal : Form
+    public partial class Form_Index : Form
     {
-        public Tela_Principal()
+        public Form_Index()
         {
             InitializeComponent();
+        }
+
+        private void arquivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
