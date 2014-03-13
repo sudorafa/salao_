@@ -9,3 +9,4 @@ C:\Users\Vanessa&Allan\Desktop\Documentacao\Projeto\Projeto4_Junior\obj\Debug\Pr
 C:\Users\Vanessa&Allan\Desktop\Documentacao\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form1.resources
 C:\Users\Vanessa&Allan\Desktop\Documentacao\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Properties.Resources.resources
 C:\Users\Vanessa&Allan\Desktop\Documentacao\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache
+C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe.config
