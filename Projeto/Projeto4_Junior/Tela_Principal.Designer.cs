@@ -34,12 +34,12 @@
             this.alterarClienteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarClienteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removerClienteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aniversariantesClienteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionariosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inserirFuncionarioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarFuncionarioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarFuncionarioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removerFuncionarioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aniversariantesClienteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.servicosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_principal.SuspendLayout();
             this.SuspendLayout();
@@ -52,8 +52,7 @@
             this.servicosMenuItem});
             this.menu_principal.Location = new System.Drawing.Point(0, 0);
             this.menu_principal.Name = "menu_principal";
-            this.menu_principal.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menu_principal.Size = new System.Drawing.Size(719, 28);
+            this.menu_principal.Size = new System.Drawing.Size(539, 24);
             this.menu_principal.TabIndex = 0;
             this.menu_principal.Text = "MenuPrincipal";
             // 
@@ -66,32 +65,38 @@
             this.removerClienteMenuItem,
             this.aniversariantesClienteMenuItem});
             this.clientesMenuItem.Name = "clientesMenuItem";
-            this.clientesMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.clientesMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesMenuItem.Text = "&Clientes";
             // 
             // inserirClienteMenuItem
             // 
             this.inserirClienteMenuItem.Name = "inserirClienteMenuItem";
-            this.inserirClienteMenuItem.Size = new System.Drawing.Size(178, 24);
+            this.inserirClienteMenuItem.Size = new System.Drawing.Size(154, 22);
             this.inserirClienteMenuItem.Text = "Inserir";
             // 
             // alterarClienteMenuItem
             // 
             this.alterarClienteMenuItem.Name = "alterarClienteMenuItem";
-            this.alterarClienteMenuItem.Size = new System.Drawing.Size(178, 24);
+            this.alterarClienteMenuItem.Size = new System.Drawing.Size(154, 22);
             this.alterarClienteMenuItem.Text = "Alterar";
             // 
             // buscarClienteMenuItem
             // 
             this.buscarClienteMenuItem.Name = "buscarClienteMenuItem";
-            this.buscarClienteMenuItem.Size = new System.Drawing.Size(178, 24);
+            this.buscarClienteMenuItem.Size = new System.Drawing.Size(154, 22);
             this.buscarClienteMenuItem.Text = "Buscar";
             // 
             // removerClienteMenuItem
             // 
             this.removerClienteMenuItem.Name = "removerClienteMenuItem";
-            this.removerClienteMenuItem.Size = new System.Drawing.Size(178, 24);
+            this.removerClienteMenuItem.Size = new System.Drawing.Size(154, 22);
             this.removerClienteMenuItem.Text = "Remover";
+            // 
+            // aniversariantesClienteMenuItem
+            // 
+            this.aniversariantesClienteMenuItem.Name = "aniversariantesClienteMenuItem";
+            this.aniversariantesClienteMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.aniversariantesClienteMenuItem.Text = "Aniversariantes";
             // 
             // funcionariosMenuItem
             // 
@@ -101,53 +106,46 @@
             this.buscarFuncionarioMenuItem,
             this.removerFuncionarioMenuItem});
             this.funcionariosMenuItem.Name = "funcionariosMenuItem";
-            this.funcionariosMenuItem.Size = new System.Drawing.Size(104, 24);
+            this.funcionariosMenuItem.Size = new System.Drawing.Size(87, 20);
             this.funcionariosMenuItem.Text = "&Funcionários";
             // 
             // inserirFuncionarioMenuItem
             // 
             this.inserirFuncionarioMenuItem.Name = "inserirFuncionarioMenuItem";
-            this.inserirFuncionarioMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.inserirFuncionarioMenuItem.Size = new System.Drawing.Size(152, 22);
             this.inserirFuncionarioMenuItem.Text = "Inserir";
             // 
             // alterarFuncionarioMenuItem
             // 
             this.alterarFuncionarioMenuItem.Name = "alterarFuncionarioMenuItem";
-            this.alterarFuncionarioMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.alterarFuncionarioMenuItem.Size = new System.Drawing.Size(152, 22);
             this.alterarFuncionarioMenuItem.Text = "Alterar";
             // 
             // buscarFuncionarioMenuItem
             // 
             this.buscarFuncionarioMenuItem.Name = "buscarFuncionarioMenuItem";
-            this.buscarFuncionarioMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.buscarFuncionarioMenuItem.Size = new System.Drawing.Size(152, 22);
             this.buscarFuncionarioMenuItem.Text = "Buscar";
             // 
             // removerFuncionarioMenuItem
             // 
             this.removerFuncionarioMenuItem.Name = "removerFuncionarioMenuItem";
-            this.removerFuncionarioMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.removerFuncionarioMenuItem.Size = new System.Drawing.Size(152, 22);
             this.removerFuncionarioMenuItem.Text = "Remover";
-            // 
-            // aniversariantesClienteMenuItem
-            // 
-            this.aniversariantesClienteMenuItem.Name = "aniversariantesClienteMenuItem";
-            this.aniversariantesClienteMenuItem.Size = new System.Drawing.Size(178, 24);
-            this.aniversariantesClienteMenuItem.Text = "Aniversariantes";
             // 
             // servicosMenuItem
             // 
             this.servicosMenuItem.Name = "servicosMenuItem";
-            this.servicosMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.servicosMenuItem.Size = new System.Drawing.Size(62, 20);
             this.servicosMenuItem.Text = "&Serviços";
             // 
             // Form_Index
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 381);
+            this.ClientSize = new System.Drawing.Size(539, 310);
             this.Controls.Add(this.menu_principal);
             this.MainMenuStrip = this.menu_principal;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form_Index";
             this.Text = "ArBelSys - Index";

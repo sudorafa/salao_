@@ -55,10 +55,15 @@
     <Compile Include="IControle.cs" />
     <Compile Include="Negocio\Cliente.cs" />
     <Compile Include="Negocio\Controle.cs" />
+    <Compile Include="Negocio\Endereco.cs" />
     <Compile Include="Negocio\Estoque.cs" />
     <Compile Include="Negocio\Funcionario.cs" />
+    <Compile Include="Negocio\Gestor.cs" />
     <Compile Include="Negocio\IBanco.cs" />
     <Compile Include="Negocio\Pessoa.cs" />
+    <Compile Include="Negocio\Produto.cs" />
+    <Compile Include="Negocio\Servico.cs" />
+    <Compile Include="Negocio\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tela_Principal.cs">

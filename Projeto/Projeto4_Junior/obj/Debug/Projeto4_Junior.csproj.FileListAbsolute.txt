@@ -16,3 +16,8 @@ C:\Users\Estefano Emanoel\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Juni
 C:\Users\Estefano Emanoel\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Properties.Resources.resources
 C:\Users\Estefano Emanoel\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_Index.resources
 C:\Users\Estefano Emanoel\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache
+C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csprojResolveAssemblyReference.cache
+C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form1.resources
+C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Properties.Resources.resources
+C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_Index.resources
+C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache

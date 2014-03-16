@@ -10,25 +10,24 @@ namespace Projeto4_Junior.Negocio
     {
 
         
-        public string CPF { get; private set; }
-        public string NOME { get; private set; }
-        public string DATA_NASCIMENTO { get; private set; }
-        public string  EMAIL { get; private set; }
-        public string RG { get; private set; }
-
+        public string Cpf { get; set; }
+        public string Nome { get; set; }
+        public DateTime Data_Nascimento { get; set; }
+        public string  Email { get; set; }
         public Pessoa()
         {
         }
 
-        public Pessoa(string cpf, string nome, string data_N, string email, string rg)
+        public Pessoa(string cpf, string nome, DateTime data_N, string email,)
         {
-            this.CPF = cpf;
-            this.NOME = nome;
-            this.DATA_NASCIMENTO = data_N;
-            this.EMAIL = email;
-            this.RG = rg;           
+            this.Cpf = cpf;
+            this.Nome = nome;
+            this.Data_Nascimento = data_N;
+            this.Email = email;                 
         }
 
     }
+}
 
-    }
+    
+
