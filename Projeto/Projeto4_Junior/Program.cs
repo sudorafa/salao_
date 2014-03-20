@@ -16,7 +16,6 @@ namespace Projeto4_Junior
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
         }
     }
 }

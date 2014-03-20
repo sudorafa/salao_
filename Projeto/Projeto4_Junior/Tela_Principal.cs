@@ -16,10 +16,28 @@ namespace Projeto4_Junior
         {
             InitializeComponent();
         }
-
-        private void arquivoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void inserirClienteMenuItem_Click(object sender, EventArgs e)
         {
+            Form_CadastroClientes cad_cli = new Form_CadastroClientes();
+            cad_cli.ShowDialog();
+        }
 
+        private void alterarClienteMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_AlterarCliente alt_cli = new Form_AlterarCliente();
+            alt_cli.ShowDialog();
+        }
+
+        private void listarClienteMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_ListarClientes list_cli = new Form_ListarClientes();
+            list_cli.ShowDialog();
+        }
+
+        private void removerClienteMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_RemoverCliente remov_cli = new Form_RemoverCliente();
+            remov_cli.ShowDialog();
         }
     }
 }
