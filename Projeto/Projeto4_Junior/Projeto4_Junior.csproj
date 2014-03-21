@@ -50,27 +50,39 @@
     <Compile Include="AlterarCliente.Designer.cs">
       <DependentUpon>AlterarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Banco\BancoDados.cs" />
+    <Compile Include="Banco\PersistenciaCliente.cs" />
+    <Compile Include="Banco\PersistenciaFuncionario.cs" />
+    <Compile Include="Banco\PersistenciaProduto.cs" />
+    <Compile Include="Banco\PersistenciaServico.cs" />
+    <Compile Include="Banco\PersistenciaUsuario.cs" />
     <Compile Include="CadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CadastroCliente.Designer.cs">
       <DependentUpon>CadastroCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="DOA\BD.cs" />
-    <Compile Include="Factory\ConnecFactory.cs" />
-    <Compile Include="IControle.cs" />
+    <Compile Include="Factory\FactoryConnection.cs" />
+    <Compile Include="Factory\Singleton.cs" />
+    <Compile Include="IFachada.cs" />
     <Compile Include="ListarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListarClientes.Designer.cs">
       <DependentUpon>ListarClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Negocio\Cliente.cs" />
-    <Compile Include="Negocio\Controle.cs" />
-    <Compile Include="Negocio\Estoque.cs" />
-    <Compile Include="Negocio\Funcionario.cs" />
-    <Compile Include="Negocio\IBanco.cs" />
-    <Compile Include="Negocio\Pessoa.cs" />
+    <Compile Include="Modelo\Cliente.cs" />
+    <Compile Include="Modelo\Funcionario.cs" />
+    <Compile Include="Modelo\Produto.cs" />
+    <Compile Include="Modelo\Servico.cs" />
+    <Compile Include="Modelo\Usuario.cs" />
+    <Compile Include="Negocios\ControladorCliente.cs" />
+    <Compile Include="Negocios\ControladorFuncionario.cs" />
+    <Compile Include="Negocios\ControladorInterface.cs" />
+    <Compile Include="Negocios\ControladorProduto.cs" />
+    <Compile Include="Negocios\ControladorServico.cs" />
+    <Compile Include="Negocios\ControladorUsuario.cs" />
+    <Compile Include="Negocios\IBancoDados.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoverCliente.cs">
