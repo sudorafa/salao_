@@ -39,5 +39,11 @@ namespace Projeto4_Junior
             Form_RemoverCliente remov_cli = new Form_RemoverCliente();
             remov_cli.ShowDialog();
         }
+
+        private void button_CadastrarClienteBarraDeFerramentas_Click(object sender, EventArgs e)
+        {
+            Form_CadastroClientes cad_cli = new Form_CadastroClientes();
+            cad_cli.ShowDialog();
+        }
     }
 }
