@@ -5,10 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Projeto4_Junior.Negocios;
 
 namespace Projeto4_Junior.Banco
 {
-    class PersistenciaProduto
+    class PersistenciaProduto : IBancoDadosProduto
     {
         public void CadastrarProdutos(Produto produto)
         {

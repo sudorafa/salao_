@@ -1,5 +1,4 @@
 ﻿using Projeto4_Junior.Modelo;
-using Projeto4_Junior;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,24 +7,26 @@ using System.Threading.Tasks;
 
 namespace Projeto4_Junior.Negocios
 {
-    class ControladorUsuario : IfachadaUsuario
+    class FachadaUsuario
     {
+        public IfachadaUsuario ifachada = new ControladorUsuario();
+
         public void CadastrarUsuario(Usuario usuario)
         {
-            
+            this.ifachada.CadastrarUsuario(usuario);
         }
         public Usuario BuscarUsuario(Usuario usuario)
         {
-            return null;
+            return this.ifachada.BuscarUsuario(usuario);
         }
         public void RemoverUsuario(Usuario usuario)
         {
-            
+            this.ifachada.RemoverUsuario(usuario);
         }
 
         public void AlterarUsuario(Usuario usuario)
         {
-            
+            this.ifachada.AlterarUsuario(usuario);
         }
     }
 }

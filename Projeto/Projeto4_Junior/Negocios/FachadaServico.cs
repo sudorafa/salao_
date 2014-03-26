@@ -1,5 +1,4 @@
 ﻿using Projeto4_Junior.Modelo;
-using Projeto4_Junior;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,23 +7,25 @@ using System.Threading.Tasks;
 
 namespace Projeto4_Junior.Negocios
 {
-    class ControladorServico : IfachadaServico
+    class FachadaServico
     {
+        public IfachadaServico ifachada = new ControladorServico();
+
         public void CadastrarServico(Servico servico)
         {
-            
+            this.ifachada.CadastrarServico(servico);
         }
         public Servico BuscarServico(Servico servico)
         {
-            return null;
+            return this.ifachada.BuscarServico(servico);
         }
         public void RemoverServico(Servico servico)
         {
-            
+            this.ifachada.RemoverServico(servico);
         }
         public void AlterarServico(Servico servico)
         {
-            
+            this.ifachada.AlterarServico(servico);
         }
     }
 }

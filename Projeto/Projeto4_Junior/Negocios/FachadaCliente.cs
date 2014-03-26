@@ -5,27 +5,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Projeto4_Junior.Negocios;
 
-namespace Projeto4_Junior.Banco
+
+namespace Projeto4_Junior.Negocios
 {
-    class PersistenciaCliente : IBancoDadosCliente
+    class FachadaCliente : IFachadaCliente
     {
+        public IFachadaCliente ifachada = new ControladorCliente();        
+
         public void CadastrarCliente(Cliente cliente)
         {
-
+            this.ifachada.CadastrarCliente(cliente);
         }
         public Cliente BuscarCliente(Cliente cliente)
         {
-            return null;
+           return this.ifachada.BuscarCliente(cliente);
         }
         public void RemoverCliente(Cliente cliente)
         {
-
+            this.ifachada.RemoverCliente(cliente);
         }
         public void AlterarCliente(Cliente cliente)
         {
-
+            this.ifachada.AlterarCliente(cliente);
         }
+        
     }
 }

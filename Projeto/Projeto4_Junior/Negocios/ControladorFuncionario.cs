@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Projeto4_Junior.Negocios
 {
-    class ControladorFuncionario
+    class ControladorFuncionario : IfachadaFuncionario
     {
         public void CadastrarFuncionario(Funcionario funionario)
         {
