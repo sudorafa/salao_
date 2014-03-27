@@ -5,11 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Projeto4_Junior.Banco;
 
 namespace Projeto4_Junior.Negocios
 {
     class ControladorUsuario : IfachadaUsuario
     {
+        private IBancoDadosUsuario ibancodados = new BancoDadosUsuario();
         public void CadastrarUsuario(Usuario usuario)
         {
             

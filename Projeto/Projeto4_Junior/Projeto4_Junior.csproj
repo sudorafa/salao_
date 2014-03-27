@@ -50,6 +50,12 @@
     <Compile Include="AlterarCliente.Designer.cs">
       <DependentUpon>AlterarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Autenticacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autenticacao.Designer.cs">
+      <DependentUpon>Autenticacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Banco\BancoDadosCliente.cs" />
     <Compile Include="Banco\BancoDadosFuncionario.cs" />
     <Compile Include="Banco\BancoDadosProduto.cs" />
@@ -116,6 +122,9 @@
     <EmbeddedResource Include="AlterarCliente.resx">
       <DependentUpon>AlterarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Autenticacao.resx">
+      <DependentUpon>Autenticacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastroCliente.resx">
       <DependentUpon>CadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +139,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RemoverCliente.resx">
       <DependentUpon>RemoverCliente.cs</DependentUpon>
@@ -150,7 +160,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\cadeado.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

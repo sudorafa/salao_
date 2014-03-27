@@ -11,23 +11,31 @@ namespace Projeto4_Junior.Negocios
 {
     class ControladorCliente : IFachadaCliente
     {
-
+        IBancoDadosCliente ibancodados = new BancoDadosCliente();
         
         public void CadastrarCliente(Cliente cliente)
         {
+            //Implementações e validações...
             
+            ibancodados.CadastrarCliente(cliente);
         }
         public Cliente BuscarCliente(Cliente cliente)
         {
-            return null;
+            //Implementações e validações...
+
+            return ibancodados.BuscarCliente(cliente);
         }
         public void RemoverCliente(Cliente cliente)
         {
-            
+            //Implementações e validações...
+
+            ibancodados.RemoverCliente(cliente);
         }
         public void AlterarCliente(Cliente cliente)
         {
-            
+            //Implementações e validações...
+
+            ibancodados.AlterarCliente(cliente);            
         }
     }
 }

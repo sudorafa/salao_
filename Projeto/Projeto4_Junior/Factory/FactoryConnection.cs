@@ -12,9 +12,19 @@ namespace Projeto4_Junior.Factory
 {
     class FactoryConnection
     {
+        private static SqlConnection conn;
         public FactoryConnection()
         {
-          
+            conn = new SqlConnection("JUNIOR;Projeto4;Trusted_Connection=True;");
+        }
+        public static SqlConnection Conexao(SqlConnection conex)
+        {
+            if (conex == null)
+            {
+                new FactoryConnection();
+                return conn;
+            }
+            return conex;
         }
     }
 }

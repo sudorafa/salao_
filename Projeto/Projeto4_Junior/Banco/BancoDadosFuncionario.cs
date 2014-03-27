@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Projeto4_Junior.Banco
 {
-    class BancoDadosFuncionario
+    class BancoDadosFuncionario : IBancoDadosFuncionario
     {
 
         public IBancoDadosFuncionario ibancodados = new PersistenciaFuncionario();

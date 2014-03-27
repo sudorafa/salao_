@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projeto4_Junior.Negocios
 {
-    class FachadaProduto
+    class FachadaProduto : IfachadaProduto
     {
         public IfachadaProduto ifachada = new ControladorProduto();
         public void CadastrarProdutos(Produto produto)

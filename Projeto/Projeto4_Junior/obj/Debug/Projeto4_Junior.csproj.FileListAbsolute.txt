@@ -35,3 +35,4 @@ C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junio
 C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_Index.resources
 C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache
 C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.pdb
+C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Autenticacao.resources
