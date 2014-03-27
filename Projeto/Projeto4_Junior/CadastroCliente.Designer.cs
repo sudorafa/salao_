@@ -73,9 +73,9 @@
             this.groupBox_DadosPessoaisCadastroCliente.Controls.Add(this.label_TelefoneCliente);
             this.groupBox_DadosPessoaisCadastroCliente.Controls.Add(this.label_NomeCliente);
             this.groupBox_DadosPessoaisCadastroCliente.Location = new System.Drawing.Point(8, 9);
-            this.groupBox_DadosPessoaisCadastroCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_DadosPessoaisCadastroCliente.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_DadosPessoaisCadastroCliente.Name = "groupBox_DadosPessoaisCadastroCliente";
-            this.groupBox_DadosPessoaisCadastroCliente.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_DadosPessoaisCadastroCliente.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox_DadosPessoaisCadastroCliente.Size = new System.Drawing.Size(254, 133);
             this.groupBox_DadosPessoaisCadastroCliente.TabIndex = 0;
             this.groupBox_DadosPessoaisCadastroCliente.TabStop = false;
@@ -84,7 +84,7 @@
             // textBox_EmailCliente
             // 
             this.textBox_EmailCliente.Location = new System.Drawing.Point(62, 38);
-            this.textBox_EmailCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_EmailCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_EmailCliente.Name = "textBox_EmailCliente";
             this.textBox_EmailCliente.Size = new System.Drawing.Size(188, 20);
             this.textBox_EmailCliente.TabIndex = 2;
@@ -92,7 +92,7 @@
             // textBox_DataNascCliente
             // 
             this.textBox_DataNascCliente.Location = new System.Drawing.Point(62, 106);
-            this.textBox_DataNascCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_DataNascCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_DataNascCliente.Name = "textBox_DataNascCliente";
             this.textBox_DataNascCliente.Size = new System.Drawing.Size(76, 20);
             this.textBox_DataNascCliente.TabIndex = 5;
@@ -100,7 +100,7 @@
             // textBox_TelefoneCliente
             // 
             this.textBox_TelefoneCliente.Location = new System.Drawing.Point(62, 84);
-            this.textBox_TelefoneCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_TelefoneCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_TelefoneCliente.Name = "textBox_TelefoneCliente";
             this.textBox_TelefoneCliente.Size = new System.Drawing.Size(76, 20);
             this.textBox_TelefoneCliente.TabIndex = 4;
@@ -108,7 +108,7 @@
             // textBox_CpfCliente
             // 
             this.textBox_CpfCliente.Location = new System.Drawing.Point(62, 61);
-            this.textBox_CpfCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_CpfCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_CpfCliente.Name = "textBox_CpfCliente";
             this.textBox_CpfCliente.Size = new System.Drawing.Size(76, 20);
             this.textBox_CpfCliente.TabIndex = 3;
@@ -116,7 +116,7 @@
             // textBox_NomeCliente
             // 
             this.textBox_NomeCliente.Location = new System.Drawing.Point(62, 15);
-            this.textBox_NomeCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_NomeCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_NomeCliente.Name = "textBox_NomeCliente";
             this.textBox_NomeCliente.Size = new System.Drawing.Size(188, 20);
             this.textBox_NomeCliente.TabIndex = 1;
@@ -188,9 +188,9 @@
             this.groupBox_EnderecoCadastroCliente.Controls.Add(this.label_EnderecoRuaCliente);
             this.groupBox_EnderecoCadastroCliente.Controls.Add(this.label_EnderecoNumeroCliente);
             this.groupBox_EnderecoCadastroCliente.Location = new System.Drawing.Point(8, 141);
-            this.groupBox_EnderecoCadastroCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_EnderecoCadastroCliente.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_EnderecoCadastroCliente.Name = "groupBox_EnderecoCadastroCliente";
-            this.groupBox_EnderecoCadastroCliente.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_EnderecoCadastroCliente.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox_EnderecoCadastroCliente.Size = new System.Drawing.Size(254, 175);
             this.groupBox_EnderecoCadastroCliente.TabIndex = 1;
             this.groupBox_EnderecoCadastroCliente.TabStop = false;
@@ -200,7 +200,7 @@
             // 
             this.comboBox_EnderecoUfCliente.FormattingEnabled = true;
             this.comboBox_EnderecoUfCliente.Location = new System.Drawing.Point(78, 126);
-            this.comboBox_EnderecoUfCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox_EnderecoUfCliente.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_EnderecoUfCliente.Name = "comboBox_EnderecoUfCliente";
             this.comboBox_EnderecoUfCliente.Size = new System.Drawing.Size(92, 21);
             this.comboBox_EnderecoUfCliente.TabIndex = 11;
@@ -208,7 +208,7 @@
             // textBox_EnderecoCidadeCliente
             // 
             this.textBox_EnderecoCidadeCliente.Location = new System.Drawing.Point(78, 103);
-            this.textBox_EnderecoCidadeCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_EnderecoCidadeCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_EnderecoCidadeCliente.Name = "textBox_EnderecoCidadeCliente";
             this.textBox_EnderecoCidadeCliente.Size = new System.Drawing.Size(76, 20);
             this.textBox_EnderecoCidadeCliente.TabIndex = 10;
@@ -216,7 +216,7 @@
             // textBox_EnderecoCepCliente
             // 
             this.textBox_EnderecoCepCliente.Location = new System.Drawing.Point(78, 150);
-            this.textBox_EnderecoCepCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_EnderecoCepCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_EnderecoCepCliente.Name = "textBox_EnderecoCepCliente";
             this.textBox_EnderecoCepCliente.Size = new System.Drawing.Size(76, 20);
             this.textBox_EnderecoCepCliente.TabIndex = 12;
@@ -224,7 +224,7 @@
             // textBox_EnderecoBairroCliente
             // 
             this.textBox_EnderecoBairroCliente.Location = new System.Drawing.Point(78, 80);
-            this.textBox_EnderecoBairroCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_EnderecoBairroCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_EnderecoBairroCliente.Name = "textBox_EnderecoBairroCliente";
             this.textBox_EnderecoBairroCliente.Size = new System.Drawing.Size(76, 20);
             this.textBox_EnderecoBairroCliente.TabIndex = 9;
@@ -232,7 +232,7 @@
             // textBox_EnderecoComplementoCliente
             // 
             this.textBox_EnderecoComplementoCliente.Location = new System.Drawing.Point(78, 58);
-            this.textBox_EnderecoComplementoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_EnderecoComplementoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_EnderecoComplementoCliente.Name = "textBox_EnderecoComplementoCliente";
             this.textBox_EnderecoComplementoCliente.Size = new System.Drawing.Size(76, 20);
             this.textBox_EnderecoComplementoCliente.TabIndex = 8;
@@ -240,7 +240,7 @@
             // textBox_EnderecoRuaCliente
             // 
             this.textBox_EnderecoRuaCliente.Location = new System.Drawing.Point(78, 35);
-            this.textBox_EnderecoRuaCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_EnderecoRuaCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_EnderecoRuaCliente.Name = "textBox_EnderecoRuaCliente";
             this.textBox_EnderecoRuaCliente.Size = new System.Drawing.Size(172, 20);
             this.textBox_EnderecoRuaCliente.TabIndex = 7;
@@ -248,7 +248,7 @@
             // textBox_EnderecoNumeroCliente
             // 
             this.textBox_EnderecoNumeroCliente.Location = new System.Drawing.Point(78, 13);
-            this.textBox_EnderecoNumeroCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_EnderecoNumeroCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_EnderecoNumeroCliente.Name = "textBox_EnderecoNumeroCliente";
             this.textBox_EnderecoNumeroCliente.Size = new System.Drawing.Size(30, 20);
             this.textBox_EnderecoNumeroCliente.TabIndex = 6;
@@ -326,7 +326,7 @@
             // button_CancelarCadastroCliente
             // 
             this.button_CancelarCadastroCliente.Location = new System.Drawing.Point(66, 324);
-            this.button_CancelarCadastroCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_CancelarCadastroCliente.Margin = new System.Windows.Forms.Padding(2);
             this.button_CancelarCadastroCliente.Name = "button_CancelarCadastroCliente";
             this.button_CancelarCadastroCliente.Size = new System.Drawing.Size(66, 19);
             this.button_CancelarCadastroCliente.TabIndex = 13;
@@ -337,12 +337,13 @@
             // button_SalvarCadastroCliente
             // 
             this.button_SalvarCadastroCliente.Location = new System.Drawing.Point(137, 324);
-            this.button_SalvarCadastroCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_SalvarCadastroCliente.Margin = new System.Windows.Forms.Padding(2);
             this.button_SalvarCadastroCliente.Name = "button_SalvarCadastroCliente";
             this.button_SalvarCadastroCliente.Size = new System.Drawing.Size(72, 19);
             this.button_SalvarCadastroCliente.TabIndex = 14;
             this.button_SalvarCadastroCliente.Text = "Salvar";
             this.button_SalvarCadastroCliente.UseVisualStyleBackColor = true;
+            this.button_SalvarCadastroCliente.Click += new System.EventHandler(this.button_SalvarCadastroCliente_Click_1);
             // 
             // Form_CadastroClientes
             // 
@@ -353,7 +354,7 @@
             this.Controls.Add(this.button_CancelarCadastroCliente);
             this.Controls.Add(this.groupBox_EnderecoCadastroCliente);
             this.Controls.Add(this.groupBox_DadosPessoaisCadastroCliente);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form_CadastroClientes";
             this.Text = "Cadastro de Clientes";

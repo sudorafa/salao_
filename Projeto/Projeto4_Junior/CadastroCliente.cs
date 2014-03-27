@@ -28,8 +28,8 @@ namespace Projeto4_Junior
         {
 
         }
-
-        private void button_SalvarCadastroCliente_Click(object sender, EventArgs e)
+        
+        private void button_SalvarCadastroCliente_Click_1(object sender, EventArgs e)
         {
             bool key = true;
 
@@ -48,7 +48,7 @@ namespace Projeto4_Junior
 
             if (key == true)
             {
-                FachadaCliente fachadaCliente = new FachadaCliente();
+                IFachadaCliente fachadaCliente = new FachadaCliente();
                 Cliente cliente = new Cliente();
 
                 cliente.Nome = campo[0];

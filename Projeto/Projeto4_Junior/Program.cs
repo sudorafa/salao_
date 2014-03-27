@@ -16,7 +16,7 @@ namespace Projeto4_Junior
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Autenticacao());
+            Application.Run(new Form_Index());
         }
     }
 }
