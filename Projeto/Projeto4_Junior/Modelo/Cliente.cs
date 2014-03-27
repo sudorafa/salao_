@@ -8,30 +8,29 @@ using System.Collections.Generic;
 
 namespace Projeto4_Junior.Modelo
 {
-    class Cliente
+    public class Cliente
     {
         public String Nome { get; set; }
+        public String Email { get; set; }
         public String Endereco { get; set; }
         public String Cpf { get; set; }
         public String Data_Nascimento { get; set; }
-        public ArrayList Telefone { get; set; }
-        
+        public String Telefone { get; set; }
+
         public Cliente()
         {
 
         }
 
-        public Cliente(String nome, String endereco, String cpf, String data_nascimento, ArrayList telefone)
+        public Cliente(String nome, String email, String endereco, String cpf, String data_nascimento, String telefone)
         {
             this.Nome = nome;
+            this.Email = email;
             this.Endereco = endereco;
             this.Cpf = cpf;
             this.Data_Nascimento = data_nascimento;
             this.Telefone = telefone;
-           
-        }
 
-    
-            
+        }
     }
 }
