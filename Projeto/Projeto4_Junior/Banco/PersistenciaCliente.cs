@@ -60,7 +60,7 @@ namespace Projeto4_Junior.Banco
 
                 SqlDataReader reader = comand.ExecuteReader();
 
-                if (reader.NextResult())
+                if (reader.Read())
                 {
                     retorno = true;                    
                 }

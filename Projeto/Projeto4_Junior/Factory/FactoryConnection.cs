@@ -16,7 +16,7 @@ namespace Projeto4_Junior.Factory
         
         public SqlConnection AbrirConnexao()
         {
-            conn.ConnectionString = "Server=Anderson;Database=Projeto4;Trusted_Connection=True;";
+            conn.ConnectionString = "Server=JUNIOR;Database=Projeto4;Trusted_Connection=True;";
             conn.Open();
 
             return conn;
