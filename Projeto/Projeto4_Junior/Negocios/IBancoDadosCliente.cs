@@ -13,5 +13,6 @@ namespace Projeto4_Junior.Negocios
         Cliente BuscarCliente(Cliente cliente);
         void RemoverCliente(Cliente cliente);
         void AlterarCliente(Cliente cliente);
+        bool VerificaExistenciaCliente(String cpf);
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Projeto4_Junior.Banco;
+using System.Windows.Forms;
 
 namespace Projeto4_Junior.Negocios
 {
@@ -15,9 +16,15 @@ namespace Projeto4_Junior.Negocios
         
         public void CadastrarCliente(Cliente cliente)
         {
-            //Implementações e validações...
-            
-            ibancodados.CadastrarCliente(cliente);
+            if (ibancodados.VerificaExistenciaCliente(cliente.Cpf) == false)
+            {
+                ibancodados.CadastrarCliente(cliente);
+            }
+            else
+            {
+                MessageBox.Show("Cliente já existente");
+            }
+           
         }
         public Cliente BuscarCliente(Cliente cliente)
         {

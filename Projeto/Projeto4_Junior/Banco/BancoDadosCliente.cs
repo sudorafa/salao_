@@ -28,5 +28,10 @@ namespace Projeto4_Junior.Banco
         {            
             this.ibancodados.AlterarCliente(cliente);
         }
+
+        public bool VerificaExistenciaCliente(String cpf)
+        {
+            return this.ibancodados.VerificaExistenciaCliente(cpf);
+        }
     }
 }
