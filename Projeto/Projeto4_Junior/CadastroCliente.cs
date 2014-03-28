@@ -65,6 +65,7 @@ namespace Projeto4_Junior
                 cliente.Endereco = campo[11];
 
                 fachadaCliente.CadastrarCliente(cliente);
+                this.Close();
             }
             else
             {

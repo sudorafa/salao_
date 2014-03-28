@@ -16,17 +16,17 @@ namespace Projeto4_Junior.Factory
         
         public SqlConnection AbrirConnexao()
         {
-            conn.ConnectionString = "Server=JUNIOR;Database=Projeto4;Trusted_Connection=True;";
+            conn.ConnectionString = "Server=Anderson;Database=Projeto4;Trusted_Connection=True;";
             conn.Open();
 
             return conn;
         }      
-        public void FecharConnecxao(SqlConnection con)
+        public void FecharConnecxao()
         {
-            if (con.State == ConnectionState.Open)
+            if (conn.State == ConnectionState.Open)
             {
-                con.Close();
-                con.Dispose();
+                conn.Close();
+                conn.Dispose();
             }
         }
 
@@ -38,11 +38,6 @@ namespace Projeto4_Junior.Factory
                 return conn;
             }
             return conex;
-        }
-
-        internal void FecharConnecxao(FactoryConnection conn)
-        {
-            throw new NotImplementedException();
-        }
+        }       
     }
 }

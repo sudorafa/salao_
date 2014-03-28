@@ -16,14 +16,14 @@ namespace Projeto4_Junior.Negocios
         
         public void CadastrarCliente(Cliente cliente)
         {
-            if (ibancodados.VerificaExistenciaCliente(cliente.Cpf) == false)
-            {
+            //if (ibancodados.VerificaExistenciaCliente(cliente.Cpf) == false)
+            //{
                 ibancodados.CadastrarCliente(cliente);
-            }
-            else
-            {
-                MessageBox.Show("Cliente já existente");
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Cliente já existente");
+            //}
            
         }
         public Cliente BuscarCliente(Cliente cliente)
