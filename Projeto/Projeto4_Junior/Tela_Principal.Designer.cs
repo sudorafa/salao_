@@ -456,6 +456,7 @@
             this.MaximizeBox = false;
             this.Name = "Form_Index";
             this.Text = "ArBelSys - Index";
+            this.Load += new System.EventHandler(this.Form_Index_Load);
             this.menu_principal.ResumeLayout(false);
             this.menu_principal.PerformLayout();
             this.barraDeFerramentas.ResumeLayout(false);

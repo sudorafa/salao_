@@ -29,5 +29,10 @@ namespace Projeto4_Junior.Banco
         {            
             this.ibancodados.AlterarUsuario(usuario);
         }
+        public bool Autenticar(String usuario, String senha)
+        {
+            return this.ibancodados.Autenticar(usuario, senha);
+        }
+
     }
 }

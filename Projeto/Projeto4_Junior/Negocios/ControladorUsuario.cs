@@ -29,5 +29,10 @@ namespace Projeto4_Junior.Negocios
         {
             
         }
+
+        public bool Autenticar(String usuario, String senha)
+        {
+            return this.ibancodados.Autenticar(usuario, senha);
+        }
     }
 }

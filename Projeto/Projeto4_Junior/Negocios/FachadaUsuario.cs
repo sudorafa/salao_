@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projeto4_Junior.Negocios
 {
-    class FachadaUsuario
+    class FachadaUsuario : IfachadaUsuario
     {
         public IfachadaUsuario ifachada = new ControladorUsuario();
 
@@ -27,6 +27,12 @@ namespace Projeto4_Junior.Negocios
         public void AlterarUsuario(Usuario usuario)
         {
             this.ifachada.AlterarUsuario(usuario);
+        }
+
+        public bool Autenticar(string usuario, string senha)
+        {
+            return this.ifachada.Autenticar(usuario, senha);
+            throw new NotImplementedException();
         }
     }
 }

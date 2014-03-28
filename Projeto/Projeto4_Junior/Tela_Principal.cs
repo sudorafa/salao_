@@ -45,5 +45,10 @@ namespace Projeto4_Junior
             Form_CadastroClientes cad_cli = new Form_CadastroClientes();
             cad_cli.ShowDialog();
         }
+
+        private void Form_Index_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

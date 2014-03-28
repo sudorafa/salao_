@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto4_Junior.Modelo
 {
-    class Usuario
+    public class Usuario
     {
         public String Nome { get; set; }
         public String Login { get; set; }

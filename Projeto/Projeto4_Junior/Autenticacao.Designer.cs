@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.group_autenticacao = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.senha = new System.Windows.Forms.TextBox();
             this.usuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.entrar = new System.Windows.Forms.Button();
             this.Aviso = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.group_autenticacao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,6 +54,15 @@
             this.group_autenticacao.TabIndex = 0;
             this.group_autenticacao.TabStop = false;
             this.group_autenticacao.Text = "Login";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Projeto4_Junior.Properties.Resources.cadeado;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 103);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // senha
             // 
@@ -99,6 +108,7 @@
             this.entrar.TabIndex = 1;
             this.entrar.Text = "Entrar";
             this.entrar.UseVisualStyleBackColor = true;
+            this.entrar.Click += new System.EventHandler(this.entrar_Click);
             // 
             // Aviso
             // 
@@ -111,15 +121,6 @@
             this.Aviso.Text = "Caso você não tenha um usuário cadastrado no sistema, contate o administrador.\r\n";
             this.Aviso.Click += new System.EventHandler(this.label3_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Projeto4_Junior.Properties.Resources.cadeado;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 103);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(237, 180);
@@ -128,6 +129,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Fechar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Autenticacao
             // 

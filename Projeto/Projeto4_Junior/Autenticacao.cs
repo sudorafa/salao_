@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto4_Junior.Negocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,41 @@ namespace Projeto4_Junior
         private void Autenticacao_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void entrar_Click(object sender, EventArgs e)
+        {
+            if(usuario.Text == null || usuario.Text.Equals("") || senha.Text == null || senha.Text.Equals(""))
+            {
+                MessageBox.Show("Preencha todos os campos!");
+            }
+            else
+            {
+                IfachadaUsuario Umusuario = new FachadaUsuario();
+                String login = usuario.Text;
+                String Umasenha = senha.Text;
+
+                if (Umusuario.Autenticar(login, Umasenha) == true)
+                {
+                    Autenticacao autenticado = new Autenticacao();
+                    autenticado.DialogResult = DialogResult.OK;
+                    MessageBox.Show("Seja bem vindo!");
+                    Form_Index form = new Form_Index();
+                    form.ShowDialog();
+
+                }
+                else
+                {
+                    MessageBox.Show("Usuario ou senha incorretos");
+                    usuario.Clear();
+                    senha.Clear();
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

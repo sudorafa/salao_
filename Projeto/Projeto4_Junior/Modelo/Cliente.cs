@@ -4,11 +4,11 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections.Generic;
+
 
 namespace Projeto4_Junior.Modelo
 {
-    public class Cliente
+    class Cliente
     {
         public String Nome { get; set; }
         public String Email { get; set; }

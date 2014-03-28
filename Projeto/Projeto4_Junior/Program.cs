@@ -16,7 +16,15 @@ namespace Projeto4_Junior
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Index());
+            Autenticacao aut = new Autenticacao();            
+
+            if (aut.ShowDialog() == DialogResult.OK)
+            {            
+                Application.Run(new Form_Index());                
+            }
+
+
+            
         }
     }
 }
