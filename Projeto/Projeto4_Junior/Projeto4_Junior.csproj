@@ -50,6 +50,12 @@
     <Compile Include="AlterarCliente.Designer.cs">
       <DependentUpon>AlterarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlterarClientePrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlterarClientePrincipal.Designer.cs">
+      <DependentUpon>AlterarClientePrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Autenticacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </Compile>
     <EmbeddedResource Include="AlterarCliente.resx">
       <DependentUpon>AlterarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlterarClientePrincipal.resx">
+      <DependentUpon>AlterarClientePrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Autenticacao.resx">
       <DependentUpon>Autenticacao.cs</DependentUpon>
