@@ -64,3 +64,6 @@ C:\Users\Jefferson\Documents\GitHub\salao_\Projeto\Projeto4_Junior\obj\Debug\Pro
 C:\Users\Jefferson\Documents\GitHub\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_RemoverCliente.resources
 C:\Users\Jefferson\Documents\GitHub\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_Index.resources
 C:\Users\Jefferson\Documents\GitHub\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe.config
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.exe
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.pdb
