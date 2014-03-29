@@ -46,10 +46,17 @@ namespace Projeto4_Junior.Negocios
         {
             if (ibancodados.VerificaExistenciaCliente(cliente.Cpf) == true)
             {
-                AlterarClientePrincipal alterar = new AlterarClientePrincipal();                
-                
-                alterar.ShowDialog();
-                ibancodados.AlterarCliente(cliente);
+                AlterarClientePrincipal alterar = new AlterarClientePrincipal();
+                if (cliente.Nome == null)
+                {                    
+                    alterar.PreencherCliente(cliente.Cpf);
+                    alterar.ShowDialog();
+                }
+                else
+                {
+                    alterar.Close();
+                    ibancodados.AlterarCliente(cliente);
+                }                
             }
             else
             {

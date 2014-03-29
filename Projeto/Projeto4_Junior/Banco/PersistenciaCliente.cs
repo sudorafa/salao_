@@ -62,11 +62,17 @@ namespace Projeto4_Junior.Banco
             FactoryConnection conn = new FactoryConnection();
             try
             {
-                
+                String query = "update Cliente set Nome = '"+cliente.Nome+"', telefone = '"+cliente.Telefone+"', endereco = '"
+                +cliente.Endereco+"', DataDeNasc = '"+cliente.Data_Nascimento+"', email = '"+cliente.Email+"' where cpf = '"+cliente.Cpf+"'";
+
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());              
+                SqlDataReader reader = comand.ExecuteReader();
+                conn.FecharConnecxao();
+                MessageBox.Show("Alterado com sucesso!");
             }
             catch (Exception e)
             {
-
+                
             }             
         }
 
@@ -75,7 +81,7 @@ namespace Projeto4_Junior.Banco
             bool retorno = true;
             FactoryConnection conn = new FactoryConnection();
             try
-            {               
+            {
                 String query = "select CPF from Cliente where CPF ='" + cpf + "'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
@@ -84,7 +90,7 @@ namespace Projeto4_Junior.Banco
 
                 if (reader.Read())
                 {
-                    retorno = true;                    
+                    retorno = true;
                 }
                 else
                 {
@@ -94,11 +100,10 @@ namespace Projeto4_Junior.Banco
             }
             catch (Exception e)
             {
-                
+
             }
-            
+
             return retorno;
-            
         }
     }
 }

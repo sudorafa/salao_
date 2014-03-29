@@ -80,6 +80,7 @@
             this.button_CancelarCadastroCliente.TabIndex = 17;
             this.button_CancelarCadastroCliente.Text = "Cancelar";
             this.button_CancelarCadastroCliente.UseVisualStyleBackColor = true;
+            this.button_CancelarCadastroCliente.Click += new System.EventHandler(this.button_CancelarCadastroCliente_Click);
             // 
             // groupBox_EnderecoCadastroCliente
             // 
