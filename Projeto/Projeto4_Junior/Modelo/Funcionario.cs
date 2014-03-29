@@ -15,6 +15,10 @@ namespace Projeto4_Junior.Modelo
         public String Data_Nascimento { get; set; }
         public ArrayList Telefone { get; set; }
         public Double Porcentagem { get; set; }
+        public int IdGestor { get; set; }
+        public int Login { get; set; }
+        public string telefone2 { get; set; }
+
 
         public Funcionario()
         {

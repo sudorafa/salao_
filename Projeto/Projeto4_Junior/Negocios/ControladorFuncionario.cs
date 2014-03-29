@@ -6,15 +6,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Projeto4_Junior.Banco;
+using System.Windows.Forms;
 
 namespace Projeto4_Junior.Negocios
 {
     class ControladorFuncionario : IfachadaFuncionario
     {
         public IBancoDadosFuncionario ibancodados = new BancoDadosFuncionario(); 
-        public void CadastrarFuncionario(Funcionario funionario)
+        public void CadastrarFuncionario(Funcionario funcionario)
         {
+            PersistenciaFuncionario PF = new PersistenciaFuncionario();
             
+            
+            
+            if (PF.VerificaFunc(funcionario) == null)
+            {
+                PF.CadastrarFuncionario(funcionario);
+                MessageBox.Show("Cadastro Efetuado com sucesso !!");
+            }
+            else
+            {
+
+                MessageBox.Show("CPF ja cadastrado !!!");
+            
+            }
+
         }
         public Funcionario BuscarFuncionario(Funcionario funionario)
         {
