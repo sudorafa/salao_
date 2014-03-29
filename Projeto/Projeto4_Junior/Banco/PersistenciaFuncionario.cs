@@ -14,6 +14,7 @@ namespace Projeto4_Junior.Banco
         public void CadastrarFuncionario(Funcionario funionario)
         {
 
+
         }
         public Funcionario BuscarFuncionario(Funcionario funionario)
         {

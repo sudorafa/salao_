@@ -25,7 +25,7 @@ namespace Projeto4_Junior.Banco
                 + cliente.Data_Nascimento + "', '" + cliente.Email + "')";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
-
+                //comand.ExecuteNonQuery(); <---- Não seria melhor usar o comand pra executar a instrução SQL ?
                 SqlDataReader reader = comand.ExecuteReader();
                 conn.FecharConnecxao();                
                 MessageBox.Show("Cadastrado Com sucesso!");
