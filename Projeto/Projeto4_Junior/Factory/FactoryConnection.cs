@@ -18,7 +18,7 @@ namespace Projeto4_Junior.Factory
         {
             conn.ConnectionString = "Server=JUNIOR;Database=Projeto4;Trusted_Connection=True;";
             SqlCommand comand = new SqlCommand();
-            com.Connection = conn;
+            comand.Connection = conn;
             conn.Open();
 
             return conn;
