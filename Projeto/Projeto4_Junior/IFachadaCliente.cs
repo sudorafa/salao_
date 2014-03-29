@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System;
 
 namespace Projeto4_Junior
 {
@@ -12,7 +12,7 @@ namespace Projeto4_Junior
     {
         void CadastrarCliente(Cliente cliente);
         Cliente BuscarCliente(Cliente cliente);
-        void RemoverCliente(Cliente cliente);
+        void RemoverCliente(String cpf);
         void AlterarCliente(Cliente cliente);
        
     }

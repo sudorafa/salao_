@@ -32,11 +32,11 @@ namespace Projeto4_Junior.Negocios
 
             return ibancodados.BuscarCliente(cliente);
         }
-        public void RemoverCliente(Cliente cliente)
+        public void RemoverCliente(String cpf)
         {
             //Implementações e validações...
 
-            ibancodados.RemoverCliente(cliente);
+            ibancodados.RemoverCliente(cpf);
         }
         public void AlterarCliente(Cliente cliente)
         {

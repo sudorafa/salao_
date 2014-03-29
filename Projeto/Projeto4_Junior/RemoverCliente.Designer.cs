@@ -37,17 +37,18 @@
             // button_RemoverCliente
             // 
             this.button_RemoverCliente.Location = new System.Drawing.Point(145, 58);
-            this.button_RemoverCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_RemoverCliente.Margin = new System.Windows.Forms.Padding(2);
             this.button_RemoverCliente.Name = "button_RemoverCliente";
             this.button_RemoverCliente.Size = new System.Drawing.Size(61, 19);
             this.button_RemoverCliente.TabIndex = 3;
             this.button_RemoverCliente.Text = "Remover";
             this.button_RemoverCliente.UseVisualStyleBackColor = true;
+            this.button_RemoverCliente.Click += new System.EventHandler(this.button_RemoverCliente_Click);
             // 
             // button_CancelarRemocaoCliente
             // 
             this.button_CancelarRemocaoCliente.Location = new System.Drawing.Point(76, 58);
-            this.button_CancelarRemocaoCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_CancelarRemocaoCliente.Margin = new System.Windows.Forms.Padding(2);
             this.button_CancelarRemocaoCliente.Name = "button_CancelarRemocaoCliente";
             this.button_CancelarRemocaoCliente.Size = new System.Drawing.Size(65, 19);
             this.button_CancelarRemocaoCliente.TabIndex = 2;
@@ -58,7 +59,7 @@
             // textBox_RemoverCliente
             // 
             this.textBox_RemoverCliente.Location = new System.Drawing.Point(96, 34);
-            this.textBox_RemoverCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_RemoverCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_RemoverCliente.Name = "textBox_RemoverCliente";
             this.textBox_RemoverCliente.Size = new System.Drawing.Size(76, 20);
             this.textBox_RemoverCliente.TabIndex = 1;
@@ -82,7 +83,7 @@
             this.Controls.Add(this.button_CancelarRemocaoCliente);
             this.Controls.Add(this.textBox_RemoverCliente);
             this.Controls.Add(this.label_RemoverCliente);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_RemoverCliente";
             this.Text = "Remover Cliente";
             this.ResumeLayout(false);

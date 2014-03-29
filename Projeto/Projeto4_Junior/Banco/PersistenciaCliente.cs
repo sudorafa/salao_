@@ -39,9 +39,31 @@ namespace Projeto4_Junior.Banco
         {
             return null;
         }
-        public void RemoverCliente(Cliente cliente)
+        public void RemoverCliente(String cpf)
         {
+            FactoryConnection conn = new FactoryConnection();
+            try
+            {
+                String query = "delete from Cliente where CPF ='" + cpf + "'";
 
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+
+                SqlDataReader reader = comand.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    MessageBox.Show("Cliente removido com sucesso!");
+                }
+                else
+                {
+                    MessageBox.Show("Cliente não cadastrado!");
+                }
+                conn.FecharConnecxao();
+            }
+            catch (Exception e)
+            {
+
+            }
         }
         public void AlterarCliente(Cliente cliente)
         {

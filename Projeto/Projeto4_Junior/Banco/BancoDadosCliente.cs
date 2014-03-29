@@ -20,9 +20,9 @@ namespace Projeto4_Junior.Banco
         {           
             return this.ibancodados.BuscarCliente(cliente);
         }
-        public void RemoverCliente(Cliente cliente)
+        public void RemoverCliente(String cpf)
         {            
-            this.ibancodados.RemoverCliente(cliente);
+            this.ibancodados.RemoverCliente(cpf);
         }
         public void AlterarCliente(Cliente cliente)
         {            

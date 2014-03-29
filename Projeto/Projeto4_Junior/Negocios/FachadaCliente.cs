@@ -21,9 +21,9 @@ namespace Projeto4_Junior.Negocios
         {
            return this.ifachada.BuscarCliente(cliente);
         }
-        public void RemoverCliente(Cliente cliente)
+        public void RemoverCliente(String cpf)
         {
-            this.ifachada.RemoverCliente(cliente);
+            this.ifachada.RemoverCliente(cpf);
         }
         public void AlterarCliente(Cliente cliente)
         {

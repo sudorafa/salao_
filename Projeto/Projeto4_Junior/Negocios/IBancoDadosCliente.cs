@@ -11,7 +11,7 @@ namespace Projeto4_Junior.Negocios
     {
         void CadastrarCliente(Cliente cliente);
         Cliente BuscarCliente(Cliente cliente);
-        void RemoverCliente(Cliente cliente);
+        void RemoverCliente(String cliente);
         void AlterarCliente(Cliente cliente);
         bool VerificaExistenciaCliente(String cpf);
     }
