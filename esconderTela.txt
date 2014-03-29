@@ -1,0 +1,7 @@
+
+        private void Alterar_Click(object sender, EventArgs e)
+        {
+            Form alt = new Alterações();
+            alt.Show();
+            this.Hide();
+        }
