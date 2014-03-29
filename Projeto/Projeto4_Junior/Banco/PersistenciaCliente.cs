@@ -28,7 +28,7 @@ namespace Projeto4_Junior.Banco
                 //comand.ExecuteNonQuery(); <---- Não seria melhor usar o comand pra executar a instrução SQL ?
                 SqlDataReader reader = comand.ExecuteReader();
                 conn.FecharConnecxao();                
-                MessageBox.Show("Cadastrado Com sucesso!");
+                MessageBox.Show("Cadastrado com sucesso!");
             }
             catch (Exception e)
             {
@@ -49,15 +49,7 @@ namespace Projeto4_Junior.Banco
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 
                 SqlDataReader reader = comand.ExecuteReader();
-
-                if (reader.Read())
-                {
-                    MessageBox.Show("Cliente removido com sucesso!");
-                }
-                else
-                {
-                    MessageBox.Show("Cliente não cadastrado!");
-                }
+                MessageBox.Show("Cliente removido com sucesso!");
                 conn.FecharConnecxao();
             }
             catch (Exception e)
@@ -67,7 +59,15 @@ namespace Projeto4_Junior.Banco
         }
         public void AlterarCliente(Cliente cliente)
         {
+            FactoryConnection conn = new FactoryConnection();
+            try
+            {
+                
+            }
+            catch (Exception e)
+            {
 
+            }             
         }
 
         public bool VerificaExistenciaCliente(String cpf)

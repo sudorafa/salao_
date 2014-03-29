@@ -17,10 +17,10 @@ namespace Projeto4_Junior
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Autenticacao aut = new Autenticacao();
-            
+            Application.Run(new Form_Index());     
             if (aut.ShowDialog() == DialogResult.OK)
             {            
-                Application.Run(new Form_Index());                
+                //Application.Run(new Form_Index());                
             }            
         }
     }

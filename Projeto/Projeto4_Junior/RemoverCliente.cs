@@ -24,8 +24,8 @@ namespace Projeto4_Junior
         }
 
         private void button_RemoverCliente_Click(object sender, EventArgs e)
-        {                                                                                    
-            if(textBox_RemoverCliente.Text != null && !textBox_RemoverCliente.Equals(""))
+        {                                                                  
+            if(textBox_RemoverCliente.Text != null && !textBox_RemoverCliente.Text.Equals(""))
             {
                 IFachadaCliente fachadaCliente = new FachadaCliente();
 
