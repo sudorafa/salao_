@@ -5,3 +5,11 @@
             alt.Show();
             this.Hide();
         }
+//para mostrar a tela novamente
+
+Form inc =  Inicio.ActiveForm;
+if (inc.Visible == false) // verifica se a tela não esta visivel e fecha a tela atual
+            {
+                inc.Show();
+                this.Close();
+            }
