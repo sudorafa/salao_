@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbNome = new System.Windows.Forms.Label();
-            this.lbTelefone = new System.Windows.Forms.Label();
-            this.lbCpf = new System.Windows.Forms.Label();
-            this.lbDataNascimento = new System.Windows.Forms.Label();
-            this.tbNome = new System.Windows.Forms.TextBox();
-            this.tbTelefone = new System.Windows.Forms.TextBox();
-            this.tbCpf = new System.Windows.Forms.TextBox();
+            this.tbPorcentagem = new System.Windows.Forms.TextBox();
+            this.lbPorcentagem = new System.Windows.Forms.Label();
             this.tbDataNascimento = new System.Windows.Forms.TextBox();
+            this.tbCpf = new System.Windows.Forms.TextBox();
+            this.tbTelefone = new System.Windows.Forms.TextBox();
+            this.tbNome = new System.Windows.Forms.TextBox();
+            this.lbDataNascimento = new System.Windows.Forms.Label();
+            this.lbCpf = new System.Windows.Forms.Label();
+            this.lbTelefone = new System.Windows.Forms.Label();
+            this.lbNome = new System.Windows.Forms.Label();
             this.groupBox_EnderecoCadastroCliente = new System.Windows.Forms.GroupBox();
             this.cbUfEndereco = new System.Windows.Forms.ComboBox();
             this.tbCidadeEndereco = new System.Windows.Forms.TextBox();
@@ -60,6 +62,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tbPorcentagem);
+            this.groupBox1.Controls.Add(this.lbPorcentagem);
             this.groupBox1.Controls.Add(this.tbDataNascimento);
             this.groupBox1.Controls.Add(this.tbCpf);
             this.groupBox1.Controls.Add(this.tbTelefone);
@@ -70,37 +74,54 @@
             this.groupBox1.Controls.Add(this.lbNome);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(287, 133);
+            this.groupBox1.Size = new System.Drawing.Size(287, 155);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
             // 
-            // lbNome
+            // tbPorcentagem
             // 
-            this.lbNome.AutoSize = true;
-            this.lbNome.Location = new System.Drawing.Point(15, 26);
-            this.lbNome.Name = "lbNome";
-            this.lbNome.Size = new System.Drawing.Size(38, 13);
-            this.lbNome.TabIndex = 0;
-            this.lbNome.Text = "Nome:";
+            this.tbPorcentagem.Location = new System.Drawing.Point(86, 131);
+            this.tbPorcentagem.Name = "tbPorcentagem";
+            this.tbPorcentagem.Size = new System.Drawing.Size(36, 20);
+            this.tbPorcentagem.TabIndex = 9;
             // 
-            // lbTelefone
+            // lbPorcentagem
             // 
-            this.lbTelefone.AutoSize = true;
-            this.lbTelefone.Location = new System.Drawing.Point(15, 56);
-            this.lbTelefone.Name = "lbTelefone";
-            this.lbTelefone.Size = new System.Drawing.Size(52, 13);
-            this.lbTelefone.TabIndex = 1;
-            this.lbTelefone.Text = "Telefone:";
+            this.lbPorcentagem.AutoSize = true;
+            this.lbPorcentagem.Location = new System.Drawing.Point(7, 134);
+            this.lbPorcentagem.Name = "lbPorcentagem";
+            this.lbPorcentagem.Size = new System.Drawing.Size(73, 13);
+            this.lbPorcentagem.TabIndex = 8;
+            this.lbPorcentagem.Text = "Porcentagem:";
             // 
-            // lbCpf
+            // tbDataNascimento
             // 
-            this.lbCpf.AutoSize = true;
-            this.lbCpf.Location = new System.Drawing.Point(15, 81);
-            this.lbCpf.Name = "lbCpf";
-            this.lbCpf.Size = new System.Drawing.Size(30, 13);
-            this.lbCpf.TabIndex = 2;
-            this.lbCpf.Text = "CPF:";
+            this.tbDataNascimento.Location = new System.Drawing.Point(119, 104);
+            this.tbDataNascimento.Name = "tbDataNascimento";
+            this.tbDataNascimento.Size = new System.Drawing.Size(60, 20);
+            this.tbDataNascimento.TabIndex = 7;
+            // 
+            // tbCpf
+            // 
+            this.tbCpf.Location = new System.Drawing.Point(51, 78);
+            this.tbCpf.Name = "tbCpf";
+            this.tbCpf.Size = new System.Drawing.Size(96, 20);
+            this.tbCpf.TabIndex = 6;
+            // 
+            // tbTelefone
+            // 
+            this.tbTelefone.Location = new System.Drawing.Point(73, 53);
+            this.tbTelefone.Name = "tbTelefone";
+            this.tbTelefone.Size = new System.Drawing.Size(74, 20);
+            this.tbTelefone.TabIndex = 5;
+            // 
+            // tbNome
+            // 
+            this.tbNome.Location = new System.Drawing.Point(59, 23);
+            this.tbNome.Name = "tbNome";
+            this.tbNome.Size = new System.Drawing.Size(195, 20);
+            this.tbNome.TabIndex = 4;
             // 
             // lbDataNascimento
             // 
@@ -111,33 +132,32 @@
             this.lbDataNascimento.TabIndex = 3;
             this.lbDataNascimento.Text = "Data de Nascimento:";
             // 
-            // tbNome
+            // lbCpf
             // 
-            this.tbNome.Location = new System.Drawing.Point(59, 23);
-            this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(195, 20);
-            this.tbNome.TabIndex = 4;
+            this.lbCpf.AutoSize = true;
+            this.lbCpf.Location = new System.Drawing.Point(15, 81);
+            this.lbCpf.Name = "lbCpf";
+            this.lbCpf.Size = new System.Drawing.Size(30, 13);
+            this.lbCpf.TabIndex = 2;
+            this.lbCpf.Text = "CPF:";
             // 
-            // tbTelefone
+            // lbTelefone
             // 
-            this.tbTelefone.Location = new System.Drawing.Point(73, 53);
-            this.tbTelefone.Name = "tbTelefone";
-            this.tbTelefone.Size = new System.Drawing.Size(74, 20);
-            this.tbTelefone.TabIndex = 5;
+            this.lbTelefone.AutoSize = true;
+            this.lbTelefone.Location = new System.Drawing.Point(15, 56);
+            this.lbTelefone.Name = "lbTelefone";
+            this.lbTelefone.Size = new System.Drawing.Size(52, 13);
+            this.lbTelefone.TabIndex = 1;
+            this.lbTelefone.Text = "Telefone:";
             // 
-            // tbCpf
+            // lbNome
             // 
-            this.tbCpf.Location = new System.Drawing.Point(51, 78);
-            this.tbCpf.Name = "tbCpf";
-            this.tbCpf.Size = new System.Drawing.Size(96, 20);
-            this.tbCpf.TabIndex = 6;
-            // 
-            // tbDataNascimento
-            // 
-            this.tbDataNascimento.Location = new System.Drawing.Point(119, 104);
-            this.tbDataNascimento.Name = "tbDataNascimento";
-            this.tbDataNascimento.Size = new System.Drawing.Size(60, 20);
-            this.tbDataNascimento.TabIndex = 7;
+            this.lbNome.AutoSize = true;
+            this.lbNome.Location = new System.Drawing.Point(15, 26);
+            this.lbNome.Name = "lbNome";
+            this.lbNome.Size = new System.Drawing.Size(38, 13);
+            this.lbNome.TabIndex = 0;
+            this.lbNome.Text = "Nome:";
             // 
             // groupBox_EnderecoCadastroCliente
             // 
@@ -155,7 +175,7 @@
             this.groupBox_EnderecoCadastroCliente.Controls.Add(this.label_EnderecoComplementoCliente);
             this.groupBox_EnderecoCadastroCliente.Controls.Add(this.label_EnderecoRuaCliente);
             this.groupBox_EnderecoCadastroCliente.Controls.Add(this.label_EnderecoNumeroCliente);
-            this.groupBox_EnderecoCadastroCliente.Location = new System.Drawing.Point(12, 150);
+            this.groupBox_EnderecoCadastroCliente.Location = new System.Drawing.Point(12, 172);
             this.groupBox_EnderecoCadastroCliente.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_EnderecoCadastroCliente.Name = "groupBox_EnderecoCadastroCliente";
             this.groupBox_EnderecoCadastroCliente.Padding = new System.Windows.Forms.Padding(2);
@@ -293,7 +313,7 @@
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(131, 330);
+            this.btCancelar.Location = new System.Drawing.Point(131, 352);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 9;
@@ -302,7 +322,7 @@
             // 
             // btCadastrar
             // 
-            this.btCadastrar.Location = new System.Drawing.Point(224, 330);
+            this.btCadastrar.Location = new System.Drawing.Point(224, 352);
             this.btCadastrar.Name = "btCadastrar";
             this.btCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btCadastrar.TabIndex = 10;
@@ -313,11 +333,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 360);
+            this.ClientSize = new System.Drawing.Size(311, 387);
             this.Controls.Add(this.btCadastrar);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.groupBox_EnderecoCadastroCliente);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "CadastroFuncionario";
             this.Text = "Cadastro de Funcionario";
             this.groupBox1.ResumeLayout(false);
@@ -356,5 +377,7 @@
         private System.Windows.Forms.Label label_EnderecoNumeroCliente;
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Button btCadastrar;
+        private System.Windows.Forms.TextBox tbPorcentagem;
+        private System.Windows.Forms.Label lbPorcentagem;
     }
 }
