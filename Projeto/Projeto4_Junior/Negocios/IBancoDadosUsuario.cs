@@ -14,6 +14,7 @@ namespace Projeto4_Junior.Negocios
         void RemoverUsuario(Usuario usuario);
         void AlterarUsuario(Usuario usuario);
         bool Autenticar(String usuario, String senha);
+        bool VerificarUsuarioExistente(String login);
 
     }
 }

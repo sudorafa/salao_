@@ -50,5 +50,11 @@ namespace Projeto4_Junior
         {
            
         }
+
+        private void inserirUsuarioMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastrarUsuario cad_usu = new CadastrarUsuario();
+            cad_usu.ShowDialog();
+        }
     }
 }

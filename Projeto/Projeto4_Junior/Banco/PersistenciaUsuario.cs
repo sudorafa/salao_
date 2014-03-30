@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Projeto4_Junior.Negocios;
 using Projeto4_Junior.Factory;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Projeto4_Junior.Banco
 {
@@ -15,6 +16,22 @@ namespace Projeto4_Junior.Banco
     {
         public void CadastrarUsuario(Usuario usuario)
         {
+            FactoryConnection conn = new FactoryConnection();
+            try
+            {
+                String query = "insert into Usuario (Nome, Login, Senha, isGestor) values" +
+                "('" + usuario.Nome + "', '" + usuario.Login + "', '" + usuario.Senha +
+                "', '" + usuario.isGestor + "')";
+
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+                //comand.ExecuteNonQuery(); <---- Não seria melhor usar o comand pra executar a instrução SQL ?
+                SqlDataReader reader = comand.ExecuteReader();
+                conn.FecharConnecxao();                
+            }
+            catch (Exception e)
+            {
+
+            }          
 
         }
         public Usuario BuscarUsuario(Usuario usuario)
@@ -53,6 +70,36 @@ namespace Projeto4_Junior.Banco
             conn.FecharConnecxao();                       
             
             return retorno;            
+        }
+        public bool VerificarUsuarioExistente(String login)
+        {
+            bool retorno = true;
+
+            FactoryConnection conn = new FactoryConnection();
+           try
+            {
+                String query = "select Login from Usuario where Login ='" + login + "'";
+
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+                
+                SqlDataReader reader = comand.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    retorno = true;
+                }
+                else
+                {
+                    retorno = false;
+                }
+                conn.FecharConnecxao();
+            }
+           catch (Exception e)
+           {
+
+           }
+
+            return retorno;
         }        
     }
 }

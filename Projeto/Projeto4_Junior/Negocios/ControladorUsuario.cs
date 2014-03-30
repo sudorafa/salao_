@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Projeto4_Junior.Banco;
+using System.Windows.Forms;
 
 namespace Projeto4_Junior.Negocios
 {
@@ -14,6 +15,15 @@ namespace Projeto4_Junior.Negocios
         private IBancoDadosUsuario ibancodados = new BancoDadosUsuario();
         public void CadastrarUsuario(Usuario usuario)
         {
+            if (this.ibancodados.VerificarUsuarioExistente(usuario.Login) == true)
+            {
+                MessageBox.Show("Usuario já cadastrado!");
+            }
+            else
+            {
+                ibancodados.CadastrarUsuario(usuario);
+                MessageBox.Show("Cadastrado com sucesso!");
+            }
             
         }
         public Usuario BuscarUsuario(Usuario usuario)
@@ -34,5 +44,6 @@ namespace Projeto4_Junior.Negocios
         {
             return this.ibancodados.Autenticar(usuario, senha);
         }
+       
     }
 }

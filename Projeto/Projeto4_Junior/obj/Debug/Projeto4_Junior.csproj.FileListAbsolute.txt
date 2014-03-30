@@ -83,3 +83,5 @@ C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Proje
 C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_RemoverCliente.resources
 C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_Index.resources
 C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache
+C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.AlterarClientePrincipal.resources
+C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.CadastrarUsuario.resources

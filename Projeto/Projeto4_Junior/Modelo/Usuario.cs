@@ -11,16 +11,19 @@ namespace Projeto4_Junior.Modelo
         public String Nome { get; set; }
         public String Login { get; set; }
         public String Senha { get; set; }
+        public int isGestor { get; set; }
+
 
         public Usuario()
         {
 
         }
-        public Usuario(String nome, String login, String senha)
+        public Usuario(String nome, String login, String senha, int isgestor)
         {
             this.Nome = nome;
             this.Login = login;
             this.Senha = senha;
+            this.isGestor = isgestor;
         }
     }
 }

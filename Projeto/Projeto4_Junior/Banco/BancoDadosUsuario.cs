@@ -33,6 +33,10 @@ namespace Projeto4_Junior.Banco
         {
             return this.ibancodados.Autenticar(usuario, senha);
         }
+        public bool VerificarUsuarioExistente(String login)
+        {
+            return ibancodados.VerificarUsuarioExistente(login);
+        }
 
     }
 }

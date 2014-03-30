@@ -33,6 +33,6 @@ namespace Projeto4_Junior.Negocios
         {
             return this.ifachada.Autenticar(usuario, senha);
             throw new NotImplementedException();
-        }
+        }        
     }
 }
