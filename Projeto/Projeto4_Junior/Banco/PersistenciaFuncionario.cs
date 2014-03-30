@@ -50,10 +50,44 @@ namespace Projeto4_Junior.Banco
         }
         public void RemoverFuncionario(Funcionario funionario)
         {
+            try
+            {
+                comm.CommandText = "DELETE FROM FUNCIONARIO WHERE CPF=@CPF";
+                comm.Parameters.AddWithValue("@cpf", funionario.Cpf);
+                fc.AbrirConnexao();
+                comm.ExecuteNonQuery();
+                fc.FecharConnecxao();
+            }
+            catch (SqlException e)
+            {
+                e.Message.GetType();
+            }
+
 
         }
         public void AlterarFuncionario(Funcionario funionario)
         {
+            try
+            {
+                comm.CommandText = "UPDATE FUNCIONARIOS set NOME=@nome, endereco=@endereco, datadenasc=@datadenasc," +
+                                   "telefone=@telefone, IDGestor=@IDGestor, login=@login where cpf=@cpf";
+                comm.Parameters.AddWithValue("@nome", funionario.Nome);
+                comm.Parameters.AddWithValue("@endereco", funionario.Endereco);
+                comm.Parameters.AddWithValue("@datadenasc", funionario.Data_Nascimento);
+                comm.Parameters.AddWithValue("@telefone", funionario.Telefone);
+                //comm.Parameters.AddWithValue("@telefone2", funionario.Telefone2);
+                comm.Parameters.AddWithValue("@cpf", funionario.Cpf);
+                comm.Parameters.AddWithValue("@IDGestor", funionario.IdGestor);
+                comm.Parameters.AddWithValue("@login", funionario.Login);
+
+                fc.AbrirConnexao();
+                comm.ExecuteNonQuery();
+                fc.FecharConnecxao();
+            }
+            catch (SqlException e)
+            {
+                e.Message.GetType();
+            }
 
         }
 
