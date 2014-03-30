@@ -120,6 +120,7 @@
             this.textBox_NomeCliente.Name = "textBox_NomeCliente";
             this.textBox_NomeCliente.Size = new System.Drawing.Size(188, 20);
             this.textBox_NomeCliente.TabIndex = 1;
+            this.textBox_NomeCliente.TextChanged += new System.EventHandler(this.textBox_NomeCliente_TextChanged_1);
             // 
             // label_DataNascCliente
             // 

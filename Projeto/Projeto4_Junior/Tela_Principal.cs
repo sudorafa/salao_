@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto4_Junior.InterfaceGrafica.Funcionario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,6 +56,13 @@ namespace Projeto4_Junior
         {
             CadastrarUsuario cad_usu = new CadastrarUsuario();
             cad_usu.ShowDialog();
+        }
+
+        private void inserirFuncionarioMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroFuncionario cad_func = new CadastroFuncionario;
+            cad_func.ShowDialog();
+
         }
     }
 }

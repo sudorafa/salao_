@@ -122,6 +122,7 @@
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(195, 20);
             this.tbNome.TabIndex = 4;
+            this.tbNome.TextChanged += new System.EventHandler(this.tbNome_TextChanged);
             // 
             // lbDataNascimento
             // 
@@ -319,6 +320,7 @@
             this.btCancelar.TabIndex = 9;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btCadastrar
             // 
@@ -328,6 +330,7 @@
             this.btCadastrar.TabIndex = 10;
             this.btCadastrar.Text = "Cadastrar";
             this.btCadastrar.UseVisualStyleBackColor = true;
+            this.btCadastrar.Click += new System.EventHandler(this.btCadastrar_Click);
             // 
             // CadastroFuncionario
             // 
