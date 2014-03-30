@@ -23,8 +23,7 @@ namespace Projeto4_Junior.Negocios
             else
             {
                 MessageBox.Show("Cliente já existente");
-            }
-           
+            }           
         }
         public Cliente BuscarCliente(Cliente cliente)
         {
@@ -34,15 +33,35 @@ namespace Projeto4_Junior.Negocios
         }
         public void RemoverCliente(String cpf)
         {
-            //Implementações e validações...
-
-            ibancodados.RemoverCliente(cpf);
+            if (ibancodados.VerificaExistenciaCliente(cpf) == true)
+            {
+                ibancodados.RemoverCliente(cpf);
+            }
+            else
+            {
+                MessageBox.Show("Cliente não cadastrado!");
+            }                
         }
         public void AlterarCliente(Cliente cliente)
         {
-            //Implementações e validações...
-
-            ibancodados.AlterarCliente(cliente);            
+            if (ibancodados.VerificaExistenciaCliente(cliente.Cpf) == true)
+            {
+                AlterarClientePrincipal alterar = new AlterarClientePrincipal();
+                if (cliente.Nome == null)
+                {                    
+                    alterar.PreencherCliente(cliente.Cpf);
+                    alterar.ShowDialog();
+                }
+                else
+                {
+                    alterar.Close();
+                    ibancodados.AlterarCliente(cliente);
+                }                
+            }
+            else
+            {
+                MessageBox.Show("Cliente não cadastrado!");
+            }                        
         }
     }
 }

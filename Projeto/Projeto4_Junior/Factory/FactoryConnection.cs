@@ -7,7 +7,6 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.Sql;
 
-
 namespace Projeto4_Junior.Factory
 {
     public class FactoryConnection
@@ -15,8 +14,8 @@ namespace Projeto4_Junior.Factory
         private static SqlConnection conn = new SqlConnection();
         
         public SqlConnection AbrirConnexao()
-        {
-            conn.ConnectionString = "Server=JEFFERSON-PC;Database=TESTE;Trusted_Connection=True;";
+        {            
+            conn.ConnectionString = @"Server=ANDERSON-PC\SQLEXPRESS;Database=Projeto4;Trusted_Connection=True;";
             SqlCommand comand = new SqlCommand();
             comand.Connection = conn;
             conn.Open();

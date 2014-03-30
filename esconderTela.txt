@@ -1,0 +1,15 @@
+
+        private void Alterar_Click(object sender, EventArgs e)
+        {
+            Form alt = new Alterações();
+            alt.Show();
+            this.Hide();
+        }
+//para mostrar a tela novamente
+
+Form inc =  Inicio.ActiveForm;
+if (inc.Visible == false) // verifica se a tela não esta visivel e fecha a tela atual
+            {
+                inc.Show();
+                this.Close();
+            }

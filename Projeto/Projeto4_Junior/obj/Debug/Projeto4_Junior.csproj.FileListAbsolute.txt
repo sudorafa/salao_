@@ -64,3 +64,22 @@ C:\Users\Jefferson\Documents\GitHub\salao_\Projeto\Projeto4_Junior\obj\Debug\Pro
 C:\Users\Jefferson\Documents\GitHub\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_RemoverCliente.resources
 C:\Users\Jefferson\Documents\GitHub\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_Index.resources
 C:\Users\Jefferson\Documents\GitHub\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe.config
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.exe
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.pdb
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.AlterarClientePrincipal.resources
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe.config
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.exe
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.pdb
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.pdb
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csprojResolveAssemblyReference.cache
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_AlterarCliente.resources
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.AlterarClientePrincipal.resources
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Autenticacao.resources
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_CadastroClientes.resources
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_ListarClientes.resources
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Properties.Resources.resources
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_RemoverCliente.resources
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_Index.resources
+C:\Users\Anderson\Desktop\BKP_GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache

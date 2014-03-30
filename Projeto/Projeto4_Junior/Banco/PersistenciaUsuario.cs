@@ -35,8 +35,7 @@ namespace Projeto4_Junior.Banco
             bool retorno = false;
             FactoryConnection conn = new FactoryConnection();   
                          
-                String query =
-                    "select Login, Senha from Usuario where Login='" + usuario + "' and Senha='" + senha + "'";                
+                String query = "select Login, Senha from Usuario where Login='" + usuario + "' and Senha='" + senha + "'";                
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 

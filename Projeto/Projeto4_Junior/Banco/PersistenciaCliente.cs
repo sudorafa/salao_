@@ -28,7 +28,7 @@ namespace Projeto4_Junior.Banco
                 //comand.ExecuteNonQuery(); <---- Não seria melhor usar o comand pra executar a instrução SQL ?
                 SqlDataReader reader = comand.ExecuteReader();
                 conn.FecharConnecxao();                
-                MessageBox.Show("Cadastrado Com sucesso!");
+                MessageBox.Show("Cadastrado com sucesso!");
             }
             catch (Exception e)
             {
@@ -49,15 +49,7 @@ namespace Projeto4_Junior.Banco
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 
                 SqlDataReader reader = comand.ExecuteReader();
-
-                if (reader.Read())
-                {
-                    MessageBox.Show("Cliente removido com sucesso!");
-                }
-                else
-                {
-                    MessageBox.Show("Cliente não cadastrado!");
-                }
+                MessageBox.Show("Cliente removido com sucesso!");
                 conn.FecharConnecxao();
             }
             catch (Exception e)
@@ -67,7 +59,21 @@ namespace Projeto4_Junior.Banco
         }
         public void AlterarCliente(Cliente cliente)
         {
+            FactoryConnection conn = new FactoryConnection();
+            try
+            {
+                String query = "update Cliente set Nome = '"+cliente.Nome+"', telefone = '"+cliente.Telefone+"', endereco = '"
+                +cliente.Endereco+"', DataDeNasc = '"+cliente.Data_Nascimento+"', email = '"+cliente.Email+"' where cpf = '"+cliente.Cpf+"'";
 
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());              
+                SqlDataReader reader = comand.ExecuteReader();
+                conn.FecharConnecxao();
+                MessageBox.Show("Alterado com sucesso!");
+            }
+            catch (Exception e)
+            {
+                
+            }             
         }
 
         public bool VerificaExistenciaCliente(String cpf)
@@ -75,7 +81,7 @@ namespace Projeto4_Junior.Banco
             bool retorno = true;
             FactoryConnection conn = new FactoryConnection();
             try
-            {               
+            {
                 String query = "select CPF from Cliente where CPF ='" + cpf + "'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
@@ -84,7 +90,7 @@ namespace Projeto4_Junior.Banco
 
                 if (reader.Read())
                 {
-                    retorno = true;                    
+                    retorno = true;
                 }
                 else
                 {
@@ -94,11 +100,10 @@ namespace Projeto4_Junior.Banco
             }
             catch (Exception e)
             {
-                
+
             }
-            
+
             return retorno;
-            
         }
     }
 }
