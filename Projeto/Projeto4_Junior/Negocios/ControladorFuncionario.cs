@@ -13,15 +13,15 @@ namespace Projeto4_Junior.Negocios
     class ControladorFuncionario : IfachadaFuncionario
     {
         public IBancoDadosFuncionario ibancodados = new BancoDadosFuncionario(); 
+
         public void CadastrarFuncionario(Funcionario funcionario)
         {
-            PersistenciaFuncionario PF = new PersistenciaFuncionario();
             
             
             
-            if (PF.VerificaFunc(funcionario) == null)
+            if (ibancodados.VerificaFunc(funcionario) == null)
             {
-                PF.CadastrarFuncionario(funcionario);
+                ibancodados.CadastrarFuncionario(funcionario);
                 MessageBox.Show("Cadastro Efetuado com sucesso !!");
             }
             else
@@ -38,11 +38,13 @@ namespace Projeto4_Junior.Negocios
         }
          public void RemoverFuncionario(Funcionario funionario)
         {
-            
+            ibancodados.RemoverFuncionario(funionario);
+            MessageBox.Show("Dados excluidos com sucesso !!");
         }
          public void AlterarFuncionario(Funcionario funionario)
          {
-
+             ibancodados.AlterarFuncionario(funionario);
+             MessageBox.Show("Alteração efetuada com sucesso !!!");
          }
     }
 }

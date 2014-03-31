@@ -1,6 +1,7 @@
 ﻿using Projeto4_Junior.Modelo;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,12 @@ namespace Projeto4_Junior.Negocios
         public void AlterarFuncionario(Funcionario funionario)
         {
             this.ifachada.AlterarFuncionario(funionario);
+        }
+
+        public SqlDataReader VefificaFunc(Funcionario funcionario)
+        {
+           return this.ifachada.VerificaFunc(funcionario);
+        
         }
 
     }
