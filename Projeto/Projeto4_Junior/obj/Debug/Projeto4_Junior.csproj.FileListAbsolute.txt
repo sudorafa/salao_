@@ -105,3 +105,6 @@ C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.exe
 C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.pdb
 C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.AlterarFuncionario.resources
 C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.CadastroFuncionario.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.CadastrarUsuario.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.AlterarFuncionario.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.CadastroFuncionario.resources
