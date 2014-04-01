@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace Projeto4_Junior.Banco
 {
@@ -30,7 +31,14 @@ namespace Projeto4_Junior.Banco
         {           
             this.ibancodados.AlterarFuncionario(funionario);
         }
-      
+
+        public SqlDataReader VerificaFunc(Funcionario funcionario)
+        {
+
+            return this.ibancodados.VerificaFunc(funcionario);
+        
+        }
+
     }
     
 }

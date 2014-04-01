@@ -72,5 +72,10 @@ namespace Projeto4_Junior
                 MessageBox.Show("Preencha todos os campos!");
             }
         }
+
+        private void textBox_NomeCliente_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -7,14 +7,19 @@ using System.Threading.Tasks;
 
 namespace Projeto4_Junior.Modelo
 {
-    class Funcionario
+    public class Funcionario
     {
         public String Nome { get; set; }
         public String Endereco { get; set; }
         public String Cpf { get; set; }
         public String Data_Nascimento { get; set; }
-        public ArrayList Telefone { get; set; }
+        
+        // public ArrayList Telefone { get; set; }
+        // Alerado o Telefone para string - Paulo César Correia
+        public String Telefone { get; set; }        
         public Double Porcentagem { get; set; }
+
+        // Para quer server os atributos abaixo???? - Paulo César Correia
         public int IdGestor { get; set; }
         public int Login { get; set; }
         public string telefone2 { get; set; }
@@ -24,7 +29,7 @@ namespace Projeto4_Junior.Modelo
         {
 
         }
-        public Funcionario(String nome, String endereco, String cpf, String data_nascimento, ArrayList telefone,
+        public Funcionario(String nome, String endereco, String cpf, String data_nascimento, String telefone,
             Double porcentagem)
         {
             this.Nome = nome;
