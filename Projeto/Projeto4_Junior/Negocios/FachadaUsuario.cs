@@ -33,6 +33,11 @@ namespace Projeto4_Junior.Negocios
         {
             return this.ifachada.Autenticar(usuario, senha);
             throw new NotImplementedException();
-        }        
+        }
+
+        public bool VerificaTipoUsuario(String login)
+        {
+            return this.ifachada.VerificaTipoUsuario(login);
+        }
     }
 }

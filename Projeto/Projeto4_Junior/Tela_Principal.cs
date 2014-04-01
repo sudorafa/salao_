@@ -60,7 +60,7 @@ namespace Projeto4_Junior
 
         private void inserirFuncionarioMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroFuncionario cad_func = new CadastroFuncionario;
+            CadastroFuncionario cad_func = new CadastroFuncionario();
             cad_func.ShowDialog();
 
         }

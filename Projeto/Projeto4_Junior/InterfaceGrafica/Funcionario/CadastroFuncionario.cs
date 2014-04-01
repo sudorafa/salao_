@@ -1,5 +1,5 @@
 ﻿using Projeto4_Junior.Negocios;
-using Projeto4_Junior.Modelo.Funcionario;
+using Projeto4_Junior.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

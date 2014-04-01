@@ -14,6 +14,6 @@ namespace Projeto4_Junior
         void RemoverUsuario(Usuario usuario);
         void AlterarUsuario(Usuario usuario);
         bool Autenticar(String usuario, String senha);
-
+        bool VerificaTipoUsuario(String login);
     }
 }

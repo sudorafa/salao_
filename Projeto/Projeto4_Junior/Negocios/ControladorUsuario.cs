@@ -44,6 +44,12 @@ namespace Projeto4_Junior.Negocios
         {
             return this.ibancodados.Autenticar(usuario, senha);
         }
+
+        public bool VerificaTipoUsuario(String login)
+        {
+            return this.ibancodados.VerificaTipoUsuario(login);
+        }
        
     }
+
 }

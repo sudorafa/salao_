@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Projeto4_Junior.Banco;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Projeto4_Junior.Negocios
 {
@@ -15,10 +16,7 @@ namespace Projeto4_Junior.Negocios
         public IBancoDadosFuncionario ibancodados = new BancoDadosFuncionario(); 
 
         public void CadastrarFuncionario(Funcionario funcionario)
-        {
-            
-            
-            
+        {          
             if (ibancodados.VerificaFunc(funcionario) == null)
             {
                 ibancodados.CadastrarFuncionario(funcionario);
@@ -26,9 +24,7 @@ namespace Projeto4_Junior.Negocios
             }
             else
             {
-
-                MessageBox.Show("CPF ja cadastrado !!!");
-            
+                MessageBox.Show("CPF ja cadastrado !!!");            
             }
 
         }
@@ -45,6 +41,11 @@ namespace Projeto4_Junior.Negocios
          {
              ibancodados.AlterarFuncionario(funionario);
              MessageBox.Show("Alteração efetuada com sucesso !!!");
+         }
+
+         public SqlDataReader VerificaFunc(Funcionario funcionario)
+         {
+             return ibancodados.VerificaFunc(funcionario);
          }
     }
 }

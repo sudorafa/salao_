@@ -29,7 +29,7 @@ namespace Projeto4_Junior.Negocios
             this.ifachada.AlterarFuncionario(funionario);
         }
 
-        public SqlDataReader VefificaFunc(Funcionario funcionario)
+        public SqlDataReader VerificaFunc(Funcionario funcionario)
         {
            return this.ifachada.VerificaFunc(funcionario);
         
