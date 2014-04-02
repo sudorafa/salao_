@@ -102,24 +102,27 @@ namespace Projeto4_Junior.Banco
         }
         public bool VerificaTipoUsuario(String login)
         {
-            bool retorno = true;
-            int tipoUsuario;
+           
             FactoryConnection conn = new FactoryConnection();
 
-            String query = "select isGestor from Usuario where Login='" + login + "'";
+            String query = "select isGestor from Usuario where Login='" + login + "' AND isGestor = '1'";
 
             SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 
             SqlDataReader reader = comand.ExecuteReader();
+            
 
-            tipoUsuario = Convert.ToInt32(reader);
-
-            if (tipoUsuario == 0)
+            if (reader.Read())
             {
-                retorno = false;
+                conn.FecharConnecxao();
+                return true;
             }
-
-            return retorno;
+            else
+            {
+                conn.FecharConnecxao();
+                return false;
+            }
+           
         }
     }
 }

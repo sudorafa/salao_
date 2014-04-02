@@ -48,8 +48,9 @@ namespace Projeto4_Junior
                 if (Umusuario.Autenticar(login, Umasenha) == true)
                 {                   
                     MessageBox.Show("Seja bem vindo!");
-                    Form_Index form = new Form_Index();                   
-                    form.Show();
+                    bool gestor = Umusuario.VerificaTipoUsuario(login);
+                    Form_Index form = new Form_Index(gestor);                    
+                    form.Show();                    
                     this.Hide();
                 }
                 else

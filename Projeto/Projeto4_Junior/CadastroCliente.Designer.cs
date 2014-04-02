@@ -359,6 +359,7 @@
             this.MaximizeBox = false;
             this.Name = "Form_CadastroClientes";
             this.Text = "Cadastro de Clientes";
+            this.Load += new System.EventHandler(this.Form_CadastroClientes_Load);
             this.groupBox_DadosPessoaisCadastroCliente.ResumeLayout(false);
             this.groupBox_DadosPessoaisCadastroCliente.PerformLayout();
             this.groupBox_EnderecoCadastroCliente.ResumeLayout(false);

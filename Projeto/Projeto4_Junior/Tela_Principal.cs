@@ -13,8 +13,10 @@ namespace Projeto4_Junior
 {
     public partial class Form_Index : Form
     {
-        public Form_Index()
+        bool gestor;
+        public Form_Index(bool gestor)
         {
+            this.gestor = gestor; 
             InitializeComponent();
         }
         private void inserirClienteMenuItem_Click(object sender, EventArgs e)
@@ -49,7 +51,11 @@ namespace Projeto4_Junior
 
         private void Form_Index_Load(object sender, EventArgs e)
         {
-           
+
+            if (gestor == false)
+            {
+                this.funcionariosMenuItem.Enabled = false;                
+            }
         }
 
         private void inserirUsuarioMenuItem_Click(object sender, EventArgs e)
@@ -62,6 +68,11 @@ namespace Projeto4_Junior
         {
             CadastroFuncionario cad_func = new CadastroFuncionario();
             cad_func.ShowDialog();
+
+        }
+
+        private void menu_principal_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
 
         }
     }

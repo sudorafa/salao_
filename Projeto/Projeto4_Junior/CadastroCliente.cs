@@ -77,5 +77,10 @@ namespace Projeto4_Junior
         {
 
         }
+
+        private void Form_CadastroClientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

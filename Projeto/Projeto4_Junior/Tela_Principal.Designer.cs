@@ -95,6 +95,7 @@
             this.menu_principal.Size = new System.Drawing.Size(562, 24);
             this.menu_principal.TabIndex = 0;
             this.menu_principal.Text = "MenuPrincipal";
+            this.menu_principal.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_principal_ItemClicked);
             // 
             // clientesMenuItem
             // 
@@ -156,26 +157,26 @@
             // inserirFuncionarioMenuItem
             // 
             this.inserirFuncionarioMenuItem.Name = "inserirFuncionarioMenuItem";
-            this.inserirFuncionarioMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inserirFuncionarioMenuItem.Size = new System.Drawing.Size(121, 22);
             this.inserirFuncionarioMenuItem.Text = "Inserir";
             this.inserirFuncionarioMenuItem.Click += new System.EventHandler(this.inserirFuncionarioMenuItem_Click);
             // 
             // alterarFuncionarioMenuItem
             // 
             this.alterarFuncionarioMenuItem.Name = "alterarFuncionarioMenuItem";
-            this.alterarFuncionarioMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alterarFuncionarioMenuItem.Size = new System.Drawing.Size(121, 22);
             this.alterarFuncionarioMenuItem.Text = "Alterar";
             // 
             // listarFuncionariosMenuItem
             // 
             this.listarFuncionariosMenuItem.Name = "listarFuncionariosMenuItem";
-            this.listarFuncionariosMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listarFuncionariosMenuItem.Size = new System.Drawing.Size(121, 22);
             this.listarFuncionariosMenuItem.Text = "Listar";
             // 
             // removerFuncionarioMenuItem
             // 
             this.removerFuncionarioMenuItem.Name = "removerFuncionarioMenuItem";
-            this.removerFuncionarioMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.removerFuncionarioMenuItem.Size = new System.Drawing.Size(121, 22);
             this.removerFuncionarioMenuItem.Text = "Remover";
             // 
             // servicosMenuItem
