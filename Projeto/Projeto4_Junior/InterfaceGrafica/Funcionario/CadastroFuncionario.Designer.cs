@@ -74,14 +74,15 @@
             this.groupBox1.Controls.Add(this.lbNome);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(287, 155);
+            this.groupBox1.Size = new System.Drawing.Size(646, 98);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // tbPorcentagem
             // 
-            this.tbPorcentagem.Location = new System.Drawing.Point(86, 131);
+            this.tbPorcentagem.Location = new System.Drawing.Point(525, 52);
             this.tbPorcentagem.Name = "tbPorcentagem";
             this.tbPorcentagem.Size = new System.Drawing.Size(36, 20);
             this.tbPorcentagem.TabIndex = 9;
@@ -89,7 +90,7 @@
             // lbPorcentagem
             // 
             this.lbPorcentagem.AutoSize = true;
-            this.lbPorcentagem.Location = new System.Drawing.Point(7, 134);
+            this.lbPorcentagem.Location = new System.Drawing.Point(446, 55);
             this.lbPorcentagem.Name = "lbPorcentagem";
             this.lbPorcentagem.Size = new System.Drawing.Size(73, 13);
             this.lbPorcentagem.TabIndex = 8;
@@ -97,28 +98,28 @@
             // 
             // tbDataNascimento
             // 
-            this.tbDataNascimento.Location = new System.Drawing.Point(119, 104);
+            this.tbDataNascimento.Location = new System.Drawing.Point(344, 52);
             this.tbDataNascimento.Name = "tbDataNascimento";
             this.tbDataNascimento.Size = new System.Drawing.Size(60, 20);
             this.tbDataNascimento.TabIndex = 7;
             // 
             // tbCpf
             // 
-            this.tbCpf.Location = new System.Drawing.Point(51, 78);
+            this.tbCpf.Location = new System.Drawing.Point(344, 23);
             this.tbCpf.Name = "tbCpf";
             this.tbCpf.Size = new System.Drawing.Size(96, 20);
             this.tbCpf.TabIndex = 6;
             // 
             // tbTelefone
             // 
-            this.tbTelefone.Location = new System.Drawing.Point(73, 53);
+            this.tbTelefone.Location = new System.Drawing.Point(73, 52);
             this.tbTelefone.Name = "tbTelefone";
             this.tbTelefone.Size = new System.Drawing.Size(74, 20);
             this.tbTelefone.TabIndex = 5;
             // 
             // tbNome
             // 
-            this.tbNome.Location = new System.Drawing.Point(59, 23);
+            this.tbNome.Location = new System.Drawing.Point(73, 23);
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(195, 20);
             this.tbNome.TabIndex = 4;
@@ -127,7 +128,7 @@
             // lbDataNascimento
             // 
             this.lbDataNascimento.AutoSize = true;
-            this.lbDataNascimento.Location = new System.Drawing.Point(6, 107);
+            this.lbDataNascimento.Location = new System.Drawing.Point(231, 55);
             this.lbDataNascimento.Name = "lbDataNascimento";
             this.lbDataNascimento.Size = new System.Drawing.Size(107, 13);
             this.lbDataNascimento.TabIndex = 3;
@@ -136,7 +137,7 @@
             // lbCpf
             // 
             this.lbCpf.AutoSize = true;
-            this.lbCpf.Location = new System.Drawing.Point(15, 81);
+            this.lbCpf.Location = new System.Drawing.Point(308, 26);
             this.lbCpf.Name = "lbCpf";
             this.lbCpf.Size = new System.Drawing.Size(30, 13);
             this.lbCpf.TabIndex = 2;
@@ -145,7 +146,7 @@
             // lbTelefone
             // 
             this.lbTelefone.AutoSize = true;
-            this.lbTelefone.Location = new System.Drawing.Point(15, 56);
+            this.lbTelefone.Location = new System.Drawing.Point(15, 55);
             this.lbTelefone.Name = "lbTelefone";
             this.lbTelefone.Size = new System.Drawing.Size(52, 13);
             this.lbTelefone.TabIndex = 1;
@@ -154,7 +155,7 @@
             // lbNome
             // 
             this.lbNome.AutoSize = true;
-            this.lbNome.Location = new System.Drawing.Point(15, 26);
+            this.lbNome.Location = new System.Drawing.Point(29, 26);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(38, 13);
             this.lbNome.TabIndex = 0;
@@ -176,11 +177,11 @@
             this.groupBox_EnderecoCadastroCliente.Controls.Add(this.label_EnderecoComplementoCliente);
             this.groupBox_EnderecoCadastroCliente.Controls.Add(this.label_EnderecoRuaCliente);
             this.groupBox_EnderecoCadastroCliente.Controls.Add(this.label_EnderecoNumeroCliente);
-            this.groupBox_EnderecoCadastroCliente.Location = new System.Drawing.Point(12, 172);
+            this.groupBox_EnderecoCadastroCliente.Location = new System.Drawing.Point(12, 127);
             this.groupBox_EnderecoCadastroCliente.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_EnderecoCadastroCliente.Name = "groupBox_EnderecoCadastroCliente";
             this.groupBox_EnderecoCadastroCliente.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_EnderecoCadastroCliente.Size = new System.Drawing.Size(287, 175);
+            this.groupBox_EnderecoCadastroCliente.Size = new System.Drawing.Size(646, 113);
             this.groupBox_EnderecoCadastroCliente.TabIndex = 8;
             this.groupBox_EnderecoCadastroCliente.TabStop = false;
             this.groupBox_EnderecoCadastroCliente.Text = "Endereço:";
@@ -188,7 +189,7 @@
             // cbUfEndereco
             // 
             this.cbUfEndereco.FormattingEnabled = true;
-            this.cbUfEndereco.Location = new System.Drawing.Point(78, 126);
+            this.cbUfEndereco.Location = new System.Drawing.Point(525, 70);
             this.cbUfEndereco.Margin = new System.Windows.Forms.Padding(2);
             this.cbUfEndereco.Name = "cbUfEndereco";
             this.cbUfEndereco.Size = new System.Drawing.Size(44, 21);
@@ -196,7 +197,7 @@
             // 
             // tbCidadeEndereco
             // 
-            this.tbCidadeEndereco.Location = new System.Drawing.Point(78, 103);
+            this.tbCidadeEndereco.Location = new System.Drawing.Point(344, 69);
             this.tbCidadeEndereco.Margin = new System.Windows.Forms.Padding(2);
             this.tbCidadeEndereco.Name = "tbCidadeEndereco";
             this.tbCidadeEndereco.Size = new System.Drawing.Size(109, 20);
@@ -204,7 +205,7 @@
             // 
             // tbCepEndereco
             // 
-            this.tbCepEndereco.Location = new System.Drawing.Point(78, 150);
+            this.tbCepEndereco.Location = new System.Drawing.Point(78, 65);
             this.tbCepEndereco.Margin = new System.Windows.Forms.Padding(2);
             this.tbCepEndereco.Name = "tbCepEndereco";
             this.tbCepEndereco.Size = new System.Drawing.Size(76, 20);
@@ -212,7 +213,7 @@
             // 
             // tbBairroEndereco
             // 
-            this.tbBairroEndereco.Location = new System.Drawing.Point(78, 80);
+            this.tbBairroEndereco.Location = new System.Drawing.Point(344, 41);
             this.tbBairroEndereco.Margin = new System.Windows.Forms.Padding(2);
             this.tbBairroEndereco.Name = "tbBairroEndereco";
             this.tbBairroEndereco.Size = new System.Drawing.Size(109, 20);
@@ -220,23 +221,23 @@
             // 
             // tbComplementoEndereco
             // 
-            this.tbComplementoEndereco.Location = new System.Drawing.Point(78, 58);
+            this.tbComplementoEndereco.Location = new System.Drawing.Point(78, 41);
             this.tbComplementoEndereco.Margin = new System.Windows.Forms.Padding(2);
             this.tbComplementoEndereco.Name = "tbComplementoEndereco";
-            this.tbComplementoEndereco.Size = new System.Drawing.Size(172, 20);
+            this.tbComplementoEndereco.Size = new System.Drawing.Size(190, 20);
             this.tbComplementoEndereco.TabIndex = 8;
             // 
             // tbRuaEndereco
             // 
-            this.tbRuaEndereco.Location = new System.Drawing.Point(78, 35);
+            this.tbRuaEndereco.Location = new System.Drawing.Point(78, 17);
             this.tbRuaEndereco.Margin = new System.Windows.Forms.Padding(2);
             this.tbRuaEndereco.Name = "tbRuaEndereco";
-            this.tbRuaEndereco.Size = new System.Drawing.Size(172, 20);
+            this.tbRuaEndereco.Size = new System.Drawing.Size(190, 20);
             this.tbRuaEndereco.TabIndex = 7;
             // 
             // tbNumeroEndereco
             // 
-            this.tbNumeroEndereco.Location = new System.Drawing.Point(78, 13);
+            this.tbNumeroEndereco.Location = new System.Drawing.Point(344, 14);
             this.tbNumeroEndereco.Margin = new System.Windows.Forms.Padding(2);
             this.tbNumeroEndereco.Name = "tbNumeroEndereco";
             this.tbNumeroEndereco.Size = new System.Drawing.Size(30, 20);
@@ -245,7 +246,7 @@
             // label_EnderecoUfCliente
             // 
             this.label_EnderecoUfCliente.AutoSize = true;
-            this.label_EnderecoUfCliente.Location = new System.Drawing.Point(55, 132);
+            this.label_EnderecoUfCliente.Location = new System.Drawing.Point(502, 76);
             this.label_EnderecoUfCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_EnderecoUfCliente.Name = "label_EnderecoUfCliente";
             this.label_EnderecoUfCliente.Size = new System.Drawing.Size(24, 13);
@@ -255,7 +256,7 @@
             // label_EnderecoBairroCliente
             // 
             this.label_EnderecoBairroCliente.AutoSize = true;
-            this.label_EnderecoBairroCliente.Location = new System.Drawing.Point(40, 84);
+            this.label_EnderecoBairroCliente.Location = new System.Drawing.Point(306, 45);
             this.label_EnderecoBairroCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_EnderecoBairroCliente.Name = "label_EnderecoBairroCliente";
             this.label_EnderecoBairroCliente.Size = new System.Drawing.Size(37, 13);
@@ -265,7 +266,7 @@
             // label_EnderecoCepCliente
             // 
             this.label_EnderecoCepCliente.AutoSize = true;
-            this.label_EnderecoCepCliente.Location = new System.Drawing.Point(49, 154);
+            this.label_EnderecoCepCliente.Location = new System.Drawing.Point(49, 69);
             this.label_EnderecoCepCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_EnderecoCepCliente.Name = "label_EnderecoCepCliente";
             this.label_EnderecoCepCliente.Size = new System.Drawing.Size(31, 13);
@@ -275,7 +276,7 @@
             // label_EnderecoCidadeCliente
             // 
             this.label_EnderecoCidadeCliente.AutoSize = true;
-            this.label_EnderecoCidadeCliente.Location = new System.Drawing.Point(36, 107);
+            this.label_EnderecoCidadeCliente.Location = new System.Drawing.Point(302, 73);
             this.label_EnderecoCidadeCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_EnderecoCidadeCliente.Name = "label_EnderecoCidadeCliente";
             this.label_EnderecoCidadeCliente.Size = new System.Drawing.Size(43, 13);
@@ -285,7 +286,7 @@
             // label_EnderecoComplementoCliente
             // 
             this.label_EnderecoComplementoCliente.AutoSize = true;
-            this.label_EnderecoComplementoCliente.Location = new System.Drawing.Point(4, 62);
+            this.label_EnderecoComplementoCliente.Location = new System.Drawing.Point(4, 45);
             this.label_EnderecoComplementoCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_EnderecoComplementoCliente.Name = "label_EnderecoComplementoCliente";
             this.label_EnderecoComplementoCliente.Size = new System.Drawing.Size(74, 13);
@@ -295,7 +296,7 @@
             // label_EnderecoRuaCliente
             // 
             this.label_EnderecoRuaCliente.AutoSize = true;
-            this.label_EnderecoRuaCliente.Location = new System.Drawing.Point(49, 39);
+            this.label_EnderecoRuaCliente.Location = new System.Drawing.Point(49, 21);
             this.label_EnderecoRuaCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_EnderecoRuaCliente.Name = "label_EnderecoRuaCliente";
             this.label_EnderecoRuaCliente.Size = new System.Drawing.Size(30, 13);
@@ -305,7 +306,7 @@
             // label_EnderecoNumeroCliente
             // 
             this.label_EnderecoNumeroCliente.AutoSize = true;
-            this.label_EnderecoNumeroCliente.Location = new System.Drawing.Point(31, 17);
+            this.label_EnderecoNumeroCliente.Location = new System.Drawing.Point(297, 18);
             this.label_EnderecoNumeroCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_EnderecoNumeroCliente.Name = "label_EnderecoNumeroCliente";
             this.label_EnderecoNumeroCliente.Size = new System.Drawing.Size(47, 13);
@@ -314,7 +315,7 @@
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(131, 352);
+            this.btCancelar.Location = new System.Drawing.Point(463, 257);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 9;
@@ -324,7 +325,7 @@
             // 
             // btCadastrar
             // 
-            this.btCadastrar.Location = new System.Drawing.Point(224, 352);
+            this.btCadastrar.Location = new System.Drawing.Point(583, 257);
             this.btCadastrar.Name = "btCadastrar";
             this.btCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btCadastrar.TabIndex = 10;
@@ -336,7 +337,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 387);
+            this.ClientSize = new System.Drawing.Size(670, 287);
             this.Controls.Add(this.btCadastrar);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.groupBox_EnderecoCadastroCliente);
