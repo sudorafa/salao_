@@ -33,7 +33,7 @@ namespace Projeto4_Junior
 
         private void listarClienteMenuItem_Click(object sender, EventArgs e)
         {
-            Form_ListarClientes list_cli = new Form_ListarClientes();
+            ListarCliente list_cli = new ListarCliente();
             list_cli.ShowDialog();
         }
 
@@ -54,7 +54,16 @@ namespace Projeto4_Junior
 
             if (gestor == false)
             {
-                this.funcionariosMenuItem.Enabled = false;                
+                this.funcionariosMenuItem.Enabled = false;
+                this.servicosMenuItem.Enabled = false;
+                this.relatoriosMenuItem.Enabled = false;
+                this.estoqueMenuItem.Enabled = false;
+                this.usuariosMenuItem.Enabled = false;
+                this.button_InserirFuncionarioBarraDeFerramentas.Enabled = false;
+                this.button_InserirServicoBarraDeFerramentas.Enabled = false;
+                this.button_RelatorioDiarioBarraDeFerramentas.Enabled = false;
+                this.button_RelatorioEstoqueBarraDeFerramentas.Enabled = false;
+                this.button_InserirUsuarioBarraDeFerramentas.Enabled = false;                
             }
         }
 
@@ -74,6 +83,13 @@ namespace Projeto4_Junior
         private void menu_principal_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void button_SairBarraDeFerramentas_Click(object sender, EventArgs e)
+        {
+            Autenticacao aut = new Autenticacao();
+            aut.Show();
+            this.Close();
         }
     }
 }

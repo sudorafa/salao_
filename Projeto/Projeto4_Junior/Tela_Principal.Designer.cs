@@ -447,6 +447,7 @@
             this.button_SairBarraDeFerramentas.Name = "button_SairBarraDeFerramentas";
             this.button_SairBarraDeFerramentas.Size = new System.Drawing.Size(51, 51);
             this.button_SairBarraDeFerramentas.Text = "Sair";
+            this.button_SairBarraDeFerramentas.Click += new System.EventHandler(this.button_SairBarraDeFerramentas_Click);
             // 
             // Form_Index
             // 
