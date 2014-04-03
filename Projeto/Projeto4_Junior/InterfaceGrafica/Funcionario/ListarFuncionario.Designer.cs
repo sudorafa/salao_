@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbNomeFuncionario = new System.Windows.Forms.TextBox();
+            this.nomeClienteBusca = new System.Windows.Forms.TextBox();
             this.btAlterarFuncionario = new System.Windows.Forms.Button();
             this.btRemoverFuncionario = new System.Windows.Forms.Button();
-            this.btBuscarFuncionario = new System.Windows.Forms.Button();
+            this.btBuscaFuncionario = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.ListaClientes = new System.Windows.Forms.ListView();
+            this.ListaFuncionario = new System.Windows.Forms.ListView();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tbNomeFuncionario);
+            this.groupBox1.Controls.Add(this.nomeClienteBusca);
             this.groupBox1.Controls.Add(this.btAlterarFuncionario);
             this.groupBox1.Controls.Add(this.btRemoverFuncionario);
-            this.groupBox1.Controls.Add(this.btBuscarFuncionario);
+            this.groupBox1.Controls.Add(this.btBuscaFuncionario);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.ListaClientes);
+            this.groupBox1.Controls.Add(this.ListaFuncionario);
             this.groupBox1.Location = new System.Drawing.Point(12, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(721, 419);
@@ -53,12 +53,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funcionários";
             // 
-            // tbNomeFuncionario
+            // nomeClienteBusca
             // 
-            this.tbNomeFuncionario.Location = new System.Drawing.Point(124, 35);
-            this.tbNomeFuncionario.Name = "tbNomeFuncionario";
-            this.tbNomeFuncionario.Size = new System.Drawing.Size(354, 20);
-            this.tbNomeFuncionario.TabIndex = 1;
+            this.nomeClienteBusca.Location = new System.Drawing.Point(124, 35);
+            this.nomeClienteBusca.Name = "nomeClienteBusca";
+            this.nomeClienteBusca.Size = new System.Drawing.Size(354, 20);
+            this.nomeClienteBusca.TabIndex = 1;
             // 
             // btAlterarFuncionario
             // 
@@ -78,14 +78,14 @@
             this.btRemoverFuncionario.Text = "Remover";
             this.btRemoverFuncionario.UseVisualStyleBackColor = true;
             // 
-            // btBuscarFuncionario
+            // btBuscaFuncionario
             // 
-            this.btBuscarFuncionario.Location = new System.Drawing.Point(484, 33);
-            this.btBuscarFuncionario.Name = "btBuscarFuncionario";
-            this.btBuscarFuncionario.Size = new System.Drawing.Size(75, 23);
-            this.btBuscarFuncionario.TabIndex = 5;
-            this.btBuscarFuncionario.Text = "Buscar";
-            this.btBuscarFuncionario.UseVisualStyleBackColor = true;
+            this.btBuscaFuncionario.Location = new System.Drawing.Point(484, 33);
+            this.btBuscaFuncionario.Name = "btBuscaFuncionario";
+            this.btBuscaFuncionario.Size = new System.Drawing.Size(75, 23);
+            this.btBuscaFuncionario.TabIndex = 5;
+            this.btBuscaFuncionario.Text = "Buscar";
+            this.btBuscaFuncionario.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -96,14 +96,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
-            // ListaClientes
+            // ListaFuncionario
             // 
-            this.ListaClientes.GridLines = true;
-            this.ListaClientes.Location = new System.Drawing.Point(6, 71);
-            this.ListaClientes.Name = "ListaClientes";
-            this.ListaClientes.Size = new System.Drawing.Size(709, 275);
-            this.ListaClientes.TabIndex = 2;
-            this.ListaClientes.UseCompatibleStateImageBehavior = false;
+            this.ListaFuncionario.GridLines = true;
+            this.ListaFuncionario.Location = new System.Drawing.Point(6, 71);
+            this.ListaFuncionario.Name = "ListaFuncionario";
+            this.ListaFuncionario.Size = new System.Drawing.Size(709, 275);
+            this.ListaFuncionario.TabIndex = 2;
+            this.ListaFuncionario.UseCompatibleStateImageBehavior = false;
             // 
             // ListarFuncionario
             // 
@@ -112,7 +112,7 @@
             this.ClientSize = new System.Drawing.Size(745, 462);
             this.Controls.Add(this.groupBox1);
             this.Name = "ListarFuncionario";
-            this.Text = "Listar Funcionario";
+            this.Text = "ListarFuncionario";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -122,11 +122,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbNomeFuncionario;
+        private System.Windows.Forms.TextBox nomeClienteBusca;
         private System.Windows.Forms.Button btAlterarFuncionario;
         private System.Windows.Forms.Button btRemoverFuncionario;
-        private System.Windows.Forms.Button btBuscarFuncionario;
+        private System.Windows.Forms.Button btBuscaFuncionario;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView ListaClientes;
+        private System.Windows.Forms.ListView ListaFuncionario;
     }
 }
