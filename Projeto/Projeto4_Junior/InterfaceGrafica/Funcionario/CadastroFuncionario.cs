@@ -83,5 +83,10 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
                 MessageBox.Show("Preencha todos os campos!");
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
