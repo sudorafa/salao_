@@ -32,7 +32,7 @@ namespace Projeto4_Junior.Banco
             }
             catch (Exception e)
             {
-                
+                MessageBox.Show(e.StackTrace + "/n" + e.Message);
             }                  
         }
         public Cliente BuscarCliente(Cliente cliente)
@@ -54,7 +54,7 @@ namespace Projeto4_Junior.Banco
             }
             catch (Exception e)
             {
-
+                MessageBox.Show(e.StackTrace + "/n" + e.Message);
             }
         }
         public void AlterarCliente(Cliente cliente)
@@ -72,7 +72,7 @@ namespace Projeto4_Junior.Banco
             }
             catch (Exception e)
             {
-                
+                MessageBox.Show(e.StackTrace + "/n" + e.Message);
             }             
         }
 
@@ -100,7 +100,7 @@ namespace Projeto4_Junior.Banco
             }
             catch (Exception e)
             {
-
+                MessageBox.Show(e.StackTrace + "/n" + e.Message);
             }
 
             return retorno;

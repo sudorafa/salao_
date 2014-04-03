@@ -30,7 +30,7 @@ namespace Projeto4_Junior.Banco
             }
             catch (Exception e)
             {
-
+                MessageBox.Show(e.StackTrace + "/n" + e.Message);
             }          
 
         }
@@ -50,24 +50,30 @@ namespace Projeto4_Junior.Banco
         public bool Autenticar(String usuario, String senha)
         {
             bool retorno = false;
-            FactoryConnection conn = new FactoryConnection();   
+            try{                
+                FactoryConnection conn = new FactoryConnection();   
                          
-                String query = "select Login, Senha from Usuario where Login='" + usuario + "' and Senha='" + senha + "'";                
+                    String query = "select Login, Senha from Usuario where Login='" + usuario + "' and Senha='" + senha + "'";                
 
-                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+                    SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 
-                SqlDataReader reader = comand.ExecuteReader();
+                    SqlDataReader reader = comand.ExecuteReader();
 
-                if (reader.Read())
-                {
-                    retorno = true;                    
-                }
-                else
-                {
-                    retorno = false;
-                }
+                    if (reader.Read())
+                    {
+                        retorno = true;                    
+                    }
+                    else
+                    {
+                        retorno = false;
+                    }
                 
-            conn.FecharConnecxao();                       
+                conn.FecharConnecxao();  
+            }
+             catch (Exception e)
+            {
+                MessageBox.Show(e.StackTrace + "/n" + e.Message);
+            }  
             
             return retorno;            
         }
@@ -76,7 +82,7 @@ namespace Projeto4_Junior.Banco
             bool retorno = true;
 
             FactoryConnection conn = new FactoryConnection();
-           try
+            try
             {
                 String query = "select Login from Usuario where Login ='" + login + "'";
 
@@ -96,33 +102,40 @@ namespace Projeto4_Junior.Banco
             }
            catch (Exception e)
            {
-
+               MessageBox.Show(e.StackTrace + "/n" + e.Message);
            }
             return retorno;
         }
         public bool VerificaTipoUsuario(String login)
         {
-           
-            FactoryConnection conn = new FactoryConnection();
+           bool retorno = true;
+           try{
+                FactoryConnection conn = new FactoryConnection();
 
-            String query = "select isGestor from Usuario where Login='" + login + "' AND isGestor = '1'";
+                String query = "select isGestor from Usuario where Login='" + login + "' AND isGestor = '1'";
 
-            SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 
-            SqlDataReader reader = comand.ExecuteReader();
+                SqlDataReader reader = comand.ExecuteReader();
             
 
-            if (reader.Read())
-            {
-                conn.FecharConnecxao();
-                return true;
+                if (reader.Read())
+                {
+                    conn.FecharConnecxao();
+                    retorno = true;
+                }
+                else
+                {
+                    conn.FecharConnecxao();
+                    retorno = false;
+                }
             }
-            else
+            catch (Exception e)
             {
-                conn.FecharConnecxao();
-                return false;
+                MessageBox.Show(e.StackTrace+"/n"+e.Message);
             }
-           
+
+           return retorno;
         }
     }
 }
