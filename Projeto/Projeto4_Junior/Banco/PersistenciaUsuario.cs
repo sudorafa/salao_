@@ -30,7 +30,7 @@ namespace Projeto4_Junior.Banco
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.StackTrace + "/n" + e.Message);
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
             }          
 
         }
@@ -72,7 +72,7 @@ namespace Projeto4_Junior.Banco
             }
              catch (Exception e)
             {
-                MessageBox.Show(e.StackTrace + "/n" + e.Message);
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
             }  
             
             return retorno;            
@@ -102,7 +102,7 @@ namespace Projeto4_Junior.Banco
             }
            catch (Exception e)
            {
-               MessageBox.Show(e.StackTrace + "/n" + e.Message);
+               MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
            }
             return retorno;
         }
@@ -132,7 +132,7 @@ namespace Projeto4_Junior.Banco
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.StackTrace+"/n"+e.Message);
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
             }
 
            return retorno;
