@@ -98,8 +98,31 @@ namespace Projeto4_Junior.Banco
            {
 
            }
-
             return retorno;
-        }        
+        }
+        public bool VerificaTipoUsuario(String login)
+        {
+           
+            FactoryConnection conn = new FactoryConnection();
+
+            String query = "select isGestor from Usuario where Login='" + login + "' AND isGestor = '1'";
+
+            SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+
+            SqlDataReader reader = comand.ExecuteReader();
+            
+
+            if (reader.Read())
+            {
+                conn.FecharConnecxao();
+                return true;
+            }
+            else
+            {
+                conn.FecharConnecxao();
+                return false;
+            }
+           
+        }
     }
 }

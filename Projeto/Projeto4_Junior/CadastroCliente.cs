@@ -57,12 +57,12 @@ namespace Projeto4_Junior
                 cliente.Telefone = campo[3];
                 cliente.Data_Nascimento = campo[4];
                 cliente.Endereco = campo[5] + " , ";
-                cliente.Endereco = campo[6] + " , ";
-                cliente.Endereco = campo[7] + " , ";
-                cliente.Endereco = campo[8] + " , ";
-                cliente.Endereco = campo[9] + " , ";
-                cliente.Endereco = campo[10] + " , ";
-                cliente.Endereco = campo[11];
+                cliente.Endereco += campo[6] + " , ";
+                cliente.Endereco += campo[7] + " , ";
+                cliente.Endereco += campo[8] + " , ";
+                cliente.Endereco += campo[9] + " , ";
+                cliente.Endereco += campo[10] + " , ";
+                cliente.Endereco += campo[11];
 
                 fachadaCliente.CadastrarCliente(cliente);
                 this.Close();
@@ -74,6 +74,11 @@ namespace Projeto4_Junior
         }
 
         private void textBox_NomeCliente_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form_CadastroClientes_Load(object sender, EventArgs e)
         {
 
         }

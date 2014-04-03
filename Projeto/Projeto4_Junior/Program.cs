@@ -13,15 +13,13 @@ namespace Projeto4_Junior
         /// </summary>
         [STAThread]
         static void Main()
-        {
+        {            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Autenticacao aut = new Autenticacao();
-            
-            if (aut.ShowDialog() == DialogResult.OK)
-            {            
-                Application.Run(new Form_Index());                
-            }            
+            Application.Run(new Autenticacao());
+           
+               
+                        
         }
     }
 }

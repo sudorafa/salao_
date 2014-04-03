@@ -46,13 +46,12 @@ namespace Projeto4_Junior
                 String Umasenha = senha.Text;
 
                 if (Umusuario.Autenticar(login, Umasenha) == true)
-                {
-                    Autenticacao autenticado = new Autenticacao();
-                    autenticado.DialogResult = DialogResult.OK;
+                {                   
                     MessageBox.Show("Seja bem vindo!");
-                    Form_Index form = new Form_Index();
-                    form.ShowDialog();
-
+                    bool gestor = Umusuario.VerificaTipoUsuario(login);
+                    Form_Index form = new Form_Index(gestor);                    
+                    form.Show();                    
+                    this.Hide();
                 }
                 else
                 {

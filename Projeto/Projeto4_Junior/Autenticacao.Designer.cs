@@ -102,7 +102,7 @@
             // 
             // entrar
             // 
-            this.entrar.Location = new System.Drawing.Point(123, 180);
+            this.entrar.Location = new System.Drawing.Point(237, 180);
             this.entrar.Name = "entrar";
             this.entrar.Size = new System.Drawing.Size(81, 28);
             this.entrar.TabIndex = 1;
@@ -123,7 +123,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(237, 180);
+            this.button1.Location = new System.Drawing.Point(123, 180);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 28);
             this.button1.TabIndex = 3;

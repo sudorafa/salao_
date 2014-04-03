@@ -13,8 +13,10 @@ namespace Projeto4_Junior
 {
     public partial class Form_Index : Form
     {
-        public Form_Index()
+        bool gestor;
+        public Form_Index(bool gestor)
         {
+            this.gestor = gestor; 
             InitializeComponent();
         }
         private void inserirClienteMenuItem_Click(object sender, EventArgs e)
@@ -31,7 +33,7 @@ namespace Projeto4_Junior
 
         private void listarClienteMenuItem_Click(object sender, EventArgs e)
         {
-            Form_ListarClientes list_cli = new Form_ListarClientes();
+            ListarCliente list_cli = new ListarCliente();
             list_cli.ShowDialog();
         }
 
@@ -49,7 +51,20 @@ namespace Projeto4_Junior
 
         private void Form_Index_Load(object sender, EventArgs e)
         {
-           
+
+            if (gestor == false)
+            {
+                this.funcionariosMenuItem.Enabled = false;
+                this.servicosMenuItem.Enabled = false;
+                this.relatoriosMenuItem.Enabled = false;
+                this.estoqueMenuItem.Enabled = false;
+                this.usuariosMenuItem.Enabled = false;
+                this.button_InserirFuncionarioBarraDeFerramentas.Enabled = false;
+                this.button_InserirServicoBarraDeFerramentas.Enabled = false;
+                this.button_RelatorioDiarioBarraDeFerramentas.Enabled = false;
+                this.button_RelatorioEstoqueBarraDeFerramentas.Enabled = false;
+                this.button_InserirUsuarioBarraDeFerramentas.Enabled = false;                
+            }
         }
 
         private void inserirUsuarioMenuItem_Click(object sender, EventArgs e)
@@ -60,9 +75,21 @@ namespace Projeto4_Junior
 
         private void inserirFuncionarioMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroFuncionario cad_func = new CadastroFuncionario;
+            CadastroFuncionario cad_func = new CadastroFuncionario();
             cad_func.ShowDialog();
 
+        }
+
+        private void menu_principal_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void button_SairBarraDeFerramentas_Click(object sender, EventArgs e)
+        {
+            Autenticacao aut = new Autenticacao();
+            aut.Show();
+            this.Close();
         }
     }
 }

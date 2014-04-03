@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace Projeto4_Junior.Negocios
 {
@@ -14,5 +15,6 @@ namespace Projeto4_Junior.Negocios
         Funcionario BuscarFuncionario(Funcionario funionario);
         void RemoverFuncionario(Funcionario funionario);
         void AlterarFuncionario(Funcionario funionario);
+        SqlDataReader VerificaFunc(Funcionario funcionario);
     }
 }
