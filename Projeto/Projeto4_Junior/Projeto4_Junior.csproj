@@ -85,7 +85,6 @@
       <DependentUpon>CadastroCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Factory\FactoryConnection.cs" />
-    <Compile Include="Factory\Singleton.cs" />
     <Compile Include="IFachadaCliente.cs" />
     <Compile Include="IfachadaFuncionario.cs" />
     <Compile Include="IfachadaProduto.cs" />

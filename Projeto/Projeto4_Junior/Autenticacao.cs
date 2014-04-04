@@ -13,6 +13,7 @@ namespace Projeto4_Junior
 {
     public partial class Autenticacao : Form
     {
+
         public Autenticacao()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace Projeto4_Junior
 
         private void entrar_Click(object sender, EventArgs e)
         {
-            if(usuario.Text == null || usuario.Text.Equals("") || senha.Text == null || senha.Text.Equals(""))
+            if (usuario.Text == null || usuario.Text.Equals("") || senha.Text == null || senha.Text.Equals(""))
             {
                 MessageBox.Show("Preencha todos os campos!");
             }
@@ -46,11 +47,11 @@ namespace Projeto4_Junior
                 String Umasenha = senha.Text;
 
                 if (Umusuario.Autenticar(login, Umasenha) == true)
-                {                   
+                {
                     MessageBox.Show("Seja bem vindo!");
                     bool gestor = Umusuario.VerificaTipoUsuario(login);
-                    Form_Index form = new Form_Index(gestor);                    
-                    form.Show();                    
+                    Form_Index form = new Form_Index(gestor);
+                    form.Show();
                     this.Hide();
                 }
                 else
@@ -66,5 +67,51 @@ namespace Projeto4_Junior
         {
             this.Close();
         }
+
+        private void Autenticacao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void senha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+
+                if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                {
+                    if (usuario.Text == null || usuario.Text.Equals("") || senha.Text == null || senha.Text.Equals(""))
+                    {
+                        MessageBox.Show("Preencha todos os campos!");
+                    }
+                    else
+                    {
+                        IfachadaUsuario Umusuario = new FachadaUsuario();
+                        String login = usuario.Text;
+                        String Umasenha = senha.Text;
+
+                        if (Umusuario.Autenticar(login, Umasenha) == true)
+                        {
+                            MessageBox.Show("Seja bem vindo!");
+                            bool gestor = Umusuario.VerificaTipoUsuario(login);
+                            Form_Index form = new Form_Index(gestor);
+                            form.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuario ou senha incorretos");
+                            usuario.Clear();
+                            senha.Clear();
+                        }
+                    }
+
+
+                }
+
+            }        
+       
     }
 }
+
+    
+

@@ -71,6 +71,7 @@
             this.senha.PasswordChar = '*';
             this.senha.Size = new System.Drawing.Size(195, 20);
             this.senha.TabIndex = 3;
+            this.senha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.senha_KeyPress);
             // 
             // usuario
             // 
@@ -102,6 +103,7 @@
             // 
             // entrar
             // 
+            this.entrar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.entrar.Location = new System.Drawing.Point(237, 180);
             this.entrar.Name = "entrar";
             this.entrar.Size = new System.Drawing.Size(81, 28);
@@ -143,6 +145,7 @@
             this.Name = "Autenticacao";
             this.Text = "Autenticacao";
             this.Load += new System.EventHandler(this.Autenticacao_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Autenticacao_KeyPress);
             this.group_autenticacao.ResumeLayout(false);
             this.group_autenticacao.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -111,3 +111,4 @@ C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Juni
 C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.ListarCliente.resources
 C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.ListarCliente.resources
 C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.ListarFuncionario.resources
+C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.ListarFuncionario.resources
