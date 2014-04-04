@@ -14,12 +14,29 @@ namespace Projeto4_Junior
     {
         public ListarCliente()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ListarCliente_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'projeto4DataSet.Cliente' table. You can move, or remove it, as needed.
+            this.clienteTableAdapter.Fill(this.projeto4DataSet.Cliente);
+
+        }
+
+        private void BuscarListaCliente_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Add("Paulo","12345");   
         }
     }
 }
