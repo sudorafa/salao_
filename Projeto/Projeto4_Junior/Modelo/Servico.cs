@@ -8,6 +8,7 @@ namespace Projeto4_Junior.Modelo
 {
     class Servico
     {
+        public String IdServico { get; set; }//Foi acrescentado
         public String Descricao { get; set; }
         public Decimal Valor { get; set; }   
 

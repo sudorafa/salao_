@@ -21,5 +21,10 @@ namespace Projeto4_Junior
         {
             this.Close();
         }
+
+        private void Form_ListarClientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

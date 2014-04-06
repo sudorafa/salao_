@@ -82,5 +82,10 @@ namespace Projeto4_Junior
         {
 
         }
+
+        private void groupBox_EnderecoCadastroCliente_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

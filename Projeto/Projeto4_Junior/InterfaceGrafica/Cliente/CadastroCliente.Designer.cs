@@ -196,6 +196,7 @@
             this.groupBox_EnderecoCadastroCliente.TabIndex = 1;
             this.groupBox_EnderecoCadastroCliente.TabStop = false;
             this.groupBox_EnderecoCadastroCliente.Text = "Endereço:";
+            this.groupBox_EnderecoCadastroCliente.Enter += new System.EventHandler(this.groupBox_EnderecoCadastroCliente_Enter);
             // 
             // comboBox_EnderecoUfCliente
             // 

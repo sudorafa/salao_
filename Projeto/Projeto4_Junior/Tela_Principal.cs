@@ -1,4 +1,5 @@
 ﻿using Projeto4_Junior.InterfaceGrafica.Funcionario;
+using Projeto4_Junior.InterfaceGrafica.Servicos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,8 @@ namespace Projeto4_Junior
             this.gestor = gestor; 
             InitializeComponent();
         }
+
+        
         private void inserirClienteMenuItem_Click(object sender, EventArgs e)
         {
             Form_CadastroClientes cad_cli = new Form_CadastroClientes();

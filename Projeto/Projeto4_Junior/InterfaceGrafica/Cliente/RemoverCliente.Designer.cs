@@ -86,6 +86,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_RemoverCliente";
             this.Text = "Remover Cliente";
+            this.Load += new System.EventHandler(this.Form_RemoverCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -120,6 +120,30 @@
     <Compile Include="InterfaceGrafica\Funcionario\ListarFuncionario.Designer.cs">
       <DependentUpon>ListarFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\AlterarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\AlterarServico.Designer.cs">
+      <DependentUpon>AlterarServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\CadastroServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\CadastroServico.Designer.cs">
+      <DependentUpon>CadastroServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\ListarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\ListarServico.Designer.cs">
+      <DependentUpon>ListarServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\RemoverServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\RemoverServico.Designer.cs">
+      <DependentUpon>RemoverServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\Funcionario.cs" />
     <Compile Include="Modelo\Produto.cs" />
@@ -188,6 +212,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Funcionario\ListarFuncionario.resx">
       <DependentUpon>ListarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Servicos\AlterarServico.resx">
+      <DependentUpon>AlterarServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Servicos\CadastroServico.resx">
+      <DependentUpon>CadastroServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Servicos\ListarServico.resx">
+      <DependentUpon>ListarServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Servicos\RemoverServico.resx">
+      <DependentUpon>RemoverServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -37,5 +37,10 @@ namespace Projeto4_Junior
                 MessageBox.Show("Informe o CPF!");
             }
         }
+
+        private void Form_RemoverCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

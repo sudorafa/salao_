@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using Projeto4_Junior.InterfaceGrafica.Servicos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,7 @@ namespace Projeto4_Junior
         {            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Autenticacao());
+            Application.Run(new Form_Cadastro_Servico());
            
                
                         
