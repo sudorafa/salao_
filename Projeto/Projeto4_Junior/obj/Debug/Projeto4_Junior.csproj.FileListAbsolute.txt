@@ -158,3 +158,6 @@ C:\Users\Vanessa&Allan\Desktop\salao_-master\Projeto\Projeto4_Junior\obj\Debug\P
 C:\Users\Vanessa&Allan\Desktop\salao_-master\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_RemoverCliente.resources
 C:\Users\Vanessa&Allan\Desktop\salao_-master\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_Index.resources
 C:\Users\Vanessa&Allan\Desktop\salao_-master\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache
+C:\Users\Vanessa&Allan\Desktop\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe.config
+C:\Users\Vanessa&Allan\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.exe
+C:\Users\Vanessa&Allan\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.pdb
