@@ -1,77 +1,58 @@
--- Geração de Modelo físico
--- Sql ANSI 2003 - brModelo.
 
 
 CREATE TABLE Cliente (
-Telefone2 varchar(100),
-Nome varchar(100),
-CPF varchar(100),
-Telefone varchar(100),
-Endereco varchar(100),
-idCliente int PRIMARY KEY identity(1,1),
-DataDeNasc varchar(100)
-)
-
-CREATE TABLE Usuario (
-Login varchar(100) PRIMARY KEY,
-Senha varchar(100),
-Nome varchar(100),
-idGestor int identity(1,1)
+Nome varchar(100) not null,
+CPF varchar(20) not null,
+Telefone varchar(20) not null,
+Telefone2 varchar(20) null,
+Endereco varchar(100) not null,
+idCliente Integer() PRIMARY KEY,
+DataDeNasc varchar(20) not null,
+Email varchar (100) not null
 )
 
 CREATE TABLE Funcionario (
-Nome varchar(1),
-Telefone varchar(1),
-Endereco varchar(1),
-idFuncionario int() PRIMARY KEY,
-Telefone2 varchar(1),
-CPF varchar(1),
-DataDeNasc varchar(1),
-Login varchar(1),
-idGestor int identity(1,1),
-FOREIGN KEY(Login) REFERENCES Usuario (Login)
+Nome varchar (100) not null,
+Endereco varchar (100) not null,
+idFuncionario Integer() PRIMARY KEY,
+Telefone varchar (20) not null,
+Telefone2 varchar (20) not null,
+DataDeNasc varchar (20) not null,
+CPF varchar (20) not null,
+Porcentagem Integer not null,
 )
 
 CREATE TABLE Servico (
-Descricao varchar(100),
-Valor decimal,
-idServico int PRIMARY KEY identity(1,1),
-idGestor int identity(1,1)
-)
-
-CREATE TABLE Gestor (
-idGestor int PRIMARY KEY identity(1,1)
+Descricao Texto(1),
+Valor Decimal(),
+idServico Integer() PRIMARY KEY,
+Login Texto(1)
 )
 
 CREATE TABLE Produto (
-Valor decimal,
-Descricao varchar(100),
-idProduto int PRIMARY KEY identity(1,1),
-idGestor int identity(1,1),
-FOREIGN KEY(idGestor) REFERENCES Gestor (idGestor)
+Valor Decimal(),
+Descricao Texto(1),
+idProduto Integer() PRIMARY KEY,
+qtdEstoque Integer(),
+Login Texto(1)
 )
 
-CREATE TABLE ProcessarServico (
-idFuncionario int identity(1,1),
-idServico int identity(1,1),
-FOREIGN KEY(idFuncionario) REFERENCES Funcionario (idFuncionario),
-FOREIGN KEY(idServico) REFERENCES Servico (idServico)
+CREATE TABLE Usuario (
+Senha Texto(1),
+Login Texto(1) PRIMARY KEY,
+Nome Texto(1),
+Nivel Boolean(),
+possui_Login Texto(1)
 )
 
-CREATE TABLE BaixaNoEstoque (
-idFuncionario int identity(1,1),
-idProduto int identity(1,1),
-FOREIGN KEY(idFuncionario) REFERENCES Funcionario (idFuncionario),
-FOREIGN KEY(idProduto) REFERENCES Produto (idProduto)
+CREATE TABLE RealizaServico (
+idServico Integer(),
+idFuncionario Integer(),
+FOREIGN KEY(idServico) REFERENCES Servico (idServico),
+FOREIGN KEY(idFuncionario) REFERENCES Funcionario (idFuncionario)
 )
 
-CREATE TABLE ManterCliente (
-idFuncionario int identity(1,1),
-idCliente int identity(1,1),
-FOREIGN KEY(idFuncionario) REFERENCES Funcionario (idFuncionario),
-FOREIGN KEY(idCliente) REFERENCES Cliente (idCliente)
-)
-
-ALTER TABLE Usuario ADD FOREIGN KEY(idGestor) REFERENCES Gestor (idGestor)
-ALTER TABLE Funcionario ADD FOREIGN KEY(idGestor) REFERENCES Gestor (idGestor)
-ALTER TABLE Servico ADD FOREIGN KEY(idGestor) REFERENCES Gestor (idGestor)
+ALTER TABLE Cliente ADD FOREIGN KEY(Login) REFERENCES Usuario (Login)
+ALTER TABLE Funcionario ADD FOREIGN KEY(Login) REFERENCES Usuario (Login)
+ALTER TABLE Servico ADD FOREIGN KEY(Login) REFERENCES Usuario (Login)
+ALTER TABLE Produto ADD FOREIGN KEY(Login) REFERENCES Usuario (Login)
