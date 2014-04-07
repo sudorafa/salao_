@@ -1,5 +1,6 @@
 ﻿using Projeto4_Junior.Modelo;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,5 +15,6 @@ namespace Projeto4_Junior.Negocios
         void RemoverCliente(String cliente);
         void AlterarCliente(Cliente cliente);
         bool VerificaExistenciaCliente(String cpf);
+        ArrayList ListarCliente(String busca);
     }
 }

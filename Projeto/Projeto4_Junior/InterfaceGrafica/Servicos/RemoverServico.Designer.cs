@@ -81,6 +81,7 @@
             this.Controls.Add(this.label1);
             this.Name = "RemoverServico";
             this.Text = "RemoverServico";
+            this.Load += new System.EventHandler(this.RemoverServico_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

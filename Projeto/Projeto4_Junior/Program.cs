@@ -18,7 +18,7 @@ namespace Projeto4_Junior
         {            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Cadastro_Servico());
+            Application.Run(new Form_Index());
            
                
                         

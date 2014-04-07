@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 
 namespace Projeto4_Junior.Negocios
@@ -28,6 +29,10 @@ namespace Projeto4_Junior.Negocios
         public void AlterarCliente(Cliente cliente)
         {
             this.ifachada.AlterarCliente(cliente);
+        }
+        public ArrayList ListarCliente(String busca)
+        {
+            return this.ifachada.ListarCliente(busca);
         }
         
     }

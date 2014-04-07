@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Projeto4_Junior.Negocios;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Collections;
 
 
 namespace Projeto4_Junior.Banco
@@ -104,6 +105,43 @@ namespace Projeto4_Junior.Banco
             }
 
             return retorno;
+        }
+        public ArrayList ListarCliente(String busca)
+        {
+            FactoryConnection conn = new FactoryConnection();
+            ArrayList lista = new ArrayList();
+
+            try
+            {
+                String query = "SELECT * FROM Cliente WHERE nome LIKE '%"+busca+"%'";
+
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+
+                SqlDataReader reader = comand.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Cliente cli = new Cliente();
+
+                    cli.Nome = (String) reader["nome"];
+                    cli.Cpf = (String)reader["cpf"];
+                    cli.Data_Nascimento = (String)reader["dataDeNasc"];
+                    cli.Email = (String)reader["email"];
+                    cli.Endereco = (String)reader["endereco"];
+                    cli.Telefone = (String)reader["telefone"];
+
+                    lista.Add(cli);
+                }
+                reader.Close();                
+                conn.FecharConnecxao();
+                
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+
+            return lista;
         }
     }
 }

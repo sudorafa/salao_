@@ -36,6 +36,7 @@ namespace Projeto4_Junior.Negocios
         }
         public void RemoverServico(Servico servico)
         {
+            /*
             if (ibancodados.VerificaExistenciaServico(IdServico) == true)
             {
                 ibancodados.RemoverServico(IdServico);
@@ -43,11 +44,13 @@ namespace Projeto4_Junior.Negocios
             else
             {
                 MessageBox.Show("Servico não cadastrado!");
-            }   
+            } 
+             * */
             
         }
         public void AlterarServico(Servico servico)
         {
+            /*
             if (ibancodados.VerificaExistenciaServico(servico.IdServico) == true)
             {
                 AlterarClientePrincipal alterar = new AlterarClientePrincipal();//estar faltando fazer o classe AlterarClientePrincipal.cs 
@@ -65,7 +68,8 @@ namespace Projeto4_Junior.Negocios
             else
             {
                 MessageBox.Show("Cliente não cadastrado!");
-            }      
+            } 
+             * */
             
         }
     }

@@ -46,5 +46,10 @@ namespace Projeto4_Junior.Banco
         {
 
         }
+        public bool VerificaExistenciaServico(String IdServico)
+        {
+            return false;
+
+        }//Foi acrescentado.
     }
 }

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Projeto4_Junior.Banco;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Projeto4_Junior.Negocios
 {
@@ -62,6 +63,10 @@ namespace Projeto4_Junior.Negocios
             {
                 MessageBox.Show("Cliente não cadastrado!");
             }                        
+        }
+        public ArrayList ListarCliente(String busca)
+        {
+            return ibancodados.ListarCliente(busca);
         }
     }
 }

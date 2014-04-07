@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Projeto4_Junior.Modelo;
+using Projeto4_Junior.Negocios;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,13 +33,29 @@ namespace Projeto4_Junior
         private void ListarCliente_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'projeto4DataSet.Cliente' table. You can move, or remove it, as needed.
-            this.clienteTableAdapter.Fill(this.projeto4DataSet.Cliente);
+            //this.clienteTableAdapter.Fill(this.projeto4DataSet.Cliente);
 
         }
 
         private void BuscarListaCliente_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add("Paulo","12345");   
+
+            IFachadaCliente fachadaCliente = new FachadaCliente();
+            ArrayList lista = fachadaCliente.ListarCliente(nomeClienteBusca.Text);
+
+            foreach (var cli in lista)
+            {
+                Cliente cliente = new Cliente();
+                cliente = (Cliente)cli;
+
+                dataGridView1.Rows.Add(cliente.Nome, cliente.Cpf);
+            }
+               
+        }
+
+        private void nomeClienteBusca_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

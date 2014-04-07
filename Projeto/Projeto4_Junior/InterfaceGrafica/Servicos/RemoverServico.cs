@@ -24,6 +24,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Servicos
 
         private void button2_Click(object sender, EventArgs e)
         {
+            /*
             if (textBox1.Text != null && !textBox1.Text.Equals(""))
             {
                 IFachadaCliente fachadaCliente = new FachadaCliente();
@@ -35,6 +36,12 @@ namespace Projeto4_Junior.InterfaceGrafica.Servicos
             {
                 MessageBox.Show("Informe o Codigo do Serviço!");
             }
+             */
+        }
+
+        private void RemoverServico_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

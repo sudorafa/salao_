@@ -1,6 +1,7 @@
 ﻿using Projeto4_Junior.Modelo;
 using Projeto4_Junior.Negocios;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,10 @@ namespace Projeto4_Junior.Banco
         public bool VerificaExistenciaCliente(String cpf)
         {
             return this.ibancodados.VerificaExistenciaCliente(cpf);
+        }
+        public ArrayList ListarCliente(String busca)
+        {
+            return this.ibancodados.ListarCliente(busca);
         }
     }
 }

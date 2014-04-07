@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System;
+using System.Collections;
 
 namespace Projeto4_Junior
 {
@@ -14,6 +15,6 @@ namespace Projeto4_Junior
         Cliente BuscarCliente(Cliente cliente);
         void RemoverCliente(String cpf);
         void AlterarCliente(Cliente cliente);
-       
+        ArrayList ListarCliente(String busca);
     }
 }

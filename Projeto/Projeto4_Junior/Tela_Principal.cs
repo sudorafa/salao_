@@ -21,6 +21,11 @@ namespace Projeto4_Junior
             InitializeComponent();
         }
 
+        public Form_Index()
+        {
+            InitializeComponent();
+        }
+
         
         private void inserirClienteMenuItem_Click(object sender, EventArgs e)
         {
