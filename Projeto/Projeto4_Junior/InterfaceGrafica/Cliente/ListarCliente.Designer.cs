@@ -31,18 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.nomeClienteBusca = new System.Windows.Forms.TextBox();
-            this.AlterarCliente = new System.Windows.Forms.Button();
-            this.RemoverCliente = new System.Windows.Forms.Button();
             this.BuscarListaCliente = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.projeto4DataSet = new Projeto4_Junior.Projeto4DataSet();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clienteTableAdapter = new Projeto4_Junior.Projeto4DataSetTableAdapters.ClienteTableAdapter();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remover = new System.Windows.Forms.DataGridViewButtonColumn();
             this.alterar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.projeto4DataSet = new Projeto4_Junior.Projeto4DataSet();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clienteTableAdapter = new Projeto4_Junior.Projeto4DataSetTableAdapters.ClienteTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projeto4DataSet)).BeginInit();
@@ -66,24 +64,6 @@
             this.nomeClienteBusca.TabIndex = 1;
             this.nomeClienteBusca.TextChanged += new System.EventHandler(this.nomeClienteBusca_TextChanged);
             // 
-            // AlterarCliente
-            // 
-            this.AlterarCliente.Location = new System.Drawing.Point(257, 365);
-            this.AlterarCliente.Name = "AlterarCliente";
-            this.AlterarCliente.Size = new System.Drawing.Size(75, 48);
-            this.AlterarCliente.TabIndex = 3;
-            this.AlterarCliente.Text = "Alterar";
-            this.AlterarCliente.UseVisualStyleBackColor = true;
-            // 
-            // RemoverCliente
-            // 
-            this.RemoverCliente.Location = new System.Drawing.Point(390, 365);
-            this.RemoverCliente.Name = "RemoverCliente";
-            this.RemoverCliente.Size = new System.Drawing.Size(75, 48);
-            this.RemoverCliente.TabIndex = 4;
-            this.RemoverCliente.Text = "Remover";
-            this.RemoverCliente.UseVisualStyleBackColor = true;
-            // 
             // BuscarListaCliente
             // 
             this.BuscarListaCliente.Location = new System.Drawing.Point(484, 33);
@@ -98,13 +78,11 @@
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.nomeClienteBusca);
-            this.groupBox1.Controls.Add(this.AlterarCliente);
-            this.groupBox1.Controls.Add(this.RemoverCliente);
             this.groupBox1.Controls.Add(this.BuscarListaCliente);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 21);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(721, 419);
+            this.groupBox1.Size = new System.Drawing.Size(637, 354);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Clientes";
@@ -120,12 +98,26 @@
             this.cpf,
             this.remover,
             this.alterar});
-            this.dataGridView1.Location = new System.Drawing.Point(38, 75);
+            this.dataGridView1.Location = new System.Drawing.Point(18, 62);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(595, 252);
+            this.dataGridView1.Size = new System.Drawing.Size(595, 260);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // projeto4DataSet
+            // 
+            this.projeto4DataSet.DataSetName = "Projeto4DataSet";
+            this.projeto4DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "Cliente";
+            this.clienteBindingSource.DataSource = this.projeto4DataSet;
+            // 
+            // clienteTableAdapter
+            // 
+            this.clienteTableAdapter.ClearBeforeFill = true;
             // 
             // nome
             // 
@@ -148,6 +140,7 @@
             this.remover.ReadOnly = true;
             this.remover.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.remover.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.remover.Text = "ee";
             // 
             // alterar
             // 
@@ -157,25 +150,11 @@
             this.alterar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.alterar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // projeto4DataSet
-            // 
-            this.projeto4DataSet.DataSetName = "Projeto4DataSet";
-            this.projeto4DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataMember = "Cliente";
-            this.clienteBindingSource.DataSource = this.projeto4DataSet;
-            // 
-            // clienteTableAdapter
-            // 
-            this.clienteTableAdapter.ClearBeforeFill = true;
-            // 
             // ListarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 462);
+            this.ClientSize = new System.Drawing.Size(665, 394);
             this.Controls.Add(this.groupBox1);
             this.Name = "ListarCliente";
             this.Text = "ListarCliente";
@@ -193,8 +172,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox nomeClienteBusca;
-        private System.Windows.Forms.Button AlterarCliente;
-        private System.Windows.Forms.Button RemoverCliente;
         private System.Windows.Forms.Button BuscarListaCliente;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
