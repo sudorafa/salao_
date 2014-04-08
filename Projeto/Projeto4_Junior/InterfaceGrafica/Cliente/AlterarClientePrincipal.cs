@@ -24,7 +24,7 @@ namespace Projeto4_Junior
             textBox_TelefoneCliente.Text = cli.Telefone;
             textBox_DataNascCliente.Text = cli.Data_Nascimento;
 
-            listar = list;
+            this.listar = list;
 
            
         }

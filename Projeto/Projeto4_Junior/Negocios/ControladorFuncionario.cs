@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Projeto4_Junior.Banco;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace Projeto4_Junior.Negocios
 {
@@ -28,24 +29,26 @@ namespace Projeto4_Junior.Negocios
             }
 
         }
-        public Funcionario BuscarFuncionario(Funcionario funionario)
+        public Funcionario BuscarFuncionario(String cpf)
         {
-            return null;
+            return ibancodados.BuscarFuncionario(cpf);
         }
-         public void RemoverFuncionario(Funcionario funionario)
+        public void RemoverFuncionario(String cpf)
         {
-            ibancodados.RemoverFuncionario(funionario);
-            MessageBox.Show("Dados excluidos com sucesso !!");
+            ibancodados.RemoverFuncionario(cpf);
         }
          public void AlterarFuncionario(Funcionario funionario)
          {
              ibancodados.AlterarFuncionario(funionario);
-             MessageBox.Show("Alteração efetuada com sucesso !!!");
          }
 
          public SqlDataReader VerificaFunc(Funcionario funcionario)
          {
              return ibancodados.VerificaFunc(funcionario);
+         }
+         public ArrayList ListarFuncionario(String buscar)
+         {
+             return ibancodados.ListarFuncionario(buscar);
          }
     }
 }

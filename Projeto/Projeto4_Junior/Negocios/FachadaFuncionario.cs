@@ -1,5 +1,6 @@
 ﻿using Projeto4_Junior.Modelo;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -16,13 +17,13 @@ namespace Projeto4_Junior.Negocios
         {
             this.ifachada.CadastrarFuncionario(funionario);
         }
-        public Funcionario BuscarFuncionario(Funcionario funionario)
+        public Funcionario BuscarFuncionario(String cpf)
         {
-            return this.ifachada.BuscarFuncionario(funionario);
+            return this.ifachada.BuscarFuncionario(cpf);
         }
-        public void RemoverFuncionario(Funcionario funionario)
+        public void RemoverFuncionario(String cpf)
         {
-            this.ifachada.RemoverFuncionario(funionario);
+            this.ifachada.RemoverFuncionario(cpf);
         }
         public void AlterarFuncionario(Funcionario funionario)
         {
@@ -33,6 +34,10 @@ namespace Projeto4_Junior.Negocios
         {
            return this.ifachada.VerificaFunc(funcionario);
         
+        }
+        public ArrayList ListarFuncionario(String buscar)
+        {
+            return this.ifachada.ListarFuncionario(buscar);
         }
 
     }

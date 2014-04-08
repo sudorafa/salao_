@@ -34,13 +34,13 @@
             this.BuscarListaCliente = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.projeto4DataSet = new Projeto4_Junior.Projeto4DataSet();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clienteTableAdapter = new Projeto4_Junior.Projeto4DataSetTableAdapters.ClienteTableAdapter();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remover = new System.Windows.Forms.DataGridViewButtonColumn();
             this.alterar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.projeto4DataSet = new Projeto4_Junior.Projeto4DataSet();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clienteTableAdapter = new Projeto4_Junior.Projeto4DataSetTableAdapters.ClienteTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projeto4DataSet)).BeginInit();
@@ -105,20 +105,6 @@
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // projeto4DataSet
-            // 
-            this.projeto4DataSet.DataSetName = "Projeto4DataSet";
-            this.projeto4DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataMember = "Cliente";
-            this.clienteBindingSource.DataSource = this.projeto4DataSet;
-            // 
-            // clienteTableAdapter
-            // 
-            this.clienteTableAdapter.ClearBeforeFill = true;
-            // 
             // nome
             // 
             this.nome.HeaderText = "Nome";
@@ -150,12 +136,27 @@
             this.alterar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.alterar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // projeto4DataSet
+            // 
+            this.projeto4DataSet.DataSetName = "Projeto4DataSet";
+            this.projeto4DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "Cliente";
+            this.clienteBindingSource.DataSource = this.projeto4DataSet;
+            // 
+            // clienteTableAdapter
+            // 
+            this.clienteTableAdapter.ClearBeforeFill = true;
+            // 
             // ListarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 394);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "ListarCliente";
             this.Text = "ListarCliente";
             this.Load += new System.EventHandler(this.ListarCliente_Load);

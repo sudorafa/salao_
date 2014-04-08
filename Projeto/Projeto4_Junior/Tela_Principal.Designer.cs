@@ -32,15 +32,11 @@
             this.menu_principal = new System.Windows.Forms.MenuStrip();
             this.clientesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inserirClienteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarClienteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarClientesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removerClienteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aniversariantesClienteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionariosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inserirFuncionarioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarFuncionarioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarFuncionariosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removerFuncionarioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.servicosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoServicoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarServicoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,9 +97,7 @@
             // 
             this.clientesMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inserirClienteMenuItem,
-            this.alterarClienteMenuItem,
             this.listarClientesMenuItem,
-            this.removerClienteMenuItem,
             this.aniversariantesClienteMenuItem});
             this.clientesMenuItem.Name = "clientesMenuItem";
             this.clientesMenuItem.Size = new System.Drawing.Size(61, 20);
@@ -116,26 +110,12 @@
             this.inserirClienteMenuItem.Text = "Inserir";
             this.inserirClienteMenuItem.Click += new System.EventHandler(this.inserirClienteMenuItem_Click);
             // 
-            // alterarClienteMenuItem
-            // 
-            this.alterarClienteMenuItem.Name = "alterarClienteMenuItem";
-            this.alterarClienteMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.alterarClienteMenuItem.Text = "Alterar";
-            this.alterarClienteMenuItem.Click += new System.EventHandler(this.alterarClienteMenuItem_Click);
-            // 
             // listarClientesMenuItem
             // 
             this.listarClientesMenuItem.Name = "listarClientesMenuItem";
             this.listarClientesMenuItem.Size = new System.Drawing.Size(154, 22);
             this.listarClientesMenuItem.Text = "Listar";
             this.listarClientesMenuItem.Click += new System.EventHandler(this.listarClienteMenuItem_Click);
-            // 
-            // removerClienteMenuItem
-            // 
-            this.removerClienteMenuItem.Name = "removerClienteMenuItem";
-            this.removerClienteMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.removerClienteMenuItem.Text = "Remover";
-            this.removerClienteMenuItem.Click += new System.EventHandler(this.removerClienteMenuItem_Click);
             // 
             // aniversariantesClienteMenuItem
             // 
@@ -147,9 +127,7 @@
             // 
             this.funcionariosMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inserirFuncionarioMenuItem,
-            this.alterarFuncionarioMenuItem,
-            this.listarFuncionariosMenuItem,
-            this.removerFuncionarioMenuItem});
+            this.listarFuncionariosMenuItem});
             this.funcionariosMenuItem.Name = "funcionariosMenuItem";
             this.funcionariosMenuItem.Size = new System.Drawing.Size(87, 20);
             this.funcionariosMenuItem.Text = "&Funcionários";
@@ -157,27 +135,16 @@
             // inserirFuncionarioMenuItem
             // 
             this.inserirFuncionarioMenuItem.Name = "inserirFuncionarioMenuItem";
-            this.inserirFuncionarioMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.inserirFuncionarioMenuItem.Size = new System.Drawing.Size(152, 22);
             this.inserirFuncionarioMenuItem.Text = "Inserir";
             this.inserirFuncionarioMenuItem.Click += new System.EventHandler(this.inserirFuncionarioMenuItem_Click);
-            // 
-            // alterarFuncionarioMenuItem
-            // 
-            this.alterarFuncionarioMenuItem.Name = "alterarFuncionarioMenuItem";
-            this.alterarFuncionarioMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.alterarFuncionarioMenuItem.Text = "Alterar";
             // 
             // listarFuncionariosMenuItem
             // 
             this.listarFuncionariosMenuItem.Name = "listarFuncionariosMenuItem";
-            this.listarFuncionariosMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.listarFuncionariosMenuItem.Size = new System.Drawing.Size(152, 22);
             this.listarFuncionariosMenuItem.Text = "Listar";
-            // 
-            // removerFuncionarioMenuItem
-            // 
-            this.removerFuncionarioMenuItem.Name = "removerFuncionarioMenuItem";
-            this.removerFuncionarioMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.removerFuncionarioMenuItem.Text = "Remover";
+            this.listarFuncionariosMenuItem.Click += new System.EventHandler(this.listarFuncionariosMenuItem_Click);
             // 
             // servicosMenuItem
             // 
@@ -475,14 +442,10 @@
         private System.Windows.Forms.MenuStrip menu_principal;
         private System.Windows.Forms.ToolStripMenuItem clientesMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inserirClienteMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alterarClienteMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarClientesMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removerClienteMenuItem;
         private System.Windows.Forms.ToolStripMenuItem funcionariosMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inserirFuncionarioMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alterarFuncionarioMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarFuncionariosMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removerFuncionarioMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aniversariantesClienteMenuItem;
         private System.Windows.Forms.ToolStripMenuItem servicosMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoServicoMenuItem;

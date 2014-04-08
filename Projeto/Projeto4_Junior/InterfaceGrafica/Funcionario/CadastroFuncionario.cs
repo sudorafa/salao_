@@ -63,7 +63,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
                 funcionario.Telefone = campo[1];
                 funcionario.Cpf = campo[2];
                 funcionario.Data_Nascimento = campo[3];
-                funcionario.Porcentagem = Double.Parse(campo[4]);
+                funcionario.Porcentagem = int.Parse(campo[4]);
 
                 funcionario.Endereco = campo[5] + " , ";
                 funcionario.Endereco += campo[6] + " , ";

@@ -99,5 +99,11 @@ namespace Projeto4_Junior
             aut.Show();
             this.Close();
         }
+
+        private void listarFuncionariosMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarFuncionario tela = new ListarFuncionario();
+            tela.ShowDialog();
+        }
     }
 }

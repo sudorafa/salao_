@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace Projeto4_Junior.Banco
 {
@@ -19,13 +20,13 @@ namespace Projeto4_Junior.Banco
         {           
             ibancodados.CadastrarFuncionario(funionario);
         }
-        public Funcionario BuscarFuncionario(Funcionario funionario)
+        public Funcionario BuscarFuncionario(String cpf)
         {
-           return this.ibancodados.BuscarFuncionario(funionario);
+           return this.ibancodados.BuscarFuncionario(cpf);
         }
-        public void RemoverFuncionario(Funcionario funionario)
+        public void RemoverFuncionario(String cpf)
         {           
-            this.ibancodados.RemoverFuncionario(funionario);
+            this.ibancodados.RemoverFuncionario(cpf);
         }
         public void AlterarFuncionario(Funcionario funionario)
         {           
@@ -37,6 +38,10 @@ namespace Projeto4_Junior.Banco
 
             return this.ibancodados.VerificaFunc(funcionario);
         
+        }
+        public ArrayList ListarFuncionario(String buscar)
+        {
+            return this.ibancodados.ListarFuncionario(buscar);
         }
 
     }
