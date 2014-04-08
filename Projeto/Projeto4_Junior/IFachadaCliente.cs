@@ -12,7 +12,7 @@ namespace Projeto4_Junior
     interface IFachadaCliente
     {
         void CadastrarCliente(Cliente cliente);
-        Cliente BuscarCliente(Cliente cliente);
+        Cliente BuscarCliente(String cpf);
         void RemoverCliente(String cpf);
         void AlterarCliente(Cliente cliente);
         ArrayList ListarCliente(String busca);

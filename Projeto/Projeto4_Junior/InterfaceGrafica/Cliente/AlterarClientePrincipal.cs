@@ -14,19 +14,57 @@ namespace Projeto4_Junior
 {
     public partial class AlterarClientePrincipal : Form
     {
+        public AlterarClientePrincipal(Cliente cli, ListarCliente list)
+        {
+            InitializeComponent();
+
+            textBox_NomeCliente.Text = cli.Nome;
+            textBox_EmailCliente.Text = cli.Email;
+            textBox_CpfCliente.Text = cli.Cpf;
+            textBox_TelefoneCliente.Text = cli.Telefone;
+            textBox_DataNascCliente.Text = cli.Data_Nascimento;
+
+            listar = list;
+
+           
+        }
+        private ListarCliente listar { get; set; }
+
         public AlterarClientePrincipal()
         {
             InitializeComponent();
         }
 
-        private void button_SalvarCadastroCliente_Click(object sender, EventArgs e)
+       
+
+        public void PreencherCliente(String cpf)
+        {
+            textBox_CpfCliente.Text = cpf;
+        }
+
+        
+
+        private void AlterarClientePrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_SalvarCadastroCliente_Click_1(object sender, EventArgs e)
         {
             bool key = true;
 
-            String[] campo = new String[12] { textBox_NomeCliente.Text, textBox_EmailCliente.Text, textBox_CpfCliente.Text
-            , textBox_TelefoneCliente.Text, textBox_DataNascCliente.Text, textBox_EnderecoNumeroCliente.Text, textBox_EnderecoRuaCliente.Text
-            , textBox_EnderecoComplementoCliente.Text, textBox_EnderecoBairroCliente.Text, textBox_EnderecoCidadeCliente.Text
-            , textBox_EnderecoCepCliente.Text, comboBox_EnderecoUfCliente.Text};
+            String[] campo = new String[12] {      textBox_NomeCliente.Text, 
+                                                   textBox_EmailCliente.Text, 
+                                                   textBox_CpfCliente.Text, 
+                                                   textBox_TelefoneCliente.Text, 
+                                                   textBox_DataNascCliente.Text, 
+                                                   textBox_EnderecoNumeroCliente.Text, 
+                                                   textBox_EnderecoRuaCliente.Text, 
+                                                   textBox_EnderecoComplementoCliente.Text, 
+                                                   textBox_EnderecoBairroCliente.Text, 
+                                                   textBox_EnderecoCidadeCliente.Text, 
+                                                   textBox_EnderecoCepCliente.Text, 
+                                                   comboBox_EnderecoUfCliente.Text};
 
             for (int x = 0; x < campo.Length; x++)
             {
@@ -55,20 +93,17 @@ namespace Projeto4_Junior
                 cliente.Endereco += campo[11];
 
                 fachadaCliente.AlterarCliente(cliente);
+                listar.dataGridView1.Rows.Clear();
+                listar.BuscarListaCliente_Click(sender, e);
                 this.Close();
             }
             else
             {
                 MessageBox.Show("Preencha todos os campos!");
-            }          
+            } 
         }
 
-        public void PreencherCliente(String cpf)
-        {
-            textBox_CpfCliente.Text = cpf;
-        }
-
-        private void button_CancelarCadastroCliente_Click(object sender, EventArgs e)
+        private void button_CancelarCadastroCliente_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

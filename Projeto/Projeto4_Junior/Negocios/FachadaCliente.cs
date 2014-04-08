@@ -18,9 +18,9 @@ namespace Projeto4_Junior.Negocios
         {
             this.ifachada.CadastrarCliente(cliente);
         }
-        public Cliente BuscarCliente(Cliente cliente)
+        public Cliente BuscarCliente(String cpf)
         {
-           return this.ifachada.BuscarCliente(cliente);
+           return this.ifachada.BuscarCliente(cpf);
         }
         public void RemoverCliente(String cpf)
         {

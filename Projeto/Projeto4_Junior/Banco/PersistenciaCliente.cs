@@ -36,9 +36,37 @@ namespace Projeto4_Junior.Banco
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
             }                  
         }
-        public Cliente BuscarCliente(Cliente cliente)
+        public Cliente BuscarCliente(String cpf)
         {
-            return null;
+            FactoryConnection conn = new FactoryConnection();
+            Cliente cli = new Cliente();
+            try
+            {
+                String query = "SELECT * FROM Cliente WHERE cpf = '" + cpf + "'";
+
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+
+                SqlDataReader reader = comand.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cli.Nome = (String)reader["nome"];
+                    cli.Cpf = (String)reader["cpf"];
+                    cli.Data_Nascimento = (String)reader["dataDeNasc"];
+                    cli.Email = (String)reader["email"];
+                    cli.Endereco = (String)reader["endereco"];
+                    cli.Telefone = (String)reader["telefone"];
+                }
+                reader.Close();
+                conn.FecharConnecxao();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            
+            return cli;
         }
         public void RemoverCliente(String cpf)
         {

@@ -11,7 +11,7 @@ namespace Projeto4_Junior.Negocios
     interface IBancoDadosCliente
     {
         void CadastrarCliente(Cliente cliente);
-        Cliente BuscarCliente(Cliente cliente);
+        Cliente BuscarCliente(String cpf);
         void RemoverCliente(String cliente);
         void AlterarCliente(Cliente cliente);
         bool VerificaExistenciaCliente(String cpf);

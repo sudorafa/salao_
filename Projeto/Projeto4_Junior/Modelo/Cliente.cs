@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Projeto4_Junior.Modelo
 {
-    class Cliente
+    public class Cliente
     {
         public String Nome { get; set; }
         public String Email { get; set; }

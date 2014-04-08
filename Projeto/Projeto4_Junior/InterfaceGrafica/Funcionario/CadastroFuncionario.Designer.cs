@@ -329,7 +329,7 @@
             this.btCadastrar.Name = "btCadastrar";
             this.btCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btCadastrar.TabIndex = 10;
-            this.btCadastrar.Text = "Cadastrar";
+            this.btCadastrar.Text = "Alterar";
             this.btCadastrar.UseVisualStyleBackColor = true;
             this.btCadastrar.Click += new System.EventHandler(this.btCadastrar_Click);
             // 

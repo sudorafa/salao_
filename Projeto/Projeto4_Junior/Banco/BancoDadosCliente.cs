@@ -17,9 +17,9 @@ namespace Projeto4_Junior.Banco
         {            
             this.ibancodados.CadastrarCliente(cliente);
         }
-        public Cliente BuscarCliente(Cliente cliente)
+        public Cliente BuscarCliente(String cpf)
         {           
-            return this.ibancodados.BuscarCliente(cliente);
+            return this.ibancodados.BuscarCliente(cpf);
         }
         public void RemoverCliente(String cpf)
         {            

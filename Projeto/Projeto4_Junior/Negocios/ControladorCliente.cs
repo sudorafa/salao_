@@ -26,11 +26,11 @@ namespace Projeto4_Junior.Negocios
                 MessageBox.Show("Cliente já existente");
             }           
         }
-        public Cliente BuscarCliente(Cliente cliente)
+        public Cliente BuscarCliente(String cpf)
         {
             //Implementações e validações...
 
-            return ibancodados.BuscarCliente(cliente);
+            return ibancodados.BuscarCliente(cpf);
         }
         public void RemoverCliente(String cpf)
         {

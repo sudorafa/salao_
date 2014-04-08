@@ -43,7 +43,12 @@ namespace Projeto4_Junior
             }
             else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["alterar"].Index)
             {
-                MessageBox.Show("alterar");
+                String cpf = (String)dataGridView1[1,e.RowIndex].Value;
+                //Carrega o cliente para ser alterado.
+                Cliente cli = fachadaCliente.BuscarCliente(cpf);
+               
+                AlterarClientePrincipal tela = new AlterarClientePrincipal(cli, this);
+                tela.ShowDialog();
             }
         }
 
@@ -54,7 +59,7 @@ namespace Projeto4_Junior
 
         }
 
-        private void BuscarListaCliente_Click(object sender, EventArgs e)
+        public void BuscarListaCliente_Click(object sender, EventArgs e)
         {
 
             IFachadaCliente fachadaCliente = new FachadaCliente();

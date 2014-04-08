@@ -174,7 +174,7 @@
         private System.Windows.Forms.TextBox nomeClienteBusca;
         private System.Windows.Forms.Button BuscarListaCliente;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dataGridView1;
         private Projeto4DataSet projeto4DataSet;
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private Projeto4DataSetTableAdapters.ClienteTableAdapter clienteTableAdapter;
