@@ -1,76 +1,76 @@
 CREATE TABLE Relatorio (
 IdRelatorio Int PRIMARY KEY,
 ValorTotal money,
-Data nvarchar(20),
-CodServ nvarchar(20),
-CodProd nvarchar(20),
-FuncCPF nvarchar(20),
-ClienCPF nvarchar(20)
+Data nvarchar(100),
+CodServ nvarchar(100),
+CodProd nvarchar(100),
+FuncCPF nvarchar(100),
+ClienCPF nvarchar(100)
 )
 
 CREATE TABLE Usuario (
 IdUsuario Int PRIMARY KEY,
-TipoUsar Int,
-Login nvarchar(20),
-Senha nvarchar(20),
-Nome nvarchar(20)
+isGestor Int,
+Login nvarchar(100),
+Senha nvarchar(100),
+Nome nvarchar(100)
 )
 
 CREATE TABLE Servicos (
-CodServ nvarchar(20) PRIMARY KEY,
-Descricao nvarchar(20),
+IdServicos Int PRIMARY KEY,
+Descricao nvarchar(100),
 Valor money
 )
 
 CREATE TABLE Funcionario (
-CPF nvarchar(20) PRIMARY KEY,
-Nome nvarchar(20),
-Telefone nvarchar(20),
-Endereco nvarchar(20),
+CPF nvarchar(100) PRIMARY KEY,
+Nome nvarchar(100),
+Telefone nvarchar(100),
+Endereco nvarchar(100),
 Porcentagem Int,
-DatNascimento nvarchar(20)
+Data_Nascimento nvarchar(100)
 )
 
 CREATE TABLE ManterFuncionario (
-FuncCPF nvarchar(20),
+FuncCPF nvarchar(100),
 IdUsuarioF Int,
 FOREIGN KEY(FuncCPF) REFERENCES Funcionario (CPF),
 FOREIGN KEY(IdUsuarioF) REFERENCES Usuario (IdUsuario)
 )
 
 CREATE TABLE Cliente (
-CPF nvarchar(20) PRIMARY KEY,
-Endereco nvarchar(20),
-Telefone nvarchar(20),
-Telefone2 nvarchar(20),
-DatNascimento nvarchar(20),
-Email nvarchar(20),
-Nome nvarchar(20)
+CPF nvarchar(100) PRIMARY KEY,
+Endereco nvarchar(100),
+Telefone nvarchar(100),
+Telefone2 nvarchar(100),
+Data_Nascimento nvarchar(100),
+Email nvarchar(100),
+Nome nvarchar(100)
 )
 
 CREATE TABLE ManterUsuario (
 IdUsuario Int,
-ClienCPF nvarchar(20),
+ClienCPF nvarchar(100),
 FOREIGN KEY(IdUsuario) REFERENCES Usuario (IdUsuario),
 FOREIGN KEY(ClienCPF) REFERENCES Cliente (CPF)
 )
 
 CREATE TABLE Produtos (
-CodProd nvarchar(20) PRIMARY KEY,
-Descricao nvarchar(20),
+IdProduto Int PRIMARY KEY,
+Descricao nvarchar(100),
 Valor Money,
-QntProd Int
+Quantidade_Estoque Int
 )
 
 CREATE TABLE ManterProdutos (
-CodProdt nvarchar(20),
+CodProdt nvarchar(100),
 IdUsuarioP Int,
 FOREIGN KEY(CodProdt) REFERENCES Produtos (CodProd),
 FOREIGN KEY(IdUsuarioP) REFERENCES Usuario (IdUsuario)
 )
 
 CREATE TABLE ManterServico (
-CodServc nvarchar(20),
+CodServc nvarchar(100),
 IdUsuarioS Int,
 FOREIGN KEY(CodServc) REFERENCES Servicos (CodServ),
 FOREIGN KEY(IdUsuarioS) REFERENCES Usuario (IdUsuario)
