@@ -26,7 +26,7 @@ CREATE TABLE Funcionario (
 CPF nvarchar(20) PRIMARY KEY,
 Nome nvarchar(20),
 Telefone nvarchar(20),
-Endereco nvarchar(20),
+Endereco nvarchar(200),
 Porcentagem Int,
 DatNascimento nvarchar(20)
 )
@@ -40,9 +40,8 @@ FOREIGN KEY(IdUsuarioF) REFERENCES Usuario (IdUsuario)
 
 CREATE TABLE Cliente (
 CPF nvarchar(20) PRIMARY KEY,
-Endereço nvarchar(20),
+Endereço nvarchar(200),
 Telefone nvarchar(20),
-Telefone2 nvarchar(20),
 DatNascimento nvarchar(20),
 Email nvarchar(20)
 )

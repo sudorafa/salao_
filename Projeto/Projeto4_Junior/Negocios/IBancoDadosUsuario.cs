@@ -1,5 +1,6 @@
 ﻿using Projeto4_Junior.Modelo;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,7 @@ namespace Projeto4_Junior.Negocios
         bool Autenticar(String usuario, String senha);
         bool VerificarUsuarioExistente(String login);
         bool VerificaTipoUsuario(String login);
+        ArrayList ListarUsuario(String busca);
 
     }
 }

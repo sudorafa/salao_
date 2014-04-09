@@ -1,5 +1,6 @@
 ﻿using Projeto4_Junior.Modelo;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,5 +16,7 @@ namespace Projeto4_Junior
         void AlterarUsuario(Usuario usuario);
         bool Autenticar(String usuario, String senha);
         bool VerificaTipoUsuario(String login);
+        ArrayList ListarUsuario(String busca);
+
     }
 }

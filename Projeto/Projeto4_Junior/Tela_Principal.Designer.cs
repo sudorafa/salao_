@@ -135,14 +135,14 @@
             // inserirFuncionarioMenuItem
             // 
             this.inserirFuncionarioMenuItem.Name = "inserirFuncionarioMenuItem";
-            this.inserirFuncionarioMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inserirFuncionarioMenuItem.Size = new System.Drawing.Size(106, 22);
             this.inserirFuncionarioMenuItem.Text = "Inserir";
             this.inserirFuncionarioMenuItem.Click += new System.EventHandler(this.inserirFuncionarioMenuItem_Click);
             // 
             // listarFuncionariosMenuItem
             // 
             this.listarFuncionariosMenuItem.Name = "listarFuncionariosMenuItem";
-            this.listarFuncionariosMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listarFuncionariosMenuItem.Size = new System.Drawing.Size(106, 22);
             this.listarFuncionariosMenuItem.Text = "Listar";
             this.listarFuncionariosMenuItem.Click += new System.EventHandler(this.listarFuncionariosMenuItem_Click);
             // 
@@ -266,26 +266,27 @@
             // inserirUsuarioMenuItem
             // 
             this.inserirUsuarioMenuItem.Name = "inserirUsuarioMenuItem";
-            this.inserirUsuarioMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.inserirUsuarioMenuItem.Size = new System.Drawing.Size(152, 22);
             this.inserirUsuarioMenuItem.Text = "Inserir";
             this.inserirUsuarioMenuItem.Click += new System.EventHandler(this.inserirUsuarioMenuItem_Click);
             // 
             // alterarUsuarioMenuItem
             // 
             this.alterarUsuarioMenuItem.Name = "alterarUsuarioMenuItem";
-            this.alterarUsuarioMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.alterarUsuarioMenuItem.Size = new System.Drawing.Size(152, 22);
             this.alterarUsuarioMenuItem.Text = "Alterar";
             // 
             // listarUsuariosMenuItem
             // 
             this.listarUsuariosMenuItem.Name = "listarUsuariosMenuItem";
-            this.listarUsuariosMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.listarUsuariosMenuItem.Size = new System.Drawing.Size(152, 22);
             this.listarUsuariosMenuItem.Text = "Listar";
+            this.listarUsuariosMenuItem.Click += new System.EventHandler(this.listarUsuariosMenuItem_Click);
             // 
             // removerUsuarioMenuItem
             // 
             this.removerUsuarioMenuItem.Name = "removerUsuarioMenuItem";
-            this.removerUsuarioMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.removerUsuarioMenuItem.Size = new System.Drawing.Size(152, 22);
             this.removerUsuarioMenuItem.Text = "Remover";
             // 
             // meuUsuarioMenuItem

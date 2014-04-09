@@ -1,5 +1,6 @@
 ﻿using Projeto4_Junior.Modelo;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,6 +39,11 @@ namespace Projeto4_Junior.Negocios
         public bool VerificaTipoUsuario(String login)
         {
             return this.ifachada.VerificaTipoUsuario(login);
+        }
+
+        public ArrayList ListarUsuario(String busca)
+        {
+            return this.ifachada.ListarUsuario(busca);
         }
     }
 }

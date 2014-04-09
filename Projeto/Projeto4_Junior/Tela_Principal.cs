@@ -1,5 +1,6 @@
 ﻿using Projeto4_Junior.InterfaceGrafica.Funcionario;
 using Projeto4_Junior.InterfaceGrafica.Servicos;
+using Projeto4_Junior.InterfaceGrafica.Usuario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -104,6 +105,12 @@ namespace Projeto4_Junior
         {
             ListarFuncionario tela = new ListarFuncionario();
             tela.ShowDialog();
+        }
+
+        private void listarUsuariosMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarUsuario usuario = new ListarUsuario();
+            usuario.Show();
         }
     }
 }

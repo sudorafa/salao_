@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Projeto4_Junior.Banco;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Projeto4_Junior.Negocios
 {
@@ -48,6 +49,11 @@ namespace Projeto4_Junior.Negocios
         public bool VerificaTipoUsuario(String login)
         {
             return this.ibancodados.VerificaTipoUsuario(login);
+        }
+
+        public ArrayList ListarUsuario(String busca)
+        {
+            return this.ibancodados.ListarUsuario(busca);
         }
        
     }

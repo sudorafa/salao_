@@ -44,12 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InterfaceGrafica\Cliente\AlterarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfaceGrafica\Cliente\AlterarCliente.Designer.cs">
-      <DependentUpon>AlterarCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="InterfaceGrafica\Cliente\AlterarClientePrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,10 +66,10 @@
     <Compile Include="Banco\PersistenciaProduto.cs" />
     <Compile Include="Banco\PersistenciaServico.cs" />
     <Compile Include="Banco\PersistenciaUsuario.cs" />
-    <Compile Include="CadastrarUsuario.cs">
+    <Compile Include="InterfaceGrafica\Usuario\CadastrarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastrarUsuario.Designer.cs">
+    <Compile Include="InterfaceGrafica\Usuario\CadastrarUsuario.Designer.cs">
       <DependentUpon>CadastrarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfaceGrafica\Cliente\CadastroCliente.cs">
@@ -108,12 +102,6 @@
     <Compile Include="InterfaceGrafica\Cliente\ListarCliente.Designer.cs">
       <DependentUpon>ListarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfaceGrafica\Cliente\ListarClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfaceGrafica\Cliente\ListarClientes.Designer.cs">
-      <DependentUpon>ListarClientes.cs</DependentUpon>
-    </Compile>
     <Compile Include="InterfaceGrafica\Funcionario\ListarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,11 +132,18 @@
     <Compile Include="InterfaceGrafica\Servicos\RemoverServico.Designer.cs">
       <DependentUpon>RemoverServico.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfaceGrafica\Usuario\ListarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Usuario\ListarUsuario.Designer.cs">
+      <DependentUpon>ListarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\Funcionario.cs" />
     <Compile Include="Modelo\Produto.cs" />
     <Compile Include="Modelo\Servico.cs" />
     <Compile Include="Modelo\Usuario.cs" />
+    <Compile Include="Negocios\ArraList.cs" />
     <Compile Include="Negocios\ControladorCliente.cs" />
     <Compile Include="Negocios\ControladorFuncionario.cs" />
     <Compile Include="Negocios\FachadaCliente.cs" />
@@ -171,28 +166,19 @@
       <DependentUpon>Projeto4DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="InterfaceGrafica\Cliente\RemoverCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfaceGrafica\Cliente\RemoverCliente.Designer.cs">
-      <DependentUpon>RemoverCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tela_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tela_Principal.Designer.cs">
       <DependentUpon>Tela_Principal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="InterfaceGrafica\Cliente\AlterarCliente.resx">
-      <DependentUpon>AlterarCliente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Cliente\AlterarClientePrincipal.resx">
       <DependentUpon>AlterarClientePrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Autenticacao.resx">
       <DependentUpon>Autenticacao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CadastrarUsuario.resx">
+    <EmbeddedResource Include="InterfaceGrafica\Usuario\CadastrarUsuario.resx">
       <DependentUpon>CadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Cliente\CadastroCliente.resx">
@@ -206,9 +192,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Cliente\ListarCliente.resx">
       <DependentUpon>ListarCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfaceGrafica\Cliente\ListarClientes.resx">
-      <DependentUpon>ListarClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Funcionario\ListarFuncionario.resx">
       <DependentUpon>ListarFuncionario.cs</DependentUpon>
@@ -225,6 +208,9 @@
     <EmbeddedResource Include="InterfaceGrafica\Servicos\RemoverServico.resx">
       <DependentUpon>RemoverServico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Usuario\ListarUsuario.resx">
+      <DependentUpon>ListarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -235,9 +221,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="InterfaceGrafica\Cliente\RemoverCliente.resx">
-      <DependentUpon>RemoverCliente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Tela_Principal.resx">
       <DependentUpon>Tela_Principal.cs</DependentUpon>
     </EmbeddedResource>

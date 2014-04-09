@@ -1,6 +1,7 @@
 ﻿using Projeto4_Junior.Modelo;
 using Projeto4_Junior.Negocios;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,6 +41,11 @@ namespace Projeto4_Junior.Banco
         public bool VerificaTipoUsuario(String login)
         {
             return this.ibancodados.VerificaTipoUsuario(login);
+        }
+
+        public ArrayList ListarUsuario(String busca)
+        {
+            return this.ibancodados.ListarUsuario(busca);
         }
 
 
