@@ -21,7 +21,7 @@ namespace Projeto4_Junior.Banco
             FactoryConnection conn = new FactoryConnection();
             try
             {
-                String query = "insert into Cliente (Nome, CPF, Telefone, Endereco, DataDeNasc, Email) values" +
+                String query = "insert into Cliente (Nome, CPF, Telefone, Endereco, DatNascimento, Email) values" +
                 "('" + cliente.Nome + "', '" + cliente.Cpf + "', '" + cliente.Telefone + "', '" + cliente.Endereco + "', '"
                 + cliente.Data_Nascimento + "', '" + cliente.Email + "')";
 
@@ -52,7 +52,7 @@ namespace Projeto4_Junior.Banco
                 {
                     cli.Nome = (String)reader["nome"];
                     cli.Cpf = (String)reader["cpf"];
-                    cli.Data_Nascimento = (String)reader["dataDeNasc"];
+                    cli.Data_Nascimento = (String)reader["datNascimento"];
                     cli.Email = (String)reader["email"];
                     cli.Endereco = (String)reader["endereco"];
                     cli.Telefone = (String)reader["telefone"];
@@ -92,7 +92,7 @@ namespace Projeto4_Junior.Banco
             try
             {
                 String query = "update Cliente set Nome = '"+cliente.Nome+"', telefone = '"+cliente.Telefone+"', endereco = '"
-                +cliente.Endereco+"', DataDeNasc = '"+cliente.Data_Nascimento+"', email = '"+cliente.Email+"' where cpf = '"+cliente.Cpf+"'";
+                +cliente.Endereco+"', DatNascimento = '"+cliente.Data_Nascimento+"', email = '"+cliente.Email+"' where cpf = '"+cliente.Cpf+"'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());              
                 SqlDataReader reader = comand.ExecuteReader();
@@ -153,7 +153,7 @@ namespace Projeto4_Junior.Banco
 
                     cli.Nome = (String) reader["nome"];
                     cli.Cpf = (String)reader["cpf"];
-                    cli.Data_Nascimento = (String)reader["dataDeNasc"];
+                    cli.Data_Nascimento = (String)reader["datNascimento"];
                     cli.Email = (String)reader["email"];
                     cli.Endereco = (String)reader["endereco"];
                     cli.Telefone = (String)reader["telefone"];
