@@ -13,23 +13,24 @@ DataDeNasc varchar(100)
 )
 
 CREATE TABLE Usuario (
-Login varchar(100) PRIMARY KEY,
+idUsuario identity(1,1) primary key
+Login varchar(100),
 Senha varchar(100),
 Nome varchar(100),
-idGestor int identity(1,1)
+idGestor int
 )
 
 CREATE TABLE Funcionario (
 Nome varchar(1),
 Telefone varchar(1),
 Endereco varchar(1),
-idFuncionario int() PRIMARY KEY,
-Telefone2 varchar(1),
-CPF varchar(1),
-DataDeNasc varchar(1),
+idFuncionario identity(1,1) PRIMARY KEY,
+idUsuario int,
+CPF varchar(11),
+DataDeNasc varchar(10),
 Login varchar(1),
 idGestor int identity(1,1),
-FOREIGN KEY(Login) REFERENCES Usuario (Login)
+FOREIGN KEY(IdUsuario) REFERENCES Usuario (IdUsuario)
 )
 
 CREATE TABLE Servico (
