@@ -134,6 +134,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 394);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "ListarFuncionario";
             this.Text = "ListarFuncionario";
             this.Load += new System.EventHandler(this.ListarFuncionario_Load);

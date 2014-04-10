@@ -36,8 +36,8 @@ namespace Projeto4_Junior
 
         private void alterarClienteMenuItem_Click(object sender, EventArgs e)
         {
-            Form_AlterarCliente alt_cli = new Form_AlterarCliente();
-            alt_cli.ShowDialog();
+            //Form_AlterarCliente alt_cli = new Form_AlterarCliente();
+            //alt_cli.ShowDialog();
         }
 
         private void listarClienteMenuItem_Click(object sender, EventArgs e)
@@ -48,8 +48,8 @@ namespace Projeto4_Junior
 
         private void removerClienteMenuItem_Click(object sender, EventArgs e)
         {
-            Form_RemoverCliente remov_cli = new Form_RemoverCliente();
-            remov_cli.ShowDialog();
+            //Form_RemoverCliente remov_cli = new Form_RemoverCliente();
+            //remov_cli.ShowDialog();
         }
 
         private void button_CadastrarClienteBarraDeFerramentas_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace Projeto4_Junior
 
             if (gestor == false)
             {
-                this.funcionariosMenuItem.Enabled = false;
+                //this.funcionariosMenuItem.Enabled = false;
                 this.servicosMenuItem.Enabled = false;
                 this.relatoriosMenuItem.Enabled = false;
                 this.estoqueMenuItem.Enabled = false;

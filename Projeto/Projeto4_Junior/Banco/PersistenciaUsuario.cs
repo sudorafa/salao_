@@ -175,6 +175,6 @@ namespace Projeto4_Junior.Banco
 
             return lista;
         }
-        }
     }
 }
+
