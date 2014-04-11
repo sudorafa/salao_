@@ -32,6 +32,8 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
         private void btCadastrar_Click(object sender, EventArgs e)
         {
             bool key = true;
+            string msg;
+           
 
             String[] campo = new String[12] {   tbNome.Text,
                                                 tbTelefone.Text,
@@ -51,8 +53,51 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
                 if (campo[x] == null || campo[x].Equals(""))
                 {
                     key = false;
-                }
+                    switch (x)
+                    {
+                        case 0:
+                            msg = "Preencha o Nome!";
+                            break;
+                        case 1:
+                            msg = "Preencha o Telefone!";
+                            break;
+                        case 2:
+                            msg = "Preencha o CPF!";
+                            break;
+                        case 3:
+                            msg = "Preencha a Data de Nascimento!";
+                            break;
+                        case 4:
+                            msg = "Preencha a Porcentagem!";
+                            break;
+                        case 5:
+                            msg = "Preencha o Número!";
+                            break;
+                        case 6:
+                            msg = "Preencha a Rua!";
+                            break;
+                        case 7:
+                            msg = "Preencha o Complemento!";
+                            break;
+                        case 8:
+                            msg = "Preencha o Bairro!";
+                            break;
+                        case 9:
+                            msg = "Preencha a Cidade!";
+                            break;
+                        case 10:
+                            msg = "Preencha o Estado!";
+                            break;
+                        case 11:
+                            msg = "Preencha o CEP!";
+                            break;
+
+                    }
+                    break;
+                 }
             }
+             
+
 
             if (key == true)
             {
@@ -80,7 +125,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
             }
             else
             {
-                MessageBox.Show("Preencha todos os campos!");
+                MessageBox.Show(msg);
             }
         }
 

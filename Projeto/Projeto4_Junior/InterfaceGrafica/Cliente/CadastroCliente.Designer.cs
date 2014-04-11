@@ -66,7 +66,7 @@
             this.textBox_EmailCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_EmailCliente.Name = "textBox_EmailCliente";
             this.textBox_EmailCliente.Size = new System.Drawing.Size(188, 20);
-            this.textBox_EmailCliente.TabIndex = 2;
+            this.textBox_EmailCliente.TabIndex = 5;
             // 
             // label_EmailCliente
             // 
@@ -95,6 +95,7 @@
             this.button_CancelarCadastroCliente.TabIndex = 17;
             this.button_CancelarCadastroCliente.Text = "Cancelar";
             this.button_CancelarCadastroCliente.UseVisualStyleBackColor = true;
+            this.button_CancelarCadastroCliente.Click += new System.EventHandler(this.button_CancelarCadastroCliente_Click_1);
             // 
             // groupBox1
             // 
@@ -128,7 +129,7 @@
             this.comboBox_EnderecoUfCliente.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_EnderecoUfCliente.Name = "comboBox_EnderecoUfCliente";
             this.comboBox_EnderecoUfCliente.Size = new System.Drawing.Size(44, 21);
-            this.comboBox_EnderecoUfCliente.TabIndex = 11;
+            this.comboBox_EnderecoUfCliente.TabIndex = 12;
             // 
             // textBox_EnderecoCidadeCliente
             // 
@@ -136,7 +137,7 @@
             this.textBox_EnderecoCidadeCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_EnderecoCidadeCliente.Name = "textBox_EnderecoCidadeCliente";
             this.textBox_EnderecoCidadeCliente.Size = new System.Drawing.Size(109, 20);
-            this.textBox_EnderecoCidadeCliente.TabIndex = 10;
+            this.textBox_EnderecoCidadeCliente.TabIndex = 11;
             // 
             // textBox_EnderecoCepCliente
             // 
@@ -144,7 +145,7 @@
             this.textBox_EnderecoCepCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_EnderecoCepCliente.Name = "textBox_EnderecoCepCliente";
             this.textBox_EnderecoCepCliente.Size = new System.Drawing.Size(76, 20);
-            this.textBox_EnderecoCepCliente.TabIndex = 12;
+            this.textBox_EnderecoCepCliente.TabIndex = 10;
             // 
             // textBox_EnderecoBairroCliente
             // 
@@ -168,7 +169,7 @@
             this.textBox_EnderecoRuaCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_EnderecoRuaCliente.Name = "textBox_EnderecoRuaCliente";
             this.textBox_EnderecoRuaCliente.Size = new System.Drawing.Size(190, 20);
-            this.textBox_EnderecoRuaCliente.TabIndex = 7;
+            this.textBox_EnderecoRuaCliente.TabIndex = 6;
             // 
             // textBox_EnderecoNumeroCliente
             // 
@@ -176,7 +177,7 @@
             this.textBox_EnderecoNumeroCliente.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_EnderecoNumeroCliente.Name = "textBox_EnderecoNumeroCliente";
             this.textBox_EnderecoNumeroCliente.Size = new System.Drawing.Size(30, 20);
-            this.textBox_EnderecoNumeroCliente.TabIndex = 6;
+            this.textBox_EnderecoNumeroCliente.TabIndex = 7;
             // 
             // label1
             // 
@@ -272,28 +273,28 @@
             this.textBox_DataNascCliente.Location = new System.Drawing.Point(344, 52);
             this.textBox_DataNascCliente.Name = "textBox_DataNascCliente";
             this.textBox_DataNascCliente.Size = new System.Drawing.Size(60, 20);
-            this.textBox_DataNascCliente.TabIndex = 7;
+            this.textBox_DataNascCliente.TabIndex = 4;
             // 
             // textBox_CpfCliente
             // 
             this.textBox_CpfCliente.Location = new System.Drawing.Point(344, 23);
             this.textBox_CpfCliente.Name = "textBox_CpfCliente";
             this.textBox_CpfCliente.Size = new System.Drawing.Size(96, 20);
-            this.textBox_CpfCliente.TabIndex = 6;
+            this.textBox_CpfCliente.TabIndex = 2;
             // 
             // textBox_TelefoneCliente
             // 
             this.textBox_TelefoneCliente.Location = new System.Drawing.Point(73, 52);
             this.textBox_TelefoneCliente.Name = "textBox_TelefoneCliente";
             this.textBox_TelefoneCliente.Size = new System.Drawing.Size(74, 20);
-            this.textBox_TelefoneCliente.TabIndex = 5;
+            this.textBox_TelefoneCliente.TabIndex = 3;
             // 
             // textBox_NomeCliente
             // 
             this.textBox_NomeCliente.Location = new System.Drawing.Point(73, 23);
             this.textBox_NomeCliente.Name = "textBox_NomeCliente";
             this.textBox_NomeCliente.Size = new System.Drawing.Size(195, 20);
-            this.textBox_NomeCliente.TabIndex = 4;
+            this.textBox_NomeCliente.TabIndex = 1;
             // 
             // lbDataNascimento
             // 

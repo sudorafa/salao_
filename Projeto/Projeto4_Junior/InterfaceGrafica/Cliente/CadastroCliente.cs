@@ -19,10 +19,6 @@ namespace Projeto4_Junior
             InitializeComponent();
         }
 
-        private void button_CancelarCadastroCliente_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void textBox_NomeCliente_TextChanged(object sender, EventArgs e)
         {
@@ -86,6 +82,11 @@ namespace Projeto4_Junior
         private void groupBox_EnderecoCadastroCliente_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_CancelarCadastroCliente_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
