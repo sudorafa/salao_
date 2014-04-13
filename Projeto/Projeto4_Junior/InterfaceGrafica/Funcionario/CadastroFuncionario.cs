@@ -32,21 +32,21 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
         private void btCadastrar_Click(object sender, EventArgs e)
         {
             bool key = true;
-            string msg;
+            String msg = "";
            
 
-            String[] campo = new String[12] {   tbNome.Text,
-                                                tbTelefone.Text,
+            String[] campo = new String[12] {   tbNome.Text,                                                
                                                 tbCpf.Text,
+                                                tbTelefone.Text,
                                                 tbDataNascimento.Text, 
                                                 tbPorcentagem.Text,
-                                                tbNumeroEndereco.Text,
                                                 tbRuaEndereco.Text,
+                                                tbNumeroEndereco.Text,
                                                 tbComplementoEndereco.Text,
                                                 tbBairroEndereco.Text,
+                                                tbCepEndereco.Text,
                                                 tbCidadeEndereco.Text,
-                                                cbUfEndereco.Text,
-                                                tbCepEndereco.Text};
+                                                cbUfEndereco.Text};
 
             for (int x = 0; x < campo.Length; x++)
             {
@@ -59,10 +59,10 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
                             msg = "Preencha o Nome!";
                             break;
                         case 1:
-                            msg = "Preencha o Telefone!";
+                            msg = "Preencha o CPF!";
                             break;
                         case 2:
-                            msg = "Preencha o CPF!";
+                            msg = "Preencha o Telefone!";
                             break;
                         case 3:
                             msg = "Preencha a Data de Nascimento!";
@@ -71,10 +71,10 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
                             msg = "Preencha a Porcentagem!";
                             break;
                         case 5:
-                            msg = "Preencha o Número!";
+                            msg = "Preencha a Rua!";
                             break;
                         case 6:
-                            msg = "Preencha a Rua!";
+                            msg = "Preencha o Número!";
                             break;
                         case 7:
                             msg = "Preencha o Complemento!";
@@ -83,14 +83,15 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
                             msg = "Preencha o Bairro!";
                             break;
                         case 9:
-                            msg = "Preencha a Cidade!";
-                            break;
-                        case 10:
-                            msg = "Preencha o Estado!";
-                            break;
-                        case 11:
                             msg = "Preencha o CEP!";
                             break;
+                        case 10:
+                            msg = "Preencha a Cidade!";
+                            break;
+                        case 11:
+                            msg = "Preencha o Estado!";
+                            break;
+                        
 
                     }
                     break;
