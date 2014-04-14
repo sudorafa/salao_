@@ -27,7 +27,7 @@ CPF nvarchar(100) PRIMARY KEY,
 Nome nvarchar(100),
 Telefone nvarchar(100),
 Endereco nvarchar(100),
-Porcentagem Int,
+Porcentagem Double,
 Data_Nascimento nvarchar(100)
 )
 
