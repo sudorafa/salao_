@@ -2,6 +2,7 @@
 using Projeto4_Junior.Negocios;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,11 @@ namespace Projeto4_Junior.Banco
         public void AlterarProdutos(Produto produto)
         {            
             this.ibancodados.AlterarProdutos(produto);
+        }
+        public SqlDataReader VerificaProd(Produto produto)
+        {
+            return this.ibancodados.VerificaProd(produto);     
+        
         }
     }
 }

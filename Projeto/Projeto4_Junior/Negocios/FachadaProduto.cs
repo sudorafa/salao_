@@ -26,5 +26,9 @@ namespace Projeto4_Junior.Negocios
         {
             this.ifachada.AlterarProdutos(produto);
         }
+        public void VerificaProd(Produto produto)
+        {
+            this.ifachada.VerificaProd(produto);
+        }
     }
 }

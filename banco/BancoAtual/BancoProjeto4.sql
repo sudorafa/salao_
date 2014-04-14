@@ -57,6 +57,7 @@ FOREIGN KEY(ClienCPF) REFERENCES Cliente (CPF)
 
 CREATE TABLE Produtos (
 IdProduto Int PRIMARY KEY,
+Codigo varchar(100),
 Descricao nvarchar(100),
 Valor Money,
 Quantidade_Estoque Int

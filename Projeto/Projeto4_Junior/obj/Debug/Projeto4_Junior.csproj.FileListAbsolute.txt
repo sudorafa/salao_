@@ -193,3 +193,23 @@ C:\Users\Jefferson\Documents\GitHub\Projeto\Projeto4_Junior\obj\Debug\Projeto4_J
 C:\Users\Jefferson\Documents\GitHub\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Properties.Resources.resources
 C:\Users\Jefferson\Documents\GitHub\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_Index.resources
 C:\Users\Jefferson\Documents\GitHub\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.pdb
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csprojResolveAssemblyReference.cache
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.AlterarClientePrincipal.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Autenticacao.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.DetalharFuncionario.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.CadastrarUsuario.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_CadastroClientes.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.AlterarFuncionario.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.CadastroFuncionario.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.ListarCliente.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.ListarFuncionario.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.AlterarServico.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.Form_Cadastro_Servico.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.ListarServico.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.RemoverServico.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.ListarUsuario.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Properties.Resources.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_Index.resources
+C:\Users\SFS SISTEMAS\Documents\Visual Studio 2012\Projects\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache
