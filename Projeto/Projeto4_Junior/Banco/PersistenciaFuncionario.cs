@@ -15,27 +15,33 @@ namespace Projeto4_Junior.Banco
 {
     class PersistenciaFuncionario : IBancoDadosFuncionario
     {
-        SqlCommand comm = new SqlCommand();
+        
         FactoryConnection fc = new FactoryConnection();
 
         public void CadastrarFuncionario(Funcionario funionario)
         {
+            fc.FecharConnecxao();
+            
+            SqlCommand comm = new SqlCommand();
             try
             {
-                comm.CommandText = "INSERT INTO FUNCIONARIOS(NOME, ENDERECO, DATNASCIMENTO, TELEFONE,  CPF)" +
-                    " VALUES(@nome, @endereco, @datNascimento, @telefone,@cpf) FROM FUNCIONARIO";
+                comm.CommandText = "INSERT INTO FUNCIONARIO(NOME, ENDERECO, DATNASCIMENTO, TELEFONE,  CPF, porcentagem)" +
+                    " VALUES(@nome, @endereco, @datNascimento, @telefone, @cpf, @porcentagem)";
                 comm.Parameters.AddWithValue("@nome", funionario.Nome);
                 comm.Parameters.AddWithValue("@endereco", funionario.Endereco);
                 comm.Parameters.AddWithValue("@datNascimento", funionario.Data_Nascimento);
                 comm.Parameters.AddWithValue("@telefone", funionario.Telefone);
                 comm.Parameters.AddWithValue("@cpf", funionario.Cpf);
+                comm.Parameters.AddWithValue("@porcentagem", funionario.Porcentagem);
 
-                fc.AbrirConnexao();
+                comm.Connection=fc.AbrirConnexao();
                 comm.ExecuteNonQuery();
                 fc.FecharConnecxao();
             }catch(SqlException e)
             {
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
                 e.Message.GetType();
+                
             }
 
 
@@ -150,11 +156,12 @@ namespace Projeto4_Junior.Banco
 
         public SqlDataReader VerificaFunc(Funcionario func)
         {
+            SqlCommand comm = new SqlCommand();
             SqlDataReader read = null;
             try
             {
                 
-                comm.CommandText = "select COUNT(*) from funcionario where cpf=@cpf";
+                comm.CommandText = "select * from funcionario where cpf=@cpf";
                 comm.Parameters.AddWithValue("@cpf", func.Cpf);
                 comm.Connection = fc.AbrirConnexao();
                 read = comm.ExecuteReader();

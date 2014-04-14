@@ -18,14 +18,15 @@ namespace Projeto4_Junior.Negocios
 
         public void CadastrarFuncionario(Funcionario funcionario)
         {          
-            if (ibancodados.VerificaFunc(funcionario) == null)
+            if (ibancodados.VerificaFunc(funcionario).HasRows)
             {
-                ibancodados.CadastrarFuncionario(funcionario);
-                MessageBox.Show("Cadastro Efetuado com sucesso !!");
+
+                MessageBox.Show("Atenção: CPF ja encontra-se cadastrador!"); 
             }
             else
             {
-                MessageBox.Show("CPF ja cadastrado !!!");            
+                ibancodados.CadastrarFuncionario(funcionario);
+                MessageBox.Show("Cadastro Efetuado com sucesso !!"); 
             }
 
         }

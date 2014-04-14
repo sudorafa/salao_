@@ -12,11 +12,11 @@ namespace Projeto4_Junior.Factory
     public class FactoryConnection
     {
         private static SqlConnection conn = new SqlConnection();
-        
+        SqlCommand comand = new SqlCommand();
+
         public SqlConnection AbrirConnexao()
         {
-            conn.ConnectionString = "Server=Paulo;Database=Projeto4;Trusted_Connection=True;";
-            SqlCommand comand = new SqlCommand();
+            conn.ConnectionString = @"Server=Jefferson-PC\SQLSERVER;Database=Projeto4;Trusted_Connection=True;";            
             comand.Connection = conn;
             conn.Open();
 
@@ -28,6 +28,8 @@ namespace Projeto4_Junior.Factory
             {
                 conn.Close();
                 conn.Dispose();
+                comand.Dispose();
+                
             }
         }
 
