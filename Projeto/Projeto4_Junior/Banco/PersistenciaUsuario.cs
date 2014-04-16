@@ -37,14 +37,40 @@ namespace Projeto4_Junior.Banco
         }
         public Usuario BuscarUsuario(String login)
         {
-            return null;
+            FactoryConnection conn = new FactoryConnection();
+            Usuario usu = new Usuario();
+            try
+            {
+                String query = "SELECT * FROM Usuario WHERE login = '" + login + "'";
+
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+
+                SqlDataReader reader = comand.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    usu.Nome = (String)reader["nome"];
+                    usu.Login = (String)reader["login"];
+                    usu.Senha = (String)reader["senha"];
+                    usu.isGestor = (int)reader["isgestor"];
+                }
+                reader.Close();
+                conn.FecharConnecxao();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+
+            return usu;
+            
         }
         public void RemoverUsuario(String login)
         {
             FactoryConnection conn = new FactoryConnection();
             try
             {
-                String query = "DELETE FROM Usuario where Login ='" + login + "'";
+                String query = "DELETE FROM Usuario where login ='" + login + "'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 
@@ -61,7 +87,21 @@ namespace Projeto4_Junior.Banco
 
         public void AlterarUsuario(Usuario usuario)
         {
+            FactoryConnection conn = new FactoryConnection();
+            try
+            {
+                String query = "UPDATE Usuario SET nome = '" + usuario.Nome + "', login = '" + usuario.Login +
+                    "', senha = '" + usuario.Senha + "', isgestor = '" + usuario.isGestor + "' WHERE cpf = '" + usuario.Login + "'";
 
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+                SqlDataReader reader = comand.ExecuteReader();
+                conn.FecharConnecxao();
+                MessageBox.Show("Alterado com sucesso!");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            } 
         }
         public bool Autenticar(String usuario, String senha)
         {
