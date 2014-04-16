@@ -13,7 +13,8 @@ IdUsuario Int PRIMARY KEY,
 isGestor Int,
 Login nvarchar(100),
 Senha nvarchar(100),
-Nome nvarchar(100)
+Nome nvarchar(100),
+Excluido Int
 )
 
 CREATE TABLE Servicos (
@@ -28,7 +29,8 @@ Nome nvarchar(100),
 Telefone nvarchar(100),
 Endereco nvarchar(100),
 Porcentagem Double,
-Data_Nascimento nvarchar(100)
+Data_Nascimento nvarchar(100),
+Excluido Int
 )
 
 CREATE TABLE ManterFuncionario (
@@ -45,7 +47,8 @@ Telefone nvarchar(100),
 Telefone2 nvarchar(100),
 Data_Nascimento nvarchar(100),
 Email nvarchar(100),
-Nome nvarchar(100)
+Nome nvarchar(100),
+Excluido Int
 )
 
 CREATE TABLE ManterUsuario (
@@ -60,7 +63,8 @@ IdProduto Int PRIMARY KEY,
 Codigo varchar(100),
 Descricao nvarchar(100),
 Valor Money,
-Quantidade_Estoque Int
+Quantidade_Estoque Int,
+Excluido Int
 )
 
 CREATE TABLE ManterProdutos (
