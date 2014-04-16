@@ -11,8 +11,8 @@ namespace Projeto4_Junior.Negocios
     interface IBancoDadosUsuario
     {
         void CadastrarUsuario(Usuario usuario);
-        Usuario BuscarUsuario(Usuario usuario);
-        void RemoverUsuario(Usuario usuario);
+        Usuario BuscarUsuario(String login);
+        void RemoverUsuario(String login);
         void AlterarUsuario(Usuario usuario);
         bool Autenticar(String usuario, String senha);
         bool VerificarUsuarioExistente(String login);

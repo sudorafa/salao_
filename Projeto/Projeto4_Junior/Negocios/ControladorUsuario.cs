@@ -27,13 +27,13 @@ namespace Projeto4_Junior.Negocios
             }
             
         }
-        public Usuario BuscarUsuario(Usuario usuario)
+        public Usuario BuscarUsuario(String login)
         {
-            return null;
+            return ibancodados.BuscarUsuario(login);
         }
-        public void RemoverUsuario(Usuario usuario)
+        public void RemoverUsuario(String login)
         {
-            
+                
         }
 
         public void AlterarUsuario(Usuario usuario)

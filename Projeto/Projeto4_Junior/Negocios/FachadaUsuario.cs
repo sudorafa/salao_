@@ -16,13 +16,13 @@ namespace Projeto4_Junior.Negocios
         {
             this.ifachada.CadastrarUsuario(usuario);
         }
-        public Usuario BuscarUsuario(Usuario usuario)
+        public Usuario BuscarUsuario(String login)
         {
-            return this.ifachada.BuscarUsuario(usuario);
+            return this.ifachada.BuscarUsuario(login);
         }
-        public void RemoverUsuario(Usuario usuario)
+        public void RemoverUsuario(String login)
         {
-            this.ifachada.RemoverUsuario(usuario);
+            this.ifachada.RemoverUsuario(login);
         }
 
         public void AlterarUsuario(Usuario usuario)

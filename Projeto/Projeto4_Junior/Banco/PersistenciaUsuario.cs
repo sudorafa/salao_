@@ -35,11 +35,11 @@ namespace Projeto4_Junior.Banco
             }          
 
         }
-        public Usuario BuscarUsuario(Usuario usuario)
+        public Usuario BuscarUsuario(String login)
         {
             return null;
         }
-        public void RemoverUsuario(Usuario usuario)
+        public void RemoverUsuario(String login)
         {
 
         }

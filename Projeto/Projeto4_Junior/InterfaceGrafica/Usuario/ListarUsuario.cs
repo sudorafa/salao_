@@ -1,5 +1,6 @@
 ﻿using Projeto4_Junior.Negocios;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,11 +21,47 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
 
         private void BuscarListaUsuario_Click(object sender, EventArgs e)
         {
-            //parei aqui!!!
-            
-            IfachadaUsuario ifachada = new FachadaUsuario();
+            IfachadaUsuario fachadausuario = new FachadaUsuario();
+            ArrayList lista = fachadausuario.ListarUsuario(Usuario_Buscado.Text);
+            dataGridView1.Rows.Clear();
+            foreach (var func in lista)
+            {
+                Projeto4_Junior.Modelo.Usuario usuario = new Projeto4_Junior.Modelo.Usuario();
+                usuario = (Projeto4_Junior.Modelo.Usuario)func;
+                // PREENCHE AS COLUNAS DE 'NOME', 'CPF' E O NOMES DOS BOTÕES PADRÕES
+                dataGridView1.Rows.Add(usuario.Nome, usuario.Login, "Remover", "Alterar");
+            }
+        }
 
-            ifachada.ListarUsuario(Usuario_Buscado.Text);
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IfachadaUsuario fachadausuario = new FachadaUsuario();
+
+            if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["remover"].Index)
+            {
+                DialogResult dr = MessageBox.Show("Tem certeza que deseja excluir " + dataGridView1[0, e.RowIndex].Value + "?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dr == DialogResult.Yes)
+                {
+                    //REMOVER O FUNCIONARIO SELECIONADO
+                    String login = (String)dataGridView1[1, e.RowIndex].Value;
+                    fachadausuario.RemoverUsuario(login);
+                    //A função abaixo limpa o dataGridView
+                    dataGridView1.Rows.Clear();
+                    //A função abaixo preenche o dataGridView
+                    this.BuscarListaUsuario_Click(sender, e);
+                }
+                else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["alterar"].Index)
+                {
+                    //ABRI A JANELA PARA ALTERAR O FUNCIONARIO SELECIONADO
+                    String login = (String)dataGridView1[1, e.RowIndex].Value;
+                    //Carrega o funcionario para ser alterado.
+                    Projeto4_Junior.Modelo.Usuario usu = fachadausuario.BuscarUsuario(login);
+
+                    AlterarUsuario tela = new AlterarUsuario(usu, this);
+                    tela.ShowDialog();
+                }
+
+            }
         }
     }
 }

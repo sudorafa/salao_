@@ -60,20 +60,22 @@ namespace Projeto4_Junior
 
         private void Form_Index_Load(object sender, EventArgs e)
         {
+            
 
             if (gestor == false)
             {
-                //this.funcionariosMenuItem.Enabled = false;
-                this.servicosMenuItem.Enabled = false;
-                this.relatoriosMenuItem.Enabled = false;
-                this.estoqueMenuItem.Enabled = false;
-                this.usuariosMenuItem.Enabled = false;
-                this.button_InserirFuncionarioBarraDeFerramentas.Enabled = false;
-                this.button_InserirServicoBarraDeFerramentas.Enabled = false;
-                this.button_RelatorioDiarioBarraDeFerramentas.Enabled = false;
-                this.button_RelatorioEstoqueBarraDeFerramentas.Enabled = false;
-                this.button_InserirUsuarioBarraDeFerramentas.Enabled = false;                
+               //this.funcionariosMenuItem.Enabled = false;
+               this.servicosMenuItem.Enabled = false;
+               this.relatoriosMenuItem.Enabled = false;
+               this.estoqueMenuItem.Enabled = false;
+               this.usuariosMenuItem.Enabled = false;
+               this.button_InserirFuncionarioBarraDeFerramentas.Enabled = false;
+               this.button_InserirServicoBarraDeFerramentas.Enabled = false;
+               this.button_RelatorioDiarioBarraDeFerramentas.Enabled = false;
+               this.button_RelatorioEstoqueBarraDeFerramentas.Enabled = false;
+               this.button_InserirUsuarioBarraDeFerramentas.Enabled = false;                
             }
+              
         }
 
         private void inserirUsuarioMenuItem_Click(object sender, EventArgs e)

@@ -17,13 +17,13 @@ namespace Projeto4_Junior.Banco
         {            
             this.ibancodados.CadastrarUsuario(usuario);
         }
-        public Usuario BuscarUsuario(Usuario usuario)
+        public Usuario BuscarUsuario(String login)
         {           
-            return this.ibancodados.BuscarUsuario(usuario);
+            return this.ibancodados.BuscarUsuario(login);
         }
-        public void RemoverUsuario(Usuario usuario)
+        public void RemoverUsuario(String login)
         {            
-            this.ibancodados.RemoverUsuario(usuario);
+            this.ibancodados.RemoverUsuario(login);
         }
 
         public void AlterarUsuario(Usuario usuario)
