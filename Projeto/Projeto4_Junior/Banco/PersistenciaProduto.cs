@@ -36,7 +36,12 @@ namespace Projeto4_Junior.Banco
         }
         public void RemoverProdutos(Produto produto)
         {
-
+            SqlCommand comm = new SqlCommand();
+                comm.CommandText = "Insert into Produtos(excluido) values (1) where codigo=@codigo";
+                comm.Parameters.AddWithValue("@codigo", produto.Codigo);
+                comm.Connection = fc.AbrirConnexao();
+                comm.ExecuteNonQuery();
+                fc.FecharConnecxao();
         }
         public void AlterarProdutos(Produto produto)
         {
