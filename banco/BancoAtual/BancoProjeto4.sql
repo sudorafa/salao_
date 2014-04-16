@@ -14,7 +14,7 @@ isGestor Int,
 Login nvarchar(100),
 Senha nvarchar(100),
 Nome nvarchar(100),
-Excluido Int
+Excluido bit
 )
 
 CREATE TABLE Servicos (
@@ -30,7 +30,7 @@ Telefone nvarchar(100),
 Endereco nvarchar(100),
 Porcentagem Double,
 Data_Nascimento nvarchar(100),
-Excluido Int
+Excluido bit
 )
 
 CREATE TABLE ManterFuncionario (
@@ -48,7 +48,7 @@ Telefone2 nvarchar(100),
 Data_Nascimento nvarchar(100),
 Email nvarchar(100),
 Nome nvarchar(100),
-Excluido Int
+Excluido bit
 )
 
 CREATE TABLE ManterUsuario (
@@ -64,7 +64,7 @@ Codigo varchar(100),
 Descricao nvarchar(100),
 Valor Money,
 Quantidade_Estoque Int,
-Excluido Int
+Excluido bit
 )
 
 CREATE TABLE ManterProdutos (
