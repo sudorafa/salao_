@@ -41,6 +41,21 @@ namespace Projeto4_Junior.Banco
         }
         public void RemoverUsuario(String login)
         {
+            FactoryConnection conn = new FactoryConnection();
+            try
+            {
+                String query = "DELETE FROM Usuario where Login ='" + login + "'";
+
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+
+                SqlDataReader reader = comand.ExecuteReader();
+                MessageBox.Show("Funcionário removido com sucesso!");
+                conn.FecharConnecxao();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
 
         }
 

@@ -33,7 +33,7 @@ namespace Projeto4_Junior.Negocios
         }
         public void RemoverUsuario(String login)
         {
-                
+            ibancodados.RemoverUsuario(login);    
         }
 
         public void AlterarUsuario(Usuario usuario)
