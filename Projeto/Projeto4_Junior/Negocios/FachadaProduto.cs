@@ -30,5 +30,11 @@ namespace Projeto4_Junior.Negocios
         {
             this.ifachada.VerificaProd(produto);
         }
+
+
+        System.Data.SqlClient.SqlDataReader IfachadaProduto.VerificaProd(Produto produto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

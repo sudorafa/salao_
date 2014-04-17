@@ -64,7 +64,7 @@ namespace Projeto4_Junior
 
             if (gestor == false)
             {
-               //this.funcionariosMenuItem.Enabled = false;
+               this.funcionariosMenuItem.Enabled = false;
                this.servicosMenuItem.Enabled = false;
                this.relatoriosMenuItem.Enabled = false;
                this.estoqueMenuItem.Enabled = false;

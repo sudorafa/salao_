@@ -168,7 +168,7 @@ namespace Projeto4_Junior.Banco
            try{
                 FactoryConnection conn = new FactoryConnection();
 
-                String query = "select isGestor from Usuario where Login='" + login + "' AND isGestor = '1'";
+                String query = "select tipoUsuario from Usuario where Login='" + login + "' AND tipoUsuario = '1'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 

@@ -191,8 +191,8 @@ namespace Projeto4_Junior.Banco
 
                     func.Nome = (String)reader["nome"];
                     func.Cpf = (String)reader["cpf"];
-                    func.Data_Nascimento = (String)reader["datNascimento"];
-                    func.Porcentagem = (int)reader["porcentagem"];
+                    func.Data_Nascimento = (String)reader["DataNascimento"];
+                    func.Porcentagem = (double)reader["porcentagem"];
                     func.Endereco = (String)reader["endereco"];
                     func.Telefone = (String)reader["telefone"];
 

@@ -14,7 +14,7 @@ namespace Projeto4_Junior.Modelo
         public String Cpf { get; set; }
         public String Data_Nascimento { get; set; }
         public String Telefone { get; set; }        
-        public int Porcentagem { get; set; }
+        public double Porcentagem { get; set; }
 
 
 
@@ -23,7 +23,7 @@ namespace Projeto4_Junior.Modelo
 
         }
         public Funcionario(String nome, String endereco, String cpf, String data_nascimento, String telefone,
-            int porcentagem)
+            double porcentagem)
         {
             this.Nome = nome;
             this.Endereco = endereco;
