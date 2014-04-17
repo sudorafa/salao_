@@ -1,6 +1,7 @@
 ﻿using Projeto4_Junior.Modelo;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,15 +27,10 @@ namespace Projeto4_Junior.Negocios
         {
             this.ifachada.AlterarProdutos(produto);
         }
-        public void VerificaProd(Produto produto)
+        public SqlDataReader VerificaProd(Produto produto)
         {
-            this.ifachada.VerificaProd(produto);
+           return this.ifachada.VerificaProd(produto);
         }
 
-
-        System.Data.SqlClient.SqlDataReader IfachadaProduto.VerificaProd(Produto produto)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

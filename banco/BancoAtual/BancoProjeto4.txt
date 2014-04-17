@@ -1,5 +1,5 @@
 CREATE TABLE Usuario (
-IdUsuario Int PRIMARY KEY,
+IdUsuario Int PRIMARY KEY identity,
 tipoUsuario Int,
 Login nvarchar(100) unique,
 Senha nvarchar(100),
@@ -25,20 +25,20 @@ DataNascimento nvarchar(20)
 
 
 CREATE TABLE Serviços (
-IdServico int PRIMARY KEY,
+IdServico int PRIMARY KEY identity,
 Descricao nvarchar(100),
 Valor money
 )
 
 CREATE TABLE Produto (
-IdProduto int PRIMARY KEY,
+IdProduto int PRIMARY KEY identity,
 Descricao nvarchar(20),
 Valor Money,
 Quantidade Int
 )
 
 CREATE TABLE Venda (
-IdRelatorio Int PRIMARY KEY,
+IdVenda Int PRIMARY KEY identity,
 ValorTotal money,
 Data nvarchar(20),
 IdServico int,
