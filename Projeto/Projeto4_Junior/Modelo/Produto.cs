@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 namespace Projeto4_Junior.Modelo
 {
     class Produto
-    {
-        public string Codigo { get; set; }
+    {        
         public String Descricao { get; set; }
         public Decimal Valor { get; set; }
         public int Quantidade_Estoque { get; set; }
+        public int IdProduto { get; set; }
+        public Boolean Ativo { get; set; }
 
         public Produto()
         {

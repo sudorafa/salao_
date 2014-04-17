@@ -29,7 +29,7 @@ namespace Projeto4_Junior.Banco
                     " VALUES(@nome, @endereco, @datNascimento, @telefone, @cpf, @porcentagem)";
                 comm.Parameters.AddWithValue("@nome", funionario.Nome);
                 comm.Parameters.AddWithValue("@endereco", funionario.Endereco);
-                comm.Parameters.AddWithValue("@datNascimento", funionario.Data_Nascimento);
+                comm.Parameters.AddWithValue("@datNascimento", funionario.DataNascimento);
                 comm.Parameters.AddWithValue("@telefone", funionario.Telefone);
                 comm.Parameters.AddWithValue("@cpf", funionario.Cpf);
                 comm.Parameters.AddWithValue("@porcentagem", funionario.Porcentagem);
@@ -63,7 +63,7 @@ namespace Projeto4_Junior.Banco
                 {
                     func.Nome = (String)reader["nome"];
                     func.Cpf = (String)reader["cpf"];
-                    func.Data_Nascimento = (String)reader["datNascimento"];
+                    func.DataNascimento = (String)reader["datNascimento"];
                     func.Porcentagem = (int)reader["porcentagem"];
                     func.Endereco = (String)reader["endereco"];
                     func.Telefone = (String)reader["telefone"];
@@ -121,7 +121,7 @@ namespace Projeto4_Junior.Banco
             FactoryConnection conn = new FactoryConnection();
             try
             {
-                String query = "UPDATE Funcionario SET nome = '" + func.Nome + "', telefone = '" + func.Telefone + "', endereco = '"+ func.Endereco + "', porcentagem = '"+func.Porcentagem+"', datNascimento = '" + func.Data_Nascimento + "' WHERE cpf = '"+func.Cpf+"'";
+                String query = "UPDATE Funcionario SET nome = '" + func.Nome + "', telefone = '" + func.Telefone + "', endereco = '"+ func.Endereco + "', porcentagem = '"+func.Porcentagem+"', datNascimento = '" + func.DataNascimento + "' WHERE cpf = '"+func.Cpf+"'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
                 SqlDataReader reader = comand.ExecuteReader();
@@ -191,7 +191,7 @@ namespace Projeto4_Junior.Banco
 
                     func.Nome = (String)reader["nome"];
                     func.Cpf = (String)reader["cpf"];
-                    func.Data_Nascimento = (String)reader["DataNascimento"];
+                    func.DataNascimento = (String)reader["DataNascimento"];
                     func.Porcentagem = (double)reader["porcentagem"];
                     func.Endereco = (String)reader["endereco"];
                     func.Telefone = (String)reader["telefone"];

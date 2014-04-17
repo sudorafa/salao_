@@ -54,9 +54,7 @@
             this.saidaEstoqueMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inserirUsuarioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarUsuarioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarUsuariosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removerUsuarioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.meuUsuarioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarCadastroMeuUsuarioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarLoginSenhaMeuUsuarioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -256,9 +254,7 @@
             // 
             this.usuariosMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inserirUsuarioMenuItem,
-            this.alterarUsuarioMenuItem,
-            this.listarUsuariosMenuItem,
-            this.removerUsuarioMenuItem});
+            this.listarUsuariosMenuItem});
             this.usuariosMenuItem.Name = "usuariosMenuItem";
             this.usuariosMenuItem.Size = new System.Drawing.Size(64, 20);
             this.usuariosMenuItem.Text = "&Usuários";
@@ -270,24 +266,12 @@
             this.inserirUsuarioMenuItem.Text = "Inserir";
             this.inserirUsuarioMenuItem.Click += new System.EventHandler(this.inserirUsuarioMenuItem_Click);
             // 
-            // alterarUsuarioMenuItem
-            // 
-            this.alterarUsuarioMenuItem.Name = "alterarUsuarioMenuItem";
-            this.alterarUsuarioMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.alterarUsuarioMenuItem.Text = "Alterar";
-            // 
             // listarUsuariosMenuItem
             // 
             this.listarUsuariosMenuItem.Name = "listarUsuariosMenuItem";
             this.listarUsuariosMenuItem.Size = new System.Drawing.Size(152, 22);
             this.listarUsuariosMenuItem.Text = "Listar";
             this.listarUsuariosMenuItem.Click += new System.EventHandler(this.listarUsuariosMenuItem_Click);
-            // 
-            // removerUsuarioMenuItem
-            // 
-            this.removerUsuarioMenuItem.Name = "removerUsuarioMenuItem";
-            this.removerUsuarioMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.removerUsuarioMenuItem.Text = "Remover";
             // 
             // meuUsuarioMenuItem
             // 
@@ -479,8 +463,6 @@
         private System.Windows.Forms.ToolStripButton button_AlterarLoginESenhaBarraDeFerramentas;
         private System.Windows.Forms.ToolStripMenuItem usuariosMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inserirUsuarioMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alterarUsuarioMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarUsuariosMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removerUsuarioMenuItem;
     }
 }

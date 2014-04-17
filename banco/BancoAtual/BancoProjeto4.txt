@@ -3,7 +3,8 @@ IdUsuario Int PRIMARY KEY identity,
 tipoUsuario Int,
 Login nvarchar(100) unique,
 Senha nvarchar(100),
-Nome nvarchar(20)
+Nome nvarchar(20),
+Ativo bit
 )
 
 CREATE TABLE Cliente (
@@ -12,6 +13,7 @@ Endereço nvarchar(200),
 Telefone nvarchar(30),
 DataNascimento nvarchar(20),
 Email nvarchar(20)
+Ativo bit
 )
 
 CREATE TABLE Funcionario (
@@ -21,6 +23,7 @@ Telefone nvarchar(30),
 Endereco nvarchar(200),
 Porcentagem float,
 DataNascimento nvarchar(20)
+Ativo bit
 )
 
 
@@ -28,6 +31,7 @@ CREATE TABLE Serviços (
 IdServico int PRIMARY KEY identity,
 Descricao nvarchar(100),
 Valor money
+Ativo bit
 )
 
 CREATE TABLE Produto (
@@ -35,6 +39,7 @@ IdProduto int PRIMARY KEY identity,
 Descricao nvarchar(20),
 Valor Money,
 Quantidade Int
+Ativo bit
 )
 
 CREATE TABLE Venda (

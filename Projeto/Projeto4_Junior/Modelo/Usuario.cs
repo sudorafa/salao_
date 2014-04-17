@@ -12,7 +12,8 @@ namespace Projeto4_Junior.Modelo
         public String Login { get; set; }
         public String Senha { get; set; }
         public int isGestor { get; set; }
-
+        public int IdUsuario { get; set; }
+        public Boolean Ativo { get; set; }
 
         public Usuario()
         {

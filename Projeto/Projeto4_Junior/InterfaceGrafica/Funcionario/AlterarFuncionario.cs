@@ -20,7 +20,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
             tbNome.Text = func.Nome;
             tbTelefone.Text = func.Telefone;
             tbCpf.Text = func.Cpf;
-            tbDataNascimento.Text = func.Data_Nascimento;
+            tbDataNascimento.Text = func.DataNascimento;
             tbPorcentagem.Text = ""+func.Porcentagem;
 
             this.listar = listarFunc;
@@ -116,7 +116,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
                     funcionario.Nome = campo[0];
                     funcionario.Telefone = campo[1];
                     funcionario.Cpf = campo[2];
-                    funcionario.Data_Nascimento = campo[3];
+                    funcionario.DataNascimento = campo[3];
                     funcionario.Porcentagem = int.Parse(campo[4]);
 
                     funcionario.Endereco = campo[5] + ", ";

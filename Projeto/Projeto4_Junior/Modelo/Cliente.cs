@@ -14,8 +14,10 @@ namespace Projeto4_Junior.Modelo
         public String Email { get; set; }
         public String Endereco { get; set; }
         public String Cpf { get; set; }
-        public String Data_Nascimento { get; set; }
+        public String DataNascimento { get; set; }
         public String Telefone { get; set; }
+        public Boolean Ativo { get; set; }
+
 
         public Cliente()
         {
@@ -28,7 +30,7 @@ namespace Projeto4_Junior.Modelo
             this.Email = email;
             this.Endereco = endereco;
             this.Cpf = cpf;
-            this.Data_Nascimento = data_nascimento;
+            this.DataNascimento = data_nascimento;
             this.Telefone = telefone;
 
         }

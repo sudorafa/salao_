@@ -20,9 +20,9 @@ namespace Projeto4_Junior.Banco
             FactoryConnection conn = new FactoryConnection();
             try
             {
-                String query = "insert into Usuario (Nome, Login, Senha, isGestor) values" +
+                String query = "insert into Usuario (Nome, Login, Senha, TipoUsuario, Ativo) values" +
                 "('" + usuario.Nome + "', '" + usuario.Login + "', '" + usuario.Senha +
-                "', '" + usuario.isGestor + "')";
+                "', '" + usuario.isGestor + "', '" + usuario.Ativo + "')";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
                 //comand.ExecuteNonQuery(); <---- Não seria melhor usar o comand pra executar a instrução SQL ?
@@ -70,7 +70,7 @@ namespace Projeto4_Junior.Banco
             FactoryConnection conn = new FactoryConnection();
             try
             {
-                String query = "DELETE FROM Usuario where login ='" + login + "'";
+                String query = "UPDATE Usuario SET Ativo=0 WHERE Login = '" + login + "'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 
@@ -91,7 +91,7 @@ namespace Projeto4_Junior.Banco
             try
             {
                 String query = "UPDATE Usuario SET nome = '" + usuario.Nome + "', login = '" + usuario.Login +
-                    "', senha = '" + usuario.Senha + "', isgestor = '" + usuario.isGestor + "' WHERE cpf = '" + usuario.Login + "'";
+                    "', senha = '" + usuario.Senha + "', isgestor = '" + usuario.isGestor + "' WHERE Login = '" + usuario.Login + "'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
                 SqlDataReader reader = comand.ExecuteReader();
@@ -109,7 +109,8 @@ namespace Projeto4_Junior.Banco
             try{                
                 FactoryConnection conn = new FactoryConnection();   
                          
-                    String query = "select Login, Senha from Usuario where Login='" + usuario + "' and Senha='" + senha + "'";                
+                    String query = "select Login, Senha, Ativo from Usuario where Login='" + usuario +
+                        "' and Senha='" + senha + "' and Ativo=1 ";                
 
                     SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 
@@ -162,6 +163,8 @@ namespace Projeto4_Junior.Banco
            }
             return retorno;
         }
+
+
         public bool VerificaTipoUsuario(String login)
         {
            bool retorno = true;
@@ -211,13 +214,16 @@ namespace Projeto4_Junior.Banco
                 {
                     Modelo.Usuario usu = new Modelo.Usuario();
 
-                    usu.Nome = (String) reader["nome"];
-                    usu.Login = (String)reader["login"];
-                    usu.Senha = (String)reader["senha"];
-                    usu.isGestor = (int)reader["TipoUsar"];
-                   
+                    usu.Nome = (String) reader["Nome"];
+                    usu.Login = (String)reader["Login"];
+                    usu.Senha = (String)reader["Senha"];
+                    usu.isGestor = (int)reader["TipoUsuario"];
+                    usu.Ativo = (Boolean)reader["Ativo"];
 
-                    lista.Add(usu);
+                    if(usu.Ativo == true)
+                    {
+                        lista.Add(usu);
+                    }                   
                 }
                 reader.Close();                
                 conn.FecharConnecxao();

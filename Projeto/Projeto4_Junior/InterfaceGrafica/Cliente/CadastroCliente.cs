@@ -51,7 +51,7 @@ namespace Projeto4_Junior
                 cliente.Email = campo[1];
                 cliente.Cpf = campo[2];
                 cliente.Telefone = campo[3];
-                cliente.Data_Nascimento = campo[4];
+                cliente.DataNascimento = campo[4];
                 cliente.Endereco = campo[5] + " , ";
                 cliente.Endereco += campo[6] + " , ";
                 cliente.Endereco += campo[7] + " , ";

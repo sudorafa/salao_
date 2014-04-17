@@ -12,9 +12,10 @@ namespace Projeto4_Junior.Modelo
         public String Nome { get; set; }
         public String Endereco { get; set; }
         public String Cpf { get; set; }
-        public String Data_Nascimento { get; set; }
+        public String DataNascimento { get; set; }
         public String Telefone { get; set; }        
         public double Porcentagem { get; set; }
+        public Boolean Ativo { get; set; }
 
 
 
@@ -28,7 +29,7 @@ namespace Projeto4_Junior.Modelo
             this.Nome = nome;
             this.Endereco = endereco;
             this.Cpf = cpf;
-            this.Data_Nascimento = data_nascimento;
+            this.DataNascimento = data_nascimento;
             this.Telefone = telefone;
             this.Porcentagem = porcentagem;
         }

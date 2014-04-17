@@ -22,7 +22,7 @@ namespace Projeto4_Junior
             textBox_EmailCliente.Text = cli.Email;
             textBox_CpfCliente.Text = cli.Cpf;
             textBox_TelefoneCliente.Text = cli.Telefone;
-            textBox_DataNascCliente.Text = cli.Data_Nascimento;
+            textBox_DataNascCliente.Text = cli.DataNascimento;
 
             this.listar = list;
 
@@ -83,7 +83,7 @@ namespace Projeto4_Junior
                 cliente.Email = campo[1];
                 cliente.Cpf = campo[2];
                 cliente.Telefone = campo[3];
-                cliente.Data_Nascimento = campo[4];
+                cliente.DataNascimento = campo[4];
                 cliente.Endereco = campo[5] + " , ";
                 cliente.Endereco += campo[6] + " , ";
                 cliente.Endereco += campo[7] + " , ";

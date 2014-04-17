@@ -18,7 +18,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
             tbNome.Text = func.Nome;
             tbCpf.Text = func.Cpf;
             tbTelefone.Text = func.Telefone;
-            tbDataNascimento.Text = func.Data_Nascimento;
+            tbDataNascimento.Text = func.DataNascimento;
             tbPorcentagem.Text = ""+func.Porcentagem;
             tbEndereco.Text = func.Endereco;
         }

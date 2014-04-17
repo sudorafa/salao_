@@ -34,7 +34,8 @@ namespace Projeto4_Junior
 
                 usuario.Nome = Nome_Usuario.Text;
                 usuario.Login = Login_Usuario.Text;
-                usuario.Senha = Senha_Usuario.Text;                
+                usuario.Senha = Senha_Usuario.Text;
+                usuario.Ativo = true;
 
                 if (isGestor.Checked == true)
                 {

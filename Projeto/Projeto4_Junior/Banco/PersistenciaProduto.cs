@@ -38,7 +38,7 @@ namespace Projeto4_Junior.Banco
         {
             SqlCommand comm = new SqlCommand();
                 comm.CommandText = "Insert into Produtos(excluido) values (1) where codigo=@codigo";
-                comm.Parameters.AddWithValue("@codigo", produto.Codigo);
+                comm.Parameters.AddWithValue("@codigo", produto.IdProduto);
                 comm.Connection = fc.AbrirConnexao();
                 comm.ExecuteNonQuery();
                 fc.FecharConnecxao();
@@ -51,7 +51,7 @@ namespace Projeto4_Junior.Banco
             comm.Parameters.AddWithValue("@descricao", produto.Descricao);
             comm.Parameters.AddWithValue("@valor", produto.Valor);
             comm.Parameters.AddWithValue("@quantidade_estoque", produto.Quantidade_Estoque);
-            comm.Parameters.AddWithValue("@codigo", produto.Codigo);
+            comm.Parameters.AddWithValue("@codigo", produto.IdProduto);
             comm.Connection = fc.AbrirConnexao();
             comm.ExecuteNonQuery();
             fc.FecharConnecxao();
@@ -70,7 +70,7 @@ namespace Projeto4_Junior.Banco
             {
 
                 comm.CommandText = "select * from produtos where codigo=@codigo";
-                comm.Parameters.AddWithValue("@codigo", produto.Codigo);
+                comm.Parameters.AddWithValue("@codigo", produto.IdProduto);
                 comm.Connection = fc.AbrirConnexao();
                 read = comm.ExecuteReader();
 
