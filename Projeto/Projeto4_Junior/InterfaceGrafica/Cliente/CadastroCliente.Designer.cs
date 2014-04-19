@@ -86,6 +86,7 @@
             this.button_SalvarCadastroCliente.TabIndex = 18;
             this.button_SalvarCadastroCliente.Text = "Cadastrar";
             this.button_SalvarCadastroCliente.UseVisualStyleBackColor = true;
+            this.button_SalvarCadastroCliente.Click += new System.EventHandler(this.button_SalvarCadastroCliente_Click);
             // 
             // button_CancelarCadastroCliente
             // 

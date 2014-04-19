@@ -24,8 +24,27 @@ namespace Projeto4_Junior
         {
 
         }
-        
-        private void button_SalvarCadastroCliente_Click_1(object sender, EventArgs e)
+        private void textBox_NomeCliente_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form_CadastroClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox_EnderecoCadastroCliente_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_CancelarCadastroCliente_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button_SalvarCadastroCliente_Click(object sender, EventArgs e)
         {
             bool key = true;
 
@@ -59,6 +78,7 @@ namespace Projeto4_Junior
                 cliente.Endereco += campo[9] + " , ";
                 cliente.Endereco += campo[10] + " , ";
                 cliente.Endereco += campo[11];
+                cliente.Ativo = true;
 
                 fachadaCliente.CadastrarCliente(cliente);
                 this.Close();
@@ -67,26 +87,6 @@ namespace Projeto4_Junior
             {
                 MessageBox.Show("Preencha todos os campos!");
             }
-        }
-
-        private void textBox_NomeCliente_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form_CadastroClientes_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox_EnderecoCadastroCliente_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button_CancelarCadastroCliente_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

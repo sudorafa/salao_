@@ -23,7 +23,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
         public AlterarUsuario(Modelo.Usuario usu, ListarUsuario listarUsuario)
         {
             InitializeComponent();
-
+            
             Nome_Usuario.Text = usu.Nome;
             Login_Usuario.Text = usu.Login;
             Senha_Usuario.Text = usu.Senha;
@@ -38,6 +38,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
             
 
             this.listarUsuario = listarUsuario;
+             
         }
 
         private void AlterarUsuario_Load(object sender, EventArgs e)

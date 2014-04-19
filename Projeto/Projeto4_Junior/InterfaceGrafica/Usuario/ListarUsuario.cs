@@ -28,7 +28,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
             {
                 Projeto4_Junior.Modelo.Usuario usuario = new Projeto4_Junior.Modelo.Usuario();
                 usuario = (Projeto4_Junior.Modelo.Usuario)func;
-                // PREENCHE AS COLUNAS DE 'NOME', 'CPF' E O NOMES DOS BOTÕES PADRÕES
+                // PREENCHE AS COLUNAS DE 'Nome', 'Login' E O NOMES DOS BOTÕES PADRÕES
                 dataGridView1.Rows.Add(usuario.Nome, usuario.Login, "Remover", "Alterar");
             }
         }
@@ -52,9 +52,8 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
                 }
                 else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["alterar"].Index)
                 {
-                    //ABRI A JANELA PARA ALTERAR O FUNCIONARIO SELECIONADO
+                    //Carrega usuario que vai ser alterado!
                     String login = (String)dataGridView1[1, e.RowIndex].Value;
-                    //Carrega o funcionario para ser alterado.
                     Projeto4_Junior.Modelo.Usuario usu = fachadausuario.BuscarUsuario(login);
 
                     AlterarUsuario tela = new AlterarUsuario(usu, this);

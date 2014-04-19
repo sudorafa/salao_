@@ -24,8 +24,7 @@ namespace Projeto4_Junior.Banco
                 "('" + usuario.Nome + "', '" + usuario.Login + "', '" + usuario.Senha +
                 "', '" + usuario.isGestor + "', '" + usuario.Ativo + "')";
 
-                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
-                //comand.ExecuteNonQuery(); <---- Não seria melhor usar o comand pra executar a instrução SQL ?
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());                
                 SqlDataReader reader = comand.ExecuteReader();
                 conn.FecharConnecxao();                
             }

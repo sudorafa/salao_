@@ -21,12 +21,11 @@ namespace Projeto4_Junior.Banco
             FactoryConnection conn = new FactoryConnection();
             try
             {
-                String query = "insert into Cliente (Nome, CPF, Telefone, Endereco, DatNascimento, Email) values" +
+                String query = "insert into Cliente (Nome, CPF, Telefone, Endereco, DataNascimento, Email, Ativo) values" +
                 "('" + cliente.Nome + "', '" + cliente.Cpf + "', '" + cliente.Telefone + "', '" + cliente.Endereco + "', '"
-                + cliente.DataNascimento + "', '" + cliente.Email + "')";
+                + cliente.DataNascimento + "', '" + cliente.Email + "', '" + cliente.Ativo + "')";
 
-                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
-                //comand.ExecuteNonQuery(); <---- Não seria melhor usar o comand pra executar a instrução SQL ?
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());               
                 SqlDataReader reader = comand.ExecuteReader();
                 conn.FecharConnecxao();                
                 MessageBox.Show("Cadastrado com sucesso!");
