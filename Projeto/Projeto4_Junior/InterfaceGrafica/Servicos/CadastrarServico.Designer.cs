@@ -1,4 +1,4 @@
-﻿namespace Projeto4_Junior.InterfaceGrafica.Servico
+﻿namespace Projeto4_Junior.InterfaceGrafica.Servicos
 {
     partial class FormularioCadastrarServico
     {
@@ -28,97 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.botao_cadastrar = new System.Windows.Forms.Button();
-            this.botao_cancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.campo_codigo_servico = new System.Windows.Forms.TextBox();
-            this.campo_descricao = new System.Windows.Forms.TextBox();
-            this.campo_valor = new System.Windows.Forms.TextBox();
+            this.campoDescricao = new System.Windows.Forms.TextBox();
+            this.campoValor = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.isGestor = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
-            // 
-            // botao_cadastrar
-            // 
-            this.botao_cadastrar.Location = new System.Drawing.Point(172, 210);
-            this.botao_cadastrar.Name = "botao_cadastrar";
-            this.botao_cadastrar.Size = new System.Drawing.Size(75, 23);
-            this.botao_cadastrar.TabIndex = 0;
-            this.botao_cadastrar.Text = "Cadastrar";
-            this.botao_cadastrar.UseVisualStyleBackColor = true;
-            this.botao_cadastrar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // botao_cancelar
-            // 
-            this.botao_cancelar.Location = new System.Drawing.Point(48, 210);
-            this.botao_cancelar.Name = "botao_cancelar";
-            this.botao_cancelar.Size = new System.Drawing.Size(75, 23);
-            this.botao_cancelar.TabIndex = 1;
-            this.botao_cancelar.Text = "Cancelar";
-            this.botao_cancelar.UseVisualStyleBackColor = true;
-            this.botao_cancelar.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 37);
+            this.label1.Location = new System.Drawing.Point(12, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Codigo do Serviço";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Descrição:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 77);
+            this.label2.Location = new System.Drawing.Point(12, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Descrição";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Valor:";
             // 
-            // label3
+            // campoDescricao
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 119);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Valor";
+            this.campoDescricao.Location = new System.Drawing.Point(76, 43);
+            this.campoDescricao.Name = "campoDescricao";
+            this.campoDescricao.Size = new System.Drawing.Size(223, 20);
+            this.campoDescricao.TabIndex = 2;
             // 
-            // campo_codigo_servico
+            // campoValor
             // 
-            this.campo_codigo_servico.Location = new System.Drawing.Point(112, 37);
-            this.campo_codigo_servico.Name = "campo_codigo_servico";
-            this.campo_codigo_servico.Size = new System.Drawing.Size(160, 20);
-            this.campo_codigo_servico.TabIndex = 5;
+            this.campoValor.Location = new System.Drawing.Point(76, 84);
+            this.campoValor.Name = "campoValor";
+            this.campoValor.Size = new System.Drawing.Size(169, 20);
+            this.campoValor.TabIndex = 3;
             // 
-            // campo_descricao
+            // button1
             // 
-            this.campo_descricao.Location = new System.Drawing.Point(112, 77);
-            this.campo_descricao.Name = "campo_descricao";
-            this.campo_descricao.Size = new System.Drawing.Size(160, 20);
-            this.campo_descricao.TabIndex = 6;
+            this.button1.Location = new System.Drawing.Point(224, 173);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Cadastrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // campo_valor
+            // button2
             // 
-            this.campo_valor.Location = new System.Drawing.Point(112, 119);
-            this.campo_valor.Name = "campo_valor";
-            this.campo_valor.Size = new System.Drawing.Size(100, 20);
-            this.campo_valor.TabIndex = 7;
+            this.button2.Location = new System.Drawing.Point(76, 173);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // isGestor
+            // 
+            this.isGestor.AutoSize = true;
+            this.isGestor.Location = new System.Drawing.Point(71, 136);
+            this.isGestor.Name = "isGestor";
+            this.isGestor.Size = new System.Drawing.Size(57, 17);
+            this.isGestor.TabIndex = 6;
+            this.isGestor.Text = "Gestor";
+            this.isGestor.UseVisualStyleBackColor = true;
             // 
             // FormularioCadastrarServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.campo_valor);
-            this.Controls.Add(this.campo_descricao);
-            this.Controls.Add(this.campo_codigo_servico);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(369, 237);
+            this.Controls.Add(this.isGestor);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.campoValor);
+            this.Controls.Add(this.campoDescricao);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.botao_cancelar);
-            this.Controls.Add(this.botao_cadastrar);
             this.Name = "FormularioCadastrarServico";
             this.Text = "CadastrarServico";
             this.ResumeLayout(false);
@@ -128,13 +120,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button botao_cadastrar;
-        private System.Windows.Forms.Button botao_cancelar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox campo_codigo_servico;
-        private System.Windows.Forms.TextBox campo_descricao;
-        private System.Windows.Forms.TextBox campo_valor;
+        private System.Windows.Forms.TextBox campoDescricao;
+        private System.Windows.Forms.TextBox campoValor;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox isGestor;
     }
 }

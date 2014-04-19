@@ -29,7 +29,7 @@ namespace Projeto4_Junior.Banco
             this.ibancodados.AlterarServico(servico);
         }
 
-        public bool VerificaExistenciaServico(String IdServico)//----------foi acrescentado------------//
+        public bool VerificaExistenciaServico(int IdServico)//----------foi acrescentado------------//
         {
             return this.ibancodados.VerificaExistenciaServico(IdServico);
         }

@@ -4,7 +4,7 @@ tipoUsuario Int,
 Login nvarchar(100) unique,
 Senha nvarchar(100),
 Nome nvarchar(20),
-Ativo bit
+Ativo bit//
 )
 
 CREATE TABLE Cliente (
@@ -43,6 +43,7 @@ Quantidade Int
 Ativo bit
 )
 
+junioharper
 CREATE TABLE Venda (
 IdVenda Int PRIMARY KEY identity,
 ValorTotal money,

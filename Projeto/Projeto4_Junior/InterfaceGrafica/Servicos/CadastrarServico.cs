@@ -7,12 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Projeto4_Junior.Modelo;
 using Projeto4_Junior.Negocios;
+using Projeto4_Junior.Modelo;
 
-
-
-namespace Projeto4_Junior.InterfaceGrafica.Servico
+namespace Projeto4_Junior.InterfaceGrafica.Servicos
 {
     public partial class FormularioCadastrarServico : Form
     {
@@ -28,38 +26,34 @@ namespace Projeto4_Junior.InterfaceGrafica.Servico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool key = true;
+            if(campoDescricao.Equals("") || campoDescricao == null)
+            {
+                MessageBox.Show("Por favor, preencher o campo de Descrição.");
+            }
+            else if(campoValor.Equals("") || campoValor == null)
+            {
+                MessageBox.Show("Por favor, preencher o campo VALOR.");
+            }
+            else
+            {
+                IfachadaServico fachadaServico = new FachadaServico();
+                Servico servico = new Servico();
 
-            String[] campo = new String[3]
-                {
-                    campo_codigo_servico.Text,
-                    campo_descricao.Text,
-                    campo_valor.Text
-                };
-
-                for (int x = 0; x < campo.Length; x++)
-                {
-                    if (campo[x] == null || campo[x].Equals(""))
-                    {
-                        key = false;
-                    }
-                }
-            
-            if(key == true)
-                {
-                    IfachadaServico fachadaSevico = new FachadaServico();
-                    Projeto4_Junior.Modelo.Servico servico = new Projeto4_Junior.Modelo.Servico();
-
-                    servico.IdServico = Convert.ToInt32(campo[0]);
-                    servico.Descricao = campo[1];
-                    servico.Valor = Convert.ToDecimal(campo[2]);
-
-                    fachadaSevico.CadastrarServico(servico);
-                    this.Close();
-                }
-             
+                servico.Descricao = campoDescricao.Text;
+                servico.Valor = Convert.ToDecimal(campoValor.Text);
                 
-           }            
+                if (isGestor.Checked == true)
+                {
+                    servico.isGestor = 1;
+                }
+                else
+                {
+                    servico.isGestor = 0;
+                }
+
+                fachadaServico.CadastrarServico(servico);
+                this.Close();
+            }
         }
     }
-
+}

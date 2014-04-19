@@ -13,7 +13,7 @@ namespace Projeto4_Junior.Negocios
         Servico BuscarServico(Servico servico);
         void RemoverServico(Servico servico);
         void AlterarServico(Servico servico);
-        bool VerificaExistenciaServico(String IdServico);//Foi acrescentado.
+        bool VerificaExistenciaServico(int IdServico);//Foi acrescentado.
          
     }
 }
