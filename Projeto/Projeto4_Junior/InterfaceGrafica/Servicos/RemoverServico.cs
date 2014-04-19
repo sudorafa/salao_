@@ -7,41 +7,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Projeto4_Junior.Negocios;
 
-namespace Projeto4_Junior.InterfaceGrafica.Servicos
+namespace Projeto4_Junior.InterfaceGrafica.Servico
 {
-    public partial class RemoverServico : Form
+    public partial class FormularioRemoverServico : Form
     {
-        public RemoverServico()
+        public FormularioRemoverServico()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void botaoCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormularioRemoverServico_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void botaoRemover_Click(object sender, EventArgs e)
         {
-            /*
-            if (textBox1.Text != null && !textBox1.Text.Equals(""))
+            if(campoRemoverCodigoServico.Text.Equals(null) || campoRemoverCodigoServico.Text.Equals(""))
             {
-                IFachadaCliente fachadaCliente = new FachadaCliente();
-
-                fachadaCliente.RemoverCliente(textBox1.Text);
+                MessageBox.Show("Por favor, preencher o campo codigo de serviço para ser removido do banco de dados.");
+            }
+            else if(campoRemoverCodigoServico.Text != null && !campoRemoverCodigoServico.Text.Equals(""))
+            {
+                IfachadaServico fachadaServico = new FachadaServico();
+                
+                fachadaServico.RemoverServico(Convert.ToInt32(campoRemoverCodigoServico.Text));
                 this.Close();
             }
-            else
-            {
-                MessageBox.Show("Informe o Codigo do Serviço!");
-            }
-             */
-        }
-
-        private void RemoverServico_Load(object sender, EventArgs e)
-        {
-
         }
     }
-}
+} 

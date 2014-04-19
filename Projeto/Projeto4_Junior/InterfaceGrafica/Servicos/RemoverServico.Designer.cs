@@ -1,6 +1,6 @@
-﻿namespace Projeto4_Junior.InterfaceGrafica.Servicos
+﻿namespace Projeto4_Junior.InterfaceGrafica.Servico
 {
-    partial class RemoverServico
+    partial class FormularioRemoverServico
     {
         /// <summary>
         /// Required designer variable.
@@ -29,59 +29,59 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.botaoRemover = new System.Windows.Forms.Button();
+            this.botaoCancelar = new System.Windows.Forms.Button();
+            this.campoRemoverCodigoServico = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 238);
+            this.label1.Location = new System.Drawing.Point(12, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 13);
+            this.label1.Size = new System.Drawing.Size(260, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Digite o CODIGO DO SERVIÇO que deseja Remover:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Digite o CODIGO DE SERVIÇO que deseja Remover:";
             // 
-            // textBox1
+            // botaoRemover
             // 
-            this.textBox1.Location = new System.Drawing.Point(59, 264);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 20);
-            this.textBox1.TabIndex = 1;
+            this.botaoRemover.Location = new System.Drawing.Point(197, 168);
+            this.botaoRemover.Name = "botaoRemover";
+            this.botaoRemover.Size = new System.Drawing.Size(75, 23);
+            this.botaoRemover.TabIndex = 1;
+            this.botaoRemover.Text = "Remover";
+            this.botaoRemover.UseVisualStyleBackColor = true;
+            this.botaoRemover.Click += new System.EventHandler(this.botaoRemover_Click);
             // 
-            // button1
+            // botaoCancelar
             // 
-            this.button1.Location = new System.Drawing.Point(45, 309);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.botaoCancelar.Location = new System.Drawing.Point(15, 168);
+            this.botaoCancelar.Name = "botaoCancelar";
+            this.botaoCancelar.Size = new System.Drawing.Size(75, 23);
+            this.botaoCancelar.TabIndex = 2;
+            this.botaoCancelar.Text = "Cancelar";
+            this.botaoCancelar.UseVisualStyleBackColor = true;
+            this.botaoCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
             // 
-            // button2
+            // campoRemoverCodigoServico
             // 
-            this.button2.Location = new System.Drawing.Point(155, 309);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Remover";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.campoRemoverCodigoServico.Location = new System.Drawing.Point(15, 93);
+            this.campoRemoverCodigoServico.Name = "campoRemoverCodigoServico";
+            this.campoRemoverCodigoServico.Size = new System.Drawing.Size(257, 20);
+            this.campoRemoverCodigoServico.TabIndex = 3;
             // 
-            // RemoverServico
+            // FormularioRemoverServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(276, 351);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.campoRemoverCodigoServico);
+            this.Controls.Add(this.botaoCancelar);
+            this.Controls.Add(this.botaoRemover);
             this.Controls.Add(this.label1);
-            this.Name = "RemoverServico";
+            this.Name = "FormularioRemoverServico";
             this.Text = "RemoverServico";
-            this.Load += new System.EventHandler(this.RemoverServico_Load);
+            this.Load += new System.EventHandler(this.FormularioRemoverServico_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,8 +90,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button botaoRemover;
+        private System.Windows.Forms.Button botaoCancelar;
+        private System.Windows.Forms.TextBox campoRemoverCodigoServico;
     }
 }
