@@ -51,7 +51,7 @@ namespace Projeto4_Junior.Banco
                 {
                     cli.Nome = (String)reader["nome"];
                     cli.Cpf = (String)reader["cpf"];
-                    cli.DataNascimento = (String)reader["datNascimento"];
+                    cli.DataNascimento = (String)reader["dataNascimento"];
                     cli.Email = (String)reader["email"];
                     cli.Endereco = (String)reader["endereco"];
                     cli.Telefone = (String)reader["telefone"];
@@ -72,7 +72,7 @@ namespace Projeto4_Junior.Banco
             FactoryConnection conn = new FactoryConnection();
             try
             {
-                String query = "delete from Cliente where CPF ='" + cpf + "'";
+                String query = "UPDATE Cliente SET Ativo=0 WHERE CPF = '" + cpf + "'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 
@@ -152,12 +152,16 @@ namespace Projeto4_Junior.Banco
 
                     cli.Nome = (String) reader["nome"];
                     cli.Cpf = (String)reader["cpf"];
-                    cli.DataNascimento = (String)reader["datNascimento"];
+                    cli.DataNascimento = (String)reader["dataNascimento"];
                     cli.Email = (String)reader["email"];
                     cli.Endereco = (String)reader["endereco"];
                     cli.Telefone = (String)reader["telefone"];
+                    cli.Ativo = (Boolean)reader["Ativo"];
 
-                    lista.Add(cli);
+                    if (cli.Ativo == true)
+                    {
+                        lista.Add(cli);
+                    }
                 }
                 reader.Close();                
                 conn.FecharConnecxao();

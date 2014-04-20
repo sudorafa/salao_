@@ -39,9 +39,7 @@
             this.listarFuncionariosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.servicosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoServicoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarServicoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarServicosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removerServicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.balancoDiarioRelatorioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatorioServicosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -148,9 +146,7 @@
             // 
             this.servicosMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoServicoMenuItem,
-            this.alterarServicoMenuItem,
-            this.listarServicosMenuItem,
-            this.removerServicoToolStripMenuItem});
+            this.listarServicosMenuItem});
             this.servicosMenuItem.Name = "servicosMenuItem";
             this.servicosMenuItem.Size = new System.Drawing.Size(62, 20);
             this.servicosMenuItem.Text = "Se&rviços";
@@ -158,30 +154,16 @@
             // novoServicoMenuItem
             // 
             this.novoServicoMenuItem.Name = "novoServicoMenuItem";
-            this.novoServicoMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.novoServicoMenuItem.Size = new System.Drawing.Size(152, 22);
             this.novoServicoMenuItem.Text = "Novo serviço";
             this.novoServicoMenuItem.Click += new System.EventHandler(this.novoServicoMenuItem_Click);
-            // 
-            // alterarServicoMenuItem
-            // 
-            this.alterarServicoMenuItem.Name = "alterarServicoMenuItem";
-            this.alterarServicoMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.alterarServicoMenuItem.Text = "Alterar serviço";
-            this.alterarServicoMenuItem.Click += new System.EventHandler(this.alterarServicoMenuItem_Click);
             // 
             // listarServicosMenuItem
             // 
             this.listarServicosMenuItem.Name = "listarServicosMenuItem";
-            this.listarServicosMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.listarServicosMenuItem.Size = new System.Drawing.Size(152, 22);
             this.listarServicosMenuItem.Text = "Listar serviços";
             this.listarServicosMenuItem.Click += new System.EventHandler(this.listarServicosMenuItem_Click);
-            // 
-            // removerServicoToolStripMenuItem
-            // 
-            this.removerServicoToolStripMenuItem.Name = "removerServicoToolStripMenuItem";
-            this.removerServicoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.removerServicoToolStripMenuItem.Text = "Remover serviço";
-            this.removerServicoToolStripMenuItem.Click += new System.EventHandler(this.removerServicoToolStripMenuItem_Click);
             // 
             // relatoriosMenuItem
             // 
@@ -438,9 +420,7 @@
         private System.Windows.Forms.ToolStripMenuItem aniversariantesClienteMenuItem;
         private System.Windows.Forms.ToolStripMenuItem servicosMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoServicoMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alterarServicoMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarServicosMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removerServicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatoriosMenuItem;
         private System.Windows.Forms.ToolStripMenuItem balancoDiarioRelatorioMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatorioServicosMenuItem;

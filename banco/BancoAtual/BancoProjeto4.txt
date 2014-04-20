@@ -28,7 +28,7 @@ Ativo bit
 )
 
 
-CREATE TABLE Serviços (
+CREATE TABLE Servico (
 IdServico int PRIMARY KEY identity,
 Descricao nvarchar(100),
 Valor money
