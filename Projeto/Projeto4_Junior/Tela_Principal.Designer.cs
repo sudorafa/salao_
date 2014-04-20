@@ -154,14 +154,14 @@
             // novoServicoMenuItem
             // 
             this.novoServicoMenuItem.Name = "novoServicoMenuItem";
-            this.novoServicoMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novoServicoMenuItem.Size = new System.Drawing.Size(147, 22);
             this.novoServicoMenuItem.Text = "Novo serviço";
             this.novoServicoMenuItem.Click += new System.EventHandler(this.novoServicoMenuItem_Click);
             // 
             // listarServicosMenuItem
             // 
             this.listarServicosMenuItem.Name = "listarServicosMenuItem";
-            this.listarServicosMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listarServicosMenuItem.Size = new System.Drawing.Size(147, 22);
             this.listarServicosMenuItem.Text = "Listar serviços";
             this.listarServicosMenuItem.Click += new System.EventHandler(this.listarServicosMenuItem_Click);
             // 
@@ -331,6 +331,7 @@
             this.button_InserirFuncionarioBarraDeFerramentas.Name = "button_InserirFuncionarioBarraDeFerramentas";
             this.button_InserirFuncionarioBarraDeFerramentas.Size = new System.Drawing.Size(51, 51);
             this.button_InserirFuncionarioBarraDeFerramentas.Text = "Inserir funcionário";
+            this.button_InserirFuncionarioBarraDeFerramentas.Click += new System.EventHandler(this.button_InserirFuncionarioBarraDeFerramentas_Click);
             // 
             // button_InserirServicoBarraDeFerramentas
             // 
