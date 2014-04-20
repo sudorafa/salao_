@@ -50,17 +50,17 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
                     //A função abaixo preenche o dataGridView
                     this.BuscarListaUsuario_Click(sender, e);
                 }
-                else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["alterar"].Index)
-                {
+            }
+            else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["alterar"].Index)
+            {
                     //Carrega usuario que vai ser alterado!
                     String login = (String)dataGridView1[1, e.RowIndex].Value;
                     Projeto4_Junior.Modelo.Usuario usu = fachadausuario.BuscarUsuario(login);
 
                     AlterarUsuario tela = new AlterarUsuario(usu, this);
                     tela.ShowDialog();
-                }
+             }
 
             }
         }
     }
-}

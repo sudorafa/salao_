@@ -112,7 +112,7 @@ namespace Projeto4_Junior
         private void listarUsuariosMenuItem_Click(object sender, EventArgs e)
         {
             ListarUsuario usuario = new ListarUsuario();
-            usuario.Show();
+            usuario.ShowDialog();
         }
 
         private void novoServicoMenuItem_Click(object sender, EventArgs e)
