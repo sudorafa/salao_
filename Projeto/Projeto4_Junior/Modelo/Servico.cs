@@ -18,13 +18,12 @@ namespace Projeto4_Junior.Modelo
         {
 
         }
-        public Servico(int idservico, Boolean ativo, String descricao, Decimal valor, int isgestor)
+        public Servico(int idservico, Boolean ativo, String descricao, Decimal valor)
         {
             this.IdServico = idservico;
             this.Ativo = ativo;
             this.Descricao = descricao;
             this.Valor = valor;
-            this.isGestor = isgestor;
         }
     }
 }

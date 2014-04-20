@@ -26,34 +26,30 @@ namespace Projeto4_Junior.InterfaceGrafica.Servicos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(campoDescricao.Equals("") || campoDescricao == null)
-            {
-                MessageBox.Show("Por favor, preencher o campo de Descrição.");
-            }
-            else if(campoValor.Equals("") || campoValor == null)
-            {
-                MessageBox.Show("Por favor, preencher o campo VALOR.");
-            }
-            else
-            {
+                    
                 IfachadaServico fachadaServico = new FachadaServico();
                 Servico servico = new Servico();
 
                 servico.Descricao = campoDescricao.Text;
                 servico.Valor = Convert.ToDecimal(campoValor.Text);
                 
-                if (isGestor.Checked == true)
+               
+                if (campoDescricao.Equals("") || campoDescricao == null || campoValor.Equals("") || campoValor == null)
                 {
-                    servico.isGestor = 1;
+                    MessageBox.Show("Por favor, preencher todos os campos");
+                    servico.Descricao = campoDescricao.Text;
                 }
                 else
                 {
-                    servico.isGestor = 0;
+                    servico.Descricao = campoDescricao.Text;   
+                    servico.Valor = Convert.ToDecimal(campoValor.Text);
+                    servico.Ativo = true;
+                    fachadaServico.CadastrarServico(servico);
+                    this.Close();
                 }
-
-                fachadaServico.CadastrarServico(servico);
-                this.Close();
+                
+           
             }
         }
     }
-}
+

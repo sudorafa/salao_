@@ -19,8 +19,8 @@ namespace Projeto4_Junior.Banco
             FactoryConnection conn = new FactoryConnection();
             try
             {
-                String query = "insert into Serviços(Descricao,Valor,Ativo) values" +
-                "('" + servico.Descricao + "', '" + servico.Valor + "', '" + servico.isGestor + "')";
+                String query = "insert into Servico(Descricao,Valor,Ativo) values" +
+                "('" + servico.Descricao + "', '" + servico.Valor + "', '" + servico.Ativo + "')";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
                 //comand.ExecuteNonQuery(); <---- Não seria melhor usar o comand pra executar a instrução SQL ?
