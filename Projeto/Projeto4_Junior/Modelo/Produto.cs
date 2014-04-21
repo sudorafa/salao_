@@ -10,7 +10,7 @@ namespace Projeto4_Junior.Modelo
     {        
         public String Descricao { get; set; }
         public Decimal Valor { get; set; }
-        public int Quantidade_Estoque { get; set; }
+        public int Quantidade { get; set; }
         public int IdProduto { get; set; }
         public Boolean Ativo { get; set; }
 
@@ -22,7 +22,7 @@ namespace Projeto4_Junior.Modelo
         {
             this.Descricao = nome;
             this.Valor = valor;
-            this.Quantidade_Estoque = quantidade_estoque;
+            this.Quantidade = quantidade_estoque;
         }
     }
 }

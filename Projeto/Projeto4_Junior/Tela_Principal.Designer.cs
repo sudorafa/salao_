@@ -67,6 +67,7 @@
             this.button_InserirUsuarioBarraDeFerramentas = new System.Windows.Forms.ToolStripButton();
             this.button_AlterarLoginESenhaBarraDeFerramentas = new System.Windows.Forms.ToolStripButton();
             this.button_SairBarraDeFerramentas = new System.Windows.Forms.ToolStripButton();
+            this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_principal.SuspendLayout();
             this.barraDeFerramentas.SuspendLayout();
             this.SuspendLayout();
@@ -219,7 +220,8 @@
             // 
             this.estoqueMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.entradaEstoqueMenuItem,
-            this.saidaEstoqueMenuItem});
+            this.saidaEstoqueMenuItem,
+            this.listarToolStripMenuItem});
             this.estoqueMenuItem.Name = "estoqueMenuItem";
             this.estoqueMenuItem.Size = new System.Drawing.Size(61, 20);
             this.estoqueMenuItem.Text = "&Estoque";
@@ -227,13 +229,14 @@
             // entradaEstoqueMenuItem
             // 
             this.entradaEstoqueMenuItem.Name = "entradaEstoqueMenuItem";
-            this.entradaEstoqueMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.entradaEstoqueMenuItem.Size = new System.Drawing.Size(152, 22);
             this.entradaEstoqueMenuItem.Text = "Entradas";
+            this.entradaEstoqueMenuItem.Click += new System.EventHandler(this.entradaEstoqueMenuItem_Click);
             // 
             // saidaEstoqueMenuItem
             // 
             this.saidaEstoqueMenuItem.Name = "saidaEstoqueMenuItem";
-            this.saidaEstoqueMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.saidaEstoqueMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saidaEstoqueMenuItem.Text = "Saídas";
             // 
             // usuariosMenuItem
@@ -388,6 +391,13 @@
             this.button_SairBarraDeFerramentas.Text = "Sair";
             this.button_SairBarraDeFerramentas.Click += new System.EventHandler(this.button_SairBarraDeFerramentas_Click);
             // 
+            // listarToolStripMenuItem
+            // 
+            this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listarToolStripMenuItem.Text = "Listar";
+            this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
+            // 
             // Form_Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,5 +459,6 @@
         private System.Windows.Forms.ToolStripMenuItem usuariosMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inserirUsuarioMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarUsuariosMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
     }
 }
