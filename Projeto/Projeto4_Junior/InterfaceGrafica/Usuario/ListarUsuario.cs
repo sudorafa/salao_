@@ -73,5 +73,10 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
             }
 
             }
+
+        private void ListarUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
         }
     }

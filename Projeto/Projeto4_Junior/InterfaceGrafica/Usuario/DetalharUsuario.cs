@@ -12,8 +12,6 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
 {
     public partial class DetalharUsuario : Form
     {
-        private Modelo.Usuario usu;
-
         public DetalharUsuario()
         {
             InitializeComponent();
@@ -32,9 +30,12 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
             else
             {
                 TipoUsu.Text = "Usuario";
-            }
+            }            
+        }
 
-            this.usu = usu;
+        private void DetalharUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
