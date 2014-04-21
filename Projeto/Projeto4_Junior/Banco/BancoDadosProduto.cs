@@ -26,9 +26,9 @@ namespace Projeto4_Junior.Banco
         }
 
 
-        public void RemoverProdutos(Produto produto)
+        public void RemoverProduto(String descricao)
         {            
-            this.ibancodados.RemoverProdutos(produto);
+            this.ibancodados.RemoverProduto(descricao);
         }
 
 
