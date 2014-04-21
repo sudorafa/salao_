@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projeto4_Junior.Negocios
 {
-    class FachadaServico
+    class FachadaServico : IfachadaServico
     {
         public IfachadaServico ifachada = new ControladorServico();
 

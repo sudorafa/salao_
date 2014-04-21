@@ -33,10 +33,10 @@ namespace Projeto4_Junior.Banco
             this.ibancodados.AlterarFuncionario(funionario);
         }
 
-        public SqlDataReader VerificaFunc(Funcionario funcionario)
+        public bool VerificaFunc(String cpf)
         {
 
-            return this.ibancodados.VerificaFunc(funcionario);
+            return this.ibancodados.VerificaFunc(cpf);
         
         }
         public ArrayList ListarFuncionario(String buscar)

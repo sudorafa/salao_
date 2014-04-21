@@ -45,5 +45,10 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
         {
 
         }
+
+        private void btAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

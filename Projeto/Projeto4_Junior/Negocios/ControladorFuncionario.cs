@@ -18,17 +18,7 @@ namespace Projeto4_Junior.Negocios
 
         public void CadastrarFuncionario(Funcionario funcionario)
         {          
-            if (ibancodados.VerificaFunc(funcionario).HasRows)
-            {
-
-                MessageBox.Show("Atenção: CPF ja encontra-se cadastrador!"); 
-            }
-            else
-            {
-                ibancodados.CadastrarFuncionario(funcionario);
-                MessageBox.Show("Cadastro Efetuado com sucesso !!"); 
-            }
-
+           ibancodados.CadastrarFuncionario(funcionario);
         }
         public Funcionario BuscarFuncionario(String cpf)
         {
@@ -43,9 +33,9 @@ namespace Projeto4_Junior.Negocios
              ibancodados.AlterarFuncionario(funionario);
          }
 
-         public SqlDataReader VerificaFunc(Funcionario funcionario)
+         public bool VerificaFunc(String cpf)
          {
-             return ibancodados.VerificaFunc(funcionario);
+             return ibancodados.VerificaFunc(cpf);
          }
          public ArrayList ListarFuncionario(String buscar)
          {

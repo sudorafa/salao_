@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto4_Junior.InterfaceGrafica.Servicos
 {
-    public partial class ListarServico : Form
+    public partial class FormularioListarServico : Form
     {
-        public ListarServico()
+        public FormularioListarServico()
         {
             InitializeComponent();
         }

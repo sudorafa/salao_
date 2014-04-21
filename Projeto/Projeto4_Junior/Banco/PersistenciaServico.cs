@@ -19,8 +19,8 @@ namespace Projeto4_Junior.Banco
             FactoryConnection conn = new FactoryConnection();
             try
             {
-                String query = "insert into Servico (Descricao,Valor, idServico) values" +
-                "('" + servico.Descricao + "', '" + servico.Valor + "', '" + servico.IdServico + "')";
+                String query = "insert into Servico(Descricao,Valor,Ativo) values" +
+                "('" + servico.Descricao + "', '" + servico.Valor + "', '" + servico.Ativo + "')";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
                 //comand.ExecuteNonQuery(); <---- Não seria melhor usar o comand pra executar a instrução SQL ?
@@ -46,7 +46,7 @@ namespace Projeto4_Junior.Banco
         {
 
         }
-        public bool VerificaExistenciaServico(String IdServico)
+        public bool VerificaExistenciaServico(int IdServico)
         {
             return false;
 
