@@ -144,6 +144,12 @@
     <Compile Include="InterfaceGrafica\Funcionario\ListarFuncionario.Designer.cs">
       <DependentUpon>ListarFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfaceGrafica\Usuario\DetalharUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Usuario\DetalharUsuario.Designer.cs">
+      <DependentUpon>DetalharUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfaceGrafica\Usuario\ListarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Funcionario\ListarFuncionario.resx">
       <DependentUpon>ListarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Usuario\DetalharUsuario.resx">
+      <DependentUpon>DetalharUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Usuario\ListarUsuario.resx">
       <DependentUpon>ListarUsuario.cs</DependentUpon>
