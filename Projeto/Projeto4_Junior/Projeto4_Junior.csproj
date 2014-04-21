@@ -72,6 +72,24 @@
     <Compile Include="InterfaceGrafica\Funcionario\DetalharFuncionario.Designer.cs">
       <DependentUpon>DetalharFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfaceGrafica\Produtos\AlterarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Produtos\AlterarProduto.Designer.cs">
+      <DependentUpon>AlterarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Produtos\CadastrarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Produtos\CadastrarProduto.Designer.cs">
+      <DependentUpon>CadastrarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Produtos\RemoverProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Produtos\RemoverProduto.Designer.cs">
+      <DependentUpon>RemoverProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfaceGrafica\Usuario\AlterarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +210,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Funcionario\DetalharFuncionario.resx">
       <DependentUpon>DetalharFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Produtos\AlterarProduto.resx">
+      <DependentUpon>AlterarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Produtos\CadastrarProduto.resx">
+      <DependentUpon>CadastrarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Produtos\RemoverProduto.resx">
+      <DependentUpon>RemoverProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Usuario\AlterarUsuario.resx">
       <DependentUpon>AlterarUsuario.cs</DependentUpon>
