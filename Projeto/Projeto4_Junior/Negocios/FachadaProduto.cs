@@ -1,5 +1,6 @@
 ﻿using Projeto4_Junior.Modelo;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -31,6 +32,12 @@ namespace Projeto4_Junior.Negocios
         {
            return this.ifachada.VerificaProd(produto);
         }
+
+        public ArrayList ListarProduto(String produto)
+        {
+            return this.ifachada.ListarProduto(produto);
+        }
+
 
     }
 }

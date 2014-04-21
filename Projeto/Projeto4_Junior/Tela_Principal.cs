@@ -149,5 +149,11 @@ namespace Projeto4_Junior
             CadastroProduto tela = new CadastroProduto();
             tela.Show();
         }
+
+        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarProdutos tela = new ListarProdutos();
+            tela.Show();
+        }
     }
 }

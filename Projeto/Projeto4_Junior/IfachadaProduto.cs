@@ -1,5 +1,6 @@
 ﻿using Projeto4_Junior.Modelo;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -15,5 +16,6 @@ namespace Projeto4_Junior
         void RemoverProdutos(Produto produto);
         void AlterarProdutos(Produto produto);
         SqlDataReader VerificaProd(Produto produto);
+        ArrayList ListarProduto(string produto);
     }
 }

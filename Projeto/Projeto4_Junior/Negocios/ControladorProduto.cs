@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Projeto4_Junior.Banco;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Projeto4_Junior.Negocios
 {
@@ -33,6 +34,11 @@ namespace Projeto4_Junior.Negocios
         public SqlDataReader VerificaProd(Produto produto)
         {
             return this.ibancodados.VerificaProd(produto);  
+        }
+
+        public ArrayList ListarProduto(String produto)
+        {
+            return this.ibancodados.ListarProduto(produto);
         }
     }
 }
