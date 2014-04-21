@@ -15,26 +15,8 @@ namespace Projeto4_Junior.Negocios
     {
         private IBancoDadosProduto ibancodados = new BancoDadosProduto();
         public void CadastrarProdutos(Produto produto)
-        {
-            
-            try
-            {
-                if (VerificaProd(produto).HasRows)
-                {
-                    MessageBox.Show("Atenção: Produto ja encontra-se Cadastrado!!");
-
-                }
-                else
-                    this.ibancodados.CadastrarProdutos(produto);
-                MessageBox.Show("Cadastro efetuado com sucesso !!");
-
-            }catch(Exception e)
-            {
-                MessageBox.Show(e + "");
-            
-            }
-
-            
+        {           
+            this.ibancodados.CadastrarProdutos(produto);           
         }
         public Produto BuscarProdutos(Produto produto)
         {

@@ -227,13 +227,14 @@
             // entradaEstoqueMenuItem
             // 
             this.entradaEstoqueMenuItem.Name = "entradaEstoqueMenuItem";
-            this.entradaEstoqueMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.entradaEstoqueMenuItem.Size = new System.Drawing.Size(152, 22);
             this.entradaEstoqueMenuItem.Text = "Entradas";
+            this.entradaEstoqueMenuItem.Click += new System.EventHandler(this.entradaEstoqueMenuItem_Click);
             // 
             // saidaEstoqueMenuItem
             // 
             this.saidaEstoqueMenuItem.Name = "saidaEstoqueMenuItem";
-            this.saidaEstoqueMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.saidaEstoqueMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saidaEstoqueMenuItem.Text = "Saídas";
             // 
             // usuariosMenuItem

@@ -66,6 +66,12 @@
     <Compile Include="Banco\PersistenciaProduto.cs" />
     <Compile Include="Banco\PersistenciaServico.cs" />
     <Compile Include="Banco\PersistenciaUsuario.cs" />
+    <Compile Include="InterfaceGrafica\Produtos\CadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Produtos\CadastroProduto.Designer.cs">
+      <DependentUpon>CadastroProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfaceGrafica\Servicos\CadastrarServico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Autenticacao.resx">
       <DependentUpon>Autenticacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Produtos\CadastroProduto.resx">
+      <DependentUpon>CadastroProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Servicos\CadastrarServico.resx">
       <DependentUpon>CadastrarServico.cs</DependentUpon>

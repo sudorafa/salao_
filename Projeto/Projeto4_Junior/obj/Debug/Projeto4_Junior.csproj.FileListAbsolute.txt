@@ -232,3 +232,4 @@ C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.cspro
 C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.exe
 C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.pdb
 C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csprojResolveAssemblyReference.cache
+C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.CadastroProduto.resources
