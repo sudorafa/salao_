@@ -49,7 +49,7 @@ namespace Projeto4_Junior.Banco
 
                 while (reader.Read())
                 {
-                    cli.Nome = (String)reader["nome"];
+                    cli.Nome = (String)reader["Nome"];
                     cli.Cpf = (String)reader["cpf"];
                     cli.DataNascimento = (String)reader["dataNascimento"];
                     cli.Email = (String)reader["email"];
