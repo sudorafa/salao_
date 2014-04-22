@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace Projeto4_Junior.Banco
 {
@@ -33,5 +34,10 @@ namespace Projeto4_Junior.Banco
         {
             return this.ibancodados.VerificaExistenciaServico(IdServico);
         }
+        public ArrayList ListarServico(String busca)
+        {
+            return this.ibancodados.ListarServico(busca);
+        }
+
     }
 }

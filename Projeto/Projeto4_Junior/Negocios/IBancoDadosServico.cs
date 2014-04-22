@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace Projeto4_Junior.Negocios
 {
@@ -14,6 +15,7 @@ namespace Projeto4_Junior.Negocios
         void RemoverServico(Servico servico);
         void AlterarServico(Servico servico);
         bool VerificaExistenciaServico(int IdServico);//Foi acrescentado.
+        ArrayList ListarServico(String busca);
          
     }
 }

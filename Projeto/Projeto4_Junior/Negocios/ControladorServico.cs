@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Projeto4_Junior.Banco;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Projeto4_Junior.Negocios
 {
@@ -71,6 +72,10 @@ namespace Projeto4_Junior.Negocios
             } 
              * */
             
+        }
+        public ArrayList ListarServico(String busca)
+        {
+            return this.ibancodados.ListarServico(busca);
         }
     }
 }
