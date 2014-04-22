@@ -20,6 +20,7 @@ namespace Projeto4_Junior.Banco
 
         public void CadastrarFuncionario(Funcionario funionario)
         {
+<<<<<<< HEAD
             fc.FecharConnecxao();
             
             SqlCommand comm = new SqlCommand();
@@ -48,6 +49,39 @@ namespace Projeto4_Junior.Banco
 
         }
         public Funcionario BuscarFuncionario(String cpf)
+=======
+            if (this.VerificaFunc(funionario.Cpf))
+            {
+                MessageBox.Show("Já existe Funcionário cadastrado com este CPF!");
+            }
+            else
+            {
+                FactoryConnection conn = new FactoryConnection();
+                try
+                {
+                    String query = "insert into Funcionario (Nome, cpf, telefone, endereco, porcentagem, datanascimento, ativo) values" +
+                    "('" + funionario.Nome + "', '" + funionario.Cpf + "', '" + funionario.Telefone +
+                    "', '" + funionario.Endereco + "', '" + funionario.Porcentagem + "', '" + funionario.DataNascimento + "', '" + funionario.Ativo + "')";
+
+                    SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+                    SqlDataReader reader = comand.ExecuteReader();
+                    MessageBox.Show("Cadastro Efetuado com sucesso !!"); 
+                    
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+                }
+                finally
+                {
+                    conn.FecharConnecxao();
+                }          
+            }
+
+
+        }
+        public Funcionario BuscarFuncionario(String cpf)
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
         {
             FactoryConnection conn = new FactoryConnection();
             Funcionario func = new Funcionario();
@@ -63,19 +97,23 @@ namespace Projeto4_Junior.Banco
                 {
                     func.Nome = (String)reader["nome"];
                     func.Cpf = (String)reader["cpf"];
-                    func.DataNascimento = (String)reader["datNascimento"];
-                    func.Porcentagem = (int)reader["porcentagem"];
+                    func.DataNascimento = (String)reader["dataNascimento"];
+                    func.Porcentagem = (double)reader["porcentagem"];
                     func.Endereco = (String)reader["endereco"];
                     func.Telefone = (String)reader["telefone"];
-
+                    func.Ativo = (bool)reader["ativo"];
                 }
                 reader.Close();
-                conn.FecharConnecxao();
+               
 
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
             }
 
             return func;
@@ -86,17 +124,41 @@ namespace Projeto4_Junior.Banco
             FactoryConnection conn = new FactoryConnection();
             try
             {
-                String query = "DELETE FROM Funcionario where CPF ='" + cpf + "'";
+                String query = "UPDATE Funcionario SET ativo = 0 where CPF ='" + cpf + "'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 
                 SqlDataReader reader = comand.ExecuteReader();
                 MessageBox.Show("Funcionário removido com sucesso!");
-                conn.FecharConnecxao();
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+<<<<<<< HEAD
+
+
+            /*
+            try
+            {
+                comm.CommandText = "DELETE FROM FUNCIONARIO WHERE CPF=@CPF";
+                comm.Parameters.AddWithValue("@cpf", cpf);
+                fc.AbrirConnexao();
+                comm.ExecuteNonQuery();
+                fc.FecharConnecxao();
+            }
+            catch (SqlException e)
+            {
+                e.Message.GetType();
+            }
+
+        */
+        }
+        public void AlterarFuncionario(Funcionario func)
+=======
+            finally
+            {
+                conn.FecharConnecxao();
             }
 
 
@@ -117,6 +179,7 @@ namespace Projeto4_Junior.Banco
         */
         }
         public void AlterarFuncionario(Funcionario func)
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
         {
             FactoryConnection conn = new FactoryConnection();
             try
@@ -125,12 +188,13 @@ namespace Projeto4_Junior.Banco
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
                 SqlDataReader reader = comand.ExecuteReader();
-                conn.FecharConnecxao();
+                
                 MessageBox.Show("Alterado com sucesso!");
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+<<<<<<< HEAD
             } 
             /*
             try
@@ -171,7 +235,69 @@ namespace Projeto4_Junior.Banco
                 e.Message.GetType();
             }
             return read;
+=======
+            }
+            finally
+            {
+                conn.FecharConnecxao();
+            }
+            /*
+            try
+            {
+                comm.CommandText = "UPDATE FUNCIONARIOS set NOME=@nome, endereco=@endereco, datnascimento=@datNascimento," +
+                                   "telefone=@telefone";
+                comm.Parameters.AddWithValue("@nome", funionario.Nome);
+                comm.Parameters.AddWithValue("@endereco", funionario.Endereco);
+                comm.Parameters.AddWithValue("@datNascimento", funionario.Data_Nascimento);
+                comm.Parameters.AddWithValue("@telefone", funionario.Telefone);
+                comm.Parameters.AddWithValue("@cpf", funionario.Cpf);
+
+                fc.AbrirConnexao();
+                comm.ExecuteNonQuery();
+                fc.FecharConnecxao();
+            }
+            catch (SqlException e)
+            {
+                e.Message.GetType();
+            }
+           */
         }
+
+        public bool VerificaFunc(String cpf)
+        {
+            bool retorno = true;
+
+            FactoryConnection conn = new FactoryConnection();
+            try
+            {
+                String query = "select cpf from Funcionario where cpf ='" + cpf + "'";
+
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+
+                SqlDataReader reader = comand.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    retorno = true;
+                }
+                else
+                {
+                    retorno = false;
+                }
+                
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
+            }
+            return retorno;
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
+        }
+
         public ArrayList ListarFuncionario(String buscar)
         {
             FactoryConnection conn = new FactoryConnection();
@@ -179,7 +305,7 @@ namespace Projeto4_Junior.Banco
 
             try
             {
-                String query = "SELECT * FROM Funcionario WHERE nome LIKE '%" + buscar + "%'";
+                String query = "SELECT * FROM Funcionario WHERE nome LIKE '%" + buscar + "%' and ativo = 1" ;
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 
@@ -195,16 +321,20 @@ namespace Projeto4_Junior.Banco
                     func.Porcentagem = (double)reader["porcentagem"];
                     func.Endereco = (String)reader["endereco"];
                     func.Telefone = (String)reader["telefone"];
-
+                    func.Ativo = (bool)reader["ativo"];
                     lista.Add(func);
                 }
                 reader.Close();
-                conn.FecharConnecxao();
+                
 
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
             }
 
             return lista;

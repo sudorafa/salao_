@@ -1,4 +1,6 @@
-﻿using Projeto4_Junior.InterfaceGrafica.Funcionario;
+﻿using Projeto4_Junior.InterfaceGrafica.Caixa;
+using Projeto4_Junior.InterfaceGrafica.Funcionario;
+using Projeto4_Junior.InterfaceGrafica.Produtos;
 using Projeto4_Junior.InterfaceGrafica.Servicos;
 using Projeto4_Junior.InterfaceGrafica.Usuario;
 using System;
@@ -112,7 +114,53 @@ namespace Projeto4_Junior
         private void listarUsuariosMenuItem_Click(object sender, EventArgs e)
         {
             ListarUsuario usuario = new ListarUsuario();
-            usuario.Show();
+            usuario.ShowDialog();
+        }
+
+        private void novoServicoMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioCadastrarServico formularioCadastrarServico = new FormularioCadastrarServico();
+            formularioCadastrarServico.ShowDialog();
+        }
+
+        private void alterarServicoMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Senhor usuario(a) a opção de ALTERAR estar disponivel somente na opção LISTAR ");//quando listar um serviço, vai ter a opção de alterar
+        }
+
+        private void removerServicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Senhor usuario(a) a opção de REMOVER estar disponivel somente na opção LISTAR ");//quando listar um serviço, vai ter a opção de remover um serviço.
+        }
+
+        private void listarServicosMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioListarServico formularioListarServico = new FormularioListarServico();
+            formularioListarServico.ShowDialog();
+        }
+
+        private void button_InserirFuncionarioBarraDeFerramentas_Click(object sender, EventArgs e)
+        {
+            CadastroFuncionario cad_func = new CadastroFuncionario();
+            cad_func.ShowDialog();
+        }
+
+        private void entradaEstoqueMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroProduto tela = new CadastroProduto();
+            tela.Show();
+        }
+
+        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarProdutos tela = new ListarProdutos();
+            tela.Show();
+        }
+
+        private void button_AbriCaixa_Click(object sender, EventArgs e)
+        {
+            TelaAbrirCaixa telaCaixa = new TelaAbrirCaixa();
+            telaCaixa.ShowDialog();
         }
 
         private void novoServicoMenuItem_Click(object sender, EventArgs e)

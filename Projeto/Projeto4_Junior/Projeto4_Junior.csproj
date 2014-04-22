@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InterfaceGrafica\Caixa\TelaAbrirCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Caixa\TelaAbrirCaixa.Designer.cs">
+      <DependentUpon>TelaAbrirCaixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfaceGrafica\Cliente\AlterarClientePrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,11 +73,31 @@
     <Compile Include="Banco\PersistenciaProduto.cs" />
     <Compile Include="Banco\PersistenciaServico.cs" />
     <Compile Include="Banco\PersistenciaUsuario.cs" />
+<<<<<<< HEAD
     <Compile Include="InterfaceGrafica\Servicos\AlterarServico.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InterfaceGrafica\Servicos\AlterarServico.Designer.cs">
       <DependentUpon>AlterarServico.cs</DependentUpon>
+=======
+    <Compile Include="InterfaceGrafica\Cliente\DetalharCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Cliente\DetalharCliente.Designer.cs">
+      <DependentUpon>DetalharCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Produtos\CadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Produtos\CadastroProduto.Designer.cs">
+      <DependentUpon>CadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Produtos\ListarProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Produtos\ListarProdutos.Designer.cs">
+      <DependentUpon>ListarProdutos.cs</DependentUpon>
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
     </Compile>
     <Compile Include="InterfaceGrafica\Servicos\CadastrarServico.cs">
       <SubType>Form</SubType>
@@ -78,6 +105,15 @@
     <Compile Include="InterfaceGrafica\Servicos\CadastrarServico.Designer.cs">
       <DependentUpon>CadastrarServico.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="InterfaceGrafica\Servicos\ListarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\ListarServico.Designer.cs">
+      <DependentUpon>ListarServico.cs</DependentUpon>
+    </Compile>
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
     <Compile Include="InterfaceGrafica\Funcionario\DetalharFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +174,15 @@
     <Compile Include="InterfaceGrafica\Funcionario\ListarFuncionario.Designer.cs">
       <DependentUpon>ListarFuncionario.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="InterfaceGrafica\Usuario\DetalharUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Usuario\DetalharUsuario.Designer.cs">
+      <DependentUpon>DetalharUsuario.cs</DependentUpon>
+    </Compile>
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
     <Compile Include="InterfaceGrafica\Usuario\ListarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,18 +223,38 @@
     <Compile Include="Tela_Principal.Designer.cs">
       <DependentUpon>Tela_Principal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="InterfaceGrafica\Caixa\TelaAbrirCaixa.resx">
+      <DependentUpon>TelaAbrirCaixa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Cliente\AlterarClientePrincipal.resx">
       <DependentUpon>AlterarClientePrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Autenticacao.resx">
       <DependentUpon>Autenticacao.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="InterfaceGrafica\Servicos\AlterarServico.resx">
       <DependentUpon>AlterarServico.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="InterfaceGrafica\Cliente\DetalharCliente.resx">
+      <DependentUpon>DetalharCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Produtos\CadastroProduto.resx">
+      <DependentUpon>CadastroProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Produtos\ListarProdutos.resx">
+      <DependentUpon>ListarProdutos.cs</DependentUpon>
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Servicos\CadastrarServico.resx">
       <DependentUpon>CadastrarServico.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+=======
+    <EmbeddedResource Include="InterfaceGrafica\Servicos\ListarServico.resx">
+      <DependentUpon>ListarServico.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
     <EmbeddedResource Include="InterfaceGrafica\Funcionario\DetalharFuncionario.resx">
       <DependentUpon>DetalharFuncionario.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +282,12 @@
     <EmbeddedResource Include="InterfaceGrafica\Funcionario\ListarFuncionario.resx">
       <DependentUpon>ListarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+=======
+    <EmbeddedResource Include="InterfaceGrafica\Usuario\DetalharUsuario.resx">
+      <DependentUpon>DetalharUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
     <EmbeddedResource Include="InterfaceGrafica\Usuario\ListarUsuario.resx">
       <DependentUpon>ListarUsuario.cs</DependentUpon>
     </EmbeddedResource>

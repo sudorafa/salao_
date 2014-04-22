@@ -4,8 +4,13 @@ tipoUsuario Int,
 Login nvarchar(100) unique,
 Senha nvarchar(100),
 Nome nvarchar(20),
+<<<<<<< HEAD
 Ativo bit,
 );
+=======
+Ativo bit//
+)
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
 
 CREATE TABLE Cliente (
 CPF nvarchar(20) PRIMARY KEY,
@@ -44,6 +49,7 @@ Ativo bit,
 );
 
 
+junioharper
 CREATE TABLE Venda (
 IdVenda Int PRIMARY KEY identity,
 ValorTotal money,

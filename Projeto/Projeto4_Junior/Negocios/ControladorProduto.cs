@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Projeto4_Junior.Banco;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Projeto4_Junior.Negocios
 {
@@ -15,34 +16,16 @@ namespace Projeto4_Junior.Negocios
     {
         private IBancoDadosProduto ibancodados = new BancoDadosProduto();
         public void CadastrarProdutos(Produto produto)
-        {
-            
-            try
-            {
-                if (VerificaProd(produto).HasRows)
-                {
-                    MessageBox.Show("Atenção: Produto ja encontra-se Cadastrado!!");
-
-                }
-                else
-                    this.ibancodados.CadastrarProdutos(produto);
-                MessageBox.Show("Cadastro efetuado com sucesso !!");
-
-            }catch(Exception e)
-            {
-                MessageBox.Show(e + "");
-            
-            }
-
-            
+        {           
+            this.ibancodados.CadastrarProdutos(produto);           
         }
         public Produto BuscarProdutos(Produto produto)
         {
             return null;
         }
-        public void RemoverProdutos(Produto produto)
+        public void RemoverProduto(String descricao)
         {
-            
+            this.ibancodados.RemoverProduto(descricao);
         }
         public void AlterarProdutos(Produto produto)
         {
@@ -51,6 +34,11 @@ namespace Projeto4_Junior.Negocios
         public SqlDataReader VerificaProd(Produto produto)
         {
             return this.ibancodados.VerificaProd(produto);  
+        }
+
+        public ArrayList ListarProduto(String produto)
+        {
+            return this.ibancodados.ListarProduto(produto);
         }
     }
 }

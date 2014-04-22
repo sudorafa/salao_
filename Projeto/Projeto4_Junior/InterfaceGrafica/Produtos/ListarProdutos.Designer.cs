@@ -1,6 +1,6 @@
-﻿namespace Projeto4_Junior.InterfaceGrafica.Servicos
+﻿namespace Projeto4_Junior.InterfaceGrafica.Produtos
 {
-    partial class FormularioListarServico
+    partial class ListarProdutos
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,14 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-<<<<<<< HEAD
-            this.Servico_Buscado = new System.Windows.Forms.TextBox();
-            this.BuscarListaUsuario = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remover = new System.Windows.Forms.DataGridViewButtonColumn();
             this.alterar = new System.Windows.Forms.DataGridViewButtonColumn();
-=======
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
+            this.ProdutoBuscado = new System.Windows.Forms.TextBox();
+            this.BuscarProduto = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -47,22 +45,15 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.Servico_Buscado);
-            this.groupBox1.Controls.Add(this.BuscarListaUsuario);
+            this.groupBox1.Controls.Add(this.ProdutoBuscado);
+            this.groupBox1.Controls.Add(this.BuscarProduto);
             this.groupBox1.Controls.Add(this.label1);
-<<<<<<< HEAD
-            this.groupBox1.Location = new System.Drawing.Point(21, 17);
+            this.groupBox1.Location = new System.Drawing.Point(14, 20);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(637, 354);
             this.groupBox1.TabIndex = 8;
-=======
-            this.groupBox1.Location = new System.Drawing.Point(30, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(637, 354);
-            this.groupBox1.TabIndex = 0;
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dados Serviços";
+            this.groupBox1.Text = "Produtos";
             // 
             // dataGridView1
             // 
@@ -72,6 +63,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Descricao,
             this.Valor,
+            this.Quantidade,
             this.remover,
             this.alterar});
             this.dataGridView1.Location = new System.Drawing.Point(18, 62);
@@ -81,61 +73,25 @@
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Servico_Buscado
-            // 
-            this.Servico_Buscado.Location = new System.Drawing.Point(124, 35);
-            this.Servico_Buscado.Name = "Servico_Buscado";
-            this.Servico_Buscado.Size = new System.Drawing.Size(354, 20);
-            this.Servico_Buscado.TabIndex = 1;
-            this.Servico_Buscado.TextChanged += new System.EventHandler(this.Servico_Buscado_TextChanged);
-            // 
-            // BuscarListaUsuario
-            // 
-            this.BuscarListaUsuario.Location = new System.Drawing.Point(484, 33);
-            this.BuscarListaUsuario.Name = "BuscarListaUsuario";
-            this.BuscarListaUsuario.Size = new System.Drawing.Size(75, 23);
-            this.BuscarListaUsuario.TabIndex = 5;
-            this.BuscarListaUsuario.Text = "Buscar";
-            this.BuscarListaUsuario.UseVisualStyleBackColor = true;
-            this.BuscarListaUsuario.Click += new System.EventHandler(this.BuscarListaUsuario_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-<<<<<<< HEAD
-            this.label1.Location = new System.Drawing.Point(80, 35);
-=======
-            this.label1.Location = new System.Drawing.Point(49, 33);
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome:";
-<<<<<<< HEAD
-            // 
             // Descricao
-=======
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(93, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(424, 20);
-            this.textBox1.TabIndex = 1;
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
-            // 
-            this.Descricao.HeaderText = "Descricao";
+            this.Descricao.HeaderText = "Descrição";
             this.Descricao.Name = "Descricao";
             this.Descricao.ReadOnly = true;
             this.Descricao.Width = 220;
             // 
-<<<<<<< HEAD
             // Valor
             // 
             this.Valor.HeaderText = "Valor";
             this.Valor.Name = "Valor";
             this.Valor.ReadOnly = true;
             this.Valor.Width = 130;
+            // 
+            // Quantidade
+            // 
+            this.Quantidade.HeaderText = "Quantidade";
+            this.Quantidade.Name = "Quantidade";
+            this.Quantidade.ReadOnly = true;
             // 
             // remover
             // 
@@ -154,33 +110,40 @@
             this.alterar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.alterar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // ListarServico
-=======
-            this.button1.Location = new System.Drawing.Point(523, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            // ProdutoBuscado
             // 
-            // dataGridView1
+            this.ProdutoBuscado.Location = new System.Drawing.Point(124, 35);
+            this.ProdutoBuscado.Name = "ProdutoBuscado";
+            this.ProdutoBuscado.Size = new System.Drawing.Size(354, 20);
+            this.ProdutoBuscado.TabIndex = 1;
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 73);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(625, 291);
-            this.dataGridView1.TabIndex = 3;
+            // BuscarProduto
             // 
-            // FormularioListarServico
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
+            this.BuscarProduto.Location = new System.Drawing.Point(484, 33);
+            this.BuscarProduto.Name = "BuscarProduto";
+            this.BuscarProduto.Size = new System.Drawing.Size(75, 23);
+            this.BuscarProduto.TabIndex = 5;
+            this.BuscarProduto.Text = "Buscar";
+            this.BuscarProduto.UseVisualStyleBackColor = true;
+            this.BuscarProduto.Click += new System.EventHandler(this.BuscarProduto_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(80, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nome:";
+            // 
+            // ListarProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 388);
+            this.ClientSize = new System.Drawing.Size(665, 394);
             this.Controls.Add(this.groupBox1);
-            this.Name = "FormularioListarServico";
-            this.Text = "ListarServico";
-            this.Load += new System.EventHandler(this.ListarServico_Load);
+            this.Name = "ListarProdutos";
+            this.Text = "ListarProdutos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -192,18 +155,13 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox Servico_Buscado;
-        private System.Windows.Forms.Button BuscarListaUsuario;
+        private System.Windows.Forms.TextBox ProdutoBuscado;
+        private System.Windows.Forms.Button BuscarProduto;
         private System.Windows.Forms.Label label1;
-<<<<<<< HEAD
         private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
         private System.Windows.Forms.DataGridViewButtonColumn remover;
         private System.Windows.Forms.DataGridViewButtonColumn alterar;
-=======
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
     }
 }

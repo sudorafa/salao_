@@ -2,7 +2,10 @@
 using Projeto4_Junior.Factory;//-----foi acrescentado-------//
 using Projeto4_Junior;
 using System;
+<<<<<<< HEAD
 using System.Collections;
+=======
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +14,10 @@ using Projeto4_Junior.Negocios;
 using System.Data.SqlClient; //---------foi acrescentado-----//
 using System.Windows.Forms;  //-------foi acrescentado-------//
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
 namespace Projeto4_Junior.Banco
 {
     class PersistenciaServico : IBancoDadosServico
@@ -36,6 +42,7 @@ namespace Projeto4_Junior.Banco
             }   
 
         }
+<<<<<<< HEAD
         public Servico BuscarServico(String Descricao)
         {
             FactoryConnection conn = new FactoryConnection();
@@ -88,11 +95,26 @@ namespace Projeto4_Junior.Banco
         {
 
         }
+=======
+        public Servico BuscarServico(Servico servico)
+        {
+            return null;
+        }
+        public void RemoverServico(Servico servico)
+        {
+
+        }
+        public void AlterarServico(Servico servico)
+        {
+
+        }
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
         public bool VerificaExistenciaServico(int IdServico)
         {
             return false;
 
         }//Foi acrescentado.
+<<<<<<< HEAD
         public ArrayList ListarServico(String busca)
         {
             FactoryConnection conn = new FactoryConnection();
@@ -129,5 +151,7 @@ namespace Projeto4_Junior.Banco
             return lista;
         }
     
+=======
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
     }
 }

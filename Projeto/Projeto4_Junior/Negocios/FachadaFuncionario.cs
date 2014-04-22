@@ -30,9 +30,9 @@ namespace Projeto4_Junior.Negocios
             this.ifachada.AlterarFuncionario(funionario);
         }
 
-        public SqlDataReader VerificaFunc(Funcionario funcionario)
+        public bool VerificaFunc(String cpf)
         {
-           return this.ifachada.VerificaFunc(funcionario);
+           return this.ifachada.VerificaFunc(cpf);
         
         }
         public ArrayList ListarFuncionario(String buscar)

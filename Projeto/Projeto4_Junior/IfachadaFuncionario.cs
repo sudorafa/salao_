@@ -15,7 +15,7 @@ namespace Projeto4_Junior
         Funcionario BuscarFuncionario(String cpf);
         void RemoverFuncionario(String cpf);
         void AlterarFuncionario(Funcionario funionario);
-        SqlDataReader VerificaFunc(Funcionario funcionario);
+        bool VerificaFunc(String cpf);
         ArrayList ListarFuncionario(String buscar);
     }
 }

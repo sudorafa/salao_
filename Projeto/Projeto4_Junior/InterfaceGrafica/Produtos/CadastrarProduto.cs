@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Projeto4_Junior.InterfaceGrafica.Produtos
+{
+    public partial class CadastrarProduto : Form
+    {
+        public CadastrarProduto()
+        {
+            InitializeComponent();
+        }
+
+        private void CadastrarProduto_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

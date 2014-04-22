@@ -106,19 +106,19 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
                 Projeto4_Junior.Modelo.Funcionario funcionario = new Projeto4_Junior.Modelo.Funcionario();
 
                 funcionario.Nome = campo[0];
-                funcionario.Telefone = campo[1];
-                funcionario.Cpf = campo[2];
+                funcionario.Cpf = campo[1];
+                funcionario.Telefone = campo[2];
                 funcionario.DataNascimento = campo[3];
-                funcionario.Porcentagem = int.Parse(campo[4]);
+                funcionario.Porcentagem = double.Parse(campo[4]);
 
-                funcionario.Endereco = campo[5] + " , ";
-                funcionario.Endereco += campo[6] + " , ";
-                funcionario.Endereco += campo[7] + " , ";
-                funcionario.Endereco += campo[8] + " , ";
-                funcionario.Endereco += campo[9] + " , ";
-                funcionario.Endereco += campo[10] + " , ";
+                funcionario.Endereco = campo[5] + ", ";
+                funcionario.Endereco += campo[6] + ", ";
+                funcionario.Endereco += campo[7] + ", ";
+                funcionario.Endereco += campo[8] + ", ";
+                funcionario.Endereco += campo[9] + ", ";
+                funcionario.Endereco += campo[10] + ", ";
                 funcionario.Endereco += campo[11] ;
-
+                funcionario.Ativo = true;
 
                 fachadaFuncionario.CadastrarFuncionario(funcionario);
                 this.Close();

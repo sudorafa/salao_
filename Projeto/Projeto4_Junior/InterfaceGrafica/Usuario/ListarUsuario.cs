@@ -50,17 +50,34 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
                     //A função abaixo preenche o dataGridView
                     this.BuscarListaUsuario_Click(sender, e);
                 }
-                else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["alterar"].Index)
-                {
+            }
+            else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["alterar"].Index)
+            {
                     //Carrega usuario que vai ser alterado!
                     String login = (String)dataGridView1[1, e.RowIndex].Value;
                     Projeto4_Junior.Modelo.Usuario usu = fachadausuario.BuscarUsuario(login);
 
                     AlterarUsuario tela = new AlterarUsuario(usu, this);
                     tela.ShowDialog();
-                }
+             }
+            else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["nome"].Index)
+            {
+                // Caso o nome da coluna seja outro troca o nome do indice em cima.
+
+                String login = (String)dataGridView1[1, e.RowIndex].Value;
+                //Carrega o funcionario para ser detalhado.
+                Projeto4_Junior.Modelo.Usuario usu = fachadausuario.BuscarUsuario(login);
+
+                DetalharUsuario tela = new DetalharUsuario(usu);
+                tela.ShowDialog();
+            }
 
             }
+
+        private void ListarUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
         }
 
         private void ListarUsuario_Load(object sender, EventArgs e)
@@ -73,4 +90,3 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
 
         }
     }
-}

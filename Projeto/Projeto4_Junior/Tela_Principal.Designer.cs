@@ -39,9 +39,7 @@
             this.listarFuncionariosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.servicosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoServicoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarServicoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarServicosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removerServicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.balancoDiarioRelatorioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatorioServicosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +50,7 @@
             this.estoqueMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaEstoqueMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saidaEstoqueMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inserirUsuarioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarUsuariosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +66,8 @@
             this.button_RelatorioDiarioBarraDeFerramentas = new System.Windows.Forms.ToolStripButton();
             this.button_RelatorioEstoqueBarraDeFerramentas = new System.Windows.Forms.ToolStripButton();
             this.button_InserirUsuarioBarraDeFerramentas = new System.Windows.Forms.ToolStripButton();
-            this.button_AlterarLoginESenhaBarraDeFerramentas = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.button_AbriCaixa = new System.Windows.Forms.ToolStripButton();
             this.button_SairBarraDeFerramentas = new System.Windows.Forms.ToolStripButton();
             this.menu_principal.SuspendLayout();
             this.barraDeFerramentas.SuspendLayout();
@@ -148,9 +148,7 @@
             // 
             this.servicosMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoServicoMenuItem,
-            this.alterarServicoMenuItem,
-            this.listarServicosMenuItem,
-            this.removerServicoToolStripMenuItem});
+            this.listarServicosMenuItem});
             this.servicosMenuItem.Name = "servicosMenuItem";
             this.servicosMenuItem.Size = new System.Drawing.Size(62, 20);
             this.servicosMenuItem.Text = "Se&rviços";
@@ -158,9 +156,10 @@
             // novoServicoMenuItem
             // 
             this.novoServicoMenuItem.Name = "novoServicoMenuItem";
-            this.novoServicoMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.novoServicoMenuItem.Size = new System.Drawing.Size(147, 22);
             this.novoServicoMenuItem.Text = "Novo serviço";
             this.novoServicoMenuItem.Click += new System.EventHandler(this.novoServicoMenuItem_Click);
+<<<<<<< HEAD
             // 
             // alterarServicoMenuItem
             // 
@@ -168,13 +167,16 @@
             this.alterarServicoMenuItem.Size = new System.Drawing.Size(161, 22);
             this.alterarServicoMenuItem.Text = "Alterar serviço";
             this.alterarServicoMenuItem.Click += new System.EventHandler(this.alterarServicoMenuItem_Click);
+=======
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
             // 
             // listarServicosMenuItem
             // 
             this.listarServicosMenuItem.Name = "listarServicosMenuItem";
-            this.listarServicosMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.listarServicosMenuItem.Size = new System.Drawing.Size(147, 22);
             this.listarServicosMenuItem.Text = "Listar serviços";
             this.listarServicosMenuItem.Click += new System.EventHandler(this.listarServicosMenuItem_Click);
+<<<<<<< HEAD
             // 
             // removerServicoToolStripMenuItem
             // 
@@ -182,6 +184,8 @@
             this.removerServicoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.removerServicoToolStripMenuItem.Text = "Remover serviço";
             this.removerServicoToolStripMenuItem.Click += new System.EventHandler(this.removerServicoToolStripMenuItem_Click);
+=======
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
             // 
             // relatoriosMenuItem
             // 
@@ -237,7 +241,8 @@
             // 
             this.estoqueMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.entradaEstoqueMenuItem,
-            this.saidaEstoqueMenuItem});
+            this.saidaEstoqueMenuItem,
+            this.listarToolStripMenuItem});
             this.estoqueMenuItem.Name = "estoqueMenuItem";
             this.estoqueMenuItem.Size = new System.Drawing.Size(61, 20);
             this.estoqueMenuItem.Text = "&Estoque";
@@ -247,12 +252,20 @@
             this.entradaEstoqueMenuItem.Name = "entradaEstoqueMenuItem";
             this.entradaEstoqueMenuItem.Size = new System.Drawing.Size(119, 22);
             this.entradaEstoqueMenuItem.Text = "Entradas";
+            this.entradaEstoqueMenuItem.Click += new System.EventHandler(this.entradaEstoqueMenuItem_Click);
             // 
             // saidaEstoqueMenuItem
             // 
             this.saidaEstoqueMenuItem.Name = "saidaEstoqueMenuItem";
             this.saidaEstoqueMenuItem.Size = new System.Drawing.Size(119, 22);
             this.saidaEstoqueMenuItem.Text = "Saídas";
+            // 
+            // listarToolStripMenuItem
+            // 
+            this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.listarToolStripMenuItem.Text = "Listar";
+            this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
             // 
             // usuariosMenuItem
             // 
@@ -315,7 +328,8 @@
             this.button_RelatorioDiarioBarraDeFerramentas,
             this.button_RelatorioEstoqueBarraDeFerramentas,
             this.button_InserirUsuarioBarraDeFerramentas,
-            this.button_AlterarLoginESenhaBarraDeFerramentas,
+            this.toolStripButton1,
+            this.button_AbriCaixa,
             this.button_SairBarraDeFerramentas});
             this.barraDeFerramentas.Location = new System.Drawing.Point(0, 24);
             this.barraDeFerramentas.Name = "barraDeFerramentas";
@@ -349,6 +363,7 @@
             this.button_InserirFuncionarioBarraDeFerramentas.Name = "button_InserirFuncionarioBarraDeFerramentas";
             this.button_InserirFuncionarioBarraDeFerramentas.Size = new System.Drawing.Size(51, 51);
             this.button_InserirFuncionarioBarraDeFerramentas.Text = "Inserir funcionário";
+            this.button_InserirFuncionarioBarraDeFerramentas.Click += new System.EventHandler(this.button_InserirFuncionarioBarraDeFerramentas_Click);
             // 
             // button_InserirServicoBarraDeFerramentas
             // 
@@ -386,14 +401,24 @@
             this.button_InserirUsuarioBarraDeFerramentas.Size = new System.Drawing.Size(51, 51);
             this.button_InserirUsuarioBarraDeFerramentas.Text = "Inserir usuário";
             // 
-            // button_AlterarLoginESenhaBarraDeFerramentas
+            // toolStripButton1
             // 
-            this.button_AlterarLoginESenhaBarraDeFerramentas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.button_AlterarLoginESenhaBarraDeFerramentas.Image = ((System.Drawing.Image)(resources.GetObject("button_AlterarLoginESenhaBarraDeFerramentas.Image")));
-            this.button_AlterarLoginESenhaBarraDeFerramentas.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.button_AlterarLoginESenhaBarraDeFerramentas.Name = "button_AlterarLoginESenhaBarraDeFerramentas";
-            this.button_AlterarLoginESenhaBarraDeFerramentas.Size = new System.Drawing.Size(51, 51);
-            this.button_AlterarLoginESenhaBarraDeFerramentas.Text = "Alterar usuário & senha";
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(51, 51);
+            this.toolStripButton1.Text = "Alterar usuário & senha";
+            // 
+            // button_AbriCaixa
+            // 
+            this.button_AbriCaixa.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.button_AbriCaixa.Image = ((System.Drawing.Image)(resources.GetObject("button_AbriCaixa.Image")));
+            this.button_AbriCaixa.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.button_AbriCaixa.Name = "button_AbriCaixa";
+            this.button_AbriCaixa.Size = new System.Drawing.Size(51, 51);
+            this.button_AbriCaixa.Text = "Abrir caixa";
+            this.button_AbriCaixa.Click += new System.EventHandler(this.button_AbriCaixa_Click);
             // 
             // button_SairBarraDeFerramentas
             // 
@@ -438,9 +463,7 @@
         private System.Windows.Forms.ToolStripMenuItem aniversariantesClienteMenuItem;
         private System.Windows.Forms.ToolStripMenuItem servicosMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoServicoMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alterarServicoMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarServicosMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removerServicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatoriosMenuItem;
         private System.Windows.Forms.ToolStripMenuItem balancoDiarioRelatorioMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatorioServicosMenuItem;
@@ -464,9 +487,11 @@
         private System.Windows.Forms.ToolStripMenuItem alterarLoginSenhaMeuUsuarioMenuItem;
         private System.Windows.Forms.ToolStripButton button_InserirUsuarioBarraDeFerramentas;
         private System.Windows.Forms.ToolStripButton button_AniversariantesBarraDeFerramentas;
-        private System.Windows.Forms.ToolStripButton button_AlterarLoginESenhaBarraDeFerramentas;
+        private System.Windows.Forms.ToolStripButton button_AbriCaixa;
         private System.Windows.Forms.ToolStripMenuItem usuariosMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inserirUsuarioMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarUsuariosMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
