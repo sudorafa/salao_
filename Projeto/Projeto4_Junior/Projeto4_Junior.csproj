@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InterfaceGrafica\Caixa\TelaAbrirCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Caixa\TelaAbrirCaixa.Designer.cs">
+      <DependentUpon>TelaAbrirCaixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfaceGrafica\Cliente\AlterarClientePrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +203,9 @@
     <Compile Include="Tela_Principal.Designer.cs">
       <DependentUpon>Tela_Principal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="InterfaceGrafica\Caixa\TelaAbrirCaixa.resx">
+      <DependentUpon>TelaAbrirCaixa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Cliente\AlterarClientePrincipal.resx">
       <DependentUpon>AlterarClientePrincipal.cs</DependentUpon>
     </EmbeddedResource>

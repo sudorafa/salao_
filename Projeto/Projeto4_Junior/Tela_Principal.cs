@@ -1,4 +1,5 @@
-﻿using Projeto4_Junior.InterfaceGrafica.Funcionario;
+﻿using Projeto4_Junior.InterfaceGrafica.Caixa;
+using Projeto4_Junior.InterfaceGrafica.Funcionario;
 using Projeto4_Junior.InterfaceGrafica.Produtos;
 using Projeto4_Junior.InterfaceGrafica.Servicos;
 using Projeto4_Junior.InterfaceGrafica.Usuario;
@@ -154,6 +155,12 @@ namespace Projeto4_Junior
         {
             ListarProdutos tela = new ListarProdutos();
             tela.Show();
+        }
+
+        private void button_AbriCaixa_Click(object sender, EventArgs e)
+        {
+            TelaAbrirCaixa telaCaixa = new TelaAbrirCaixa();
+            telaCaixa.ShowDialog();
         }
     }
 }
