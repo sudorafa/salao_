@@ -1,6 +1,6 @@
-﻿namespace Projeto4_Junior.InterfaceGrafica.Servico
+﻿namespace Projeto4_Junior.InterfaceGrafica.Servicos
 {
-    partial class FormularioAlterarServico
+    partial class AlterarServico
     {
         /// <summary>
         /// Required designer variable.
@@ -28,70 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.DadosUsuario = new System.Windows.Forms.GroupBox();
+            this.Valor_Servico = new System.Windows.Forms.TextBox();
+            this.Descricao_Servico = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.botaoRemover = new System.Windows.Forms.Button();
-            this.botaoCancelar = new System.Windows.Forms.Button();
-            this.campoRemoverServico = new System.Windows.Forms.TextBox();
+            this.btAlterar = new System.Windows.Forms.Button();
+            this.Cancelar = new System.Windows.Forms.Button();
+            this.DadosUsuario.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // DadosUsuario
+            // 
+            this.DadosUsuario.Controls.Add(this.Valor_Servico);
+            this.DadosUsuario.Controls.Add(this.Descricao_Servico);
+            this.DadosUsuario.Controls.Add(this.label2);
+            this.DadosUsuario.Controls.Add(this.label1);
+            this.DadosUsuario.Location = new System.Drawing.Point(12, 12);
+            this.DadosUsuario.Name = "DadosUsuario";
+            this.DadosUsuario.Size = new System.Drawing.Size(324, 169);
+            this.DadosUsuario.TabIndex = 2;
+            this.DadosUsuario.TabStop = false;
+            this.DadosUsuario.Text = "Usuario";
+            // 
+            // Valor_Servico
+            // 
+            this.Valor_Servico.Location = new System.Drawing.Point(70, 64);
+            this.Valor_Servico.Name = "Valor_Servico";
+            this.Valor_Servico.Size = new System.Drawing.Size(134, 20);
+            this.Valor_Servico.TabIndex = 4;
+            // 
+            // Descricao_Servico
+            // 
+            this.Descricao_Servico.Location = new System.Drawing.Point(70, 33);
+            this.Descricao_Servico.Name = "Descricao_Servico";
+            this.Descricao_Servico.Size = new System.Drawing.Size(217, 20);
+            this.Descricao_Servico.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Valor:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 64);
+            this.label1.Location = new System.Drawing.Point(6, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 13);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Digite o CODIGO DO SERVIÇO que deseja alterar:";
+            this.label1.Text = "Descrição:";
             // 
-            // botaoRemover
+            // btAlterar
             // 
-            this.botaoRemover.Location = new System.Drawing.Point(197, 168);
-            this.botaoRemover.Name = "botaoRemover";
-            this.botaoRemover.Size = new System.Drawing.Size(75, 23);
-            this.botaoRemover.TabIndex = 1;
-            this.botaoRemover.Text = "Alterar";
-            this.botaoRemover.UseVisualStyleBackColor = true;
-            this.botaoRemover.Click += new System.EventHandler(this.botaoRemover_Click);
+            this.btAlterar.Location = new System.Drawing.Point(192, 197);
+            this.btAlterar.Name = "btAlterar";
+            this.btAlterar.Size = new System.Drawing.Size(81, 28);
+            this.btAlterar.TabIndex = 8;
+            this.btAlterar.Text = "Alterar";
+            this.btAlterar.UseVisualStyleBackColor = true;
+            this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click);
             // 
-            // botaoCancelar
+            // Cancelar
             // 
-            this.botaoCancelar.Location = new System.Drawing.Point(28, 168);
-            this.botaoCancelar.Name = "botaoCancelar";
-            this.botaoCancelar.Size = new System.Drawing.Size(75, 23);
-            this.botaoCancelar.TabIndex = 2;
-            this.botaoCancelar.Text = "Cancelar";
-            this.botaoCancelar.UseVisualStyleBackColor = true;
-            this.botaoCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
+            this.Cancelar.Location = new System.Drawing.Point(90, 197);
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(81, 28);
+            this.Cancelar.TabIndex = 7;
+            this.Cancelar.Text = "Cancelar";
+            this.Cancelar.UseVisualStyleBackColor = true;
             // 
-            // campoRemoverServico
-            // 
-            this.campoRemoverServico.Location = new System.Drawing.Point(28, 115);
-            this.campoRemoverServico.Name = "campoRemoverServico";
-            this.campoRemoverServico.Size = new System.Drawing.Size(244, 20);
-            this.campoRemoverServico.TabIndex = 3;
-            // 
-            // FormularioAlterarServico
+            // AlterarServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.campoRemoverServico);
-            this.Controls.Add(this.botaoCancelar);
-            this.Controls.Add(this.botaoRemover);
-            this.Controls.Add(this.label1);
-            this.Name = "FormularioAlterarServico";
+            this.ClientSize = new System.Drawing.Size(369, 237);
+            this.Controls.Add(this.btAlterar);
+            this.Controls.Add(this.DadosUsuario);
+            this.Controls.Add(this.Cancelar);
+            this.Name = "AlterarServico";
             this.Text = "AlterarServico";
-            this.Load += new System.EventHandler(this.FormularioAlterarServico_Load);
+            this.Load += new System.EventHandler(this.AlterarServico_Load);
+            this.DadosUsuario.ResumeLayout(false);
+            this.DadosUsuario.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.GroupBox DadosUsuario;
+        private System.Windows.Forms.TextBox Valor_Servico;
+        private System.Windows.Forms.TextBox Descricao_Servico;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button botaoRemover;
-        private System.Windows.Forms.Button botaoCancelar;
-        private System.Windows.Forms.TextBox campoRemoverServico;
+        private System.Windows.Forms.Button btAlterar;
+        private System.Windows.Forms.Button Cancelar;
     }
 }

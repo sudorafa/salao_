@@ -114,5 +114,27 @@ namespace Projeto4_Junior
             ListarUsuario usuario = new ListarUsuario();
             usuario.Show();
         }
+
+        private void novoServicoMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioCadastrarServico formularioCadastrarServico = new FormularioCadastrarServico();
+            formularioCadastrarServico.ShowDialog();
+        }
+
+        private void alterarServicoMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Senhor usuario(a) a opção de ALTERAR estar disponivel somente na opção LISTAR ");//quando listar um serviço, vai ter a opção de alterar
+        }
+
+        private void removerServicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Senhor usuario(a) a opção de REMOVER estar disponivel somente na opção LISTAR ");//quando listar um serviço, vai ter a opção de remover um serviço.
+        }
+
+        private void listarServicosMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarServico formularioListarServico = new ListarServico();
+            formularioListarServico.ShowDialog();
+        }
     }
 }

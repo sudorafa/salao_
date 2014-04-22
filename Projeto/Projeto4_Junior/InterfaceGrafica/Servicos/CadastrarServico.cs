@@ -7,12 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Projeto4_Junior.Modelo;
 using Projeto4_Junior.Negocios;
+using Projeto4_Junior.Modelo;
 
-
-
-namespace Projeto4_Junior.InterfaceGrafica.Servico
+namespace Projeto4_Junior.InterfaceGrafica.Servicos
 {
     public partial class FormularioCadastrarServico : Form
     {
@@ -28,38 +26,30 @@ namespace Projeto4_Junior.InterfaceGrafica.Servico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool key = true;
+                    
+                IfachadaServico fachadaServico = new FachadaServico();
+                Servico servico = new Servico();
 
-            String[] campo = new String[3]
+                servico.Descricao = campoDescricao.Text;
+                servico.Valor = Convert.ToDecimal(campoValor.Text);
+                
+               
+                if (campoDescricao.Equals("") || campoDescricao == null || campoValor.Equals("") || campoValor == null)
                 {
-                    campo_codigo_servico.Text,
-                    campo_descricao.Text,
-                    campo_valor.Text
-                };
-
-                for (int x = 0; x < campo.Length; x++)
-                {
-                    if (campo[x] == null || campo[x].Equals(""))
-                    {
-                        key = false;
-                    }
+                    MessageBox.Show("Por favor, preencher todos os campos");
+                    servico.Descricao = campoDescricao.Text;
                 }
-            
-            if(key == true)
+                else
                 {
-                    IfachadaServico fachadaSevico = new FachadaServico();
-                    Projeto4_Junior.Modelo.Servico servico = new Projeto4_Junior.Modelo.Servico();
-
-                    servico.IdServico = Convert.ToInt32(campo[0]);
-                    servico.Descricao = campo[1];
-                    servico.Valor = Convert.ToDecimal(campo[2]);
-
-                    fachadaSevico.CadastrarServico(servico);
+                    servico.Descricao = campoDescricao.Text;   
+                    servico.Valor = Convert.ToDecimal(campoValor.Text);
+                    servico.Ativo = true;
+                    fachadaServico.CadastrarServico(servico);
                     this.Close();
                 }
-             
                 
-           }            
+           
+            }
         }
     }
 

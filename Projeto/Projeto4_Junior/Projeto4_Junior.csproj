@@ -66,11 +66,29 @@
     <Compile Include="Banco\PersistenciaProduto.cs" />
     <Compile Include="Banco\PersistenciaServico.cs" />
     <Compile Include="Banco\PersistenciaUsuario.cs" />
+    <Compile Include="InterfaceGrafica\Servicos\AlterarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\AlterarServico.Designer.cs">
+      <DependentUpon>AlterarServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\CadastrarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\CadastrarServico.Designer.cs">
+      <DependentUpon>CadastrarServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfaceGrafica\Funcionario\DetalharFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InterfaceGrafica\Funcionario\DetalharFuncionario.Designer.cs">
       <DependentUpon>DetalharFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\ListarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\ListarServico.Designer.cs">
+      <DependentUpon>ListarServico.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfaceGrafica\Usuario\AlterarUsuario.cs">
       <SubType>Form</SubType>
@@ -120,30 +138,6 @@
     <Compile Include="InterfaceGrafica\Funcionario\ListarFuncionario.Designer.cs">
       <DependentUpon>ListarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfaceGrafica\Servicos\AlterarServico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfaceGrafica\Servicos\AlterarServico.Designer.cs">
-      <DependentUpon>AlterarServico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfaceGrafica\Servicos\CadastroServico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfaceGrafica\Servicos\CadastroServico.Designer.cs">
-      <DependentUpon>CadastroServico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfaceGrafica\Servicos\ListarServico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfaceGrafica\Servicos\ListarServico.Designer.cs">
-      <DependentUpon>ListarServico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InterfaceGrafica\Servicos\RemoverServico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfaceGrafica\Servicos\RemoverServico.Designer.cs">
-      <DependentUpon>RemoverServico.cs</DependentUpon>
-    </Compile>
     <Compile Include="InterfaceGrafica\Usuario\ListarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,8 +184,17 @@
     <EmbeddedResource Include="Autenticacao.resx">
       <DependentUpon>Autenticacao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Servicos\AlterarServico.resx">
+      <DependentUpon>AlterarServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Servicos\CadastrarServico.resx">
+      <DependentUpon>CadastrarServico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Funcionario\DetalharFuncionario.resx">
       <DependentUpon>DetalharFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Servicos\ListarServico.resx">
+      <DependentUpon>ListarServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Usuario\AlterarUsuario.resx">
       <DependentUpon>AlterarUsuario.cs</DependentUpon>
@@ -213,18 +216,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Funcionario\ListarFuncionario.resx">
       <DependentUpon>ListarFuncionario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfaceGrafica\Servicos\AlterarServico.resx">
-      <DependentUpon>AlterarServico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfaceGrafica\Servicos\CadastroServico.resx">
-      <DependentUpon>CadastroServico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfaceGrafica\Servicos\ListarServico.resx">
-      <DependentUpon>ListarServico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfaceGrafica\Servicos\RemoverServico.resx">
-      <DependentUpon>RemoverServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Usuario\ListarUsuario.resx">
       <DependentUpon>ListarUsuario.cs</DependentUpon>

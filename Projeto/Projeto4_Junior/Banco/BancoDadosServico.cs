@@ -1,6 +1,7 @@
 ﻿using Projeto4_Junior.Modelo;
 using Projeto4_Junior.Negocios;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,11 +17,11 @@ namespace Projeto4_Junior.Banco
         {            
             this.ibancodados.CadastrarServico(servico);
         }
-        public Servico BuscarServico(Servico servico)
+        public Servico BuscarServico(String Descricao)
         {            
-            return this.ibancodados.BuscarServico(servico);
+            return this.ibancodados.BuscarServico(Descricao);
         }
-        public void RemoverServico(Servico servico)
+        public void RemoverServico(String servico)
         {           
             this.ibancodados.RemoverServico(servico);
         }
@@ -28,10 +29,13 @@ namespace Projeto4_Junior.Banco
         {           
             this.ibancodados.AlterarServico(servico);
         }
-
-        public bool VerificaExistenciaServico(String IdServico)//----------foi acrescentado------------//
+        public bool VerificaExistenciaServico(int IdServico)//----------foi acrescentado------------//
         {
             return this.ibancodados.VerificaExistenciaServico(IdServico);
+        }
+        public ArrayList ListarServico(String busca)
+        {
+            return this.ibancodados.ListarServico(busca);
         }
     }
 }

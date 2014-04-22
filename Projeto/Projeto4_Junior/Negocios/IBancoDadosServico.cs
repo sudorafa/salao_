@@ -1,5 +1,6 @@
 ﻿using Projeto4_Junior.Modelo;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,10 +11,11 @@ namespace Projeto4_Junior.Negocios
     interface IBancoDadosServico
     {
         void CadastrarServico(Servico servico);
-        Servico BuscarServico(Servico servico);
-        void RemoverServico(Servico servico);
+        Servico BuscarServico(String Descricao);
+        void RemoverServico(String Descricao);
         void AlterarServico(Servico servico);
-        bool VerificaExistenciaServico(String IdServico);//Foi acrescentado.
+        bool VerificaExistenciaServico(int IdServico);//Foi acrescentado.
+        ArrayList ListarServico(String busca);
          
     }
 }

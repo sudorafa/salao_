@@ -83,7 +83,6 @@ namespace Projeto4_Junior.Banco
             }
 
         }
-
         public void AlterarUsuario(Usuario usuario)
         {
             FactoryConnection conn = new FactoryConnection();
@@ -162,8 +161,6 @@ namespace Projeto4_Junior.Banco
            }
             return retorno;
         }
-
-
         public bool VerificaTipoUsuario(String login)
         {
            bool retorno = true;
@@ -200,7 +197,6 @@ namespace Projeto4_Junior.Banco
         {
            FactoryConnection conn = new FactoryConnection();
             ArrayList lista = new ArrayList();
-
             try
             {
                 String query = "SELECT * FROM Usuario WHERE nome LIKE '%"+busca+"%'";
@@ -232,7 +228,6 @@ namespace Projeto4_Junior.Banco
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
             }
-
             return lista;
         }
     }

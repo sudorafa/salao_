@@ -8,19 +8,22 @@ namespace Projeto4_Junior.Modelo
 {
     class Servico
     {
-        public String IdServico { get; set; }
+        public int IdServico { get; set; }
         public Boolean Ativo { get; set; }
         public String Descricao { get; set; }
-        public Decimal Valor { get; set; }   
-
+        public Decimal Valor { get; set; }
+        public int isGestor { get; set; }
+        
         public Servico()
         {
 
         }
-        public Servico(String nome, Decimal valor)
+        public Servico(int idservico, Boolean ativo, String descricao, Decimal valor)
         {
-            this.Descricao = nome;
-            this.Valor = valor;            
+            this.IdServico = idservico;
+            this.Ativo = ativo;
+            this.Descricao = descricao;
+            this.Valor = valor;
         }
     }
 }

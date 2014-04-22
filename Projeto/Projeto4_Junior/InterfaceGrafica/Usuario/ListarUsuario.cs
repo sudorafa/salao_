@@ -62,5 +62,15 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
 
             }
         }
+
+        private void ListarUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Usuario_Buscado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
