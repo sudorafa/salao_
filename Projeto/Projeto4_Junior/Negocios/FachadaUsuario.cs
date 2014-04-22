@@ -24,19 +24,23 @@ namespace Projeto4_Junior.Negocios
         {
             this.ifachada.RemoverUsuario(login);
         }
+
         public void AlterarUsuario(Usuario usuario)
         {
             this.ifachada.AlterarUsuario(usuario);
         }
+
         public bool Autenticar(string usuario, string senha)
         {
             return this.ifachada.Autenticar(usuario, senha);
             throw new NotImplementedException();
         }
+
         public bool VerificaTipoUsuario(String login)
         {
             return this.ifachada.VerificaTipoUsuario(login);
         }
+
         public ArrayList ListarUsuario(String busca)
         {
             return this.ifachada.ListarUsuario(busca);

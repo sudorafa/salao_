@@ -30,14 +30,14 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProdutoBuscado = new System.Windows.Forms.TextBox();
+            this.BuscarProduto = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remover = new System.Windows.Forms.DataGridViewButtonColumn();
             this.alterar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ProdutoBuscado = new System.Windows.Forms.TextBox();
-            this.BuscarProduto = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +71,32 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(595, 260);
             this.dataGridView1.TabIndex = 6;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // ProdutoBuscado
+            // 
+            this.ProdutoBuscado.Location = new System.Drawing.Point(124, 35);
+            this.ProdutoBuscado.Name = "ProdutoBuscado";
+            this.ProdutoBuscado.Size = new System.Drawing.Size(354, 20);
+            this.ProdutoBuscado.TabIndex = 1;
+            // 
+            // BuscarProduto
+            // 
+            this.BuscarProduto.Location = new System.Drawing.Point(484, 33);
+            this.BuscarProduto.Name = "BuscarProduto";
+            this.BuscarProduto.Size = new System.Drawing.Size(75, 23);
+            this.BuscarProduto.TabIndex = 5;
+            this.BuscarProduto.Text = "Buscar";
+            this.BuscarProduto.UseVisualStyleBackColor = true;
+            this.BuscarProduto.Click += new System.EventHandler(this.BuscarProduto_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(80, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nome:";
             // 
             // Descricao
             // 
@@ -109,32 +134,6 @@
             this.alterar.ReadOnly = true;
             this.alterar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.alterar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // ProdutoBuscado
-            // 
-            this.ProdutoBuscado.Location = new System.Drawing.Point(124, 35);
-            this.ProdutoBuscado.Name = "ProdutoBuscado";
-            this.ProdutoBuscado.Size = new System.Drawing.Size(354, 20);
-            this.ProdutoBuscado.TabIndex = 1;
-            // 
-            // BuscarProduto
-            // 
-            this.BuscarProduto.Location = new System.Drawing.Point(484, 33);
-            this.BuscarProduto.Name = "BuscarProduto";
-            this.BuscarProduto.Size = new System.Drawing.Size(75, 23);
-            this.BuscarProduto.TabIndex = 5;
-            this.BuscarProduto.Text = "Buscar";
-            this.BuscarProduto.UseVisualStyleBackColor = true;
-            this.BuscarProduto.Click += new System.EventHandler(this.BuscarProduto_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome:";
             // 
             // ListarProdutos
             // 

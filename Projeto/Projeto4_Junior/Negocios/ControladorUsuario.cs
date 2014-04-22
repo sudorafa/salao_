@@ -35,18 +35,22 @@ namespace Projeto4_Junior.Negocios
         {
             ibancodados.RemoverUsuario(login);    
         }
+
         public void AlterarUsuario(Usuario usuario)
         {
             
         }
+
         public bool Autenticar(String usuario, String senha)
         {
             return this.ibancodados.Autenticar(usuario, senha);
         }
+
         public bool VerificaTipoUsuario(String login)
         {
             return this.ibancodados.VerificaTipoUsuario(login);
         }
+
         public ArrayList ListarUsuario(String busca)
         {
             return this.ibancodados.ListarUsuario(busca);

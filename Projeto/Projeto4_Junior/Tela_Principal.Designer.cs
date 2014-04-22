@@ -159,16 +159,6 @@
             this.novoServicoMenuItem.Size = new System.Drawing.Size(147, 22);
             this.novoServicoMenuItem.Text = "Novo serviço";
             this.novoServicoMenuItem.Click += new System.EventHandler(this.novoServicoMenuItem_Click);
-<<<<<<< HEAD
-            // 
-            // alterarServicoMenuItem
-            // 
-            this.alterarServicoMenuItem.Name = "alterarServicoMenuItem";
-            this.alterarServicoMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.alterarServicoMenuItem.Text = "Alterar serviço";
-            this.alterarServicoMenuItem.Click += new System.EventHandler(this.alterarServicoMenuItem_Click);
-=======
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
             // 
             // listarServicosMenuItem
             // 
@@ -176,16 +166,6 @@
             this.listarServicosMenuItem.Size = new System.Drawing.Size(147, 22);
             this.listarServicosMenuItem.Text = "Listar serviços";
             this.listarServicosMenuItem.Click += new System.EventHandler(this.listarServicosMenuItem_Click);
-<<<<<<< HEAD
-            // 
-            // removerServicoToolStripMenuItem
-            // 
-            this.removerServicoToolStripMenuItem.Name = "removerServicoToolStripMenuItem";
-            this.removerServicoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.removerServicoToolStripMenuItem.Text = "Remover serviço";
-            this.removerServicoToolStripMenuItem.Click += new System.EventHandler(this.removerServicoToolStripMenuItem_Click);
-=======
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
             // 
             // relatoriosMenuItem
             // 

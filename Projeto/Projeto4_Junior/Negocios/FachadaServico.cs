@@ -1,6 +1,5 @@
 ﻿using Projeto4_Junior.Modelo;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,21 +15,17 @@ namespace Projeto4_Junior.Negocios
         {
             this.ifachada.CadastrarServico(servico);
         }
-        public Servico BuscarServico(String Descricao)
+        public Servico BuscarServico(Servico servico)
         {
-            return this.ifachada.BuscarServico(Descricao);
+            return this.ifachada.BuscarServico(servico);
         }
-        public void RemoverServico(String Descricao)
+        public void RemoverServico(Servico servico)
         {
-            this.ifachada.RemoverServico(Descricao);
+            this.ifachada.RemoverServico(servico);
         }
         public void AlterarServico(Servico servico)
         {
             this.ifachada.AlterarServico(servico);
-        }
-        public ArrayList ListarServico(String busca)
-        {
-            return this.ifachada.ListarServico(busca);
         }
     }
 }

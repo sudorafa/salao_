@@ -57,26 +57,8 @@ namespace Projeto4_Junior.Banco
         {
             return null;
         }
-        public void RemoverProduto(String descricao)
+        public void RemoverProdutos(Produto produto)
         {
-            FactoryConnection conn = new FactoryConnection();
-            try
-            {
-                String query = "UPDATE Produto SET Ativo=0 WHERE Descricao = '" + descricao + "'";
-
-                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
-
-                SqlDataReader reader = comand.ExecuteReader();
-                MessageBox.Show("Funcionário removido com sucesso!");
-                conn.FecharConnecxao();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
-            }
-
-
-
             /*
             SqlCommand comm = new SqlCommand();
                 comm.CommandText = "Insert into Produtos(excluido) values (1) where codigo=@codigo";

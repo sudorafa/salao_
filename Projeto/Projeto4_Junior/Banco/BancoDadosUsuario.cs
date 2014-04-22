@@ -25,6 +25,7 @@ namespace Projeto4_Junior.Banco
         {            
             this.ibancodados.RemoverUsuario(login);
         }
+
         public void AlterarUsuario(Usuario usuario)
         {            
             this.ibancodados.AlterarUsuario(usuario);
@@ -41,6 +42,7 @@ namespace Projeto4_Junior.Banco
         {
             return this.ibancodados.VerificaTipoUsuario(login);
         }
+
         public ArrayList ListarUsuario(String busca)
         {
             return this.ibancodados.ListarUsuario(busca);

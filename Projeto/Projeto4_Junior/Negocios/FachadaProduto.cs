@@ -20,9 +20,9 @@ namespace Projeto4_Junior.Negocios
         {
             return this.ifachada.BuscarProdutos(produto);
         }
-        public void RemoverProduto(String descricao)
+        public void RemoverProdutos(Produto produto)
         {
-            this.ifachada.RemoverProduto(descricao);
+            this.ifachada.RemoverProdutos(produto);
         }
         public void AlterarProdutos(Produto produto)
         {

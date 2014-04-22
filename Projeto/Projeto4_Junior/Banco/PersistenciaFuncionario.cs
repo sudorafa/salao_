@@ -20,36 +20,6 @@ namespace Projeto4_Junior.Banco
 
         public void CadastrarFuncionario(Funcionario funionario)
         {
-<<<<<<< HEAD
-            fc.FecharConnecxao();
-            
-            SqlCommand comm = new SqlCommand();
-            try
-            {
-                comm.CommandText = "INSERT INTO FUNCIONARIO(NOME, ENDERECO, DATNASCIMENTO, TELEFONE,  CPF, porcentagem)" +
-                    " VALUES(@nome, @endereco, @datNascimento, @telefone, @cpf, @porcentagem)";
-                comm.Parameters.AddWithValue("@nome", funionario.Nome);
-                comm.Parameters.AddWithValue("@endereco", funionario.Endereco);
-                comm.Parameters.AddWithValue("@datNascimento", funionario.DataNascimento);
-                comm.Parameters.AddWithValue("@telefone", funionario.Telefone);
-                comm.Parameters.AddWithValue("@cpf", funionario.Cpf);
-                comm.Parameters.AddWithValue("@porcentagem", funionario.Porcentagem);
-
-                comm.Connection=fc.AbrirConnexao();
-                comm.ExecuteNonQuery();
-                fc.FecharConnecxao();
-            }catch(SqlException e)
-            {
-                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
-                e.Message.GetType();
-                
-            }
-
-
-
-        }
-        public Funcionario BuscarFuncionario(String cpf)
-=======
             if (this.VerificaFunc(funionario.Cpf))
             {
                 MessageBox.Show("Já existe Funcionário cadastrado com este CPF!");
@@ -81,7 +51,6 @@ namespace Projeto4_Junior.Banco
 
         }
         public Funcionario BuscarFuncionario(String cpf)
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
         {
             FactoryConnection conn = new FactoryConnection();
             Funcionario func = new Funcionario();
@@ -135,27 +104,6 @@ namespace Projeto4_Junior.Banco
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
             }
-<<<<<<< HEAD
-
-
-            /*
-            try
-            {
-                comm.CommandText = "DELETE FROM FUNCIONARIO WHERE CPF=@CPF";
-                comm.Parameters.AddWithValue("@cpf", cpf);
-                fc.AbrirConnexao();
-                comm.ExecuteNonQuery();
-                fc.FecharConnecxao();
-            }
-            catch (SqlException e)
-            {
-                e.Message.GetType();
-            }
-
-        */
-        }
-        public void AlterarFuncionario(Funcionario func)
-=======
             finally
             {
                 conn.FecharConnecxao();
@@ -179,7 +127,6 @@ namespace Projeto4_Junior.Banco
         */
         }
         public void AlterarFuncionario(Funcionario func)
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
         {
             FactoryConnection conn = new FactoryConnection();
             try
@@ -194,48 +141,6 @@ namespace Projeto4_Junior.Banco
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
-<<<<<<< HEAD
-            } 
-            /*
-            try
-            {
-                comm.CommandText = "UPDATE FUNCIONARIOS set NOME=@nome, endereco=@endereco, datnascimento=@datNascimento," +
-                                   "telefone=@telefone";
-                comm.Parameters.AddWithValue("@nome", funionario.Nome);
-                comm.Parameters.AddWithValue("@endereco", funionario.Endereco);
-                comm.Parameters.AddWithValue("@datNascimento", funionario.Data_Nascimento);
-                comm.Parameters.AddWithValue("@telefone", funionario.Telefone);
-                comm.Parameters.AddWithValue("@cpf", funionario.Cpf);
-
-                fc.AbrirConnexao();
-                comm.ExecuteNonQuery();
-                fc.FecharConnecxao();
-            }
-            catch (SqlException e)
-            {
-                e.Message.GetType();
-            }
-           */
-        }
-
-        public SqlDataReader VerificaFunc(Funcionario func)
-        {
-            SqlCommand comm = new SqlCommand();
-            SqlDataReader read = null;
-            try
-            {
-                
-                comm.CommandText = "select * from funcionario where cpf=@cpf";
-                comm.Parameters.AddWithValue("@cpf", func.Cpf);
-                comm.Connection = fc.AbrirConnexao();
-                read = comm.ExecuteReader();
-                
-            }catch(SqlException e)
-            {
-                e.Message.GetType();
-            }
-            return read;
-=======
             }
             finally
             {
@@ -295,7 +200,6 @@ namespace Projeto4_Junior.Banco
                 conn.FecharConnecxao();
             }
             return retorno;
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
         }
 
         public ArrayList ListarFuncionario(String buscar)

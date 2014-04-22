@@ -2,7 +2,6 @@
 using Projeto4_Junior.Negocios;
 using Projeto4_Junior;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,14 +27,26 @@ namespace Projeto4_Junior.Negocios
             }  
             
         }
-        public Servico BuscarServico(String Descricao)
+        public Servico BuscarServico(Servico servico)
         {
-            return ibancodados.BuscarServico(Descricao);
+            return ibancodados.BuscarServico(servico);
             
+            
+            //return null;
         }
-        public void RemoverServico(String Descricao)
+        public void RemoverServico(Servico servico)
         {
-            ibancodados.RemoverServico(Descricao);
+            /*
+            if (ibancodados.VerificaExistenciaServico(IdServico) == true)
+            {
+                ibancodados.RemoverServico(IdServico);
+            }
+            else
+            {
+                MessageBox.Show("Servico não cadastrado!");
+            } 
+             * */
+            
         }
         public void AlterarServico(Servico servico)
         {
@@ -60,10 +71,6 @@ namespace Projeto4_Junior.Negocios
             } 
              * */
             
-        }
-        public ArrayList ListarServico(String busca)
-        {
-            return this.ibancodados.ListarServico(busca);
         }
     }
 }

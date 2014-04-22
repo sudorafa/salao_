@@ -108,7 +108,6 @@
             this.Usuario_Buscado.Name = "Usuario_Buscado";
             this.Usuario_Buscado.Size = new System.Drawing.Size(354, 20);
             this.Usuario_Buscado.TabIndex = 1;
-            this.Usuario_Buscado.TextChanged += new System.EventHandler(this.Usuario_Buscado_TextChanged);
             // 
             // BuscarListaUsuario
             // 
@@ -137,7 +136,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ListarUsuario";
             this.Text = "ListarUsuario";
-            this.Load += new System.EventHandler(this.ListarUsuario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

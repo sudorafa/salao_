@@ -2,10 +2,6 @@
 using Projeto4_Junior.Factory;//-----foi acrescentado-------//
 using Projeto4_Junior;
 using System;
-<<<<<<< HEAD
-using System.Collections;
-=======
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,10 +10,6 @@ using Projeto4_Junior.Negocios;
 using System.Data.SqlClient; //---------foi acrescentado-----//
 using System.Windows.Forms;  //-------foi acrescentado-------//
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
 namespace Projeto4_Junior.Banco
 {
     class PersistenciaServico : IBancoDadosServico
@@ -42,60 +34,6 @@ namespace Projeto4_Junior.Banco
             }   
 
         }
-<<<<<<< HEAD
-        public Servico BuscarServico(String Descricao)
-        {
-            FactoryConnection conn = new FactoryConnection();
-            Servico servico = new Servico();
-            try
-            {
-                String query = "SELECT * FROM Servico WHERE login = '" + Descricao + "'";
-
-                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
-
-                SqlDataReader reader = comand.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    servico.Descricao = (String)reader["Descricao"];
-                    servico.Valor = (Decimal)reader["Valor"];
-                    servico.Ativo = (Boolean)reader["Ativo"];
-                }
-                reader.Close();
-                conn.FecharConnecxao();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
-            }
-
-            return servico;
-
-        }
-        public void RemoverServico(String Descricao)
-        {
-            FactoryConnection conn = new FactoryConnection();
-            try
-            {
-                String query = "UPDATE Servico SET Ativo=0 WHERE Descricao = '" + Descricao + "'";
-
-                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
-
-                SqlDataReader reader = comand.ExecuteReader();
-                MessageBox.Show("Serviço removido com sucesso!");
-                conn.FecharConnecxao();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
-            }
-
-        }
-        public void AlterarServico(Servico servico)
-        {
-
-        }
-=======
         public Servico BuscarServico(Servico servico)
         {
             return null;
@@ -108,50 +46,10 @@ namespace Projeto4_Junior.Banco
         {
 
         }
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
         public bool VerificaExistenciaServico(int IdServico)
         {
             return false;
 
         }//Foi acrescentado.
-<<<<<<< HEAD
-        public ArrayList ListarServico(String busca)
-        {
-            FactoryConnection conn = new FactoryConnection();
-            ArrayList lista = new ArrayList();
-            try
-            {
-                String query = "SELECT * FROM Servico WHERE nome LIKE '%"+busca+"%'";
-
-                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
-
-                SqlDataReader reader = comand.ExecuteReader();
-
-                while (reader.Read())
-                {
-                     Servico servico = new Servico();
-                     servico.Descricao = (String)reader["Descricao"];
-                     servico.Valor = (Decimal)reader["Valor"];
-                     servico.Ativo = (Boolean)reader["Ativo"];
-                                        
-                    if (servico.Ativo == true)
-                    {
-                        lista.Add(servico);
-                    }
-                }
-                reader.Close();
-                conn.FecharConnecxao();
-
-            }
-            catch (SqlException e)
-            {
-                e.Message.GetType();
-            }
-
-            return lista;
-        }
-    
-=======
->>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
     }
 }
