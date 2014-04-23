@@ -46,12 +46,13 @@ CREATE TABLE Venda (
 IdVenda Int PRIMARY KEY identity,
 ValorTotal money,
 Data nvarchar(20),
+)
+
+CREATE TABLE VendaProdutoServico(
+IdVenda int not null,
+IdProduto int, 
 IdServico int,
-IdProduto int,
-CPFFuncionario nvarchar(20),
-CPFCliente nvarchar(20),
-FOREIGN KEY(IdServico) REFERENCES Serviços (IdServico),
-FOREIGN KEY(IdProduto) REFERENCES Produto (IdProduto),
-FOREIGN KEY(CPFFuncionario) REFERENCES Funcionario (CPF),
-FOREIGN KEY(CPFCliente) REFERENCES Cliente (CPF)
+FOREIGN KEY (IdVenda) REFERENCES Venda (IdVenda),
+FOREIGN KEY (IdProduto) REFERENCES Produto (IdProduto),
+FOREIGN KEY (IdServico) REFERENCES Serviços (IdServico)
 )
