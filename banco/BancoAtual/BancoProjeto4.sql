@@ -12,7 +12,7 @@ CPF nvarchar(20) PRIMARY KEY,
 Endereço nvarchar(200),
 Telefone nvarchar(30),
 DataNascimento nvarchar(20),
-Email nvarchar(20)
+Email nvarchar(20),
 Ativo bit
 )
 
@@ -22,7 +22,7 @@ Nome nvarchar(100),
 Telefone nvarchar(30),
 Endereco nvarchar(200),
 Porcentagem float,
-DataNascimento nvarchar(20)
+DataNascimento nvarchar(20),
 Ativo bit
 )
 
@@ -30,7 +30,7 @@ Ativo bit
 CREATE TABLE Serviços (
 IdServico int PRIMARY KEY identity,
 Descricao nvarchar(100),
-Valor money
+Valor money,
 Ativo bit
 )
 
@@ -38,7 +38,7 @@ CREATE TABLE Produto (
 IdProduto int PRIMARY KEY identity,
 Descricao nvarchar(20),
 Valor Money,
-Quantidade Int
+Quantidade Int,
 Ativo bit
 )
 
@@ -50,8 +50,8 @@ IdServico int,
 IdProduto int,
 CPFFuncionario nvarchar(20),
 CPFCliente nvarchar(20),
-FOREIGN KEY(IdServico) REFERENCES Serviço (IdServico),
-FOREIGN KEY(IdProduto) REFERENCES Produtos (IdProduto),
+FOREIGN KEY(IdServico) REFERENCES Serviços (IdServico),
+FOREIGN KEY(IdProduto) REFERENCES Produto (IdProduto),
 FOREIGN KEY(CPFFuncionario) REFERENCES Funcionario (CPF),
 FOREIGN KEY(CPFCliente) REFERENCES Cliente (CPF)
 )
