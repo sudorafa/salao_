@@ -242,11 +242,7 @@ C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.cspro
 C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.exe
 C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.pdb
 C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csprojResolveAssemblyReference.cache
-<<<<<<< HEAD
-=======
 >>>>>>> cbddf32ba7595faaeebbf912ec17cc7cb2f367d8
-C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.CadastroProduto.resources
-C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.ListarProdutos.resources
 C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.DetalharUsuario.resources
 >>>>>>> 388f4582e89564df5e5849115aef726b15f32b6b
 >>>>>>> 0147ddcc722324d502394f8350c57cbd80c36468
