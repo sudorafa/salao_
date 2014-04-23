@@ -4,8 +4,13 @@ tipoUsuario Int,
 Login nvarchar(100) unique,
 Senha nvarchar(100),
 Nome nvarchar(20),
+<<<<<<< HEAD
+Ativo bit,
+);
+=======
 Ativo bit//
 )
+>>>>>>> 66f00740a17d1a8df448f010c5eeb1f9f829d430
 
 CREATE TABLE Cliente (
 CPF nvarchar(20) PRIMARY KEY,
@@ -13,9 +18,9 @@ Nome nvarchar(100),
 Endereco nvarchar(200),
 Telefone nvarchar(30),
 DataNascimento nvarchar(20),
-Email nvarchar(20)
-Ativo bit
-)
+Email nvarchar(20),
+Ativo bit,
+);
 
 CREATE TABLE Funcionario (
 CPF nvarchar(20) PRIMARY KEY,
@@ -23,9 +28,9 @@ Nome nvarchar(100),
 Telefone nvarchar(30),
 Endereco nvarchar(200),
 Porcentagem float,
-DataNascimento nvarchar(20)
-Ativo bit
-)
+DataNascimento nvarchar(20),
+Ativo bit,
+);
 
 
 CREATE TABLE Servico (
@@ -33,15 +38,16 @@ IdServico int PRIMARY KEY identity,
 Descricao nvarchar(100),
 Valor money
 Ativo bit
-)
+);
 
 CREATE TABLE Produto (
 IdProduto int PRIMARY KEY identity,
 Descricao nvarchar(20),
 Valor Money,
-Quantidade Int
-Ativo bit
-)
+Quantidade Int,
+Ativo bit,
+);
+
 
 junioharper
 CREATE TABLE Venda (
@@ -56,4 +62,5 @@ FOREIGN KEY(IdServico) REFERENCES Serviço (IdServico),
 FOREIGN KEY(IdProduto) REFERENCES Produtos (IdProduto),
 FOREIGN KEY(CPFFuncionario) REFERENCES Funcionario (CPF),
 FOREIGN KEY(CPFCliente) REFERENCES Cliente (CPF)
-)
+);
+

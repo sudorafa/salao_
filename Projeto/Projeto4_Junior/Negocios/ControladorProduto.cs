@@ -23,9 +23,9 @@ namespace Projeto4_Junior.Negocios
         {
             return null;
         }
-        public void RemoverProduto(String descricao)
+        public void RemoverProdutos(Produto produto)
         {
-            this.ibancodados.RemoverProduto(descricao);
+            
         }
         public void AlterarProdutos(Produto produto)
         {

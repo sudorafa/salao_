@@ -1,5 +1,4 @@
-﻿using Projeto4_Junior.InterfaceGrafica.Cliente;
-using Projeto4_Junior.Modelo;
+﻿using Projeto4_Junior.Modelo;
 using Projeto4_Junior.Negocios;
 using System;
 using System.Collections;
@@ -49,17 +48,6 @@ namespace Projeto4_Junior
                 Cliente cli = fachadaCliente.BuscarCliente(cpf);
                
                 AlterarClientePrincipal tela = new AlterarClientePrincipal(cli, this);
-                tela.ShowDialog();
-            }
-            else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["nome"].Index)
-            {
-                // Caso o nome da coluna seja outro troca o nome do indice em cima.
-
-                String cpf = (String)dataGridView1[1, e.RowIndex].Value;
-                //Carrega o funcionario para ser detalhado.
-                Projeto4_Junior.Modelo.Cliente cli = fachadaCliente.BuscarCliente(cpf);
-
-                DetalharCliente tela = new DetalharCliente(cli);
                 tela.ShowDialog();
             }
         }

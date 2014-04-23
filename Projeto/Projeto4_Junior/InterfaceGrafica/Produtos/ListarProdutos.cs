@@ -34,25 +34,5 @@ namespace Projeto4_Junior.InterfaceGrafica.Produtos
                 dataGridView1.Rows.Add(produto.Descricao, produto.Valor, produto.Quantidade, "Remover", "Alterar");
             }
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            IfachadaProduto fachadaProduto = new FachadaProduto();
-
-            if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["remover"].Index)
-            {
-                DialogResult dr = MessageBox.Show("Tem certeza que deseja excluir " + dataGridView1[0, e.RowIndex].Value + "?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (dr == DialogResult.Yes)
-                {
-                    //REMOVER O FUNCIONARIO SELECIONADO
-                    String descricao = (String)dataGridView1[0, e.RowIndex].Value;
-                    fachadaProduto.RemoverProduto(descricao);
-                    //A função abaixo limpa o dataGridView
-                    dataGridView1.Rows.Clear();
-                    //A função abaixo preenche o dataGridView
-                    this.BuscarProduto_Click(sender, e);
-                }
-            }
-        }
     }
 }

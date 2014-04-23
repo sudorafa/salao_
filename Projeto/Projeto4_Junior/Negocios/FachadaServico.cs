@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
+using Projeto4_Junior;
 
 namespace Projeto4_Junior.Negocios
 {
@@ -26,6 +28,10 @@ namespace Projeto4_Junior.Negocios
         public void AlterarServico(Servico servico)
         {
             this.ifachada.AlterarServico(servico);
+        }
+        public ArrayList ListarServico(String busca)
+        {
+            return this.ifachada.ListarServico(busca);
         }
     }
 }
