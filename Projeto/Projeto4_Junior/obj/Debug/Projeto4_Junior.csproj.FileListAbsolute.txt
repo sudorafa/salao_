@@ -249,3 +249,11 @@ C:\Users\Administrador\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4
 C:\Users\Administrador\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.CadastroProduto.resources
 C:\Users\Administrador\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.ListarProdutos.resources
 >>>>>>> 97d7825a2283479bb80f25cb52114864e6f31a0c
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Caixa.TelaAbrirCaixa.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.CadastroProduto.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.ListarProdutos.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.FormularioCadastrarServico.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.FormularioListarServico.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.DetalharFuncionario.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.AlterarUsuario.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.ListarUsuario.resources
