@@ -46,6 +46,10 @@ CREATE TABLE Venda (
 IdVenda Int PRIMARY KEY identity,
 ValorTotal money,
 Data nvarchar(20),
+CPFFuncionario nvarchar(20),
+CPFCliente nvarchar(20),
+FOREIGN KEY (CPFFuncionario) REFERENCES Funcionario (CPF),
+FOREIGN KEY (CPFCliente) REFERENCES Cliente (CPF)
 )
 
 CREATE TABLE VendaProdutoServico(
