@@ -18,7 +18,7 @@ namespace Projeto4_Junior.Negocios
            
         public void CadastrarServico(Servico servico)//--------foi acrescentado --------------//
         {
-            if (ibancodados.VerificaExistenciaServico(servico.IdServico) == false)
+            if (ibancodados.VerificaExistenciaServico(servico.Descricao) == false)
             {
                 ibancodados.CadastrarServico(servico);
             }
@@ -28,25 +28,16 @@ namespace Projeto4_Junior.Negocios
             }  
             
         }
-        public Servico BuscarServico(Servico servico)
+        public Servico BuscarServico(String Descricao)
         {
-            return ibancodados.BuscarServico(servico);
+            return ibancodados.BuscarServico(Descricao);
             
             
             //return null;
         }
-        public void RemoverServico(Servico servico)
+        public void RemoverServico(String Descricao)
         {
-            /*
-            if (ibancodados.VerificaExistenciaServico(IdServico) == true)
-            {
-                ibancodados.RemoverServico(IdServico);
-            }
-            else
-            {
-                MessageBox.Show("Servico não cadastrado!");
-            } 
-             * */
+            ibancodados.RemoverServico(Descricao);    
             
         }
         public void AlterarServico(Servico servico)

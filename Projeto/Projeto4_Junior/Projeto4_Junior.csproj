@@ -85,6 +85,12 @@
     <Compile Include="InterfaceGrafica\Produtos\ListarProdutos.Designer.cs">
       <DependentUpon>ListarProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\AlterarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Servicos\AlterarServico.Designer.cs">
+      <DependentUpon>AlterarServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfaceGrafica\Servicos\CadastrarServico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Produtos\ListarProdutos.resx">
       <DependentUpon>ListarProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Servicos\AlterarServico.resx">
+      <DependentUpon>AlterarServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Servicos\CadastrarServico.resx">
       <DependentUpon>CadastrarServico.cs</DependentUpon>

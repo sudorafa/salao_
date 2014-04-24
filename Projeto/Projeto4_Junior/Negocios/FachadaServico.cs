@@ -17,13 +17,13 @@ namespace Projeto4_Junior.Negocios
         {
             this.ifachada.CadastrarServico(servico);
         }
-        public Servico BuscarServico(Servico servico)
+        public Servico BuscarServico(String Descricao)
         {
-            return this.ifachada.BuscarServico(servico);
+            return this.ifachada.BuscarServico(Descricao);
         }
-        public void RemoverServico(Servico servico)
+        public void RemoverServico(String Descricao)
         {
-            this.ifachada.RemoverServico(servico);
+            this.ifachada.RemoverServico(Descricao);
         }
         public void AlterarServico(Servico servico)
         {

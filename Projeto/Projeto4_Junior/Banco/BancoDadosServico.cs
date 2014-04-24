@@ -17,22 +17,22 @@ namespace Projeto4_Junior.Banco
         {            
             this.ibancodados.CadastrarServico(servico);
         }
-        public Servico BuscarServico(Servico servico)
+        public Servico BuscarServico(String Descricao)
         {            
-            return this.ibancodados.BuscarServico(servico);
+            return this.ibancodados.BuscarServico(Descricao);
         }
-        public void RemoverServico(Servico servico)
+        public void RemoverServico(String Descricao)
         {           
-            this.ibancodados.RemoverServico(servico);
+            this.ibancodados.RemoverServico(Descricao);
         }
         public void AlterarServico(Servico servico)
         {           
             this.ibancodados.AlterarServico(servico);
         }
 
-        public bool VerificaExistenciaServico(int IdServico)//----------foi acrescentado------------//
+        public bool VerificaExistenciaServico(String Descricao)//----------foi acrescentado------------//
         {
-            return this.ibancodados.VerificaExistenciaServico(IdServico);
+            return this.ibancodados.VerificaExistenciaServico(Descricao);
         }
         public ArrayList ListarServico(String busca)
         {
