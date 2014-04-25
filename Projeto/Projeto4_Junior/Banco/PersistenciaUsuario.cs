@@ -51,7 +51,7 @@ namespace Projeto4_Junior.Banco
                     usu.Nome = (String)reader["nome"];
                     usu.Login = (String)reader["login"];
                     usu.Senha = (String)reader["senha"];
-                    usu.isGestor = (int)reader["isgestor"];
+                    usu.isGestor = (int)reader["TipoUsuario"];
                 }
                 reader.Close();
                 conn.FecharConnecxao();

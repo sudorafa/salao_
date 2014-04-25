@@ -9,7 +9,8 @@ Ativo bit
 
 CREATE TABLE Cliente (
 CPF nvarchar(20) PRIMARY KEY,
-Endereço nvarchar(200),
+Nome nvarchar(20),
+Endereco nvarchar(200),
 Telefone nvarchar(30),
 DataNascimento nvarchar(20),
 Email nvarchar(20),
@@ -27,7 +28,7 @@ Ativo bit
 )
 
 
-CREATE TABLE Serviços (
+CREATE TABLE Servicos (
 IdServico int PRIMARY KEY identity,
 Descricao nvarchar(100),
 Valor money,
@@ -58,5 +59,5 @@ IdProduto int,
 IdServico int,
 FOREIGN KEY (IdVenda) REFERENCES Venda (IdVenda),
 FOREIGN KEY (IdProduto) REFERENCES Produto (IdProduto),
-FOREIGN KEY (IdServico) REFERENCES Serviços (IdServico)
+FOREIGN KEY (IdServico) REFERENCES Servicos (IdServico)
 )

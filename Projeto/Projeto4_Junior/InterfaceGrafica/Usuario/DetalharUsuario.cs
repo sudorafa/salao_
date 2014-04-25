@@ -17,20 +17,20 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
             InitializeComponent();
         }
 
-        public DetalharUsuario(Modelo.Usuario usu)
+        public DetalharUsuario(Projeto4_Junior.Modelo.Usuario usu)
         {
             InitializeComponent();
-            NomeUsu.Text = usu.Nome;
-            LoginUsu.Text = usu.Login;
-            SenhaUsu.Text = usu.Senha;
+            Nome_Usu.Text = usu.Nome;
+            Login_Usu.Text = usu.Login;
+            Senha_Usu.Text = usu.Senha;
             if (usu.isGestor == 1)
             {
-                TipoUsu.Text = "Gestor";
+                Tipo_Usu.Text = "Gestor";
             }
             else
             {
-                TipoUsu.Text = "Usuario";
-            }            
+                Tipo_Usu.Text = "Usuario";
+            }
         }
 
         private void DetalharUsuario_Load(object sender, EventArgs e)
