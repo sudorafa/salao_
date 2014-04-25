@@ -13,7 +13,7 @@ namespace Projeto4_Junior
         void CadastrarUsuario(Usuario usuario);
         Usuario BuscarUsuario(String login);
         void RemoverUsuario(String login);
-        void AlterarUsuario(Usuario usuario);
+        void AlterarUsuario(Usuario usuario, String login);
         bool Autenticar(String usuario, String senha);
         bool VerificaTipoUsuario(String login);
         ArrayList ListarUsuario(String busca);

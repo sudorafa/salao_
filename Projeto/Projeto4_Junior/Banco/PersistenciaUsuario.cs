@@ -84,13 +84,13 @@ namespace Projeto4_Junior.Banco
 
         }
 
-        public void AlterarUsuario(Usuario usuario)
+        public void AlterarUsuario(Usuario usuario, String login)
         {
             FactoryConnection conn = new FactoryConnection();
             try
             {
-                String query = "UPDATE Usuario SET nome = '" + usuario.Nome + "', login = '" + usuario.Login +
-                    "', senha = '" + usuario.Senha + "', isgestor = '" + usuario.isGestor + "' WHERE Login = '" + usuario.Login + "'";
+                String query = "UPDATE Usuario SET Nome = '" + usuario.Nome + "', Login = '" + usuario.Login +
+                    "', Senha = '" + usuario.Senha + "', TipoUsuario = '" + usuario.isGestor + "' WHERE Login = '" + login + "'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
                 SqlDataReader reader = comand.ExecuteReader();

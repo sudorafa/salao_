@@ -25,9 +25,9 @@ namespace Projeto4_Junior.Negocios
             this.ifachada.RemoverUsuario(login);
         }
 
-        public void AlterarUsuario(Usuario usuario)
+        public void AlterarUsuario(Usuario usuario, String login)
         {
-            this.ifachada.AlterarUsuario(usuario);
+            this.ifachada.AlterarUsuario(usuario, login);
         }
 
         public bool Autenticar(string usuario, string senha)
