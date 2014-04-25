@@ -43,7 +43,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Servicos
                 if (dr == DialogResult.Yes)
                 {
                     
-                    String Descricao = Convert.ToString(dataGridView1[1, e.RowIndex].Value);
+                    String Descricao = Convert.ToString(dataGridView1[0, e.RowIndex].Value);
                     fachadaServico.RemoverServico(Descricao);
                     //A função abaixo limpa o dataGridView
                     dataGridView1.Rows.Clear();
