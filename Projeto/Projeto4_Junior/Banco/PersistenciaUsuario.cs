@@ -74,7 +74,7 @@ namespace Projeto4_Junior.Banco
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 
                 SqlDataReader reader = comand.ExecuteReader();
-                MessageBox.Show("Funcionário removido com sucesso!");
+                MessageBox.Show("Usuario removido com sucesso!");
                 conn.FecharConnecxao();
             }
             catch (Exception e)

@@ -30,20 +30,7 @@ namespace Projeto4_Junior.Banco
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
                 SqlDataReader reader = comand.ExecuteReader();
-                conn.FecharConnecxao();       
-
-                /*
-                SqlCommand comm = new SqlCommand();
-                comm.CommandText = "INSERT INTO PRODUTO(DESCRICAO, VALOR, QUANTIDADE, Ativo)" +
-                    "VALUES(@descricao, @valor, @quantidade_estoque)";
-                comm.Parameters.AddWithValue("@descricao", produto.Descricao);
-                comm.Parameters.AddWithValue("@valor", produto.Valor);
-                comm.Parameters.AddWithValue("@quantidade_estoque", produto.Quantidade);
-                comm.Parameters.AddWithValue("@Ativo", produto.Ativo);
-                comm.Connection = fc.AbrirConnexao();
-                comm.ExecuteNonQuery();
-                fc.FecharConnecxao();
-                 */
+                conn.FecharConnecxao();
 
                 MessageBox.Show("Cadastrado com sucesso!");
             }
@@ -57,61 +44,34 @@ namespace Projeto4_Junior.Banco
         {
             return null;
         }
-        public void RemoverProdutos(Produto produto)
+        public void RemoverProduto(String descricao)
         {
-            /*
-            SqlCommand comm = new SqlCommand();
-                comm.CommandText = "Insert into Produtos(excluido) values (1) where codigo=@codigo";
-                comm.Parameters.AddWithValue("@codigo", produto.IdProduto);
-                comm.Connection = fc.AbrirConnexao();
-                comm.ExecuteNonQuery();
-                fc.FecharConnecxao();
-             */ 
+            FactoryConnection conn = new FactoryConnection();
+            try
+            {
+                String query = "UPDATE Produto SET Ativo=0 WHERE Descricao = '" + descricao + "'";
+
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+
+                SqlDataReader reader = comand.ExecuteReader();
+                MessageBox.Show("Produto removido com sucesso!");
+                conn.FecharConnecxao();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            
         }
         public void AlterarProdutos(Produto produto)
         {
 
-            /*
-            try{
-            SqlCommand comm = new SqlCommand();
-            comm.CommandText = "update produtos set descricao=@descricao, valor=@valor, quantidade_estoque=@quantidade_estoque where codigo=@codigo";
-            comm.Parameters.AddWithValue("@descricao", produto.Descricao);
-            comm.Parameters.AddWithValue("@valor", produto.Valor);
-            comm.Parameters.AddWithValue("@quantidade_estoque", produto.Quantidade);
-            comm.Parameters.AddWithValue("@codigo", produto.IdProduto);
-            comm.Connection = fc.AbrirConnexao();
-            comm.ExecuteNonQuery();
-            fc.FecharConnecxao();
-            }catch(SqlException e)
-            {
-                MessageBox.Show("Não foi Possivel Conectar ao banco de dados!!!" + e);
             
-            }
-            */
         }
               
         public SqlDataReader VerificaProd(Produto produto)
         {
-            return null;
-
-            /*
-            SqlCommand comm = new SqlCommand();
-            SqlDataReader read = null;
-            try
-            {
-
-                comm.CommandText = "select * from produtos where codigo=@codigo";
-                comm.Parameters.AddWithValue("@codigo", produto.IdProduto);
-                comm.Connection = fc.AbrirConnexao();
-                read = comm.ExecuteReader();
-
-            }
-            catch (SqlException e)
-            {
-                MessageBox.Show("Não foi Possivel Conectar ao banco de dados!!!" + e);
-            }
-            return read;
-             */ 
+            return null;           
         }
 
         public ArrayList ListarProduto(String produto)

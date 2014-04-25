@@ -13,7 +13,7 @@ namespace Projeto4_Junior.Negocios
     {
         void CadastrarProdutos(Produto produto);
         Produto BuscarProdutos(Produto produto);
-        void RemoverProdutos(Produto produto);
+        void RemoverProduto(String descricao);
         void AlterarProdutos(Produto produto);
         SqlDataReader VerificaProd(Produto produto);
         ArrayList ListarProduto(string produto);
