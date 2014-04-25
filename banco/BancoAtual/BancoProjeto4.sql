@@ -10,7 +10,7 @@ Ativo bit
 CREATE TABLE Cliente (
 CPF nvarchar(20) PRIMARY KEY,
 Nome nvarchar(20),
-Endereço nvarchar(200),
+Endereco nvarchar(200),
 Telefone nvarchar(30),
 DataNascimento nvarchar(20),
 Email nvarchar(20),
