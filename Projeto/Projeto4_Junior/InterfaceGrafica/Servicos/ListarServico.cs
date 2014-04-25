@@ -42,7 +42,8 @@ namespace Projeto4_Junior.InterfaceGrafica.Servicos
                 DialogResult dr = MessageBox.Show("Tem certeza que deseja excluir " + dataGridView1[0, e.RowIndex].Value + "?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dr == DialogResult.Yes)
                 {
-                    String Descricao = (String)dataGridView1[1, e.RowIndex].Value;
+                    
+                    String Descricao = Convert.ToString(dataGridView1[1, e.RowIndex].Value);
                     fachadaServico.RemoverServico(Descricao);
                     //A função abaixo limpa o dataGridView
                     dataGridView1.Rows.Clear();
