@@ -3,6 +3,8 @@ using Projeto4_Junior.InterfaceGrafica.Funcionario;
 using Projeto4_Junior.InterfaceGrafica.Produtos;
 using Projeto4_Junior.InterfaceGrafica.Servicos;
 using Projeto4_Junior.InterfaceGrafica.Usuario;
+using Projeto4_Junior.Modelo;
+using Projeto4_Junior.Negocios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -180,6 +182,15 @@ namespace Projeto4_Junior
         {
             CadastrarUsuario cad_usu = new CadastrarUsuario();
             cad_usu.ShowDialog();
+        }
+
+        private void alterarCadastroMeuUsuarioMenuItem_Click(object sender, EventArgs e)
+        {
+            IfachadaUsuario fachadausuario = new FachadaUsuario();
+            Projeto4_Junior.Modelo.Usuario usu = fachadausuario.BuscarUsuario(SessionUser.login);
+
+            AlterarUsuario tela = new AlterarUsuario(usu, SessionUser.login);
+            tela.ShowDialog();
         }
     }
 }

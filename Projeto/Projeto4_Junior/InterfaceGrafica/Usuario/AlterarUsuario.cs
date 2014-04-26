@@ -14,7 +14,9 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
     public partial class AlterarUsuario : Form
     {
         private ListarUsuario listarUsuario;
-        String login; 
+        String login;
+        private Modelo.Usuario usu;
+        private string p; 
 
         public AlterarUsuario()
         {
@@ -40,6 +42,13 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
 
             this.listarUsuario = listarUsuario;
              
+        }
+
+        public AlterarUsuario(Modelo.Usuario usu, string p)
+        {
+            // TODO: Complete member initialization
+            this.usu = usu;
+            this.p = p;
         }
 
         private void AlterarUsuario_Load(object sender, EventArgs e)

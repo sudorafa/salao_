@@ -284,6 +284,7 @@
             this.alterarCadastroMeuUsuarioMenuItem.Name = "alterarCadastroMeuUsuarioMenuItem";
             this.alterarCadastroMeuUsuarioMenuItem.Size = new System.Drawing.Size(186, 22);
             this.alterarCadastroMeuUsuarioMenuItem.Text = "Alterar cadastro";
+            this.alterarCadastroMeuUsuarioMenuItem.Click += new System.EventHandler(this.alterarCadastroMeuUsuarioMenuItem_Click);
             // 
             // alterarLoginSenhaMeuUsuarioMenuItem
             // 

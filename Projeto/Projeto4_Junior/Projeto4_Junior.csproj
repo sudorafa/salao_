@@ -186,6 +186,7 @@
     <Compile Include="Modelo\Funcionario.cs" />
     <Compile Include="Modelo\Produto.cs" />
     <Compile Include="Modelo\Servico.cs" />
+    <Compile Include="Modelo\SessionUser.cs" />
     <Compile Include="Modelo\Usuario.cs" />
     <Compile Include="Negocios\ArraList.cs" />
     <Compile Include="Negocios\ControladorCliente.cs" />
