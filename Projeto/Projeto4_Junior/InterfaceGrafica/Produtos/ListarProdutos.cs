@@ -63,6 +63,17 @@ namespace Projeto4_Junior.InterfaceGrafica.Produtos
                 AlterarProduto tela = new AlterarProduto(prod, this);
                 tela.ShowDialog();
             }
+            else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["Descricao"].Index)
+            {
+                // Caso o nome da coluna seja outro troca o nome do indice em cima.
+
+                String descricao = (String)dataGridView1[0, e.RowIndex].Value;
+                //Carrega o funcionario para ser detalhado.
+                Projeto4_Junior.Modelo.Produto prod = fachada.BuscarProduto(descricao);
+
+                DetalharProduto tela = new DetalharProduto(prod);
+                tela.ShowDialog();
+            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

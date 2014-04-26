@@ -12,19 +12,11 @@ namespace Projeto4_Junior.InterfaceGrafica.Servico
 {
     public partial class AlterarServico : Form
     {
-        public AlterarServico(Projeto4_Junior.Modelo.Servico serv, ListarServico listarServ)
-        {
-            InitializeComponent();
-            tbNome.Text = serv.Descricao;
-            tbValor.Double = serv.Valor;
-
-            this.listar = listarServ;
-        }
+       
         public AlterarServico()
         {
              InitializeComponent();
-        }
-         private ListarServico listar { get; set; }
+        }       
 
         
         

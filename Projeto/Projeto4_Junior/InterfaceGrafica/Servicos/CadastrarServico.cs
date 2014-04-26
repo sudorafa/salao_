@@ -28,7 +28,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Servicos
         {
                     
                 IfachadaServico fachadaServico = new FachadaServico();
-                Servico servico = new Servico();
+                Projeto4_Junior.Modelo.Servico servico = new Projeto4_Junior.Modelo.Servico();
 
                 servico.Descricao = campoDescricao.Text;
                 servico.Valor = Convert.ToDecimal(campoValor.Text);
