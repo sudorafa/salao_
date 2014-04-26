@@ -169,5 +169,11 @@ namespace Projeto4_Junior
             aut.Show();
             this.Close();
         }
+
+        private void button_InserirServicoBarraDeFerramentas_Click(object sender, EventArgs e)
+        {
+            FormularioCadastrarServico formularioCadastrarServico = new FormularioCadastrarServico();
+            formularioCadastrarServico.ShowDialog();
+        }
     }
 }
