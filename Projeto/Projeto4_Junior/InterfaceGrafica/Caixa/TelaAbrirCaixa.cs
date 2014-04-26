@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Projeto4_Junior.Negocios;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,8 +18,40 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
         {
             InitializeComponent();
 
-            cbFuncionario.Items.Add("teste");
-            cbFuncionario.Items.Add("teste2");
+            IfachadaFuncionario func = new FachadaFuncionario();
+            ArrayList listaFunc = func.ListarFuncionario("");
+            for (int i = 0; i < listaFunc.Count; i++)
+            {
+                Projeto4_Junior.Modelo.Funcionario funci = (Projeto4_Junior.Modelo.Funcionario)listaFunc[i];
+                Projeto4_Junior.Modelo.ComboboxItem item = new Projeto4_Junior.Modelo.ComboboxItem();
+                item.Text = funci.Nome;
+                item.Value = funci.Cpf;
+                cbFuncionario.Items.Add(item);
+            }
+
+            IfachadaServico serv = new FachadaServico();
+            ArrayList listaServ = serv.ListarServico("");
+            for (int i = 0; i < listaServ.Count; i++)
+            {
+                Projeto4_Junior.Modelo.Servico servi = new Projeto4_Junior.Modelo.Servico();
+                Projeto4_Junior.Modelo.ComboboxItem item = new Projeto4_Junior.Modelo.ComboboxItem();
+                servi = (Projeto4_Junior.Modelo.Servico)listaServ[i];
+                item.Text = servi.Descricao + "  -  R$" + servi.Valor;
+                item.Value = servi.IdServico;
+                cbServicos.Items.Add(item);
+            }
+
+            IfachadaProduto prod = new FachadaProduto();
+            ArrayList listaProd = prod.ListarProduto("");
+            for (int i = 0; i < listaProd.Count; i++)
+            {
+                Projeto4_Junior.Modelo.Produto produ = new Projeto4_Junior.Modelo.Produto();
+                Projeto4_Junior.Modelo.ComboboxItem item = new Projeto4_Junior.Modelo.ComboboxItem();
+                produ = (Projeto4_Junior.Modelo.Produto)listaProd[i];
+                item.Text = produ.Descricao + "  -  R$" + produ.Valor;
+                item.Value = produ.IdProduto;
+                cbProdutos.Items.Add(item);
+            }
             
         }
 
@@ -44,6 +78,11 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
         private void cbFuncionario_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

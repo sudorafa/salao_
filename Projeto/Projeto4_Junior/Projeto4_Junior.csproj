@@ -182,6 +182,7 @@
       <DependentUpon>ListarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Cliente.cs" />
+    <Compile Include="Modelo\ComboboxItem.cs" />
     <Compile Include="Modelo\Funcionario.cs" />
     <Compile Include="Modelo\Produto.cs" />
     <Compile Include="Modelo\Servico.cs" />
