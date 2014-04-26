@@ -31,21 +31,21 @@ Ativo bit
 CREATE TABLE Servicos (
 IdServico int PRIMARY KEY identity,
 Descricao nvarchar(100),
-Valor money,
+Valor decimal(12,2),
 Ativo bit
 )
 
 CREATE TABLE Produto (
 IdProduto int PRIMARY KEY identity,
 Descricao nvarchar(20),
-Valor Money,
+Valor decimal(12,2),
 Quantidade Int,
 Ativo bit
 )
 
 CREATE TABLE Venda (
 IdVenda Int PRIMARY KEY identity,
-ValorTotal money,
+ValorTotal decimal(12,2),
 Data nvarchar(20),
 CPFFuncionario nvarchar(20),
 CPFCliente nvarchar(20),

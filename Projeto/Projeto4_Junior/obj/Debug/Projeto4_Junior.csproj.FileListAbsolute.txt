@@ -39,12 +39,9 @@ C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Juni
 C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe
 C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.pdb
 C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csprojResolveAssemblyReference.cache
-C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_AlterarCliente.resources
 C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Autenticacao.resources
 C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_CadastroClientes.resources
-C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_ListarClientes.resources
 C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Properties.Resources.resources
-C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_RemoverCliente.resources
 C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_Index.resources
 C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache
 C:\Users\Jefferson\Documents\GitHub\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe.config
@@ -236,7 +233,6 @@ C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Auten
 C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.AlterarProduto.resources
 C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.CadastroProduto.resources
 C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.ListarProdutos.resources
-C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.AlterarServico.resources
 C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.FormularioCadastrarServico.resources
 C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.FormularioListarServico.resources
 C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.DetalharFuncionario.resources
@@ -259,6 +255,17 @@ C:\Users\valdenio\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Juni
 C:\Users\valdenio\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.pdb
 C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servico.AlterarServico.resources
 C:\Users\Júnior\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.DetalharProduto.resources
+<<<<<<< HEAD
 C:\Users\Administrador\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.AlterarProduto.resources
 C:\Users\Administrador\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.DetalharProduto.resources
 C:\Users\Administrador\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.DetalharUsuario.resources
+=======
+C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csprojResolveAssemblyReference.cache
+C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.DetalharProduto.resources
+C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servico.AlterarServico.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.AlterarProduto.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.DetalharProduto.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servico.AlterarServico.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.DetalharUsuario.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.AlterarLoginSenha.resources
+>>>>>>> 3775261f543ff22479e199cdc1f3015e1e0c79dc

@@ -3,6 +3,8 @@ using Projeto4_Junior.InterfaceGrafica.Funcionario;
 using Projeto4_Junior.InterfaceGrafica.Produtos;
 using Projeto4_Junior.InterfaceGrafica.Servicos;
 using Projeto4_Junior.InterfaceGrafica.Usuario;
+using Projeto4_Junior.Modelo;
+using Projeto4_Junior.Negocios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -161,6 +163,52 @@ namespace Projeto4_Junior
         {
             TelaAbrirCaixa telaCaixa = new TelaAbrirCaixa();
             telaCaixa.ShowDialog();
+        }
+
+        private void sairMenuItem_Click(object sender, EventArgs e)
+        {
+            Autenticacao aut = new Autenticacao();
+            aut.Show();
+            this.Close();
+        }
+
+        private void button_InserirServicoBarraDeFerramentas_Click(object sender, EventArgs e)
+        {
+            FormularioCadastrarServico formularioCadastrarServico = new FormularioCadastrarServico();
+            formularioCadastrarServico.ShowDialog();
+        }
+
+        private void button_InserirUsuarioBarraDeFerramentas_Click(object sender, EventArgs e)
+        {
+            CadastrarUsuario cad_usu = new CadastrarUsuario();
+            cad_usu.ShowDialog();
+        }
+
+        private void alterarCadastroMeuUsuarioMenuItem_Click(object sender, EventArgs e)
+        {
+            IfachadaUsuario fachadausuario = new FachadaUsuario();
+            Usuario usu = fachadausuario.BuscarUsuario(SessionUser.login);
+            
+            AlterarUsuario tela = new AlterarUsuario(usu);
+            tela.ShowDialog();
+        }
+
+        private void alterarLoginSenhaMeuUsuarioMenuItem_Click(object sender, EventArgs e)
+        {
+            IfachadaUsuario fachadausuario = new FachadaUsuario();
+            Usuario usu = fachadausuario.BuscarUsuario(SessionUser.login);
+
+            AlterarLoginSenha tela = new AlterarLoginSenha(usu);
+            tela.ShowDialog();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            IfachadaUsuario fachadausuario = new FachadaUsuario();
+            Usuario usu = fachadausuario.BuscarUsuario(SessionUser.login);
+
+            AlterarLoginSenha tela = new AlterarLoginSenha(usu);
+            tela.ShowDialog();
         }
     }
 }

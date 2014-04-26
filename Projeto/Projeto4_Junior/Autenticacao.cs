@@ -1,4 +1,5 @@
 ﻿using Projeto4_Junior.Negocios;
+using Projeto4_Junior.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,10 +47,14 @@ namespace Projeto4_Junior
                 String login = usuario.Text;
                 String Umasenha = senha.Text;
 
+                SessionUser.login = login;
+                SessionUser.senha = Umasenha;
+
                 if (Umusuario.Autenticar(login, Umasenha) == true)
-                {
+                {                    
                     MessageBox.Show("Seja bem vindo!");
                     bool gestor = Umusuario.VerificaTipoUsuario(login);
+                    SessionUser.isGestor = gestor;
                     Form_Index form = new Form_Index(gestor);                   
                     form.Show();
                     this.Hide();

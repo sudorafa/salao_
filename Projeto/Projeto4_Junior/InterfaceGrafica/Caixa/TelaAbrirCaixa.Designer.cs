@@ -40,8 +40,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbFuncionario = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbServicos = new System.Windows.Forms.ComboBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbProdutos = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +50,9 @@
             this.lbTotal = new System.Windows.Forms.Label();
             this.btFinalizarVenda = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
+            this.btAdicionarServico = new System.Windows.Forms.Button();
+            this.btAdicionarProduto = new System.Windows.Forms.Button();
+            this.lbValorTotal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -163,6 +166,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btAdicionarServico);
             this.groupBox3.Controls.Add(this.cbServicos);
             this.groupBox3.Location = new System.Drawing.Point(12, 195);
             this.groupBox3.Name = "groupBox3";
@@ -171,8 +175,17 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Serviços";
             // 
+            // cbServicos
+            // 
+            this.cbServicos.FormattingEnabled = true;
+            this.cbServicos.Location = new System.Drawing.Point(24, 33);
+            this.cbServicos.Name = "cbServicos";
+            this.cbServicos.Size = new System.Drawing.Size(218, 21);
+            this.cbServicos.TabIndex = 4;
+            // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btAdicionarProduto);
             this.groupBox4.Controls.Add(this.cbProdutos);
             this.groupBox4.Location = new System.Drawing.Point(344, 195);
             this.groupBox4.Name = "groupBox4";
@@ -181,21 +194,13 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Produtos";
             // 
-            // cbServicos
-            // 
-            this.cbServicos.FormattingEnabled = true;
-            this.cbServicos.Location = new System.Drawing.Point(24, 33);
-            this.cbServicos.Name = "cbServicos";
-            this.cbServicos.Size = new System.Drawing.Size(281, 21);
-            this.cbServicos.TabIndex = 4;
-            // 
             // cbProdutos
             // 
             this.cbProdutos.FormattingEnabled = true;
             this.cbProdutos.Location = new System.Drawing.Point(23, 33);
             this.cbProdutos.Name = "cbProdutos";
-            this.cbProdutos.Size = new System.Drawing.Size(281, 21);
-            this.cbProdutos.TabIndex = 5;
+            this.cbProdutos.Size = new System.Drawing.Size(215, 21);
+            this.cbProdutos.TabIndex = 6;
             // 
             // dataGridView1
             // 
@@ -235,13 +240,13 @@
             // lbTotal
             // 
             this.lbTotal.AutoSize = true;
-            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotal.ForeColor = System.Drawing.Color.Firebrick;
+            this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.ForeColor = System.Drawing.Color.Red;
             this.lbTotal.Location = new System.Drawing.Point(29, 506);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(94, 37);
+            this.lbTotal.Size = new System.Drawing.Size(153, 33);
             this.lbTotal.TabIndex = 6;
-            this.lbTotal.Text = "Total";
+            this.lbTotal.Text = "Total - R$";
             // 
             // btFinalizarVenda
             // 
@@ -249,7 +254,7 @@
             this.btFinalizarVenda.Location = new System.Drawing.Point(517, 508);
             this.btFinalizarVenda.Name = "btFinalizarVenda";
             this.btFinalizarVenda.Size = new System.Drawing.Size(131, 45);
-            this.btFinalizarVenda.TabIndex = 7;
+            this.btFinalizarVenda.TabIndex = 8;
             this.btFinalizarVenda.Text = "Finalizar Venda";
             this.btFinalizarVenda.UseVisualStyleBackColor = true;
             // 
@@ -259,15 +264,46 @@
             this.btCancelar.Location = new System.Drawing.Point(430, 508);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(81, 45);
-            this.btCancelar.TabIndex = 8;
+            this.btCancelar.TabIndex = 9;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
+            // 
+            // btAdicionarServico
+            // 
+            this.btAdicionarServico.Location = new System.Drawing.Point(248, 33);
+            this.btAdicionarServico.Name = "btAdicionarServico";
+            this.btAdicionarServico.Size = new System.Drawing.Size(60, 23);
+            this.btAdicionarServico.TabIndex = 5;
+            this.btAdicionarServico.Text = "Adicionar";
+            this.btAdicionarServico.UseVisualStyleBackColor = true;
+            // 
+            // btAdicionarProduto
+            // 
+            this.btAdicionarProduto.Location = new System.Drawing.Point(247, 33);
+            this.btAdicionarProduto.Name = "btAdicionarProduto";
+            this.btAdicionarProduto.Size = new System.Drawing.Size(60, 23);
+            this.btAdicionarProduto.TabIndex = 7;
+            this.btAdicionarProduto.Text = "Adicionar";
+            this.btAdicionarProduto.UseVisualStyleBackColor = true;
+            // 
+            // lbValorTotal
+            // 
+            this.lbValorTotal.AutoSize = true;
+            this.lbValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValorTotal.ForeColor = System.Drawing.Color.Red;
+            this.lbValorTotal.Location = new System.Drawing.Point(188, 506);
+            this.lbValorTotal.Name = "lbValorTotal";
+            this.lbValorTotal.Size = new System.Drawing.Size(82, 31);
+            this.lbValorTotal.TabIndex = 9;
+            this.lbValorTotal.Text = "00,00";
             // 
             // TelaAbrirCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 565);
+            this.Controls.Add(this.lbValorTotal);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btFinalizarVenda);
             this.Controls.Add(this.lbTotal);
@@ -315,5 +351,8 @@
         private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.Button btFinalizarVenda;
         private System.Windows.Forms.Button btCancelar;
+        private System.Windows.Forms.Button btAdicionarServico;
+        private System.Windows.Forms.Button btAdicionarProduto;
+        private System.Windows.Forms.Label lbValorTotal;
     }
 }

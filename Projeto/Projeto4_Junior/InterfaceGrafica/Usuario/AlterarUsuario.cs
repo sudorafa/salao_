@@ -14,7 +14,8 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
     public partial class AlterarUsuario : Form
     {
         private ListarUsuario listarUsuario;
-        String login; 
+        String login;
+        private Modelo.Usuario usu; 
 
         public AlterarUsuario()
         {
@@ -40,6 +41,17 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
 
             this.listarUsuario = listarUsuario;
              
+        }
+
+        public AlterarUsuario(Modelo.Usuario usu)
+        {
+            InitializeComponent();
+
+            Nome_Usuario.Text = usu.Nome;
+            Login_Usuario.Text = usu.Login;
+            Senha_Usuario.Text = usu.Senha;
+            isGestor.Checked = false;
+            isGestor.Enabled = false;
         }
 
         private void AlterarUsuario_Load(object sender, EventArgs e)
@@ -80,6 +92,11 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
         private void Cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void DadosUsuario_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

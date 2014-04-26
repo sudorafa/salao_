@@ -1,6 +1,6 @@
 ﻿namespace Projeto4_Junior.InterfaceGrafica.Usuario
 {
-    partial class AlterarUsuario
+    partial class AlterarLoginSenha
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DadosUsuario = new System.Windows.Forms.GroupBox();
-            this.isGestor = new System.Windows.Forms.CheckBox();
-            this.Senha_Usuario = new System.Windows.Forms.TextBox();
-            this.Login_Usuario = new System.Windows.Forms.TextBox();
-            this.Nome_Usuario = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btAlterar = new System.Windows.Forms.Button();
             this.Cancelar = new System.Windows.Forms.Button();
+            this.DadosUsuario = new System.Windows.Forms.GroupBox();
+            this.Senha_Usuario = new System.Windows.Forms.TextBox();
+            this.Login_Usuario = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.DadosUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
+            // btAlterar
+            // 
+            this.btAlterar.Location = new System.Drawing.Point(123, 209);
+            this.btAlterar.Name = "btAlterar";
+            this.btAlterar.Size = new System.Drawing.Size(81, 28);
+            this.btAlterar.TabIndex = 7;
+            this.btAlterar.Text = "Alterar";
+            this.btAlterar.UseVisualStyleBackColor = true;
+            this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click);
+            // 
+            // Cancelar
+            // 
+            this.Cancelar.Location = new System.Drawing.Point(21, 209);
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(81, 28);
+            this.Cancelar.TabIndex = 6;
+            this.Cancelar.Text = "Cancelar";
+            this.Cancelar.UseVisualStyleBackColor = true;
+            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
+            // 
             // DadosUsuario
             // 
-            this.DadosUsuario.Controls.Add(this.isGestor);
             this.DadosUsuario.Controls.Add(this.Senha_Usuario);
             this.DadosUsuario.Controls.Add(this.Login_Usuario);
-            this.DadosUsuario.Controls.Add(this.Nome_Usuario);
             this.DadosUsuario.Controls.Add(this.label3);
             this.DadosUsuario.Controls.Add(this.label2);
-            this.DadosUsuario.Controls.Add(this.label1);
-            this.DadosUsuario.Location = new System.Drawing.Point(12, 12);
+            this.DadosUsuario.Location = new System.Drawing.Point(12, 34);
             this.DadosUsuario.Name = "DadosUsuario";
-            this.DadosUsuario.Size = new System.Drawing.Size(324, 169);
-            this.DadosUsuario.TabIndex = 1;
+            this.DadosUsuario.Size = new System.Drawing.Size(199, 169);
+            this.DadosUsuario.TabIndex = 5;
             this.DadosUsuario.TabStop = false;
             this.DadosUsuario.Text = "Usuario";
-            this.DadosUsuario.Enter += new System.EventHandler(this.DadosUsuario_Enter);
-            // 
-            // isGestor
-            // 
-            this.isGestor.AutoSize = true;
-            this.isGestor.Location = new System.Drawing.Point(50, 136);
-            this.isGestor.Name = "isGestor";
-            this.isGestor.Size = new System.Drawing.Size(57, 17);
-            this.isGestor.TabIndex = 6;
-            this.isGestor.Text = "Gestor";
-            this.isGestor.UseVisualStyleBackColor = true;
             // 
             // Senha_Usuario
             // 
@@ -82,13 +85,6 @@
             this.Login_Usuario.Name = "Login_Usuario";
             this.Login_Usuario.Size = new System.Drawing.Size(134, 20);
             this.Login_Usuario.TabIndex = 4;
-            // 
-            // Nome_Usuario
-            // 
-            this.Nome_Usuario.Location = new System.Drawing.Point(50, 33);
-            this.Nome_Usuario.Name = "Nome_Usuario";
-            this.Nome_Usuario.Size = new System.Drawing.Size(237, 20);
-            this.Nome_Usuario.TabIndex = 3;
             // 
             // label3
             // 
@@ -108,46 +104,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Login:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome:";
-            // 
-            // btAlterar
-            // 
-            this.btAlterar.Location = new System.Drawing.Point(185, 187);
-            this.btAlterar.Name = "btAlterar";
-            this.btAlterar.Size = new System.Drawing.Size(81, 28);
-            this.btAlterar.TabIndex = 4;
-            this.btAlterar.Text = "Alterar";
-            this.btAlterar.UseVisualStyleBackColor = true;
-            this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click);
-            // 
-            // Cancelar
-            // 
-            this.Cancelar.Location = new System.Drawing.Point(83, 187);
-            this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(81, 28);
-            this.Cancelar.TabIndex = 3;
-            this.Cancelar.Text = "Cancelar";
-            this.Cancelar.UseVisualStyleBackColor = true;
-            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
-            // 
-            // AlterarUsuario
+            // AlterarLoginSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 237);
+            this.ClientSize = new System.Drawing.Size(223, 266);
             this.Controls.Add(this.btAlterar);
             this.Controls.Add(this.Cancelar);
             this.Controls.Add(this.DadosUsuario);
-            this.Name = "AlterarUsuario";
-            this.Text = "AlterarUsuario";
-            this.Load += new System.EventHandler(this.AlterarUsuario_Load);
+            this.Name = "AlterarLoginSenha";
+            this.Text = "AlterarLoginSenha";
             this.DadosUsuario.ResumeLayout(false);
             this.DadosUsuario.PerformLayout();
             this.ResumeLayout(false);
@@ -156,15 +122,12 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox DadosUsuario;
-        private System.Windows.Forms.CheckBox isGestor;
-        private System.Windows.Forms.TextBox Senha_Usuario;
-        private System.Windows.Forms.TextBox Login_Usuario;
-        private System.Windows.Forms.TextBox Nome_Usuario;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btAlterar;
         private System.Windows.Forms.Button Cancelar;
+        private System.Windows.Forms.GroupBox DadosUsuario;
+        private System.Windows.Forms.TextBox Senha_Usuario;
+        private System.Windows.Forms.TextBox Login_Usuario;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
