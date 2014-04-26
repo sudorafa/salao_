@@ -259,14 +259,14 @@
             // inserirUsuarioMenuItem
             // 
             this.inserirUsuarioMenuItem.Name = "inserirUsuarioMenuItem";
-            this.inserirUsuarioMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inserirUsuarioMenuItem.Size = new System.Drawing.Size(106, 22);
             this.inserirUsuarioMenuItem.Text = "Inserir";
             this.inserirUsuarioMenuItem.Click += new System.EventHandler(this.inserirUsuarioMenuItem_Click);
             // 
             // listarUsuariosMenuItem
             // 
             this.listarUsuariosMenuItem.Name = "listarUsuariosMenuItem";
-            this.listarUsuariosMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listarUsuariosMenuItem.Size = new System.Drawing.Size(106, 22);
             this.listarUsuariosMenuItem.Text = "Listar";
             this.listarUsuariosMenuItem.Click += new System.EventHandler(this.listarUsuariosMenuItem_Click);
             // 
@@ -291,6 +291,7 @@
             this.alterarLoginSenhaMeuUsuarioMenuItem.Name = "alterarLoginSenhaMeuUsuarioMenuItem";
             this.alterarLoginSenhaMeuUsuarioMenuItem.Size = new System.Drawing.Size(186, 22);
             this.alterarLoginSenhaMeuUsuarioMenuItem.Text = "Alterar login && senha";
+            this.alterarLoginSenhaMeuUsuarioMenuItem.Click += new System.EventHandler(this.alterarLoginSenhaMeuUsuarioMenuItem_Click);
             // 
             // sairMenuItem
             // 

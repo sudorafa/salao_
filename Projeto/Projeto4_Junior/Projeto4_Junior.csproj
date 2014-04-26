@@ -121,6 +121,12 @@
     <Compile Include="InterfaceGrafica\Funcionario\DetalharFuncionario.Designer.cs">
       <DependentUpon>DetalharFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfaceGrafica\Usuario\AlterarLoginSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceGrafica\Usuario\AlterarLoginSenha.Designer.cs">
+      <DependentUpon>AlterarLoginSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfaceGrafica\Usuario\AlterarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Funcionario\DetalharFuncionario.resx">
       <DependentUpon>DetalharFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceGrafica\Usuario\AlterarLoginSenha.resx">
+      <DependentUpon>AlterarLoginSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceGrafica\Usuario\AlterarUsuario.resx">
       <DependentUpon>AlterarUsuario.cs</DependentUpon>

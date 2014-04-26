@@ -56,6 +56,7 @@
             this.DadosUsuario.TabIndex = 1;
             this.DadosUsuario.TabStop = false;
             this.DadosUsuario.Text = "Usuario";
+            this.DadosUsuario.Enter += new System.EventHandler(this.DadosUsuario_Enter);
             // 
             // isGestor
             // 

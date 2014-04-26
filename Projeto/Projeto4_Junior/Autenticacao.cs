@@ -54,6 +54,7 @@ namespace Projeto4_Junior
                 {                    
                     MessageBox.Show("Seja bem vindo!");
                     bool gestor = Umusuario.VerificaTipoUsuario(login);
+                    SessionUser.isGestor = gestor;
                     Form_Index form = new Form_Index(gestor);                   
                     form.Show();
                     this.Hide();

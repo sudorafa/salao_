@@ -262,3 +262,4 @@ C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Juni
 C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.DetalharProduto.resources
 C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servico.AlterarServico.resources
 C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.DetalharUsuario.resources
+C:\Users\Anderson\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.AlterarLoginSenha.resources

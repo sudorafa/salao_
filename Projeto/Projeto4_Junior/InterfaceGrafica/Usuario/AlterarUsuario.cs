@@ -93,5 +93,10 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
         {
             this.Close();
         }
+
+        private void DadosUsuario_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

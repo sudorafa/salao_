@@ -46,6 +46,7 @@
             this.btAlterar.TabIndex = 7;
             this.btAlterar.Text = "Alterar";
             this.btAlterar.UseVisualStyleBackColor = true;
+            this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click);
             // 
             // Cancelar
             // 
