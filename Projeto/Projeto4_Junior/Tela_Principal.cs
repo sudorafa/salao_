@@ -201,5 +201,14 @@ namespace Projeto4_Junior
             AlterarLoginSenha tela = new AlterarLoginSenha(usu);
             tela.ShowDialog();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            IfachadaUsuario fachadausuario = new FachadaUsuario();
+            Usuario usu = fachadausuario.BuscarUsuario(SessionUser.login);
+
+            AlterarLoginSenha tela = new AlterarLoginSenha(usu);
+            tela.ShowDialog();
+        }
     }
 }

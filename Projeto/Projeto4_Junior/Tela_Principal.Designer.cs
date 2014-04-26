@@ -394,6 +394,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(51, 51);
             this.toolStripButton1.Text = "Alterar usuário & senha";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // button_AbriCaixa
             // 
