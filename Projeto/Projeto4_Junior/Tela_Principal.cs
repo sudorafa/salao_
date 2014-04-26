@@ -187,9 +187,9 @@ namespace Projeto4_Junior
         private void alterarCadastroMeuUsuarioMenuItem_Click(object sender, EventArgs e)
         {
             IfachadaUsuario fachadausuario = new FachadaUsuario();
-            Projeto4_Junior.Modelo.Usuario usu = fachadausuario.BuscarUsuario(SessionUser.login);
-
-            AlterarUsuario tela = new AlterarUsuario(usu, SessionUser.login);
+            Usuario usu = fachadausuario.BuscarUsuario(SessionUser.login);
+            
+            AlterarUsuario tela = new AlterarUsuario(usu);
             tela.ShowDialog();
         }
     }

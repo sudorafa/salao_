@@ -15,8 +15,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
     {
         private ListarUsuario listarUsuario;
         String login;
-        private Modelo.Usuario usu;
-        private string p; 
+        private Modelo.Usuario usu; 
 
         public AlterarUsuario()
         {
@@ -44,11 +43,15 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
              
         }
 
-        public AlterarUsuario(Modelo.Usuario usu, string p)
+        public AlterarUsuario(Modelo.Usuario usu)
         {
-            // TODO: Complete member initialization
-            this.usu = usu;
-            this.p = p;
+            InitializeComponent();
+
+            Nome_Usuario.Text = usu.Nome;
+            Login_Usuario.Text = usu.Login;
+            Senha_Usuario.Text = usu.Senha;
+            isGestor.Checked = false;
+            isGestor.Enabled = false;
         }
 
         private void AlterarUsuario_Load(object sender, EventArgs e)
