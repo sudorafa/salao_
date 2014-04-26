@@ -13,7 +13,6 @@ namespace Projeto4_Junior.InterfaceGrafica.Usuario
 {
     public partial class AlterarUsuario : Form
     {
-        private Modelo.Usuario usu;
         private ListarUsuario listarUsuario;
         String login; 
 

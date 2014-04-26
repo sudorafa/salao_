@@ -20,9 +20,9 @@ namespace Projeto4_Junior.Banco
         }
 
 
-        public Produto BuscarProdutos(Produto produto)
+        public Produto BuscarProduto(String descricao)
         {            
-            return this.ibancodados.BuscarProdutos(produto);
+            return this.ibancodados.BuscarProduto(descricao);
         }
 
 
@@ -32,9 +32,9 @@ namespace Projeto4_Junior.Banco
         }
 
 
-        public void AlterarProdutos(Produto produto)
+        public void AlterarProduto(Produto produto)
         {            
-            this.ibancodados.AlterarProdutos(produto);
+            this.ibancodados.AlterarProduto(produto);
         }
 
 

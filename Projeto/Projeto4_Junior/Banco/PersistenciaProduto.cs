@@ -40,9 +40,36 @@ namespace Projeto4_Junior.Banco
             }
         }
 
-        public Produto BuscarProdutos(Produto produto)
+        public Produto BuscarProduto(String descricao)
         {
-            return null;
+            FactoryConnection conn = new FactoryConnection();
+            Produto prod = new Produto();
+            try
+            {
+                String query = "SELECT * FROM Produto WHERE login = '" + descricao + "'";
+
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+
+                SqlDataReader reader = comand.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    prod.Descricao = (String)reader["Descricao"];
+                    prod.Valor = (Decimal)reader["Valor"];
+                    prod.Quantidade = (int)reader["Quantidade"];
+                    prod.IdProduto = (int)reader["IdProduto"];
+                    
+                }
+                reader.Close();
+                conn.FecharConnecxao();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+
+            return prod;
+            
         }
         public void RemoverProduto(String descricao)
         {
@@ -63,17 +90,28 @@ namespace Projeto4_Junior.Banco
             }
             
         }
-        public void AlterarProdutos(Produto produto)
+        public void AlterarProduto(Produto produto)
         {
+            FactoryConnection conn = new FactoryConnection();
+            try
+            {
+                String query = "UPDATE Produto SET Descricao = '" + produto.Descricao +
+                    "', Valor = '" + produto.Valor +
+                    "', Quantidade = '" + produto.Quantidade +
+                    "' WHERE IdProduto = '" + produto.IdProduto + "'";
 
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+                SqlDataReader reader = comand.ExecuteReader();
+                conn.FecharConnecxao();
+                MessageBox.Show("Alterado com sucesso!");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            } 
             
         }
-              
-        public SqlDataReader VerificaProd(Produto produto)
-        {
-            return null;           
-        }
-
+        
         public ArrayList ListarProduto(String produto)
         {
             FactoryConnection conn = new FactoryConnection();

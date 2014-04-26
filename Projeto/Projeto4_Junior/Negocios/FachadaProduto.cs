@@ -16,17 +16,17 @@ namespace Projeto4_Junior.Negocios
         {
             this.ifachada.CadastrarProdutos(produto);
         }
-        public Produto BuscarProdutos(Produto produto)
+        public Produto BuscarProduto(String descricao)
         {
-            return this.ifachada.BuscarProdutos(produto);
+            return this.ifachada.BuscarProduto(descricao);
         }
         public void RemoverProduto(String descricao)
         {
             this.ifachada.RemoverProduto(descricao);
         }
-        public void AlterarProdutos(Produto produto)
+        public void AlterarProduto(Produto produto)
         {
-            this.ifachada.AlterarProdutos(produto);
+            this.ifachada.AlterarProduto(produto);
         }
         public SqlDataReader VerificaProd(Produto produto)
         {

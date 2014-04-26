@@ -53,6 +53,15 @@ namespace Projeto4_Junior.InterfaceGrafica.Produtos
                     this.BuscarProduto_Click(sender, e);
                 }
             }
+            else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["alterar"].Index)
+            {
+                //Carrega usuario que vai ser alterado!
+                String descricao = (String)dataGridView1[0, e.RowIndex].Value;
+                Projeto4_Junior.Modelo.Produto prod = fachada.BuscarProduto(descricao);
+
+                AlterarProduto tela = new AlterarProduto(prod, this);
+                tela.ShowDialog();
+            }
         }
     }
 }

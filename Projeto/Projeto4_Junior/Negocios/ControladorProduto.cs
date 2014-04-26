@@ -19,17 +19,17 @@ namespace Projeto4_Junior.Negocios
         {           
             this.ibancodados.CadastrarProdutos(produto);           
         }
-        public Produto BuscarProdutos(Produto produto)
+        public Produto BuscarProduto(String descricao)
         {
-            return null;
+            return this.ibancodados.BuscarProduto(descricao);
         }
         public void RemoverProduto(String descricao)
         {
             this.ibancodados.RemoverProduto(descricao);
         }
-        public void AlterarProdutos(Produto produto)
+        public void AlterarProduto(Produto produto)
         {
-          
+            this.ibancodados.AlterarProduto(produto);
         }
         public SqlDataReader VerificaProd(Produto produto)
         {
