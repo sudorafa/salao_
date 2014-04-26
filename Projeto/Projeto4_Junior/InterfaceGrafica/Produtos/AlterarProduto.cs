@@ -18,10 +18,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Produtos
         private Produto prod;
         private ListarProdutos listarProdutos;
 
-        public AlterarProduto()
-        {
-            InitializeComponent();
-        }
+        
         public AlterarProduto(Produto prod, ListarProdutos listarProdutos)
         {
             InitializeComponent();
@@ -34,6 +31,11 @@ namespace Projeto4_Junior.InterfaceGrafica.Produtos
             this.prod = prod;
             this.listarProdutos = listarProdutos;
         }
+        public AlterarProduto()
+        {
+            InitializeComponent();
+        }
+
         private void AlterarProduto_Load(object sender, EventArgs e)
         {
 

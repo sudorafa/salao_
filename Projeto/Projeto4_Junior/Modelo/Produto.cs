@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto4_Junior.Modelo
 {
-    class Produto
+    public class Produto
     {        
         public String Descricao { get; set; }
         public Decimal Valor { get; set; }

@@ -37,13 +37,13 @@ namespace Projeto4_Junior.Banco
             this.ibancodados.AlterarProduto(produto);
         }
 
-
+        /*
         public SqlDataReader VerificaProd(Produto produto)
         {
             return this.ibancodados.VerificaProd(produto);     
         
         }
-
+        */
 
         public ArrayList ListarProduto(String produto)
         {

@@ -15,7 +15,7 @@ namespace Projeto4_Junior.Negocios
         Produto BuscarProduto(String descricao);
         void RemoverProduto(String descricao);
         void AlterarProduto(Produto produto);
-        SqlDataReader VerificaProd(Produto produto);
+        //SqlDataReader VerificaProd(Produto produto);
         ArrayList ListarProduto(string produto);
     }
 }

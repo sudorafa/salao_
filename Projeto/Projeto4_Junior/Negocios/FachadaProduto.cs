@@ -28,11 +28,12 @@ namespace Projeto4_Junior.Negocios
         {
             this.ifachada.AlterarProduto(produto);
         }
+        /*
         public SqlDataReader VerificaProd(Produto produto)
         {
            return this.ifachada.VerificaProd(produto);
         }
-
+        */
         public ArrayList ListarProduto(String produto)
         {
             return this.ifachada.ListarProduto(produto);

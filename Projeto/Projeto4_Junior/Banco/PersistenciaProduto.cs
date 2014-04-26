@@ -13,7 +13,7 @@ using System.Collections;
 
 namespace Projeto4_Junior.Banco
 {
-    class PersistenciaProduto : IBancoDadosProduto
+    public class PersistenciaProduto : IBancoDadosProduto
     {
        
         
@@ -46,7 +46,7 @@ namespace Projeto4_Junior.Banco
             Produto prod = new Produto();
             try
             {
-                String query = "SELECT * FROM Produto WHERE login = '" + descricao + "'";
+                String query = "SELECT * FROM Produto WHERE descricao = '" + descricao + "'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 
@@ -150,5 +150,6 @@ namespace Projeto4_Junior.Banco
 
             return lista;
         }
+
     }
 }

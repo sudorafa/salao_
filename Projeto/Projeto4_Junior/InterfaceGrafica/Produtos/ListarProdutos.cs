@@ -55,6 +55,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Produtos
             }
             else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["alterar"].Index)
             {
+                
                 //Carrega usuario que vai ser alterado!
                 String descricao = (String)dataGridView1[0, e.RowIndex].Value;
                 Projeto4_Junior.Modelo.Produto prod = fachada.BuscarProduto(descricao);
@@ -62,6 +63,11 @@ namespace Projeto4_Junior.InterfaceGrafica.Produtos
                 AlterarProduto tela = new AlterarProduto(prod, this);
                 tela.ShowDialog();
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

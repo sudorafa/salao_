@@ -279,6 +279,7 @@
     <EmbeddedResource Include="Tela_Principal.resx">
       <DependentUpon>Tela_Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram2.cd" />
     <None Include="Projeto4DataSet.xsc">
       <DependentUpon>Projeto4DataSet.xsd</DependentUpon>
     </None>
