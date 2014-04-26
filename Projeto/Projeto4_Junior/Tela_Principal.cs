@@ -162,5 +162,12 @@ namespace Projeto4_Junior
             TelaAbrirCaixa telaCaixa = new TelaAbrirCaixa();
             telaCaixa.ShowDialog();
         }
+
+        private void sairMenuItem_Click(object sender, EventArgs e)
+        {
+            Autenticacao aut = new Autenticacao();
+            aut.Show();
+            this.Close();
+        }
     }
 }

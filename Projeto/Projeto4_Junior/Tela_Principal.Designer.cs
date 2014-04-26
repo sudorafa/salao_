@@ -296,6 +296,7 @@
             this.sairMenuItem.Name = "sairMenuItem";
             this.sairMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sairMenuItem.Text = "&Sair";
+            this.sairMenuItem.Click += new System.EventHandler(this.sairMenuItem_Click);
             // 
             // barraDeFerramentas
             // 
