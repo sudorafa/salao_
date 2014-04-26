@@ -1,4 +1,4 @@
-﻿namespace Projeto4_Junior.InterfaceGrafica.Servicos
+﻿namespace Projeto4_Junior.InterfaceGrafica.Servico
 {
     partial class AlterarServico
     {
