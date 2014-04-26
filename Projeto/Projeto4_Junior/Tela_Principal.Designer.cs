@@ -156,14 +156,14 @@
             // novoServicoMenuItem
             // 
             this.novoServicoMenuItem.Name = "novoServicoMenuItem";
-            this.novoServicoMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novoServicoMenuItem.Size = new System.Drawing.Size(147, 22);
             this.novoServicoMenuItem.Text = "Novo serviço";
             this.novoServicoMenuItem.Click += new System.EventHandler(this.novoServicoMenuItem_Click);
             // 
             // listarServicosMenuItem
             // 
             this.listarServicosMenuItem.Name = "listarServicosMenuItem";
-            this.listarServicosMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listarServicosMenuItem.Size = new System.Drawing.Size(147, 22);
             this.listarServicosMenuItem.Text = "Listar serviços";
             this.listarServicosMenuItem.Click += new System.EventHandler(this.listarServicosMenuItem_Click);
             // 
@@ -259,14 +259,14 @@
             // inserirUsuarioMenuItem
             // 
             this.inserirUsuarioMenuItem.Name = "inserirUsuarioMenuItem";
-            this.inserirUsuarioMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.inserirUsuarioMenuItem.Size = new System.Drawing.Size(152, 22);
             this.inserirUsuarioMenuItem.Text = "Inserir";
             this.inserirUsuarioMenuItem.Click += new System.EventHandler(this.inserirUsuarioMenuItem_Click);
             // 
             // listarUsuariosMenuItem
             // 
             this.listarUsuariosMenuItem.Name = "listarUsuariosMenuItem";
-            this.listarUsuariosMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.listarUsuariosMenuItem.Size = new System.Drawing.Size(152, 22);
             this.listarUsuariosMenuItem.Text = "Listar";
             this.listarUsuariosMenuItem.Click += new System.EventHandler(this.listarUsuariosMenuItem_Click);
             // 
@@ -382,6 +382,7 @@
             this.button_InserirUsuarioBarraDeFerramentas.Name = "button_InserirUsuarioBarraDeFerramentas";
             this.button_InserirUsuarioBarraDeFerramentas.Size = new System.Drawing.Size(51, 51);
             this.button_InserirUsuarioBarraDeFerramentas.Text = "Inserir usuário";
+            this.button_InserirUsuarioBarraDeFerramentas.Click += new System.EventHandler(this.button_InserirUsuarioBarraDeFerramentas_Click);
             // 
             // toolStripButton1
             // 

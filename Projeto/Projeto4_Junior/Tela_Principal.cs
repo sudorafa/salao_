@@ -175,5 +175,11 @@ namespace Projeto4_Junior
             FormularioCadastrarServico formularioCadastrarServico = new FormularioCadastrarServico();
             formularioCadastrarServico.ShowDialog();
         }
+
+        private void button_InserirUsuarioBarraDeFerramentas_Click(object sender, EventArgs e)
+        {
+            CadastrarUsuario cad_usu = new CadastrarUsuario();
+            cad_usu.ShowDialog();
+        }
     }
 }
