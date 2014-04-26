@@ -25,9 +25,9 @@ namespace Projeto4_Junior.Banco
         {           
             this.ibancodados.RemoverServico(Descricao);
         }
-        public void AlterarServico(Servico servico)
+        public void AlterarServico(Servico servico, String idServicoParaServico)
         {           
-            this.ibancodados.AlterarServico(servico);
+            this.ibancodados.AlterarServico(servico, idServicoParaServico );
         }
 
         public bool VerificaExistenciaServico(String Descricao)//----------foi acrescentado------------//

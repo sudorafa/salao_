@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Projeto4_Junior.InterfaceGrafica.Servicos;
+using Projeto4_Junior.Negocios;
 
 namespace Projeto4_Junior.InterfaceGrafica.Servicos
 {
@@ -29,20 +31,20 @@ namespace Projeto4_Junior.InterfaceGrafica.Servicos
                 Projeto4_Junior.Modelo.Servico servico = new Projeto4_Junior.Modelo.Servico();
                 servico = (Projeto4_Junior.Modelo.Servico)func;
                 // PREENCHE AS COLUNAS DE 'descricao', 'serviço' E O NOMES DOS BOTÕES PADRÕES
-                dataGridView1.Rows.Add(servico.Descricao,servico.Valor,"Remover", "Alterar");
+                dataGridView1.Rows.Add(servico.Descricao, servico.Valor, "Remover", "Alterar");
             }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             IfachadaServico fachadaServico = new FachadaServico();
-            
+
             if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["remover"].Index)
             {
                 DialogResult dr = MessageBox.Show("Tem certeza que deseja excluir " + dataGridView1[0, e.RowIndex].Value + "?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dr == DialogResult.Yes)
                 {
-                    
+
                     String Descricao = Convert.ToString(dataGridView1[0, e.RowIndex].Value);
                     fachadaServico.RemoverServico(Descricao);
                     //A função abaixo limpa o dataGridView
@@ -50,17 +52,29 @@ namespace Projeto4_Junior.InterfaceGrafica.Servicos
                     //A função abaixo preenche o dataGridView
                     this.BuscarListaServico_Click(sender, e);
                 }
-                else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["alterar"].Index)
-                {
-                    //Carrega servico que vai ser alterado!
-                    //String Descricao = (String)dataGridView1[1, e.RowIndex].Value;
-                    //Projeto4_Junior.Modelo.Servico servic = fachadaServico.BuscarServico(Descricao);
+            }
+            else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["alterar"].Index)
+            {
+                DialogResult dr = MessageBox.Show("Tem certeza que deseja alterar " + dataGridView1[0, e.RowIndex].Value + "?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-                    //AlterarServico tela = new AlterarServico(servic, this);
-                    //tela.ShowDialog();
+                if (dr == DialogResult.Yes)
+                {
+                    //Carrega usuario que vai ser alterado!
+                    String descricao = Convert.ToString(dataGridView1[0, e.RowIndex].Value);
+                    Projeto4_Junior.Modelo.Servico servic = fachadaServico.BuscarServico(descricao);                         
+                    
+                    AlterarServico tela = new AlterarServico(servic, this);
+                    tela.ShowDialog();
                 }
             }
-            
+
+        }
+
+
+        private void FormularioListarServico_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
+

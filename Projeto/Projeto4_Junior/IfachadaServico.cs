@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Projeto4_Junior
 {
     interface IfachadaServico
@@ -13,7 +14,7 @@ namespace Projeto4_Junior
         void CadastrarServico(Servico servico);
         Servico BuscarServico(String Descricao);
         void RemoverServico(String Descricao);
-        void AlterarServico(Servico servico);
+        void AlterarServico(Servico servico, String idServicoParaServico);
         ArrayList ListarServico(String busca);
     }
 }

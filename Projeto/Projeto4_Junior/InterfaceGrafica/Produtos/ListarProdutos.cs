@@ -70,13 +70,18 @@ namespace Projeto4_Junior.InterfaceGrafica.Produtos
                 String descricao = (String)dataGridView1[0, e.RowIndex].Value;
                 //Carrega o funcionario para ser detalhado.
                 Projeto4_Junior.Modelo.Produto prod = fachada.BuscarProduto(descricao);
-
+                
                 DetalharProduto tela = new DetalharProduto(prod);
                 tela.ShowDialog();
             }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListarProdutos_Load(object sender, EventArgs e)
         {
 
         }

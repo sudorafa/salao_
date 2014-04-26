@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto4_Junior.Modelo
 {
-    class Servico
+    public class Servico
     {
         public int IdServico { get; set; }
         public Boolean Ativo { get; set; }

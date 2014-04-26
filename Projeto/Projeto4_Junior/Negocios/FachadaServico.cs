@@ -25,9 +25,9 @@ namespace Projeto4_Junior.Negocios
         {
             this.ifachada.RemoverServico(Descricao);
         }
-        public void AlterarServico(Servico servico)
+        public void AlterarServico(Servico servico, String idServicoParaServico)
         {
-            this.ifachada.AlterarServico(servico);
+            this.ifachada.AlterarServico(servico, idServicoParaServico);
         }
         public ArrayList ListarServico(String busca)
         {

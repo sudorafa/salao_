@@ -13,7 +13,7 @@ namespace Projeto4_Junior.Negocios
         void CadastrarServico(Servico servico);
         Servico BuscarServico(String Descricao);
         void RemoverServico(String Descricao);
-        void AlterarServico(Servico servico);
+        void AlterarServico(Servico servico, String idServicoParaServico);
         bool VerificaExistenciaServico(String Descricao);//Foi acrescentado.
         ArrayList ListarServico(String busca);
          

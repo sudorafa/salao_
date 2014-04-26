@@ -40,28 +40,10 @@ namespace Projeto4_Junior.Negocios
             ibancodados.RemoverServico(Descricao);    
             
         }
-        public void AlterarServico(Servico servico)
+        public void AlterarServico(Servico servico, String idServicoParaServico)
         {
-            /*
-            if (ibancodados.VerificaExistenciaServico(servico.IdServico) == true)
-            {
-                AlterarClientePrincipal alterar = new AlterarClientePrincipal();//estar faltando fazer o classe AlterarClientePrincipal.cs 
-                if (cliente.Nome == null)
-                {
-                    alterar.PreencherCliente(cliente.Cpf);
-                    alterar.ShowDialog();
-                }
-                else
-                {
-                    alterar.Close();
-                    ibancodados.AlterarCliente(cliente);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Cliente não cadastrado!");
-            } 
-             * */
+            this.ibancodados.AlterarServico(servico,idServicoParaServico);
+            
             
         }
         public ArrayList ListarServico(String busca)

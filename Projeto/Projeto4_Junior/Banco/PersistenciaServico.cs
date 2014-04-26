@@ -84,9 +84,28 @@ namespace Projeto4_Junior.Banco
 
 
         }
-        public void AlterarServico(Servico servico)
+        public void AlterarServico(Servico servico, String idServicoParaServico)
         {
+            FactoryConnection conn = new FactoryConnection();
+            try
+            {
+                String query = "UPDATE Servico SET Descricao = '" + servico.Descricao +
+                   "' , Valor = '" + servico.Valor + 
+                   "' WHERE Descricao = '" + idServicoParaServico + "'";
+                    
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+                SqlDataReader reader = comand.ExecuteReader();
 
+                MessageBox.Show("Alterado com sucesso!");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
+            }
         }
         public bool VerificaExistenciaServico(String Descricao)
         {

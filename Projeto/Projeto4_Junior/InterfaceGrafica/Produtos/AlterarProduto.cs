@@ -26,8 +26,8 @@ namespace Projeto4_Junior.InterfaceGrafica.Produtos
             DescricaoPro.Text = prod.Descricao;
             ValorProd.Text = Convert.ToString(prod.Valor);
             QuantidadeProd.Text = Convert.ToString(prod.Quantidade);
-            this.idProdutoParaAlterar = prod.IdProduto;
 
+            this.idProdutoParaAlterar = prod.IdProduto;
             this.prod = prod;
             this.listarProdutos = listarProdutos;
         }
