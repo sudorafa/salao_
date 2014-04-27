@@ -16,13 +16,7 @@ namespace Projeto4_Junior.Factory
 
         public SqlConnection AbrirConnexao()
         {
-<<<<<<< HEAD
-            conn.ConnectionString = @"Server=PROGRAMADOR-PC\SQLEXPRESS;Database=Projeto4;Trusted_Connection=True;";         
-            //conn.ConnectionString = @"Server=localhost\SQLEXPRESS;Database=Projeto4;Trusted_Connection=True;";  
-=======
-            //conn.ConnectionString = @"Server=PROGRAMADOR-PC\SQLEXPRESS;Database=Projeto4;Trusted_Connection=True;";         
             conn.ConnectionString = @"Server=localhost\SQLEXPRESS;Database=Projeto4;Trusted_Connection=True;";  
->>>>>>> 3775261f543ff22479e199cdc1f3015e1e0c79dc
             //conn.ConnectionString = "Server=localhost;Database=Projeto4;Trusted_Connection=True;";
             comand.Connection = conn;
             conn.Open();

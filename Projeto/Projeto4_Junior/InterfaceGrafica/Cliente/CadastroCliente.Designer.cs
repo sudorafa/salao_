@@ -35,11 +35,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox_EnderecoUfCliente = new System.Windows.Forms.ComboBox();
             this.textBox_EnderecoCidadeCliente = new System.Windows.Forms.TextBox();
-            this.textBox_EnderecoCepCliente = new System.Windows.Forms.TextBox();
             this.textBox_EnderecoBairroCliente = new System.Windows.Forms.TextBox();
             this.textBox_EnderecoComplementoCliente = new System.Windows.Forms.TextBox();
             this.textBox_EnderecoRuaCliente = new System.Windows.Forms.TextBox();
-            this.textBox_EnderecoNumeroCliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,14 +46,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox_DataNascCliente = new System.Windows.Forms.TextBox();
-            this.textBox_CpfCliente = new System.Windows.Forms.TextBox();
-            this.textBox_TelefoneCliente = new System.Windows.Forms.TextBox();
             this.textBox_NomeCliente = new System.Windows.Forms.TextBox();
             this.lbDataNascimento = new System.Windows.Forms.Label();
             this.lbCpf = new System.Windows.Forms.Label();
             this.lbTelefone = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
+            this.textBox_CpfCliente = new System.Windows.Forms.MaskedTextBox();
+            this.textBox_TelefoneCliente = new System.Windows.Forms.MaskedTextBox();
+            this.textBox_DataNascCliente = new System.Windows.Forms.MaskedTextBox();
+            this.textBox_EnderecoNumeroCliente = new System.Windows.Forms.MaskedTextBox();
+            this.textBox_EnderecoCepCliente = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -100,13 +100,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox_EnderecoNumeroCliente);
+            this.groupBox1.Controls.Add(this.textBox_EnderecoCepCliente);
             this.groupBox1.Controls.Add(this.comboBox_EnderecoUfCliente);
             this.groupBox1.Controls.Add(this.textBox_EnderecoCidadeCliente);
-            this.groupBox1.Controls.Add(this.textBox_EnderecoCepCliente);
             this.groupBox1.Controls.Add(this.textBox_EnderecoBairroCliente);
             this.groupBox1.Controls.Add(this.textBox_EnderecoComplementoCliente);
             this.groupBox1.Controls.Add(this.textBox_EnderecoRuaCliente);
-            this.groupBox1.Controls.Add(this.textBox_EnderecoNumeroCliente);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
@@ -140,14 +140,6 @@
             this.textBox_EnderecoCidadeCliente.Size = new System.Drawing.Size(109, 20);
             this.textBox_EnderecoCidadeCliente.TabIndex = 11;
             // 
-            // textBox_EnderecoCepCliente
-            // 
-            this.textBox_EnderecoCepCliente.Location = new System.Drawing.Point(78, 65);
-            this.textBox_EnderecoCepCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_EnderecoCepCliente.Name = "textBox_EnderecoCepCliente";
-            this.textBox_EnderecoCepCliente.Size = new System.Drawing.Size(76, 20);
-            this.textBox_EnderecoCepCliente.TabIndex = 10;
-            // 
             // textBox_EnderecoBairroCliente
             // 
             this.textBox_EnderecoBairroCliente.Location = new System.Drawing.Point(344, 41);
@@ -171,14 +163,6 @@
             this.textBox_EnderecoRuaCliente.Name = "textBox_EnderecoRuaCliente";
             this.textBox_EnderecoRuaCliente.Size = new System.Drawing.Size(190, 20);
             this.textBox_EnderecoRuaCliente.TabIndex = 6;
-            // 
-            // textBox_EnderecoNumeroCliente
-            // 
-            this.textBox_EnderecoNumeroCliente.Location = new System.Drawing.Point(344, 14);
-            this.textBox_EnderecoNumeroCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_EnderecoNumeroCliente.Name = "textBox_EnderecoNumeroCliente";
-            this.textBox_EnderecoNumeroCliente.Size = new System.Drawing.Size(30, 20);
-            this.textBox_EnderecoNumeroCliente.TabIndex = 7;
             // 
             // label1
             // 
@@ -252,10 +236,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox_EmailCliente);
-            this.groupBox2.Controls.Add(this.textBox_DataNascCliente);
             this.groupBox2.Controls.Add(this.textBox_CpfCliente);
             this.groupBox2.Controls.Add(this.textBox_TelefoneCliente);
+            this.groupBox2.Controls.Add(this.textBox_DataNascCliente);
+            this.groupBox2.Controls.Add(this.textBox_EmailCliente);
             this.groupBox2.Controls.Add(this.label_EmailCliente);
             this.groupBox2.Controls.Add(this.textBox_NomeCliente);
             this.groupBox2.Controls.Add(this.lbDataNascimento);
@@ -268,27 +252,6 @@
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados Pessoais";
-            // 
-            // textBox_DataNascCliente
-            // 
-            this.textBox_DataNascCliente.Location = new System.Drawing.Point(344, 52);
-            this.textBox_DataNascCliente.Name = "textBox_DataNascCliente";
-            this.textBox_DataNascCliente.Size = new System.Drawing.Size(60, 20);
-            this.textBox_DataNascCliente.TabIndex = 4;
-            // 
-            // textBox_CpfCliente
-            // 
-            this.textBox_CpfCliente.Location = new System.Drawing.Point(344, 23);
-            this.textBox_CpfCliente.Name = "textBox_CpfCliente";
-            this.textBox_CpfCliente.Size = new System.Drawing.Size(96, 20);
-            this.textBox_CpfCliente.TabIndex = 2;
-            // 
-            // textBox_TelefoneCliente
-            // 
-            this.textBox_TelefoneCliente.Location = new System.Drawing.Point(73, 52);
-            this.textBox_TelefoneCliente.Name = "textBox_TelefoneCliente";
-            this.textBox_TelefoneCliente.Size = new System.Drawing.Size(74, 20);
-            this.textBox_TelefoneCliente.TabIndex = 3;
             // 
             // textBox_NomeCliente
             // 
@@ -333,6 +296,46 @@
             this.lbNome.TabIndex = 0;
             this.lbNome.Text = "Nome:";
             // 
+            // textBox_CpfCliente
+            // 
+            this.textBox_CpfCliente.Location = new System.Drawing.Point(344, 19);
+            this.textBox_CpfCliente.Mask = "999.999.999-99";
+            this.textBox_CpfCliente.Name = "textBox_CpfCliente";
+            this.textBox_CpfCliente.Size = new System.Drawing.Size(86, 20);
+            this.textBox_CpfCliente.TabIndex = 19;
+            // 
+            // textBox_TelefoneCliente
+            // 
+            this.textBox_TelefoneCliente.Location = new System.Drawing.Point(73, 52);
+            this.textBox_TelefoneCliente.Mask = "(99) 9999-9999";
+            this.textBox_TelefoneCliente.Name = "textBox_TelefoneCliente";
+            this.textBox_TelefoneCliente.Size = new System.Drawing.Size(83, 20);
+            this.textBox_TelefoneCliente.TabIndex = 20;
+            // 
+            // textBox_DataNascCliente
+            // 
+            this.textBox_DataNascCliente.Location = new System.Drawing.Point(344, 49);
+            this.textBox_DataNascCliente.Mask = "99/99/9999";
+            this.textBox_DataNascCliente.Name = "textBox_DataNascCliente";
+            this.textBox_DataNascCliente.Size = new System.Drawing.Size(67, 20);
+            this.textBox_DataNascCliente.TabIndex = 21;
+            // 
+            // textBox_EnderecoNumeroCliente
+            // 
+            this.textBox_EnderecoNumeroCliente.Location = new System.Drawing.Point(344, 14);
+            this.textBox_EnderecoNumeroCliente.Mask = "9999999999";
+            this.textBox_EnderecoNumeroCliente.Name = "textBox_EnderecoNumeroCliente";
+            this.textBox_EnderecoNumeroCliente.Size = new System.Drawing.Size(69, 20);
+            this.textBox_EnderecoNumeroCliente.TabIndex = 22;
+            // 
+            // textBox_EnderecoCepCliente
+            // 
+            this.textBox_EnderecoCepCliente.Location = new System.Drawing.Point(78, 66);
+            this.textBox_EnderecoCepCliente.Mask = "99999-999";
+            this.textBox_EnderecoCepCliente.Name = "textBox_EnderecoCepCliente";
+            this.textBox_EnderecoCepCliente.Size = new System.Drawing.Size(61, 20);
+            this.textBox_EnderecoCepCliente.TabIndex = 23;
+            // 
             // Form_CadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,11 +367,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBox_EnderecoUfCliente;
         private System.Windows.Forms.TextBox textBox_EnderecoCidadeCliente;
-        private System.Windows.Forms.TextBox textBox_EnderecoCepCliente;
         private System.Windows.Forms.TextBox textBox_EnderecoBairroCliente;
         private System.Windows.Forms.TextBox textBox_EnderecoComplementoCliente;
         private System.Windows.Forms.TextBox textBox_EnderecoRuaCliente;
-        private System.Windows.Forms.TextBox textBox_EnderecoNumeroCliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -377,13 +378,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox_DataNascCliente;
-        private System.Windows.Forms.TextBox textBox_CpfCliente;
-        private System.Windows.Forms.TextBox textBox_TelefoneCliente;
         private System.Windows.Forms.TextBox textBox_NomeCliente;
         private System.Windows.Forms.Label lbDataNascimento;
         private System.Windows.Forms.Label lbCpf;
         private System.Windows.Forms.Label lbTelefone;
         private System.Windows.Forms.Label lbNome;
+        private System.Windows.Forms.MaskedTextBox textBox_EnderecoNumeroCliente;
+        private System.Windows.Forms.MaskedTextBox textBox_EnderecoCepCliente;
+        private System.Windows.Forms.MaskedTextBox textBox_CpfCliente;
+        private System.Windows.Forms.MaskedTextBox textBox_TelefoneCliente;
+        private System.Windows.Forms.MaskedTextBox textBox_DataNascCliente;
     }
 }
