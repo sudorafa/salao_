@@ -35,13 +35,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btBuscarCliente = new System.Windows.Forms.Button();
-            this.tbBuscarCpfCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbFuncionario = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btAdicionarServico = new System.Windows.Forms.Button();
             this.cbServicos = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btAdicionarProduto = new System.Windows.Forms.Button();
             this.cbProdutos = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,9 +51,8 @@
             this.lbTotal = new System.Windows.Forms.Label();
             this.btFinalizarVenda = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
-            this.btAdicionarServico = new System.Windows.Forms.Button();
-            this.btAdicionarProduto = new System.Windows.Forms.Button();
             this.lbValorTotal = new System.Windows.Forms.Label();
+            this.tbBuscarCpfCliente = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -72,12 +72,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tbBuscarCpfCliente);
             this.groupBox1.Controls.Add(this.tbCpfCliente);
             this.groupBox1.Controls.Add(this.tbNomeCliente);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btBuscarCliente);
-            this.groupBox1.Controls.Add(this.tbBuscarCpfCliente);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 86);
             this.groupBox1.Name = "groupBox1";
@@ -128,13 +128,7 @@
             this.btBuscarCliente.TabIndex = 2;
             this.btBuscarCliente.Text = "Buscar";
             this.btBuscarCliente.UseVisualStyleBackColor = true;
-            // 
-            // tbBuscarCpfCliente
-            // 
-            this.tbBuscarCpfCliente.Location = new System.Drawing.Point(116, 13);
-            this.tbBuscarCpfCliente.Name = "tbBuscarCpfCliente";
-            this.tbBuscarCpfCliente.Size = new System.Drawing.Size(93, 20);
-            this.tbBuscarCpfCliente.TabIndex = 1;
+            this.btBuscarCliente.Click += new System.EventHandler(this.btBuscarCliente_Click_1);
             // 
             // label2
             // 
@@ -175,6 +169,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Serviços";
             // 
+            // btAdicionarServico
+            // 
+            this.btAdicionarServico.Location = new System.Drawing.Point(248, 33);
+            this.btAdicionarServico.Name = "btAdicionarServico";
+            this.btAdicionarServico.Size = new System.Drawing.Size(60, 23);
+            this.btAdicionarServico.TabIndex = 5;
+            this.btAdicionarServico.Text = "Adicionar";
+            this.btAdicionarServico.UseVisualStyleBackColor = true;
+            this.btAdicionarServico.Click += new System.EventHandler(this.btAdicionarServico_Click);
+            // 
             // cbServicos
             // 
             this.cbServicos.FormattingEnabled = true;
@@ -193,6 +197,15 @@
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Produtos";
+            // 
+            // btAdicionarProduto
+            // 
+            this.btAdicionarProduto.Location = new System.Drawing.Point(247, 33);
+            this.btAdicionarProduto.Name = "btAdicionarProduto";
+            this.btAdicionarProduto.Size = new System.Drawing.Size(60, 23);
+            this.btAdicionarProduto.TabIndex = 7;
+            this.btAdicionarProduto.Text = "Adicionar";
+            this.btAdicionarProduto.UseVisualStyleBackColor = true;
             // 
             // cbProdutos
             // 
@@ -269,24 +282,6 @@
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
-            // btAdicionarServico
-            // 
-            this.btAdicionarServico.Location = new System.Drawing.Point(248, 33);
-            this.btAdicionarServico.Name = "btAdicionarServico";
-            this.btAdicionarServico.Size = new System.Drawing.Size(60, 23);
-            this.btAdicionarServico.TabIndex = 5;
-            this.btAdicionarServico.Text = "Adicionar";
-            this.btAdicionarServico.UseVisualStyleBackColor = true;
-            // 
-            // btAdicionarProduto
-            // 
-            this.btAdicionarProduto.Location = new System.Drawing.Point(247, 33);
-            this.btAdicionarProduto.Name = "btAdicionarProduto";
-            this.btAdicionarProduto.Size = new System.Drawing.Size(60, 23);
-            this.btAdicionarProduto.TabIndex = 7;
-            this.btAdicionarProduto.Text = "Adicionar";
-            this.btAdicionarProduto.UseVisualStyleBackColor = true;
-            // 
             // lbValorTotal
             // 
             this.lbValorTotal.AutoSize = true;
@@ -297,6 +292,14 @@
             this.lbValorTotal.Size = new System.Drawing.Size(82, 31);
             this.lbValorTotal.TabIndex = 9;
             this.lbValorTotal.Text = "00,00";
+            // 
+            // tbBuscarCpfCliente
+            // 
+            this.tbBuscarCpfCliente.Location = new System.Drawing.Point(112, 13);
+            this.tbBuscarCpfCliente.Mask = "999.999.999-99";
+            this.tbBuscarCpfCliente.Name = "tbBuscarCpfCliente";
+            this.tbBuscarCpfCliente.Size = new System.Drawing.Size(86, 20);
+            this.tbBuscarCpfCliente.TabIndex = 10;
             // 
             // TelaAbrirCaixa
             // 
@@ -331,7 +334,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbBuscarCpfCliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cbFuncionario;
@@ -354,5 +356,6 @@
         private System.Windows.Forms.Button btAdicionarServico;
         private System.Windows.Forms.Button btAdicionarProduto;
         private System.Windows.Forms.Label lbValorTotal;
+        private System.Windows.Forms.MaskedTextBox tbBuscarCpfCliente;
     }
 }

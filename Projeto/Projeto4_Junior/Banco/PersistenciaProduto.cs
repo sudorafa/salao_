@@ -30,13 +30,17 @@ namespace Projeto4_Junior.Banco
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
                 SqlDataReader reader = comand.ExecuteReader();
-                conn.FecharConnecxao();
+                
 
                 MessageBox.Show("Cadastrado com sucesso!");
             }
             catch(Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
             }
         }
 
@@ -61,11 +65,15 @@ namespace Projeto4_Junior.Banco
                     
                 }
                 reader.Close();
-                conn.FecharConnecxao();
+                
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
             }
 
             return prod;
@@ -82,11 +90,15 @@ namespace Projeto4_Junior.Banco
 
                 SqlDataReader reader = comand.ExecuteReader();
                 MessageBox.Show("Produto removido com sucesso!");
-                conn.FecharConnecxao();
+                
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
             }
             
         }
@@ -102,13 +114,17 @@ namespace Projeto4_Junior.Banco
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
                 SqlDataReader reader = comand.ExecuteReader();
-                conn.FecharConnecxao();
+                
                 MessageBox.Show("Alterado com sucesso!");
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
-            } 
+            }
+            finally
+            {
+                conn.FecharConnecxao();
+            }
             
         }
         
@@ -140,12 +156,16 @@ namespace Projeto4_Junior.Banco
                     }
                 }
                 reader.Close();
-                conn.FecharConnecxao();
+                
 
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
             }
 
             return lista;

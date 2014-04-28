@@ -27,13 +27,17 @@ namespace Projeto4_Junior.Banco
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());               
                 SqlDataReader reader = comand.ExecuteReader();
-                conn.FecharConnecxao();                
+                               
                 MessageBox.Show("Cadastrado com sucesso!");
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
-            }                  
+            }
+            finally
+            {
+                conn.FecharConnecxao(); 
+            }
         }
         public Cliente BuscarCliente(String cpf)
         {
@@ -57,12 +61,16 @@ namespace Projeto4_Junior.Banco
                     cli.Telefone = (String)reader["telefone"];
                 }
                 reader.Close();
-                conn.FecharConnecxao();
+               
 
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
             }
             
             return cli;
@@ -78,11 +86,15 @@ namespace Projeto4_Junior.Banco
 
                 SqlDataReader reader = comand.ExecuteReader();
                 MessageBox.Show("Cliente removido com sucesso!");
-                conn.FecharConnecxao();
+                
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
             }
         }
         public void AlterarCliente(Cliente cliente)
@@ -95,13 +107,17 @@ namespace Projeto4_Junior.Banco
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());              
                 SqlDataReader reader = comand.ExecuteReader();
-                conn.FecharConnecxao();
+                
                 MessageBox.Show("Alterado com sucesso!");
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
-            }             
+            }
+            finally
+            {
+                conn.FecharConnecxao();
+            }
         }
 
         public bool VerificaExistenciaCliente(String cpf)
@@ -124,11 +140,15 @@ namespace Projeto4_Junior.Banco
                 {
                     retorno = false;
                 }
-                conn.FecharConnecxao();
+                
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
             }
 
             return retorno;
@@ -164,12 +184,16 @@ namespace Projeto4_Junior.Banco
                     }
                 }
                 reader.Close();                
-                conn.FecharConnecxao();
+                
                 
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
             }
 
             return lista;

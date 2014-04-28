@@ -57,7 +57,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show(listBox1.SelectedItem.ToString());
+            
         }
 
         private void btBuscarCliente_Click(object sender, EventArgs e)
@@ -83,6 +83,39 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btBuscarCliente_Click_1(object sender, EventArgs e)
+        {
+            String ClienteCpfBusca = tbBuscarCpfCliente.Text;
+            if(ClienteCpfBusca != null && ClienteCpfBusca != "")
+            {
+                IFachadaCliente fachada = new FachadaCliente();
+                Projeto4_Junior.Modelo.Cliente cli = new Projeto4_Junior.Modelo.Cliente();
+
+                cli = fachada.BuscarCliente(ClienteCpfBusca);
+                if (cli.Nome != null)
+                {
+                    tbNomeCliente.Text = cli.Nome;
+                    tbCpfCliente.Text = cli.Cpf;
+                }
+                else
+                {
+                    MessageBox.Show("Cliente não encontrado!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Digite o CPF do cliente!");
+            }
+            
+        }
+
+        private void btAdicionarServico_Click(object sender, EventArgs e)
+        {
+            String buscarServico = (cbServicos.SelectedItem as Projeto4_Junior.Modelo.ComboboxItem).Value.ToString();
+            MessageBox.Show("" + buscarServico);
+            //TODO 
         }
     }
 }

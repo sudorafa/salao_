@@ -28,7 +28,7 @@ Ativo bit
 )
 
 
-CREATE TABLE Servicos (
+CREATE TABLE Servico (
 IdServico int PRIMARY KEY identity,
 Descricao nvarchar(100),
 Valor decimal(12,2),
@@ -59,5 +59,5 @@ IdProduto int,
 IdServico int,
 FOREIGN KEY (IdVenda) REFERENCES Venda (IdVenda),
 FOREIGN KEY (IdProduto) REFERENCES Produto (IdProduto),
-FOREIGN KEY (IdServico) REFERENCES Servicos (IdServico)
+FOREIGN KEY (IdServico) REFERENCES Servico (IdServico)
 )

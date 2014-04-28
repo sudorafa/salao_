@@ -20,19 +20,23 @@ namespace Projeto4_Junior.Banco
             FactoryConnection conn = new FactoryConnection();
             try
             {
-                String query = "insert into Servico(Descricao,Valor,Ativo) values" +
+                String query = "insert into Servico (Descricao,Valor,Ativo) values" +
                 "('" + servico.Descricao + "', '" + servico.Valor + "', '" + servico.Ativo + "')";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
                 //comand.ExecuteNonQuery(); <---- Não seria melhor usar o comand pra executar a instrução SQL ?
                 SqlDataReader reader = comand.ExecuteReader();
-                conn.FecharConnecxao();
+                
                 MessageBox.Show("Cadastrado com sucesso!");
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");//----até aqui----/
-            }   
+            }
+            finally
+            {
+                conn.FecharConnecxao();
+            }
 
         }
         public Servico BuscarServico(String Descricao)
@@ -49,16 +53,21 @@ namespace Projeto4_Junior.Banco
 
                 while (reader.Read())
                 {
+                    serv.IdServico = (int)reader["IdServico"];
                     serv.Descricao = (String)reader["Descricao"];
                     serv.Valor = (Decimal)reader["Valor"];
                     serv.Ativo = (Boolean)reader["Ativo"];
                 }
                 reader.Close();
-                conn.FecharConnecxao();
+                
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
             }
 
             return serv;
@@ -75,11 +84,15 @@ namespace Projeto4_Junior.Banco
 
                 SqlDataReader reader = comand.ExecuteReader();
                 MessageBox.Show("Serviço removido com sucesso!");
-                conn.FecharConnecxao();
+                
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
             }
 
 
@@ -128,11 +141,15 @@ namespace Projeto4_Junior.Banco
                 {
                     retorno = false;
                 }
-                conn.FecharConnecxao();
+                
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
             }
             return retorno;
         }
@@ -144,16 +161,16 @@ namespace Projeto4_Junior.Banco
 
             try
             {
-                String query = "SELECT * FROM Servico WHERE Descricao LIKE '%"+busca+"%'";
-
+                String query = "SELECT * FROM Servico WHERE descricao LIKE '%" + busca + "%' and ativo = 1";
+                
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
-
+                
                 SqlDataReader reader = comand.ExecuteReader();
-
+               
                 while (reader.Read())
                 {
                     Modelo.Servico servico = new Modelo.Servico();
-
+                    servico.IdServico = (int)reader["IdServico"];
                     servico.Descricao = (String)reader["Descricao"];
                     servico.Valor = (Decimal)reader["Valor"];
                     servico.Ativo = (Boolean)reader["Ativo"];
@@ -163,13 +180,18 @@ namespace Projeto4_Junior.Banco
                         lista.Add(servico);
                     }                   
                 }
-                reader.Close();                
-                conn.FecharConnecxao();
+                
+                reader.Close();
+               
                 
             }
             catch (Exception e)
             {
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
             }
 
             return lista;
