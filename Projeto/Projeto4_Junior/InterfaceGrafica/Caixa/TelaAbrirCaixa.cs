@@ -161,5 +161,25 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
                 this.valorTotal();
             }
         }
+
+        private void btAdicionarProduto_Click(object sender, EventArgs e)
+        {
+            String buscarProduto = cbProdutos.Text;
+
+            if (buscarProduto != "")
+            {
+                buscarProduto = (cbProdutos.SelectedItem as Projeto4_Junior.Modelo.ComboboxItem).Value.ToString();
+                IfachadaProduto fachada = new FachadaProduto();
+                Projeto4_Junior.Modelo.Produto prod = fachada.BuscarProduto(int.Parse(buscarProduto));
+
+                dGListaServProd.Rows.Add(prod.Descricao, prod.Valor, "Remover");
+                this.valorTotal();
+                //MessageBox.Show("" + buscarServico);
+            }
+            else
+            {
+                MessageBox.Show("Selecione pelo menos um produto!");
+            }
+        }
     }
 }

@@ -16,9 +16,9 @@ namespace Projeto4_Junior.Negocios
         {
             this.ifachada.CadastrarProdutos(produto);
         }
-        public Produto BuscarProduto(String descricao)
+        public Produto BuscarProduto(int idProduto)
         {
-            return this.ifachada.BuscarProduto(descricao);
+            return this.ifachada.BuscarProduto(idProduto);
         }
         public void RemoverProduto(String descricao)
         {

@@ -214,6 +214,7 @@
             this.btAdicionarProduto.TabIndex = 7;
             this.btAdicionarProduto.Text = "Adicionar";
             this.btAdicionarProduto.UseVisualStyleBackColor = true;
+            this.btAdicionarProduto.Click += new System.EventHandler(this.btAdicionarProduto_Click);
             // 
             // cbProdutos
             // 

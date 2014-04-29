@@ -20,9 +20,9 @@ namespace Projeto4_Junior.Banco
         }
 
 
-        public Produto BuscarProduto(String descricao)
+        public Produto BuscarProduto(int idProduto)
         {            
-            return this.ibancodados.BuscarProduto(descricao);
+            return this.ibancodados.BuscarProduto(idProduto);
         }
 
 

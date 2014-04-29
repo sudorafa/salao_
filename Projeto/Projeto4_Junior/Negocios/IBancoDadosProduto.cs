@@ -12,7 +12,7 @@ namespace Projeto4_Junior.Negocios
     interface IBancoDadosProduto
     {
         void CadastrarProdutos(Produto produto);
-        Produto BuscarProduto(String descricao);
+        Produto BuscarProduto(int idProduto);
         void RemoverProduto(String descricao);
         void AlterarProduto(Produto produto);
         //SqlDataReader VerificaProd(Produto produto);

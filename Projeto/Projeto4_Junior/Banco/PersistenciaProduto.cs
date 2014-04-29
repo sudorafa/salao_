@@ -44,13 +44,13 @@ namespace Projeto4_Junior.Banco
             }
         }
 
-        public Produto BuscarProduto(String descricao)
+        public Produto BuscarProduto(int idProduto)
         {
             FactoryConnection conn = new FactoryConnection();
             Produto prod = new Produto();
             try
             {
-                String query = "SELECT * FROM Produto WHERE descricao = '" + descricao + "'";
+                String query = "SELECT * FROM Produto WHERE IdProduto = '"+ idProduto +"' AND Ativo = 1";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 
@@ -62,6 +62,7 @@ namespace Projeto4_Junior.Banco
                     prod.Valor = (Decimal)reader["Valor"];
                     prod.Quantidade = (int)reader["Quantidade"];
                     prod.IdProduto = (int)reader["IdProduto"];
+                    prod.Ativo = (Boolean)reader["Ativo"];
                     
                 }
                 reader.Close();
@@ -149,6 +150,7 @@ namespace Projeto4_Junior.Banco
                     umProduto.Valor = (Decimal)reader["Valor"];
                     umProduto.Quantidade = (int)reader["Quantidade"];                    
                     umProduto.Ativo = (Boolean)reader["Ativo"];
+                    umProduto.IdProduto = (int)reader["IdProduto"];
 
                     if (umProduto.Ativo == true)
                     {

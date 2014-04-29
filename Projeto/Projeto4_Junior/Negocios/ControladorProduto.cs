@@ -19,9 +19,9 @@ namespace Projeto4_Junior.Negocios
         {           
             this.ibancodados.CadastrarProdutos(produto);           
         }
-        public Produto BuscarProduto(String descricao)
+        public Produto BuscarProduto(int idProduto)
         {
-            return this.ibancodados.BuscarProduto(descricao);
+            return this.ibancodados.BuscarProduto(idProduto);
         }
         public void RemoverProduto(String descricao)
         {
