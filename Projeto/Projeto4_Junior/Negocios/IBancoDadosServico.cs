@@ -11,7 +11,7 @@ namespace Projeto4_Junior.Negocios
     interface IBancoDadosServico
     {
         void CadastrarServico(Servico servico);
-        Servico BuscarServico(String Descricao);
+        Servico BuscarServico(int idServico);
         void RemoverServico(String Descricao);
         void AlterarServico(Servico servico, String idServicoParaServico);
         bool VerificaExistenciaServico(String Descricao);//Foi acrescentado.

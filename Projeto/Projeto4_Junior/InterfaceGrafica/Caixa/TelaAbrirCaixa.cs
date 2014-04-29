@@ -113,9 +113,53 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
 
         private void btAdicionarServico_Click(object sender, EventArgs e)
         {
-            String buscarServico = (cbServicos.SelectedItem as Projeto4_Junior.Modelo.ComboboxItem).Value.ToString();
-            MessageBox.Show("" + buscarServico);
+            String buscarServico = cbServicos.Text;
+
+            if (buscarServico != "")
+            {
+                buscarServico = (cbServicos.SelectedItem as Projeto4_Junior.Modelo.ComboboxItem).Value.ToString();
+                IfachadaServico fachada = new FachadaServico();
+                Projeto4_Junior.Modelo.Servico serv = fachada.BuscarServico(int.Parse(buscarServico));
+                
+                dGListaServProd.Rows.Add(serv.Descricao,serv.Valor,"Remover");
+                this.valorTotal();
+                //MessageBox.Show("" + buscarServico);
+            }
+            else
+            {
+                MessageBox.Show("Selecione pelo menos um serviço!");
+            }
+                
+                
+            
             //TODO 
+        }
+
+        private void valorTotal()
+        {
+            decimal total = 0;
+            for (int i = 0; i < dGListaServProd.RowCount; i++)
+            {
+                decimal x = (decimal)dGListaServProd.Rows[i].Cells[1].Value;
+                total += x;
+            }
+            if (total != 0) { 
+                lbValorTotal.Text = ""+total;
+            }
+            else
+            {
+                lbValorTotal.Text = "00,00";
+            }
+        }
+
+        private void dGListaServProd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex == dGListaServProd.Columns["remover"].Index)
+            {
+                this.dGListaServProd.Rows.Remove(this.dGListaServProd.CurrentRow);
+                this.dGListaServProd.Refresh();
+                this.valorTotal();
+            }
         }
     }
 }

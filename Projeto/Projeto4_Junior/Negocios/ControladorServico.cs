@@ -28,9 +28,9 @@ namespace Projeto4_Junior.Negocios
             }  
             
         }
-        public Servico BuscarServico(String Descricao)
+        public Servico BuscarServico(int idServico)
         {
-            return ibancodados.BuscarServico(Descricao);
+            return ibancodados.BuscarServico(idServico);
             
             
             //return null;

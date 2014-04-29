@@ -40,6 +40,7 @@
             this.lbTelefone = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
             this.groupBox_EnderecoCadastroCliente = new System.Windows.Forms.GroupBox();
+            this.tbNumeroEndereco = new System.Windows.Forms.MaskedTextBox();
             this.tbCepEndereco = new System.Windows.Forms.MaskedTextBox();
             this.cbUfEndereco = new System.Windows.Forms.ComboBox();
             this.tbCidadeEndereco = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@
             this.label_EnderecoNumeroCliente = new System.Windows.Forms.Label();
             this.btCancelar = new System.Windows.Forms.Button();
             this.btCadastrar = new System.Windows.Forms.Button();
-            this.tbNumeroEndereco = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox_EnderecoCadastroCliente.SuspendLayout();
             this.SuspendLayout();
@@ -189,6 +189,14 @@
             this.groupBox_EnderecoCadastroCliente.TabStop = false;
             this.groupBox_EnderecoCadastroCliente.Text = "Endereço:";
             // 
+            // tbNumeroEndereco
+            // 
+            this.tbNumeroEndereco.Location = new System.Drawing.Point(344, 18);
+            this.tbNumeroEndereco.Mask = "9999999999";
+            this.tbNumeroEndereco.Name = "tbNumeroEndereco";
+            this.tbNumeroEndereco.Size = new System.Drawing.Size(69, 20);
+            this.tbNumeroEndereco.TabIndex = 7;
+            // 
             // tbCepEndereco
             // 
             this.tbCepEndereco.Location = new System.Drawing.Point(78, 66);
@@ -201,32 +209,32 @@
             // 
             this.cbUfEndereco.FormattingEnabled = true;
             this.cbUfEndereco.Items.AddRange(new object[] {
-            "AC\t",
-            "AL\t",
-            "AP\t",
-            "AM\t",
-            "BA\t",
-            "CE\t",
-            "DF\t",
-            "ES\t",
-            "GO\t",
-            "MA\t",
-            "MT\t",
-            "MS\t",
-            "MG\t",
-            "PA\t",
-            "PB\t",
-            "PR\t",
-            "PE\t",
-            "PI\t",
-            "RJ\t",
-            "RN\t",
-            "RS\t",
-            "RO\t",
-            "RR\t",
-            "SC\t",
-            "SP\t",
-            "SE\t",
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
             "TO"});
             this.cbUfEndereco.Location = new System.Drawing.Point(525, 70);
             this.cbUfEndereco.Margin = new System.Windows.Forms.Padding(2);
@@ -355,14 +363,6 @@
             this.btCadastrar.Text = "Cadastrar";
             this.btCadastrar.UseVisualStyleBackColor = true;
             this.btCadastrar.Click += new System.EventHandler(this.btCadastrar_Click);
-            // 
-            // tbNumeroEndereco
-            // 
-            this.tbNumeroEndereco.Location = new System.Drawing.Point(344, 18);
-            this.tbNumeroEndereco.Mask = "9999999999";
-            this.tbNumeroEndereco.Name = "tbNumeroEndereco";
-            this.tbNumeroEndereco.Size = new System.Drawing.Size(69, 20);
-            this.tbNumeroEndereco.TabIndex = 7;
             // 
             // CadastroFuncionario
             // 

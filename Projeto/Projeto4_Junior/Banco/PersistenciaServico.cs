@@ -39,13 +39,13 @@ namespace Projeto4_Junior.Banco
             }
 
         }
-        public Servico BuscarServico(String Descricao)
+        public Servico BuscarServico(int idServico)
         {
             FactoryConnection conn = new FactoryConnection();
             Servico serv = new Servico();
             try
             {
-                String query = "SELECT * FROM Servico WHERE Descricao = '" + Descricao + "'";
+                String query = "SELECT * FROM Servico WHERE IdServico = '" + idServico + "' and ativo = 1";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 

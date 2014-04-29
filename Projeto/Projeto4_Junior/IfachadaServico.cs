@@ -12,7 +12,7 @@ namespace Projeto4_Junior
     interface IfachadaServico
     {
         void CadastrarServico(Servico servico);
-        Servico BuscarServico(String Descricao);
+        Servico BuscarServico(int idServico);
         void RemoverServico(String Descricao);
         void AlterarServico(Servico servico, String idServicoParaServico);
         ArrayList ListarServico(String busca);

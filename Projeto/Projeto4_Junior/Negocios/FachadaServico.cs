@@ -17,9 +17,9 @@ namespace Projeto4_Junior.Negocios
         {
             this.ifachada.CadastrarServico(servico);
         }
-        public Servico BuscarServico(String Descricao)
+        public Servico BuscarServico(int idServico)
         {
-            return this.ifachada.BuscarServico(Descricao);
+            return this.ifachada.BuscarServico(idServico);
         }
         public void RemoverServico(String Descricao)
         {
