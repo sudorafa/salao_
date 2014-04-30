@@ -46,13 +46,15 @@
             this.btAdicionarProduto = new System.Windows.Forms.Button();
             this.cbProdutos = new System.Windows.Forms.ComboBox();
             this.dGListaServProd = new System.Windows.Forms.DataGridView();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remover = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lbTotal = new System.Windows.Forms.Label();
             this.btFinalizarVenda = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
             this.lbValorTotal = new System.Windows.Forms.Label();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remover = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.idProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -232,33 +234,15 @@
             this.dGListaServProd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.descricao,
             this.valor,
-            this.remover});
+            this.remover,
+            this.idProduto,
+            this.idServico});
             this.dGListaServProd.Location = new System.Drawing.Point(12, 284);
             this.dGListaServProd.Name = "dGListaServProd";
             this.dGListaServProd.ReadOnly = true;
             this.dGListaServProd.Size = new System.Drawing.Size(657, 180);
             this.dGListaServProd.TabIndex = 5;
             this.dGListaServProd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGListaServProd_CellContentClick);
-            // 
-            // descricao
-            // 
-            this.descricao.HeaderText = "Descrição";
-            this.descricao.Name = "descricao";
-            this.descricao.ReadOnly = true;
-            this.descricao.Width = 400;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor";
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            this.valor.Width = 112;
-            // 
-            // remover
-            // 
-            this.remover.HeaderText = "";
-            this.remover.Name = "remover";
-            this.remover.ReadOnly = true;
             // 
             // lbTotal
             // 
@@ -280,6 +264,7 @@
             this.btFinalizarVenda.TabIndex = 8;
             this.btFinalizarVenda.Text = "Finalizar Venda";
             this.btFinalizarVenda.UseVisualStyleBackColor = true;
+            this.btFinalizarVenda.Click += new System.EventHandler(this.btFinalizarVenda_Click);
             // 
             // btCancelar
             // 
@@ -302,6 +287,40 @@
             this.lbValorTotal.Size = new System.Drawing.Size(82, 31);
             this.lbValorTotal.TabIndex = 9;
             this.lbValorTotal.Text = "00,00";
+            // 
+            // descricao
+            // 
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            this.descricao.Width = 400;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor";
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            this.valor.Width = 112;
+            // 
+            // remover
+            // 
+            this.remover.HeaderText = "";
+            this.remover.Name = "remover";
+            this.remover.ReadOnly = true;
+            // 
+            // idProduto
+            // 
+            this.idProduto.HeaderText = "idProduto";
+            this.idProduto.Name = "idProduto";
+            this.idProduto.ReadOnly = true;
+            this.idProduto.Visible = false;
+            // 
+            // idServico
+            // 
+            this.idServico.HeaderText = "idServico";
+            this.idServico.Name = "idServico";
+            this.idServico.ReadOnly = true;
+            this.idServico.Visible = false;
             // 
             // TelaAbrirCaixa
             // 
@@ -349,9 +368,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox cbProdutos;
         private System.Windows.Forms.DataGridView dGListaServProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
-        private System.Windows.Forms.DataGridViewButtonColumn remover;
         private System.Windows.Forms.Label lbTotal;
         private System.Windows.Forms.Button btFinalizarVenda;
         private System.Windows.Forms.Button btCancelar;
@@ -359,5 +375,10 @@
         private System.Windows.Forms.Button btAdicionarProduto;
         private System.Windows.Forms.Label lbValorTotal;
         private System.Windows.Forms.MaskedTextBox tbBuscarCpfCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
+        private System.Windows.Forms.DataGridViewButtonColumn remover;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idServico;
     }
 }

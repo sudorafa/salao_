@@ -121,7 +121,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
                 IfachadaServico fachada = new FachadaServico();
                 Projeto4_Junior.Modelo.Servico serv = fachada.BuscarServico(int.Parse(buscarServico));
                 
-                dGListaServProd.Rows.Add(serv.Descricao,serv.Valor,"Remover");
+                dGListaServProd.Rows.Add(serv.Descricao,serv.Valor,"Remover","",serv.IdServico);
                 this.valorTotal();
                 //MessageBox.Show("" + buscarServico);
             }
@@ -129,10 +129,6 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
             {
                 MessageBox.Show("Selecione pelo menos um serviço!");
             }
-                
-                
-            
-            //TODO 
         }
 
         private void valorTotal()
@@ -172,13 +168,38 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
                 IfachadaProduto fachada = new FachadaProduto();
                 Projeto4_Junior.Modelo.Produto prod = fachada.BuscarProduto(int.Parse(buscarProduto));
 
-                dGListaServProd.Rows.Add(prod.Descricao, prod.Valor, "Remover");
+                dGListaServProd.Rows.Add(prod.Descricao, prod.Valor, "Remover",prod.IdProduto,"");
                 this.valorTotal();
                 //MessageBox.Show("" + buscarServico);
             }
             else
             {
                 MessageBox.Show("Selecione pelo menos um produto!");
+            }
+        }
+
+        private void btFinalizarVenda_Click(object sender, EventArgs e)
+        {
+            //Validação dos campos
+            String funcionario = cbFuncionario.Text;
+            String cliente = tbCpfCliente.Text;
+            String total = lbValorTotal.Text;
+
+            if (funcionario == "")
+            {
+                MessageBox.Show("Preencha o campo Funcionário!");
+            }
+            else if(cliente == "")
+            {
+                MessageBox.Show("Preencha o campo Cliente!");
+            }
+            else if (total == "00,00" || dGListaServProd.RowCount == 0)
+            {
+                MessageBox.Show("Deve ter algum item na venda!");
+            }
+            else
+            {
+
             }
         }
     }

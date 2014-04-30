@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banco\BancoDadosVenda.cs" />
+    <Compile Include="Banco\PersistenciaVenda.cs" />
+    <Compile Include="ifachadaVenda.cs" />
     <Compile Include="InterfaceGrafica\Caixa\TelaAbrirCaixa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,9 +197,11 @@
     <Compile Include="Modelo\Servico.cs" />
     <Compile Include="Modelo\SessionUser.cs" />
     <Compile Include="Modelo\Usuario.cs" />
+    <Compile Include="Modelo\Venda.cs" />
     <Compile Include="Negocios\ArraList.cs" />
     <Compile Include="Negocios\ControladorCliente.cs" />
     <Compile Include="Negocios\ControladorFuncionario.cs" />
+    <Compile Include="Negocios\ControladorVenda.cs" />
     <Compile Include="Negocios\FachadaCliente.cs" />
     <Compile Include="Negocios\ControladorProduto.cs" />
     <Compile Include="Negocios\ControladorServico.cs" />
@@ -205,11 +210,13 @@
     <Compile Include="Negocios\FachadaProduto.cs" />
     <Compile Include="Negocios\FachadaServico.cs" />
     <Compile Include="Negocios\FachadaUsuario.cs" />
+    <Compile Include="Negocios\FachadaVenda.cs" />
     <Compile Include="Negocios\IBancoDadosCliente.cs" />
     <Compile Include="Negocios\IBancoDadosFuncionario.cs" />
     <Compile Include="Negocios\IBancoDadosProduto.cs" />
     <Compile Include="Negocios\IBancoDadosServico.cs" />
     <Compile Include="Negocios\IBancoDadosUsuario.cs" />
+    <Compile Include="Negocios\IBancoDadosVenda.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Projeto4DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
