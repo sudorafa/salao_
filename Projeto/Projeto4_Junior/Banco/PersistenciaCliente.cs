@@ -103,7 +103,7 @@ namespace Projeto4_Junior.Banco
             try
             {
                 String query = "update Cliente set Nome = '"+cliente.Nome+"', telefone = '"+cliente.Telefone+"', endereco = '"
-                +cliente.Endereco+"', DatNascimento = '"+cliente.DataNascimento+"', email = '"+cliente.Email+"' where cpf = '"+cliente.Cpf+"'";
+                +cliente.Endereco+"', DataNascimento = '"+cliente.DataNascimento+"', email = '"+cliente.Email+"' where cpf = '"+cliente.Cpf+"'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());              
                 SqlDataReader reader = comand.ExecuteReader();
