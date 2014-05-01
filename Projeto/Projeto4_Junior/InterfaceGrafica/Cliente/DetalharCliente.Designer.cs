@@ -100,6 +100,7 @@
             this.tbCpf.ReadOnly = true;
             this.tbCpf.Size = new System.Drawing.Size(96, 20);
             this.tbCpf.TabIndex = 6;
+            this.tbCpf.TextChanged += new System.EventHandler(this.tbCpf_TextChanged);
             // 
             // tbTelefone
             // 

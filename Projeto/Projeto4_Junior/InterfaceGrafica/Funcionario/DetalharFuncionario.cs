@@ -32,5 +32,10 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
         {
 
         }
+
+        private void tbCpf_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
