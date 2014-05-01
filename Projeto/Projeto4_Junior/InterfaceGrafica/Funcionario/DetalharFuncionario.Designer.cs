@@ -107,7 +107,7 @@
             this.tbDataNascimento.Location = new System.Drawing.Point(344, 52);
             this.tbDataNascimento.Name = "tbDataNascimento";
             this.tbDataNascimento.ReadOnly = true;
-            this.tbDataNascimento.Size = new System.Drawing.Size(60, 20);
+            this.tbDataNascimento.Size = new System.Drawing.Size(96, 20);
             this.tbDataNascimento.TabIndex = 7;
             // 
             // tbCpf
@@ -124,7 +124,7 @@
             this.tbTelefone.Location = new System.Drawing.Point(73, 52);
             this.tbTelefone.Name = "tbTelefone";
             this.tbTelefone.ReadOnly = true;
-            this.tbTelefone.Size = new System.Drawing.Size(74, 20);
+            this.tbTelefone.Size = new System.Drawing.Size(102, 20);
             this.tbTelefone.TabIndex = 5;
             // 
             // tbNome

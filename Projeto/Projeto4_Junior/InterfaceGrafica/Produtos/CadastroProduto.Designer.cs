@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.DescricaoProduto = new System.Windows.Forms.TextBox();
-            this.ValorProduto = new System.Windows.Forms.TextBox();
-            this.QuantidadeProduto = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Cancelar = new System.Windows.Forms.Button();
             this.Cadastrar = new System.Windows.Forms.Button();
+            this.ValorProduto = new System.Windows.Forms.MaskedTextBox();
+            this.QuantidadeProduto = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,23 +55,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Produto";
             // 
-            // label1
+            // DescricaoProduto
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Descrição:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Valor:";
+            this.DescricaoProduto.Location = new System.Drawing.Point(90, 37);
+            this.DescricaoProduto.Name = "DescricaoProduto";
+            this.DescricaoProduto.Size = new System.Drawing.Size(318, 20);
+            this.DescricaoProduto.TabIndex = 1;
             // 
             // label3
             // 
@@ -82,33 +71,30 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Quantidade:";
             // 
-            // DescricaoProduto
+            // label2
             // 
-            this.DescricaoProduto.Location = new System.Drawing.Point(90, 37);
-            this.DescricaoProduto.Name = "DescricaoProduto";
-            this.DescricaoProduto.Size = new System.Drawing.Size(318, 20);
-            this.DescricaoProduto.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Valor:";
             // 
-            // ValorProduto
+            // label1
             // 
-            this.ValorProduto.Location = new System.Drawing.Point(90, 76);
-            this.ValorProduto.Name = "ValorProduto";
-            this.ValorProduto.Size = new System.Drawing.Size(88, 20);
-            this.ValorProduto.TabIndex = 4;
-            // 
-            // QuantidadeProduto
-            // 
-            this.QuantidadeProduto.Location = new System.Drawing.Point(97, 118);
-            this.QuantidadeProduto.Name = "QuantidadeProduto";
-            this.QuantidadeProduto.Size = new System.Drawing.Size(45, 20);
-            this.QuantidadeProduto.TabIndex = 5;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Descrição:";
             // 
             // Cancelar
             // 
             this.Cancelar.Location = new System.Drawing.Point(245, 192);
             this.Cancelar.Name = "Cancelar";
             this.Cancelar.Size = new System.Drawing.Size(75, 23);
-            this.Cancelar.TabIndex = 6;
+            this.Cancelar.TabIndex = 5;
             this.Cancelar.Text = "Cancelar";
             this.Cancelar.UseVisualStyleBackColor = true;
             this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
@@ -118,10 +104,26 @@
             this.Cadastrar.Location = new System.Drawing.Point(356, 192);
             this.Cadastrar.Name = "Cadastrar";
             this.Cadastrar.Size = new System.Drawing.Size(75, 23);
-            this.Cadastrar.TabIndex = 7;
+            this.Cadastrar.TabIndex = 4;
             this.Cadastrar.Text = "Cadastrar";
             this.Cadastrar.UseVisualStyleBackColor = true;
             this.Cadastrar.Click += new System.EventHandler(this.Cadastrar_Click);
+            // 
+            // ValorProduto
+            // 
+            this.ValorProduto.Location = new System.Drawing.Point(90, 72);
+            this.ValorProduto.Mask = "9999999999999999999999999999999999999";
+            this.ValorProduto.Name = "ValorProduto";
+            this.ValorProduto.Size = new System.Drawing.Size(229, 20);
+            this.ValorProduto.TabIndex = 2;
+            // 
+            // QuantidadeProduto
+            // 
+            this.QuantidadeProduto.Location = new System.Drawing.Point(97, 118);
+            this.QuantidadeProduto.Mask = "9999999999";
+            this.QuantidadeProduto.Name = "QuantidadeProduto";
+            this.QuantidadeProduto.Size = new System.Drawing.Size(69, 20);
+            this.QuantidadeProduto.TabIndex = 3;
             // 
             // CadastroProduto
             // 
@@ -142,13 +144,13 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox QuantidadeProduto;
-        private System.Windows.Forms.TextBox ValorProduto;
         private System.Windows.Forms.TextBox DescricaoProduto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Cancelar;
         private System.Windows.Forms.Button Cadastrar;
+        private System.Windows.Forms.MaskedTextBox ValorProduto;
+        private System.Windows.Forms.MaskedTextBox QuantidadeProduto;
     }
 }

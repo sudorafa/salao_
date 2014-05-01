@@ -175,6 +175,7 @@
             this.comboBox_EnderecoUfCliente.Name = "comboBox_EnderecoUfCliente";
             this.comboBox_EnderecoUfCliente.Size = new System.Drawing.Size(44, 21);
             this.comboBox_EnderecoUfCliente.TabIndex = 12;
+            this.comboBox_EnderecoUfCliente.SelectedIndexChanged += new System.EventHandler(this.comboBox_EnderecoUfCliente_SelectedIndexChanged);
             // 
             // textBox_EnderecoCidadeCliente
             // 

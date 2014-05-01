@@ -107,5 +107,10 @@ namespace Projeto4_Junior
         {
             this.Close();
         }
+
+        private void comboBox_EnderecoUfCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
