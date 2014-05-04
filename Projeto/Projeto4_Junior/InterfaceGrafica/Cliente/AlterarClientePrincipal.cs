@@ -24,6 +24,47 @@ namespace Projeto4_Junior
             textBox_TelefoneCliente.Text = cli.Telefone;
             textBox_DataNascCliente.Text = cli.DataNascimento;
 
+            int cont = 0;
+            String concCep = "";
+
+            for (int x = 0; x < cli.Endereco.Length; x++)
+            {
+                String currentEnd = cli.Endereco.Substring(x, 1);
+                if (currentEnd != ",")
+                {
+                    switch (cont){
+                        case 0:
+                            textBox_EnderecoNumeroCliente.Text += currentEnd;
+                            break;
+                        case 1:
+                            textBox_EnderecoRuaCliente.Text += currentEnd;
+                            break;
+                        case 2:
+                            textBox_EnderecoComplementoCliente.Text += currentEnd;
+                            break;
+                        case 3:
+                            textBox_EnderecoBairroCliente.Text += currentEnd;
+                            break;
+                        case 4:
+                            textBox_EnderecoCidadeCliente.Text += currentEnd;
+                            break;
+                        case 5:
+                            if(currentEnd != " ")
+                                concCep += currentEnd;
+                            else
+                                textBox_EnderecoCepCliente.Text = concCep;                            
+                            break;
+                        case 6:
+                            comboBox_EnderecoUfCliente.Text += currentEnd;
+                            break;
+                    }    
+                }
+                else{
+                    cont++;
+                    x++;
+                }
+            }
+
             this.listar = list;
 
            
