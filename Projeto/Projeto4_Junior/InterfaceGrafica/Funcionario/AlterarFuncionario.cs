@@ -23,6 +23,49 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
             tbDataNascimento.Text = func.DataNascimento;
             tbPorcentagem.Text = ""+func.Porcentagem;
 
+            int cont = 0;
+            String concCep = "";
+
+            for (int x = 0; x < func.Endereco.Length; x++)
+            {
+                String currentEnd = func.Endereco.Substring(x, 1);
+                if (currentEnd != ",")
+                {
+                    switch (cont)
+                    {
+                        case 0:
+                            tbRuaEndereco.Text += currentEnd;
+                            break;
+                        case 1:
+                            tbNumeroEndereco.Text += currentEnd;
+                            break;
+                        case 2:
+                            tbComplementoEndereco.Text += currentEnd;
+                            break;
+                        case 3:
+                            tbBairroEndereco.Text += currentEnd;
+                            break;
+                        case 4:
+                             if (currentEnd != " ")
+                                concCep += currentEnd;
+                            else
+                                tbCepEndereco.Text = concCep;
+                            break;                           
+                        case 5:
+                            tbCidadeEndereco.Text += currentEnd;
+                            break;
+                        case 6:
+                            cbUfEndereco.Text += currentEnd;
+                            break;
+                    }
+                }
+                else
+                {
+                    cont++;
+                    x++;
+                }
+            }
+
             this.listar = listarFunc;
 
         }
@@ -119,12 +162,12 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
                     funcionario.DataNascimento = campo[3];
                     funcionario.Porcentagem = int.Parse(campo[4]);
 
-                    funcionario.Endereco = campoEndereco[0] + ", ";
-                    funcionario.Endereco += campoEndereco[1] + ", ";
-                    funcionario.Endereco += campoEndereco[2] + ", ";
-                    funcionario.Endereco += campoEndereco[3] + ", ";
-                    funcionario.Endereco += campoEndereco[4] + ", ";
-                    funcionario.Endereco += campoEndereco[5] + ", ";
+                    funcionario.Endereco = campoEndereco[0] + " , ";
+                    funcionario.Endereco += campoEndereco[1] + " , ";
+                    funcionario.Endereco += campoEndereco[2] + " , ";
+                    funcionario.Endereco += campoEndereco[3] + " , ";
+                    funcionario.Endereco += campoEndereco[4] + " , ";
+                    funcionario.Endereco += campoEndereco[5] + " , ";
                     funcionario.Endereco += campoEndereco[6];
 
                     fachadaFuncionario.AlterarFuncionario(funcionario);
