@@ -98,7 +98,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
 
                 for (int x = 0; x < campoEndereco.Length; x++)
                 {
-                    if (campoEndereco[x] != null || !campoEndereco.Equals(""))
+                    if (campoEndereco[x] == null || campoEndereco.Equals(""))
                     {
                         key = false;
                         MessageBox.Show("Preencha todos os campos do endereço!");
@@ -114,18 +114,18 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
                     Projeto4_Junior.Modelo.Funcionario funcionario = new Projeto4_Junior.Modelo.Funcionario();
 
                     funcionario.Nome = campo[0];
-                    funcionario.Telefone = campo[1];
-                    funcionario.Cpf = campo[2];
+                    funcionario.Cpf = campo[1];
+                    funcionario.Telefone = campo[2];
                     funcionario.DataNascimento = campo[3];
                     funcionario.Porcentagem = int.Parse(campo[4]);
 
-                    funcionario.Endereco = campo[5] + ", ";
-                    funcionario.Endereco += campo[6] + ", ";
-                    funcionario.Endereco += campo[7] + ", ";
-                    funcionario.Endereco += campo[8] + ", ";
-                    funcionario.Endereco += campo[9] + ", ";
-                    funcionario.Endereco += campo[10] + ", ";
-                    funcionario.Endereco += campo[11] ;
+                    funcionario.Endereco = campoEndereco[0] + ", ";
+                    funcionario.Endereco += campoEndereco[1] + ", ";
+                    funcionario.Endereco += campoEndereco[2] + ", ";
+                    funcionario.Endereco += campoEndereco[3] + ", ";
+                    funcionario.Endereco += campoEndereco[4] + ", ";
+                    funcionario.Endereco += campoEndereco[5] + ", ";
+                    funcionario.Endereco += campoEndereco[6];
 
                     fachadaFuncionario.AlterarFuncionario(funcionario);
                     listar.dataGridView1.Rows.Clear();

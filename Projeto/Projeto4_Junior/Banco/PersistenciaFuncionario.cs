@@ -131,7 +131,9 @@ namespace Projeto4_Junior.Banco
             FactoryConnection conn = new FactoryConnection();
             try
             {
-                String query = "UPDATE Funcionario SET nome = '" + func.Nome + "', telefone = '" + func.Telefone + "', endereco = '"+ func.Endereco + "', porcentagem = '"+func.Porcentagem+"', datNascimento = '" + func.DataNascimento + "' WHERE cpf = '"+func.Cpf+"'";
+                String query = "UPDATE Funcionario SET nome = '" + func.Nome + "', telefone = '" + func.Telefone +
+                "', endereco = '"+ func.Endereco + "', porcentagem = '"+func.Porcentagem+
+                "', dataNascimento = '" + func.DataNascimento + "' WHERE cpf = '"+func.Cpf+"'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
                 SqlDataReader reader = comand.ExecuteReader();
