@@ -210,5 +210,13 @@ namespace Projeto4_Junior
             AlterarLoginSenha tela = new AlterarLoginSenha(usu);
             tela.ShowDialog();
         }
+
+        private void aniversariantesClienteMenuItem_Click(object sender, EventArgs e)
+        {
+            Projeto4_Junior.InterfaceGrafica.Cliente.Aniversariantes tela =
+               new Projeto4_Junior.InterfaceGrafica.Cliente.Aniversariantes();
+
+            tela.Show();
+        }
     }
 }

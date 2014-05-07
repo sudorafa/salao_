@@ -120,6 +120,7 @@
             this.aniversariantesClienteMenuItem.Name = "aniversariantesClienteMenuItem";
             this.aniversariantesClienteMenuItem.Size = new System.Drawing.Size(154, 22);
             this.aniversariantesClienteMenuItem.Text = "Aniversariantes";
+            this.aniversariantesClienteMenuItem.Click += new System.EventHandler(this.aniversariantesClienteMenuItem_Click);
             // 
             // funcionariosMenuItem
             // 
