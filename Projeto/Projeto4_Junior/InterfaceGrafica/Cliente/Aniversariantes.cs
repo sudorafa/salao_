@@ -34,11 +34,8 @@ namespace Projeto4_Junior.InterfaceGrafica.Cliente
             {
                 DateTime data = DateTime.Now;
 
-                String dia = data.Day.ToString();
-                String mes = data.Month.ToString();
-                String ano = data.Year.ToString();
 
-                String dataAtual = dia + "/" + mes + "/" + ano;
+                string dataAtual = String.Format("{0:dd/MM}", data);
 
                 ArrayList lista = fachada.BuscarAniversariantes(dataAtual);
 
@@ -54,7 +51,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Cliente
                         Projeto4_Junior.Modelo.Cliente cliente = new Projeto4_Junior.Modelo.Cliente();
                         cliente = (Projeto4_Junior.Modelo.Cliente)cli;
 
-                        dataGridView1.Rows.Add(cliente.Nome);
+                        dataGridView1.Rows.Add(cliente.Nome, cliente.Cpf);
                     }
                 }
             }
@@ -75,7 +72,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Cliente
                         Projeto4_Junior.Modelo.Cliente cliente = new Projeto4_Junior.Modelo.Cliente();
                         cliente = (Projeto4_Junior.Modelo.Cliente)cli;
 
-                        dataGridView1.Rows.Add(cliente.Nome);
+                        dataGridView1.Rows.Add(cliente.Nome, cliente.Cpf);
                     }
                 }
 
@@ -84,7 +81,17 @@ namespace Projeto4_Junior.InterfaceGrafica.Cliente
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+            IFachadaCliente fachada = new FachadaCliente();
+
+            if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["nome"].Index)
+            {
+                String cpf = (String)dataGridView1[1, e.RowIndex].Value;
+                
+                Projeto4_Junior.Modelo.Cliente cliente = fachada.BuscarCliente(cpf);
+
+                DetalharCliente tela = new DetalharCliente(cliente);
+                tela.ShowDialog();
+            }
         }
 
        

@@ -205,7 +205,7 @@ namespace Projeto4_Junior.Banco
 
             try
             {
-                String query = "SELECT * FROM Cliente WHERE DataNascimento = '" + data + "'";
+                String query = "SELECT * FROM Cliente WHERE DataNascimento LIKE '%" + data + "%'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
 

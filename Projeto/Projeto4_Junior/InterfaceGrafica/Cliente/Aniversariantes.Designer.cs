@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             // 
             // Buscar
             // 
-            this.Buscar.Location = new System.Drawing.Point(132, 38);
+            this.Buscar.Location = new System.Drawing.Point(124, 38);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(55, 20);
             this.Buscar.TabIndex = 11;
@@ -74,10 +75,10 @@
             // 
             // DataBuscada
             // 
-            this.DataBuscada.Location = new System.Drawing.Point(59, 38);
-            this.DataBuscada.Mask = "99/99/9999";
+            this.DataBuscada.Location = new System.Drawing.Point(77, 38);
+            this.DataBuscada.Mask = "99/99";
             this.DataBuscada.Name = "DataBuscada";
-            this.DataBuscada.Size = new System.Drawing.Size(67, 20);
+            this.DataBuscada.Size = new System.Drawing.Size(41, 20);
             this.DataBuscada.TabIndex = 10;
             // 
             // label1
@@ -85,9 +86,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(20, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Data:";
+            this.label1.Text = "Dia/Mês:";
             // 
             // dataGridView1
             // 
@@ -95,7 +96,8 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nome});
+            this.nome,
+            this.cpf});
             this.dataGridView1.Location = new System.Drawing.Point(23, 67);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -109,6 +111,13 @@
             this.nome.Name = "nome";
             this.nome.ReadOnly = true;
             this.nome.Width = 320;
+            // 
+            // cpf
+            // 
+            this.cpf.HeaderText = "cpf";
+            this.cpf.Name = "cpf";
+            this.cpf.ReadOnly = true;
+            this.cpf.Visible = false;
             // 
             // Aniversariantes
             // 
@@ -135,5 +144,6 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
     }
 }
