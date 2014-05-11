@@ -10,7 +10,7 @@ namespace Projeto4_Junior
 {
     interface ifachadaVenda
     {
-        void CadastrarFuncionario(Venda venda);
+        int CadastrarFuncionario(Venda venda);
         Venda BuscarFuncionario(int idVenda);
         void RemoverFuncionario(int idVenda);
         void AlterarFuncionario(Venda venda);

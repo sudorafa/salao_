@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Projeto4_Junior.Banco
 {
@@ -12,29 +13,37 @@ namespace Projeto4_Junior.Banco
     {
         
 
-        public void CadastrarFuncionario(Modelo.Venda venda)
+        public int CadastrarFuncionario(Modelo.Venda venda)
         {
-            //TODO- concluir o nsert com oretorno do id da venda
+                FactoryConnection conn = new FactoryConnection();
+                int id = 0;
+                string sSQL = @"INSERT INTO venda
+					(ValorTotal, Data, CPFFuncionario, CPFCliente) VALUES (@valorTotal, @data, @cpfFuncionario, @cpfCliente)
+					SET @id = SCOPE_IDENTITY()";
+                try { 
+                    SqlCommand cmd = new SqlCommand(sSQL, conn.AbrirConnexao());
+                    cmd.Parameters.AddWithValue("@valorTotal", venda.ValorTotal);
+                    cmd.Parameters.AddWithValue("@data", venda.Data);
+                    cmd.Parameters.AddWithValue("@cpfFuncionario", venda.CPFFuncionario);
+                    cmd.Parameters.AddWithValue("@cpfCliente", venda.CPFCliente);
+                    cmd.Parameters.AddWithValue("@idVenda", 0).Direction = System.Data.ParameterDirection.Output;
 
-            /*
-            FactoryConnection conn = new FactoryConnection();
-            String query = "insert into venda (ValorTotal, Data, CPFFuncionario, CPFCliente) values (@param1,@param2) select SCOPE_IDENTITY()";
-            //Crio meu objeto SqlCommand passando meu sql e o objeto de conexão (que cada um cria de um jeito)
-            
-            SqlCommand cmd = new SqlCommand(query, conn);
+                
+                    cmd.ExecuteNonQuery();
+                    id = Convert.ToInt32(cmd.Parameters["@idVenda"].Value);
 
-            // crio os parâmetros
-            cmd.Parameters.Add("@campo1", SqlDbType.VarChar, 100);
-            cmd.Parameters.Add("@campo2", SqlDbType.VarChar, 100);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+                }
+                finally
+                {
+                    conn.FecharConnecxao();
 
-            // valorizo os parâmetros
-            cmd.Parameters["@campo1"].Value = "teste";
-            cmd.Parameters["@campo2"].Value = "campo";
-
-            // recupero o IDENTITY através da execução do ExecuteScalar
-            int identity = Convert.ToInt16(cmd.ExecuteScalar());
-             * 
-             * */
+                }
+                return id;
+                           
         }
 
         public Modelo.Venda BuscarFuncionario(int idVenda)

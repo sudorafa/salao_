@@ -11,9 +11,9 @@ namespace Projeto4_Junior.Banco
     {
         IBancoDadosVenda ibanco = new PersistenciaVenda();
 
-        public void CadastrarFuncionario(Modelo.Venda venda)
+        public int CadastrarFuncionario(Modelo.Venda venda)
         {
-            ibanco.CadastrarFuncionario(venda);
+            return ibanco.CadastrarFuncionario(venda);
         }
 
         public Modelo.Venda BuscarFuncionario(int idVenda)

@@ -10,9 +10,9 @@ namespace Projeto4_Junior.Negocios
     {
         public ifachadaVenda ifachada = new ControladorVenda();
 
-        public void CadastrarFuncionario(Modelo.Venda venda)
+        public int CadastrarFuncionario(Modelo.Venda venda)
         {
-            ifachada.CadastrarFuncionario(venda);
+            return ifachada.CadastrarFuncionario(venda);
         }
 
         public Modelo.Venda BuscarFuncionario(int idVenda)

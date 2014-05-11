@@ -199,7 +199,9 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
             }
             else
             {
-
+                //DateTime date = new DateTime();
+                //date = DateTime.Now;
+               //MessageBox.Show("" + date);
             }
         }
     }

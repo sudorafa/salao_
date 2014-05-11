@@ -9,9 +9,9 @@ namespace Projeto4_Junior.Negocios
     class ControladorVenda : ifachadaVenda
     {
         public IBancoDadosVenda ibanco = new BancoDadosVenda();
-        public void CadastrarFuncionario(Modelo.Venda venda)
+        public int CadastrarFuncionario(Modelo.Venda venda)
         {
-            ibanco.CadastrarFuncionario(venda);
+           return ibanco.CadastrarFuncionario(venda);
         }
 
         public Modelo.Venda BuscarFuncionario(int idVenda)
