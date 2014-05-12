@@ -11,15 +11,15 @@ namespace Projeto4_Junior.Banco
 {
     public class PersistenciaVenda : IBancoDadosVenda
     {
-        
 
-        public int CadastrarFuncionario(Modelo.Venda venda)
+
+        public int CadastrarVenda(Modelo.Venda venda)
         {
                 FactoryConnection conn = new FactoryConnection();
                 int id = 0;
                 string sSQL = @"INSERT INTO venda
 					(ValorTotal, Data, CPFFuncionario, CPFCliente) VALUES (@valorTotal, @data, @cpfFuncionario, @cpfCliente)
-					SET @id = SCOPE_IDENTITY()";
+					SET @idVenda = SCOPE_IDENTITY()";
                 try { 
                     SqlCommand cmd = new SqlCommand(sSQL, conn.AbrirConnexao());
                     cmd.Parameters.AddWithValue("@valorTotal", venda.ValorTotal);
@@ -30,6 +30,7 @@ namespace Projeto4_Junior.Banco
 
                 
                     cmd.ExecuteNonQuery();
+
                     id = Convert.ToInt32(cmd.Parameters["@idVenda"].Value);
 
                 }
@@ -45,28 +46,49 @@ namespace Projeto4_Junior.Banco
                 return id;
                            
         }
+        public void CadastrarItensVenda(Modelo.ItensVenda item)
+        {
+            FactoryConnection conn = new FactoryConnection();
+            try
+            {
+                String query = "insert into VendaProdutoServico (idVenda, idServico, idProduto) values" +
+                "('" + item.IdVenda + "', '" + item.IdServico + "', '" + item.IdProduto + "')";
 
-        public Modelo.Venda BuscarFuncionario(int idVenda)
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+                SqlDataReader reader = comand.ExecuteReader();
+                
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
+            }
+        }
+
+        public Modelo.Venda BuscarVenda(int idVenda)
         {
             throw new NotImplementedException();
         }
 
-        public void RemoverFuncionario(int idVenda)
+        public void RemoverVenda(int idVenda)
         {
             throw new NotImplementedException();
         }
 
-        public void AlterarFuncionario(Modelo.Venda venda)
+        public void AlterarVenda(Modelo.Venda venda)
         {
             throw new NotImplementedException();
         }
 
-        public bool VerificaFunc(int idVenda)
+        public bool VerificaVenda(int idVenda)
         {
             throw new NotImplementedException();
         }
 
-        public System.Collections.ArrayList ListarFuncionario(int idVenda)
+        public System.Collections.ArrayList ListarVenda(int idVenda)
         {
             throw new NotImplementedException();
         }

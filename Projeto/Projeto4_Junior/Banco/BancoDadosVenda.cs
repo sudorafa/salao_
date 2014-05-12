@@ -11,34 +11,38 @@ namespace Projeto4_Junior.Banco
     {
         IBancoDadosVenda ibanco = new PersistenciaVenda();
 
-        public int CadastrarFuncionario(Modelo.Venda venda)
+        public int CadastrarVenda(Modelo.Venda venda)
         {
-            return ibanco.CadastrarFuncionario(venda);
+            return ibanco.CadastrarVenda(venda);
+        }
+        public void CadastrarItensVenda(Modelo.ItensVenda item)
+        {
+            ibanco.CadastrarItensVenda(item);
         }
 
-        public Modelo.Venda BuscarFuncionario(int idVenda)
+        public Modelo.Venda BuscarVenda(int idVenda)
         {
-            return ibanco.BuscarFuncionario(idVenda);
+            return ibanco.BuscarVenda(idVenda);
         }
 
-        public void RemoverFuncionario(int idVenda)
+        public void RemoverVenda(int idVenda)
         {
-            ibanco.RemoverFuncionario(idVenda);
+            ibanco.RemoverVenda(idVenda);
         }
 
-        public void AlterarFuncionario(Modelo.Venda venda)
+        public void AlterarVenda(Modelo.Venda venda)
         {
-            ibanco.AlterarFuncionario(venda);
+            ibanco.AlterarVenda(venda);
         }
 
-        public bool VerificaFunc(int idVenda)
+        public bool VerificaVenda(int idVenda)
         {
-            return ibanco.VerificaFunc(idVenda);
+            return ibanco.VerificaVenda(idVenda);
         }
 
-        public System.Collections.ArrayList ListarFuncionario(int idVenda)
+        public System.Collections.ArrayList ListarVenda(int idVenda)
         {
-            return ibanco.ListarFuncionario(idVenda);
+            return ibanco.ListarVenda(idVenda);
         }
     }
 }

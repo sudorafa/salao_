@@ -10,34 +10,39 @@ namespace Projeto4_Junior.Negocios
     {
         public ifachadaVenda ifachada = new ControladorVenda();
 
-        public int CadastrarFuncionario(Modelo.Venda venda)
+        public int CadastrarVenda(Modelo.Venda venda)
         {
-            return ifachada.CadastrarFuncionario(venda);
+            return ifachada.CadastrarVenda(venda);
         }
 
-        public Modelo.Venda BuscarFuncionario(int idVenda)
+        public void CadastrarItensVenda(Modelo.ItensVenda item)
         {
-            return ifachada.BuscarFuncionario(idVenda);
+            ifachada.CadastrarItensVenda(item);
         }
 
-        public void RemoverFuncionario(int idVenda)
+        public Modelo.Venda BuscarVenda(int idVenda)
         {
-            ifachada.RemoverFuncionario(idVenda);
+            return ifachada.BuscarVenda(idVenda);
         }
 
-        public void AlterarFuncionario(Modelo.Venda venda)
+        public void RemoverVenda(int idVenda)
         {
-            ifachada.AlterarFuncionario(venda);
+            ifachada.RemoverVenda(idVenda);
         }
 
-        public bool VerificaFunc(int idVenda)
+        public void AlterarVenda(Modelo.Venda venda)
         {
-            return ifachada.VerificaFunc(idVenda);
+            ifachada.AlterarVenda(venda);
         }
 
-        public System.Collections.ArrayList ListarFuncionario(int idVenda)
+        public bool VerificaVenda(int idVenda)
         {
-            return ifachada.ListarFuncionario(idVenda);
+            return ifachada.VerificaVenda(idVenda);
+        }
+
+        public System.Collections.ArrayList ListarVenda(int idVenda)
+        {
+            return ifachada.ListarVenda(idVenda);
         }
     }
 }

@@ -121,7 +121,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
                 IfachadaServico fachada = new FachadaServico();
                 Projeto4_Junior.Modelo.Servico serv = fachada.BuscarServico(int.Parse(buscarServico));
                 
-                dGListaServProd.Rows.Add(serv.Descricao,serv.Valor,"Remover","",serv.IdServico);
+                dGListaServProd.Rows.Add(serv.Descricao,serv.Valor,"Remover",0,serv.IdServico);
                 this.valorTotal();
                 //MessageBox.Show("" + buscarServico);
             }
@@ -168,7 +168,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
                 IfachadaProduto fachada = new FachadaProduto();
                 Projeto4_Junior.Modelo.Produto prod = fachada.BuscarProduto(int.Parse(buscarProduto));
 
-                dGListaServProd.Rows.Add(prod.Descricao, prod.Valor, "Remover",prod.IdProduto,"");
+                dGListaServProd.Rows.Add(prod.Descricao, prod.Valor, "Remover",prod.IdProduto,0);
                 this.valorTotal();
                 //MessageBox.Show("" + buscarServico);
             }
@@ -181,10 +181,10 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
         private void btFinalizarVenda_Click(object sender, EventArgs e)
         {
             //Validação dos campos
-            String funcionario = cbFuncionario.Text;
+            String funcionario = (cbFuncionario.SelectedItem as Modelo.ComboboxItem).Value.ToString();
             String cliente = tbCpfCliente.Text;
             String total = lbValorTotal.Text;
-
+           
             if (funcionario == "")
             {
                 MessageBox.Show("Preencha o campo Funcionário!");
@@ -199,9 +199,33 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
             }
             else
             {
-                //DateTime date = new DateTime();
-                //date = DateTime.Now;
-               //MessageBox.Show("" + date);
+               
+                ifachadaVenda fachada = new FachadaVenda();
+                Modelo.Venda venda = new Modelo.Venda();
+                Modelo.ItensVenda item = new Modelo.ItensVenda();
+                venda.CPFCliente = cliente;
+                venda.CPFFuncionario = funcionario;
+                venda.Data = DateTime.Now.ToString("dd/MM/yyyy");
+                venda.ValorTotal = decimal.Parse(total);
+
+                item.IdVenda = fachada.CadastrarVenda(venda);
+                if (item.IdVenda != 0)
+                {
+                    for (int i = 0; i < dGListaServProd.RowCount; i++)
+                    {
+                        int idProduto = (int)dGListaServProd.Rows[i].Cells[4].Value;
+                        int idServico = (int)dGListaServProd.Rows[i].Cells[3].Value;
+                        if(idProduto != 0 ){
+                            item.IdProduto = idProduto;
+                        }
+                        if(idServico != 0){
+                            item.IdServico = idServico;
+                        }
+
+                        fachada.CadastrarItensVenda(item);
+                    }
+                }
+               
             }
         }
     }
