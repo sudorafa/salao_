@@ -49,10 +49,20 @@ namespace Projeto4_Junior.Banco
         public void CadastrarItensVenda(Modelo.ItensVenda item)
         {
             FactoryConnection conn = new FactoryConnection();
+            String query = "";
             try
             {
-                String query = "insert into VendaProdutoServico (idVenda, idServico, idProduto) values" +
-                "('" + item.IdVenda + "', '" + item.IdServico + "', '" + item.IdProduto + "')";
+                if(item.IdProduto == 0)
+                {
+                    query = "insert into VendaProdutoServico (idVenda, idServico) values" +
+                     "('" + item.IdVenda + "', '" + item.IdServico  + "')";
+                }
+                if (item.IdServico == 0)
+                {
+                    query = "insert into VendaProdutoServico (idVenda,  idProduto) values" +
+                        "('" + item.IdVenda + "', '"  + item.IdProduto + "')";
+                }
+                
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
                 SqlDataReader reader = comand.ExecuteReader();

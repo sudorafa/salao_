@@ -213,13 +213,15 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
                 {
                     for (int i = 0; i < dGListaServProd.RowCount; i++)
                     {
-                        int idProduto = (int)dGListaServProd.Rows[i].Cells[4].Value;
-                        int idServico = (int)dGListaServProd.Rows[i].Cells[3].Value;
+                        int idProduto = (int)dGListaServProd.Rows[i].Cells[3].Value;
+                        int idServico = (int)dGListaServProd.Rows[i].Cells[4].Value;
                         if(idProduto != 0 ){
                             item.IdProduto = idProduto;
+                            item.IdServico = 0;
                         }
                         if(idServico != 0){
                             item.IdServico = idServico;
+                            item.IdProduto = 0;
                         }
 
                         fachada.CadastrarItensVenda(item);
