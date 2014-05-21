@@ -17,9 +17,9 @@ namespace Projeto4_Junior.Banco
         {            
             this.ibancodados.CadastrarServico(servico);
         }
-        public Servico BuscarServico(String Descricao)
+        public Servico BuscarServico(int idServico)
         {            
-            return this.ibancodados.BuscarServico(Descricao);
+            return this.ibancodados.BuscarServico(idServico);
         }
         public void RemoverServico(String Descricao)
         {           

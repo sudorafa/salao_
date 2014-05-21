@@ -34,6 +34,10 @@ namespace Projeto4_Junior.Negocios
         {
             return this.ifachada.ListarCliente(busca);
         }
+        public ArrayList BuscarAniversariantes(String data)
+        {
+            return this.ifachada.BuscarAniversariantes(data);
+        }
         
     }
 }

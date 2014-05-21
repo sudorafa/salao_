@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.QuantidadeProd = new System.Windows.Forms.TextBox();
-            this.ValorProd = new System.Windows.Forms.TextBox();
             this.DescricaoPro = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Alterar = new System.Windows.Forms.Button();
             this.Cancelar = new System.Windows.Forms.Button();
+            this.QuantidadeProd = new System.Windows.Forms.MaskedTextBox();
+            this.ValorProd = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,26 +55,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Produto";
             // 
-            // QuantidadeProd
-            // 
-            this.QuantidadeProd.Location = new System.Drawing.Point(97, 118);
-            this.QuantidadeProd.Name = "QuantidadeProd";
-            this.QuantidadeProd.Size = new System.Drawing.Size(45, 20);
-            this.QuantidadeProd.TabIndex = 5;
-            // 
-            // ValorProd
-            // 
-            this.ValorProd.Location = new System.Drawing.Point(90, 76);
-            this.ValorProd.Name = "ValorProd";
-            this.ValorProd.Size = new System.Drawing.Size(88, 20);
-            this.ValorProd.TabIndex = 4;
-            // 
             // DescricaoPro
             // 
             this.DescricaoPro.Location = new System.Drawing.Point(90, 37);
             this.DescricaoPro.Name = "DescricaoPro";
             this.DescricaoPro.Size = new System.Drawing.Size(318, 20);
-            this.DescricaoPro.TabIndex = 3;
+            this.DescricaoPro.TabIndex = 1;
             // 
             // label3
             // 
@@ -108,7 +94,7 @@
             this.Alterar.Location = new System.Drawing.Point(333, 203);
             this.Alterar.Name = "Alterar";
             this.Alterar.Size = new System.Drawing.Size(75, 23);
-            this.Alterar.TabIndex = 9;
+            this.Alterar.TabIndex = 4;
             this.Alterar.Text = "Alterar";
             this.Alterar.UseVisualStyleBackColor = true;
             this.Alterar.Click += new System.EventHandler(this.Alterar_Click);
@@ -118,10 +104,26 @@
             this.Cancelar.Location = new System.Drawing.Point(222, 203);
             this.Cancelar.Name = "Cancelar";
             this.Cancelar.Size = new System.Drawing.Size(75, 23);
-            this.Cancelar.TabIndex = 8;
+            this.Cancelar.TabIndex = 5;
             this.Cancelar.Text = "Cancelar";
             this.Cancelar.UseVisualStyleBackColor = true;
             this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
+            // 
+            // QuantidadeProd
+            // 
+            this.QuantidadeProd.Location = new System.Drawing.Point(97, 118);
+            this.QuantidadeProd.Mask = "9999999999";
+            this.QuantidadeProd.Name = "QuantidadeProd";
+            this.QuantidadeProd.Size = new System.Drawing.Size(69, 20);
+            this.QuantidadeProd.TabIndex = 3;
+            // 
+            // ValorProd
+            // 
+            this.ValorProd.Location = new System.Drawing.Point(90, 76);
+            this.ValorProd.Mask = "9999999999999999999999999999999999999";
+            this.ValorProd.Name = "ValorProd";
+            this.ValorProd.Size = new System.Drawing.Size(229, 20);
+            this.ValorProd.TabIndex = 2;
             // 
             // AlterarProduto
             // 
@@ -143,13 +145,13 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox QuantidadeProd;
-        private System.Windows.Forms.TextBox ValorProd;
         private System.Windows.Forms.TextBox DescricaoPro;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Alterar;
         private System.Windows.Forms.Button Cancelar;
+        private System.Windows.Forms.MaskedTextBox QuantidadeProd;
+        private System.Windows.Forms.MaskedTextBox ValorProd;
     }
 }

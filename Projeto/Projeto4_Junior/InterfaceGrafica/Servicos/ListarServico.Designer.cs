@@ -30,13 +30,14 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Servico_Buscado = new System.Windows.Forms.TextBox();
+            this.BuscarListaServico = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remover = new System.Windows.Forms.DataGridViewButtonColumn();
             this.alterar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Servico_Buscado = new System.Windows.Forms.TextBox();
-            this.BuscarListaServico = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.idServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -63,13 +64,40 @@
             this.Descricao,
             this.Valor,
             this.remover,
-            this.alterar});
+            this.alterar,
+            this.idServico});
             this.dataGridView1.Location = new System.Drawing.Point(18, 62);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(595, 260);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Servico_Buscado
+            // 
+            this.Servico_Buscado.Location = new System.Drawing.Point(124, 35);
+            this.Servico_Buscado.Name = "Servico_Buscado";
+            this.Servico_Buscado.Size = new System.Drawing.Size(354, 20);
+            this.Servico_Buscado.TabIndex = 1;
+            // 
+            // BuscarListaServico
+            // 
+            this.BuscarListaServico.Location = new System.Drawing.Point(484, 33);
+            this.BuscarListaServico.Name = "BuscarListaServico";
+            this.BuscarListaServico.Size = new System.Drawing.Size(75, 23);
+            this.BuscarListaServico.TabIndex = 5;
+            this.BuscarListaServico.Text = "Buscar";
+            this.BuscarListaServico.UseVisualStyleBackColor = true;
+            this.BuscarListaServico.Click += new System.EventHandler(this.BuscarListaServico_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(80, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nome:";
             // 
             // Descricao
             // 
@@ -102,31 +130,12 @@
             this.alterar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.alterar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // Servico_Buscado
+            // idServico
             // 
-            this.Servico_Buscado.Location = new System.Drawing.Point(124, 35);
-            this.Servico_Buscado.Name = "Servico_Buscado";
-            this.Servico_Buscado.Size = new System.Drawing.Size(354, 20);
-            this.Servico_Buscado.TabIndex = 1;
-            // 
-            // BuscarListaServico
-            // 
-            this.BuscarListaServico.Location = new System.Drawing.Point(484, 33);
-            this.BuscarListaServico.Name = "BuscarListaServico";
-            this.BuscarListaServico.Size = new System.Drawing.Size(75, 23);
-            this.BuscarListaServico.TabIndex = 5;
-            this.BuscarListaServico.Text = "Buscar";
-            this.BuscarListaServico.UseVisualStyleBackColor = true;
-            this.BuscarListaServico.Click += new System.EventHandler(this.BuscarListaServico_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome:";
+            this.idServico.HeaderText = "idServico";
+            this.idServico.Name = "idServico";
+            this.idServico.ReadOnly = true;
+            this.idServico.Visible = false;
             // 
             // FormularioListarServico
             // 
@@ -155,6 +164,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
         private System.Windows.Forms.DataGridViewButtonColumn remover;
         private System.Windows.Forms.DataGridViewButtonColumn alterar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idServico;
 
     }
 }

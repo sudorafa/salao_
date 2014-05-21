@@ -113,9 +113,122 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
 
         private void btAdicionarServico_Click(object sender, EventArgs e)
         {
-            String buscarServico = (cbServicos.SelectedItem as Projeto4_Junior.Modelo.ComboboxItem).Value.ToString();
-            MessageBox.Show("" + buscarServico);
-            //TODO 
+            String buscarServico = cbServicos.Text;
+
+            if (buscarServico != "")
+            {
+                buscarServico = (cbServicos.SelectedItem as Projeto4_Junior.Modelo.ComboboxItem).Value.ToString();
+                IfachadaServico fachada = new FachadaServico();
+                Projeto4_Junior.Modelo.Servico serv = fachada.BuscarServico(int.Parse(buscarServico));
+                
+                dGListaServProd.Rows.Add(serv.Descricao,serv.Valor,"Remover",0,serv.IdServico);
+                this.valorTotal();
+                //MessageBox.Show("" + buscarServico);
+            }
+            else
+            {
+                MessageBox.Show("Selecione pelo menos um serviço!");
+            }
+        }
+
+        private void valorTotal()
+        {
+            decimal total = 0;
+            for (int i = 0; i < dGListaServProd.RowCount; i++)
+            {
+                decimal x = (decimal)dGListaServProd.Rows[i].Cells[1].Value;
+                total += x;
+            }
+            if (total != 0) { 
+                lbValorTotal.Text = ""+total;
+            }
+            else
+            {
+                lbValorTotal.Text = "00,00";
+            }
+        }
+
+        private void dGListaServProd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex == dGListaServProd.Columns["remover"].Index)
+            {
+                this.dGListaServProd.Rows.Remove(this.dGListaServProd.CurrentRow);
+                this.dGListaServProd.Refresh();
+                this.valorTotal();
+            }
+        }
+
+        private void btAdicionarProduto_Click(object sender, EventArgs e)
+        {
+            String buscarProduto = cbProdutos.Text;
+
+            if (buscarProduto != "")
+            {
+                buscarProduto = (cbProdutos.SelectedItem as Projeto4_Junior.Modelo.ComboboxItem).Value.ToString();
+                IfachadaProduto fachada = new FachadaProduto();
+                Projeto4_Junior.Modelo.Produto prod = fachada.BuscarProduto(int.Parse(buscarProduto));
+
+                dGListaServProd.Rows.Add(prod.Descricao, prod.Valor, "Remover",prod.IdProduto,0);
+                this.valorTotal();
+                //MessageBox.Show("" + buscarServico);
+            }
+            else
+            {
+                MessageBox.Show("Selecione pelo menos um produto!");
+            }
+        }
+
+        private void btFinalizarVenda_Click(object sender, EventArgs e)
+        {
+            //Validação dos campos
+            String funcionario = (cbFuncionario.SelectedItem as Modelo.ComboboxItem).Value.ToString();
+            String cliente = tbCpfCliente.Text;
+            String total = lbValorTotal.Text;
+           
+            if (funcionario == "")
+            {
+                MessageBox.Show("Preencha o campo Funcionário!");
+            }
+            else if(cliente == "")
+            {
+                MessageBox.Show("Preencha o campo Cliente!");
+            }
+            else if (total == "00,00" || dGListaServProd.RowCount == 0)
+            {
+                MessageBox.Show("Deve ter algum item na venda!");
+            }
+            else
+            {
+               
+                ifachadaVenda fachada = new FachadaVenda();
+                Modelo.Venda venda = new Modelo.Venda();
+                Modelo.ItensVenda item = new Modelo.ItensVenda();
+                venda.CPFCliente = cliente;
+                venda.CPFFuncionario = funcionario;
+                venda.Data = DateTime.Now.ToString("dd/MM/yyyy");
+                venda.ValorTotal = decimal.Parse(total);
+
+                item.IdVenda = fachada.CadastrarVenda(venda);
+                if (item.IdVenda != 0)
+                {
+                    for (int i = 0; i < dGListaServProd.RowCount; i++)
+                    {
+                        int idProduto = (int)dGListaServProd.Rows[i].Cells[3].Value;
+                        int idServico = (int)dGListaServProd.Rows[i].Cells[4].Value;
+                        if(idProduto != 0 ){
+                            item.IdProduto = idProduto;
+                            item.IdServico = 0;
+                        }
+                        if(idServico != 0){
+                            item.IdServico = idServico;
+                            item.IdProduto = 0;
+                        }
+
+                        fachada.CadastrarItensVenda(item);
+                    }
+                }
+               
+            }
         }
     }
 }

@@ -8,29 +8,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace Projeto4_Junior.InterfaceGrafica.Cliente
 {
     public partial class DetalharCliente : Form
     {
+        private Modelo.Cliente cliente;
+
         public DetalharCliente()
         {
             InitializeComponent();
         }
 
-        public DetalharCliente(Projeto4_Junior.Modelo.Cliente cliente)
+        public DetalharCliente(Modelo.Cliente cliente)
         {
             InitializeComponent();
-            NomCliente.Text = cliente.Nome;
-            CpfCliente.Text = cliente.Cpf;
-            TelCliente.Text = cliente.Telefone;
-            DataNascCliente.Text = cliente.DataNascimento;
-            EndeCliente.Text = cliente.Endereco;
-            EmailCliente.Text = cliente.Email;
-            
+            tbNome.Text = cliente.Nome;
+            tbCpf.Text = cliente.Cpf;
+            tbTelefone.Text = cliente.Telefone;
+            tbDataNascimento.Text = cliente.DataNascimento;
+            tbEmail.Text = cliente.Email;
+            tbEndereco.Text = cliente.Endereco;
         }
 
-        private void DetalharCliente_Load(object sender, EventArgs e)
+        private void tbCpf_TextChanged(object sender, EventArgs e)
         {
 
         }

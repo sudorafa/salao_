@@ -68,5 +68,9 @@ namespace Projeto4_Junior.Negocios
         {
             return ibancodados.ListarCliente(busca);
         }
+        public ArrayList BuscarAniversariantes(String data)
+        {
+            return this.ibancodados.BuscarAniversariantes(data);
+        }
     }
 }

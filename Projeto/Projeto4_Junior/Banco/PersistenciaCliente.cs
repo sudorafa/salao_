@@ -103,7 +103,7 @@ namespace Projeto4_Junior.Banco
             try
             {
                 String query = "update Cliente set Nome = '"+cliente.Nome+"', telefone = '"+cliente.Telefone+"', endereco = '"
-                +cliente.Endereco+"', DatNascimento = '"+cliente.DataNascimento+"', email = '"+cliente.Email+"' where cpf = '"+cliente.Cpf+"'";
+                +cliente.Endereco+"', DataNascimento = '"+cliente.DataNascimento+"', email = '"+cliente.Email+"' where cpf = '"+cliente.Cpf+"'";
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());              
                 SqlDataReader reader = comand.ExecuteReader();
@@ -198,5 +198,50 @@ namespace Projeto4_Junior.Banco
 
             return lista;
         }
+        public ArrayList BuscarAniversariantes(String data)
+        {
+            FactoryConnection conn = new FactoryConnection();
+            ArrayList lista = new ArrayList();
+
+            try
+            {
+                String query = "SELECT * FROM Cliente WHERE DataNascimento LIKE '%" + data + "%'";
+
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+
+                SqlDataReader reader = comand.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Cliente cli = new Cliente();
+
+                    cli.Nome = (String)reader["nome"];
+                    cli.Cpf = (String)reader["cpf"];
+                    cli.DataNascimento = (String)reader["dataNascimento"];
+                    cli.Email = (String)reader["email"];
+                    cli.Endereco = (String)reader["endereco"];
+                    cli.Telefone = (String)reader["telefone"];
+                    cli.Ativo = (Boolean)reader["Ativo"];
+
+                    if (cli.Ativo == true)
+                    {
+                        lista.Add(cli);
+                    }
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+            }
+            finally
+            {
+                conn.FecharConnecxao();
+            }
+
+            return lista;
+        }
     }
 }
+

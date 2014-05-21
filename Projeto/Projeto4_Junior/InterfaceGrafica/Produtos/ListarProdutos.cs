@@ -31,7 +31,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Produtos
                 Projeto4_Junior.Modelo.Produto produto = new Projeto4_Junior.Modelo.Produto();
                 produto = (Projeto4_Junior.Modelo.Produto)func;
                 // PREENCHE AS COLUNAS DE 'NOME', 'CPF' E O NOMES DOS BOTÕES PADRÕES
-                dataGridView1.Rows.Add(produto.Descricao, produto.Valor, produto.Quantidade, "Remover", "Alterar");
+                dataGridView1.Rows.Add(produto.Descricao, produto.Valor, produto.Quantidade, "Remover", "Alterar", produto.IdProduto);
             }
         }
 
@@ -57,8 +57,8 @@ namespace Projeto4_Junior.InterfaceGrafica.Produtos
             {
                 
                 //Carrega usuario que vai ser alterado!
-                String descricao = (String)dataGridView1[0, e.RowIndex].Value;
-                Projeto4_Junior.Modelo.Produto prod = fachada.BuscarProduto(descricao);
+                int idProduto = (int)dataGridView1[5, e.RowIndex].Value;
+                Projeto4_Junior.Modelo.Produto prod = fachada.BuscarProduto(idProduto);
 
                 AlterarProduto tela = new AlterarProduto(prod, this);
                 tela.ShowDialog();
@@ -67,9 +67,9 @@ namespace Projeto4_Junior.InterfaceGrafica.Produtos
             {
                 // Caso o nome da coluna seja outro troca o nome do indice em cima.
 
-                String descricao = (String)dataGridView1[0, e.RowIndex].Value;
+                int idProduto = (int)dataGridView1[5, e.RowIndex].Value;
                 //Carrega o funcionario para ser detalhado.
-                Projeto4_Junior.Modelo.Produto prod = fachada.BuscarProduto(descricao);
+                Projeto4_Junior.Modelo.Produto prod = fachada.BuscarProduto(idProduto);
                 
                 DetalharProduto tela = new DetalharProduto(prod);
                 tela.ShowDialog();

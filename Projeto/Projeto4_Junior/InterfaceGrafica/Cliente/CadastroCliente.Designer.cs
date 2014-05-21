@@ -143,38 +143,39 @@
             // 
             this.comboBox_EnderecoUfCliente.FormattingEnabled = true;
             this.comboBox_EnderecoUfCliente.Items.AddRange(new object[] {
-            "AC\t",
-            "AL\t",
-            "AP\t",
-            "AM\t",
-            "BA\t",
-            "CE\t",
-            "DF\t",
-            "ES\t",
-            "GO\t",
-            "MA\t",
-            "MT\t",
-            "MS\t",
-            "MG\t",
-            "PA\t",
-            "PB\t",
-            "PR\t",
-            "PE\t",
-            "PI\t",
-            "RJ\t",
-            "RN\t",
-            "RS\t",
-            "RO\t",
-            "RR\t",
-            "SC\t",
-            "SP\t",
-            "SE\t",
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
             "TO"});
             this.comboBox_EnderecoUfCliente.Location = new System.Drawing.Point(525, 70);
             this.comboBox_EnderecoUfCliente.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_EnderecoUfCliente.Name = "comboBox_EnderecoUfCliente";
             this.comboBox_EnderecoUfCliente.Size = new System.Drawing.Size(44, 21);
             this.comboBox_EnderecoUfCliente.TabIndex = 12;
+            this.comboBox_EnderecoUfCliente.SelectedIndexChanged += new System.EventHandler(this.comboBox_EnderecoUfCliente_SelectedIndexChanged);
             // 
             // textBox_EnderecoCidadeCliente
             // 

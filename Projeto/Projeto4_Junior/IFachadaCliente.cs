@@ -16,5 +16,6 @@ namespace Projeto4_Junior
         void RemoverCliente(String cpf);
         void AlterarCliente(Cliente cliente);
         ArrayList ListarCliente(String busca);
+        ArrayList BuscarAniversariantes(String data);
     }
 }

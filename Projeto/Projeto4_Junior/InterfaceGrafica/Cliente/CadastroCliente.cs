@@ -88,5 +88,10 @@ namespace Projeto4_Junior
                 MessageBox.Show("Preencha todos os campos!");
             }
         }
+
+        private void comboBox_EnderecoUfCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -34,13 +34,13 @@
             this.BuscarListaCliente = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remover = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.alterar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.projeto4DataSet = new Projeto4_Junior.Projeto4DataSet();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteTableAdapter = new Projeto4_Junior.Projeto4DataSetTableAdapters.ClienteTableAdapter();
+            this.alterar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.remover = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projeto4DataSet)).BeginInit();
@@ -105,37 +105,6 @@
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // nome
-            // 
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            this.nome.Width = 220;
-            // 
-            // cpf
-            // 
-            this.cpf.HeaderText = "CPF";
-            this.cpf.Name = "cpf";
-            this.cpf.ReadOnly = true;
-            this.cpf.Width = 130;
-            // 
-            // remover
-            // 
-            this.remover.HeaderText = "";
-            this.remover.Name = "remover";
-            this.remover.ReadOnly = true;
-            this.remover.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.remover.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.remover.Text = "ee";
-            // 
-            // alterar
-            // 
-            this.alterar.HeaderText = "";
-            this.alterar.Name = "alterar";
-            this.alterar.ReadOnly = true;
-            this.alterar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.alterar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // projeto4DataSet
             // 
             this.projeto4DataSet.DataSetName = "Projeto4DataSet";
@@ -149,6 +118,37 @@
             // clienteTableAdapter
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // alterar
+            // 
+            this.alterar.HeaderText = "";
+            this.alterar.Name = "alterar";
+            this.alterar.ReadOnly = true;
+            this.alterar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.alterar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // remover
+            // 
+            this.remover.HeaderText = "";
+            this.remover.Name = "remover";
+            this.remover.ReadOnly = true;
+            this.remover.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.remover.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.remover.Text = "ee";
+            // 
+            // cpf
+            // 
+            this.cpf.HeaderText = "CPF";
+            this.cpf.Name = "cpf";
+            this.cpf.ReadOnly = true;
+            this.cpf.Width = 130;
+            // 
+            // nome
+            // 
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            this.nome.Width = 220;
             // 
             // ListarCliente
             // 

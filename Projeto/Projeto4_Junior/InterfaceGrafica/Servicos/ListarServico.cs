@@ -31,7 +31,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Servicos
                 Projeto4_Junior.Modelo.Servico servico = new Projeto4_Junior.Modelo.Servico();
                 servico = (Projeto4_Junior.Modelo.Servico)func;
                 // PREENCHE AS COLUNAS DE 'descricao', 'serviço' E O NOMES DOS BOTÕES PADRÕES
-                dataGridView1.Rows.Add(servico.Descricao, servico.Valor, "Remover", "Alterar");
+                dataGridView1.Rows.Add(servico.Descricao, servico.Valor, "Remover", "Alterar", servico.IdServico);
             }
         }
 
@@ -55,17 +55,15 @@ namespace Projeto4_Junior.InterfaceGrafica.Servicos
             }
             else if (e.RowIndex < 0 || e.ColumnIndex == dataGridView1.Columns["alterar"].Index)
             {
-                DialogResult dr = MessageBox.Show("Tem certeza que deseja alterar " + dataGridView1[0, e.RowIndex].Value + "?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-                if (dr == DialogResult.Yes)
-                {
+                    //AO PEDIDO DE PAULO, FOI RETIRADO A MENSAGEM "DESEJA ALTERAR - SIM ? OU NAO?" 
                     //Carrega usuario que vai ser alterado!
-                    String descricao = Convert.ToString(dataGridView1[0, e.RowIndex].Value);
-                    Projeto4_Junior.Modelo.Servico servic = fachadaServico.BuscarServico(descricao);                         
+                    int idServico = (int)dataGridView1[4, e.RowIndex].Value;
                     
-                    AlterarServico tela = new AlterarServico(servic, this);
-                    tela.ShowDialog();
-                }
+                    Projeto4_Junior.Modelo.Servico servic = fachadaServico.BuscarServico(idServico);                         
+                    
+                   AlterarServico tela = new AlterarServico(servic, this);
+                   tela.ShowDialog();
+                
             }
 
         }

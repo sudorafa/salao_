@@ -16,5 +16,7 @@ namespace Projeto4_Junior.Negocios
         void AlterarCliente(Cliente cliente);
         bool VerificaExistenciaCliente(String cpf);
         ArrayList ListarCliente(String busca);
+        ArrayList BuscarAniversariantes(String data);
+
     }
 }

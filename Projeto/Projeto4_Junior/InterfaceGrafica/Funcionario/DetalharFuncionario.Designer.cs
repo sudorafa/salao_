@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox_EnderecoCadastroCliente = new System.Windows.Forms.GroupBox();
+            this.tbEndereco = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbPorcentagem = new System.Windows.Forms.TextBox();
             this.lbPorcentagem = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.lbCpf = new System.Windows.Forms.Label();
             this.lbTelefone = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
-            this.tbEndereco = new System.Windows.Forms.TextBox();
             this.groupBox_EnderecoCadastroCliente.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +56,15 @@
             this.groupBox_EnderecoCadastroCliente.TabIndex = 16;
             this.groupBox_EnderecoCadastroCliente.TabStop = false;
             this.groupBox_EnderecoCadastroCliente.Text = "Endereço:";
+            // 
+            // tbEndereco
+            // 
+            this.tbEndereco.Location = new System.Drawing.Point(18, 18);
+            this.tbEndereco.Multiline = true;
+            this.tbEndereco.Name = "tbEndereco";
+            this.tbEndereco.ReadOnly = true;
+            this.tbEndereco.Size = new System.Drawing.Size(612, 54);
+            this.tbEndereco.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -98,7 +107,7 @@
             this.tbDataNascimento.Location = new System.Drawing.Point(344, 52);
             this.tbDataNascimento.Name = "tbDataNascimento";
             this.tbDataNascimento.ReadOnly = true;
-            this.tbDataNascimento.Size = new System.Drawing.Size(60, 20);
+            this.tbDataNascimento.Size = new System.Drawing.Size(96, 20);
             this.tbDataNascimento.TabIndex = 7;
             // 
             // tbCpf
@@ -108,13 +117,14 @@
             this.tbCpf.ReadOnly = true;
             this.tbCpf.Size = new System.Drawing.Size(96, 20);
             this.tbCpf.TabIndex = 6;
+            this.tbCpf.TextChanged += new System.EventHandler(this.tbCpf_TextChanged);
             // 
             // tbTelefone
             // 
             this.tbTelefone.Location = new System.Drawing.Point(73, 52);
             this.tbTelefone.Name = "tbTelefone";
             this.tbTelefone.ReadOnly = true;
-            this.tbTelefone.Size = new System.Drawing.Size(74, 20);
+            this.tbTelefone.Size = new System.Drawing.Size(102, 20);
             this.tbTelefone.TabIndex = 5;
             // 
             // tbNome
@@ -160,15 +170,6 @@
             this.lbNome.Size = new System.Drawing.Size(38, 13);
             this.lbNome.TabIndex = 0;
             this.lbNome.Text = "Nome:";
-            // 
-            // tbEndereco
-            // 
-            this.tbEndereco.Location = new System.Drawing.Point(18, 18);
-            this.tbEndereco.Multiline = true;
-            this.tbEndereco.Name = "tbEndereco";
-            this.tbEndereco.ReadOnly = true;
-            this.tbEndereco.Size = new System.Drawing.Size(612, 54);
-            this.tbEndereco.TabIndex = 0;
             // 
             // DetalharFuncionario
             // 
