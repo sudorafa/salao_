@@ -15,9 +15,9 @@ namespace Projeto4_Junior.Negocios
             return ifachada.CadastrarVenda(venda);
         }
 
-        public void CadastrarItensVenda(Modelo.ItensVenda item)
+        public Boolean CadastrarItensVenda(Modelo.ItensVenda item)
         {
-            ifachada.CadastrarItensVenda(item);
+            return ifachada.CadastrarItensVenda(item);
         }
 
         public Modelo.Venda BuscarVenda(int idVenda)
@@ -28,6 +28,10 @@ namespace Projeto4_Junior.Negocios
         public void RemoverVenda(int idVenda)
         {
             ifachada.RemoverVenda(idVenda);
+        }
+        public void RemoverVendaItem(int idVenda)
+        {
+            ifachada.RemoverVendaItem(idVenda);
         }
 
         public void AlterarVenda(Modelo.Venda venda)

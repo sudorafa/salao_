@@ -46,7 +46,7 @@ namespace Projeto4_Junior.Banco
                 return id;
                            
         }
-        public void CadastrarItensVenda(Modelo.ItensVenda item)
+        public Boolean CadastrarItensVenda(Modelo.ItensVenda item)
         {
             FactoryConnection conn = new FactoryConnection();
             String query = "";
@@ -66,11 +66,15 @@ namespace Projeto4_Junior.Banco
 
                 SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
                 SqlDataReader reader = comand.ExecuteReader();
+
+                return true;
                 
             }
             catch (Exception e)
             {
+                
                 MessageBox.Show("Não foi possível conectar-se ao banco de dados!");
+                return false;
             }
             finally
             {
@@ -85,7 +89,43 @@ namespace Projeto4_Junior.Banco
 
         public void RemoverVenda(int idVenda)
         {
-            throw new NotImplementedException();
+            FactoryConnection conn = new FactoryConnection();
+            try
+            {
+                String query = "DELETE FROM venda WHERE idVenda='"+idVenda+"'";
+
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+
+                SqlDataReader reader = comand.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                
+            }
+            finally
+            {
+                conn.FecharConnecxao();
+            }
+        }
+        public void RemoverVendaItem(int idVenda)
+        {
+            FactoryConnection conn = new FactoryConnection();
+            try
+            {
+                String query = "DELETE FROM VendaProdutoServico WHERE idVenda='" + idVenda + "'";
+
+                SqlCommand comand = new SqlCommand(query, conn.AbrirConnexao());
+
+                SqlDataReader reader = comand.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+
+            }
+            finally
+            {
+                conn.FecharConnecxao();
+            }
         }
 
         public void AlterarVenda(Modelo.Venda venda)

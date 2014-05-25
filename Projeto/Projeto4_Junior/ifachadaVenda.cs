@@ -11,9 +11,10 @@ namespace Projeto4_Junior
     interface ifachadaVenda
     {
         int CadastrarVenda(Venda venda);
-        void CadastrarItensVenda(ItensVenda item);
+        Boolean CadastrarItensVenda(ItensVenda item);
         Venda BuscarVenda(int idVenda);
         void RemoverVenda(int idVenda);
+        void RemoverVendaItem(int idVenda);
         void AlterarVenda(Venda venda);
         bool VerificaVenda(int idVenda);
         ArrayList ListarVenda(int idVenda);

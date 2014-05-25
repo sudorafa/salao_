@@ -211,6 +211,7 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
                 item.IdVenda = fachada.CadastrarVenda(venda);
                 if (item.IdVenda != 0)
                 {
+                    Boolean verifMessagem = true;
                     for (int i = 0; i < dGListaServProd.RowCount; i++)
                     {
                         int idProduto = (int)dGListaServProd.Rows[i].Cells[3].Value;
@@ -224,7 +225,24 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
                             item.IdProduto = 0;
                         }
 
-                        fachada.CadastrarItensVenda(item);
+                        Boolean verificar = fachada.CadastrarItensVenda(item);
+
+                        if (verificar == false)
+                        {
+                            fachada.RemoverVendaItem(item.IdVenda);
+                            fachada.RemoverVenda(item.IdVenda);
+                            verifMessagem = false;
+                        }
+                    }
+
+                    if (verifMessagem)
+                    {
+                        MessageBox.Show("Venda Realizada com Sucesso!!");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao Venda Realizada!!");
                     }
                 }
                
