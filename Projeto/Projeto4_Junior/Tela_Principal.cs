@@ -1,4 +1,5 @@
-﻿using Projeto4_Junior.InterfaceGrafica.Caixa;
+﻿using Projeto4_Junior.Banco;
+using Projeto4_Junior.InterfaceGrafica.Caixa;
 using Projeto4_Junior.InterfaceGrafica.Funcionario;
 using Projeto4_Junior.InterfaceGrafica.Produtos;
 using Projeto4_Junior.InterfaceGrafica.Servicos;
@@ -70,13 +71,13 @@ namespace Projeto4_Junior
             {
                this.funcionariosMenuItem.Enabled = false;
                this.servicosMenuItem.Enabled = false;
-               this.relatoriosMenuItem.Enabled = false;
+               //this.relatoriosMenuItem.Enabled = false;
                this.estoqueMenuItem.Enabled = false;
                this.usuariosMenuItem.Enabled = false;
                this.button_InserirFuncionarioBarraDeFerramentas.Enabled = false;
                this.button_InserirServicoBarraDeFerramentas.Enabled = false;
-               this.button_RelatorioDiarioBarraDeFerramentas.Enabled = false;
-               this.button_RelatorioEstoqueBarraDeFerramentas.Enabled = false;
+               //this.button_RelatorioDiarioBarraDeFerramentas.Enabled = false;
+               //this.button_RelatorioEstoqueBarraDeFerramentas.Enabled = false;
                this.button_InserirUsuarioBarraDeFerramentas.Enabled = false;                
             }
               
@@ -217,6 +218,19 @@ namespace Projeto4_Junior
                new Projeto4_Junior.InterfaceGrafica.Cliente.Aniversariantes();
 
             tela.Show();
+        }
+
+        private void button_RelatorioDiarioBarraDeFerramentas_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PersistenciaVenda v = new PersistenciaVenda();
+            v.RelatorioBalacoDiario();
+            MessageBox.Show("Relatório gerado com sucesso! LOCAL DO ARQUIVO DISCO C.", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
     }
 }

@@ -37,6 +37,7 @@
             this.tbNomeFuncionario = new System.Windows.Forms.TextBox();
             this.btBurcarFuncionario = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -47,9 +48,11 @@
             this.groupBox1.Controls.Add(this.tbNomeFuncionario);
             this.groupBox1.Controls.Add(this.btBurcarFuncionario);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(14, 20);
+            this.groupBox1.Location = new System.Drawing.Point(19, 25);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(637, 354);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(849, 436);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funcionários";
@@ -64,10 +67,11 @@
             this.cpf,
             this.remover,
             this.alterar});
-            this.dataGridView1.Location = new System.Drawing.Point(18, 62);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 76);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(595, 260);
+            this.dataGridView1.Size = new System.Drawing.Size(793, 320);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -104,16 +108,18 @@
             // 
             // tbNomeFuncionario
             // 
-            this.tbNomeFuncionario.Location = new System.Drawing.Point(124, 35);
+            this.tbNomeFuncionario.Location = new System.Drawing.Point(165, 43);
+            this.tbNomeFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.tbNomeFuncionario.Name = "tbNomeFuncionario";
-            this.tbNomeFuncionario.Size = new System.Drawing.Size(354, 20);
+            this.tbNomeFuncionario.Size = new System.Drawing.Size(471, 22);
             this.tbNomeFuncionario.TabIndex = 1;
             // 
             // btBurcarFuncionario
             // 
-            this.btBurcarFuncionario.Location = new System.Drawing.Point(484, 33);
+            this.btBurcarFuncionario.Location = new System.Drawing.Point(645, 41);
+            this.btBurcarFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.btBurcarFuncionario.Name = "btBurcarFuncionario";
-            this.btBurcarFuncionario.Size = new System.Drawing.Size(75, 23);
+            this.btBurcarFuncionario.Size = new System.Drawing.Size(100, 28);
             this.btBurcarFuncionario.TabIndex = 5;
             this.btBurcarFuncionario.Text = "Buscar";
             this.btBurcarFuncionario.UseVisualStyleBackColor = true;
@@ -122,18 +128,32 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 35);
+            this.label1.Location = new System.Drawing.Point(107, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(588, 469);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(193, 28);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Gerar Relatório";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ListarFuncionario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 394);
+            this.ClientSize = new System.Drawing.Size(887, 504);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "ListarFuncionario";
             this.Text = "ListarFuncionario";
@@ -156,6 +176,7 @@
         private System.Windows.Forms.TextBox tbNomeFuncionario;
         private System.Windows.Forms.Button btBurcarFuncionario;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
 
     }
 }

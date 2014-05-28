@@ -10,6 +10,8 @@ using System.Data.SqlClient;
 using Projeto4_Junior.Factory;
 using System.Collections;
 using System.Windows.Forms;
+using System.Data;
+using System.IO;
 
 namespace Projeto4_Junior.Banco
 {
@@ -203,7 +205,28 @@ namespace Projeto4_Junior.Banco
             }
             return retorno;
         }
+        public void RelatorioFuncionario()
+        {
+            FactoryConnection conn = new FactoryConnection();
+            string endereco = "C:\\relatorioFuncionario.csv";
+            using (StreamWriter writer = new StreamWriter(endereco, false, Encoding.GetEncoding("iso-8859-15")))
+            {
+                writer.WriteLine("NOME;QUANTIDADE DE SERVIÇOS;VALOR TOTAL/SERVIÇOS");
+             
+                    SqlCommand sqlComand = new SqlCommand("RelatorioFuncionario", conn.AbrirConnexao());
 
+                    using (IDataReader reader = sqlComand.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                                writer.WriteLine(Convert.ToString(reader["Nome"]) + ";" + 
+                                                 Convert.ToString(reader["Quantidade"]) + ";" +
+                                                 Convert.ToString(reader["Valor"]));
+                        }
+                    }
+                    conn.FecharConnecxao();
+                }
+            }
         public ArrayList ListarFuncionario(String buscar)
         {
             FactoryConnection conn = new FactoryConnection();

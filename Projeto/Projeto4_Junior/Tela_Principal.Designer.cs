@@ -40,13 +40,6 @@
             this.servicosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoServicoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarServicosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatoriosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.balancoDiarioRelatorioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatorioServicosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatorioServicosPorClienteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatorioServicosPorFuncionariosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatorioConvenieciaMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatorioEstoqueMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estoqueMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaEstoqueMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saidaEstoqueMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,8 +56,6 @@
             this.button_AniversariantesBarraDeFerramentas = new System.Windows.Forms.ToolStripButton();
             this.button_InserirFuncionarioBarraDeFerramentas = new System.Windows.Forms.ToolStripButton();
             this.button_InserirServicoBarraDeFerramentas = new System.Windows.Forms.ToolStripButton();
-            this.button_RelatorioDiarioBarraDeFerramentas = new System.Windows.Forms.ToolStripButton();
-            this.button_RelatorioEstoqueBarraDeFerramentas = new System.Windows.Forms.ToolStripButton();
             this.button_InserirUsuarioBarraDeFerramentas = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.button_AbriCaixa = new System.Windows.Forms.ToolStripButton();
@@ -79,14 +70,14 @@
             this.clientesMenuItem,
             this.funcionariosMenuItem,
             this.servicosMenuItem,
-            this.relatoriosMenuItem,
             this.estoqueMenuItem,
             this.usuariosMenuItem,
             this.meuUsuarioMenuItem,
             this.sairMenuItem});
             this.menu_principal.Location = new System.Drawing.Point(0, 0);
             this.menu_principal.Name = "menu_principal";
-            this.menu_principal.Size = new System.Drawing.Size(562, 24);
+            this.menu_principal.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menu_principal.Size = new System.Drawing.Size(749, 28);
             this.menu_principal.TabIndex = 0;
             this.menu_principal.Text = "MenuPrincipal";
             this.menu_principal.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_principal_ItemClicked);
@@ -98,27 +89,27 @@
             this.listarClientesMenuItem,
             this.aniversariantesClienteMenuItem});
             this.clientesMenuItem.Name = "clientesMenuItem";
-            this.clientesMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.clientesMenuItem.Size = new System.Drawing.Size(73, 24);
             this.clientesMenuItem.Text = "&Clientes";
             // 
             // inserirClienteMenuItem
             // 
             this.inserirClienteMenuItem.Name = "inserirClienteMenuItem";
-            this.inserirClienteMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.inserirClienteMenuItem.Size = new System.Drawing.Size(178, 24);
             this.inserirClienteMenuItem.Text = "Inserir";
             this.inserirClienteMenuItem.Click += new System.EventHandler(this.inserirClienteMenuItem_Click);
             // 
             // listarClientesMenuItem
             // 
             this.listarClientesMenuItem.Name = "listarClientesMenuItem";
-            this.listarClientesMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.listarClientesMenuItem.Size = new System.Drawing.Size(178, 24);
             this.listarClientesMenuItem.Text = "Listar";
             this.listarClientesMenuItem.Click += new System.EventHandler(this.listarClienteMenuItem_Click);
             // 
             // aniversariantesClienteMenuItem
             // 
             this.aniversariantesClienteMenuItem.Name = "aniversariantesClienteMenuItem";
-            this.aniversariantesClienteMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.aniversariantesClienteMenuItem.Size = new System.Drawing.Size(178, 24);
             this.aniversariantesClienteMenuItem.Text = "Aniversariantes";
             this.aniversariantesClienteMenuItem.Click += new System.EventHandler(this.aniversariantesClienteMenuItem_Click);
             // 
@@ -128,20 +119,20 @@
             this.inserirFuncionarioMenuItem,
             this.listarFuncionariosMenuItem});
             this.funcionariosMenuItem.Name = "funcionariosMenuItem";
-            this.funcionariosMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.funcionariosMenuItem.Size = new System.Drawing.Size(104, 24);
             this.funcionariosMenuItem.Text = "&Funcionários";
             // 
             // inserirFuncionarioMenuItem
             // 
             this.inserirFuncionarioMenuItem.Name = "inserirFuncionarioMenuItem";
-            this.inserirFuncionarioMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.inserirFuncionarioMenuItem.Size = new System.Drawing.Size(118, 24);
             this.inserirFuncionarioMenuItem.Text = "Inserir";
             this.inserirFuncionarioMenuItem.Click += new System.EventHandler(this.inserirFuncionarioMenuItem_Click);
             // 
             // listarFuncionariosMenuItem
             // 
             this.listarFuncionariosMenuItem.Name = "listarFuncionariosMenuItem";
-            this.listarFuncionariosMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.listarFuncionariosMenuItem.Size = new System.Drawing.Size(118, 24);
             this.listarFuncionariosMenuItem.Text = "Listar";
             this.listarFuncionariosMenuItem.Click += new System.EventHandler(this.listarFuncionariosMenuItem_Click);
             // 
@@ -151,72 +142,22 @@
             this.novoServicoMenuItem,
             this.listarServicosMenuItem});
             this.servicosMenuItem.Name = "servicosMenuItem";
-            this.servicosMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.servicosMenuItem.Size = new System.Drawing.Size(75, 24);
             this.servicosMenuItem.Text = "Se&rviços";
             // 
             // novoServicoMenuItem
             // 
             this.novoServicoMenuItem.Name = "novoServicoMenuItem";
-            this.novoServicoMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.novoServicoMenuItem.Size = new System.Drawing.Size(169, 24);
             this.novoServicoMenuItem.Text = "Novo serviço";
             this.novoServicoMenuItem.Click += new System.EventHandler(this.novoServicoMenuItem_Click);
             // 
             // listarServicosMenuItem
             // 
             this.listarServicosMenuItem.Name = "listarServicosMenuItem";
-            this.listarServicosMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.listarServicosMenuItem.Size = new System.Drawing.Size(169, 24);
             this.listarServicosMenuItem.Text = "Listar serviços";
             this.listarServicosMenuItem.Click += new System.EventHandler(this.listarServicosMenuItem_Click);
-            // 
-            // relatoriosMenuItem
-            // 
-            this.relatoriosMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.balancoDiarioRelatorioMenuItem,
-            this.relatorioServicosMenuItem,
-            this.relatorioConvenieciaMenuItem,
-            this.relatorioEstoqueMenuItem});
-            this.relatoriosMenuItem.Name = "relatoriosMenuItem";
-            this.relatoriosMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.relatoriosMenuItem.Text = "Re&latórios";
-            // 
-            // balancoDiarioRelatorioMenuItem
-            // 
-            this.balancoDiarioRelatorioMenuItem.Name = "balancoDiarioRelatorioMenuItem";
-            this.balancoDiarioRelatorioMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.balancoDiarioRelatorioMenuItem.Text = "Balanço diário";
-            // 
-            // relatorioServicosMenuItem
-            // 
-            this.relatorioServicosMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.relatorioServicosPorClienteMenuItem,
-            this.relatorioServicosPorFuncionariosMenuItem});
-            this.relatorioServicosMenuItem.Name = "relatorioServicosMenuItem";
-            this.relatorioServicosMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.relatorioServicosMenuItem.Text = "Serviços";
-            // 
-            // relatorioServicosPorClienteMenuItem
-            // 
-            this.relatorioServicosPorClienteMenuItem.Name = "relatorioServicosPorClienteMenuItem";
-            this.relatorioServicosPorClienteMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.relatorioServicosPorClienteMenuItem.Text = "Por cliente";
-            // 
-            // relatorioServicosPorFuncionariosMenuItem
-            // 
-            this.relatorioServicosPorFuncionariosMenuItem.Name = "relatorioServicosPorFuncionariosMenuItem";
-            this.relatorioServicosPorFuncionariosMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.relatorioServicosPorFuncionariosMenuItem.Text = "Por funcionário";
-            // 
-            // relatorioConvenieciaMenuItem
-            // 
-            this.relatorioConvenieciaMenuItem.Name = "relatorioConvenieciaMenuItem";
-            this.relatorioConvenieciaMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.relatorioConvenieciaMenuItem.Text = "Conveniêcia";
-            // 
-            // relatorioEstoqueMenuItem
-            // 
-            this.relatorioEstoqueMenuItem.Name = "relatorioEstoqueMenuItem";
-            this.relatorioEstoqueMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.relatorioEstoqueMenuItem.Text = "Estoque";
             // 
             // estoqueMenuItem
             // 
@@ -225,26 +166,26 @@
             this.saidaEstoqueMenuItem,
             this.listarToolStripMenuItem});
             this.estoqueMenuItem.Name = "estoqueMenuItem";
-            this.estoqueMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.estoqueMenuItem.Size = new System.Drawing.Size(74, 24);
             this.estoqueMenuItem.Text = "&Estoque";
             // 
             // entradaEstoqueMenuItem
             // 
             this.entradaEstoqueMenuItem.Name = "entradaEstoqueMenuItem";
-            this.entradaEstoqueMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.entradaEstoqueMenuItem.Size = new System.Drawing.Size(152, 24);
             this.entradaEstoqueMenuItem.Text = "Entradas";
             this.entradaEstoqueMenuItem.Click += new System.EventHandler(this.entradaEstoqueMenuItem_Click);
             // 
             // saidaEstoqueMenuItem
             // 
             this.saidaEstoqueMenuItem.Name = "saidaEstoqueMenuItem";
-            this.saidaEstoqueMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.saidaEstoqueMenuItem.Size = new System.Drawing.Size(152, 24);
             this.saidaEstoqueMenuItem.Text = "Saídas";
             // 
             // listarToolStripMenuItem
             // 
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.listarToolStripMenuItem.Text = "Listar";
             this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
             // 
@@ -254,20 +195,20 @@
             this.inserirUsuarioMenuItem,
             this.listarUsuariosMenuItem});
             this.usuariosMenuItem.Name = "usuariosMenuItem";
-            this.usuariosMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.usuariosMenuItem.Size = new System.Drawing.Size(77, 24);
             this.usuariosMenuItem.Text = "&Usuários";
             // 
             // inserirUsuarioMenuItem
             // 
             this.inserirUsuarioMenuItem.Name = "inserirUsuarioMenuItem";
-            this.inserirUsuarioMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.inserirUsuarioMenuItem.Size = new System.Drawing.Size(152, 24);
             this.inserirUsuarioMenuItem.Text = "Inserir";
             this.inserirUsuarioMenuItem.Click += new System.EventHandler(this.inserirUsuarioMenuItem_Click);
             // 
             // listarUsuariosMenuItem
             // 
             this.listarUsuariosMenuItem.Name = "listarUsuariosMenuItem";
-            this.listarUsuariosMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.listarUsuariosMenuItem.Size = new System.Drawing.Size(152, 24);
             this.listarUsuariosMenuItem.Text = "Listar";
             this.listarUsuariosMenuItem.Click += new System.EventHandler(this.listarUsuariosMenuItem_Click);
             // 
@@ -277,27 +218,27 @@
             this.alterarCadastroMeuUsuarioMenuItem,
             this.alterarLoginSenhaMeuUsuarioMenuItem});
             this.meuUsuarioMenuItem.Name = "meuUsuarioMenuItem";
-            this.meuUsuarioMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.meuUsuarioMenuItem.Size = new System.Drawing.Size(104, 24);
             this.meuUsuarioMenuItem.Text = "&Meu Usuário";
             // 
             // alterarCadastroMeuUsuarioMenuItem
             // 
             this.alterarCadastroMeuUsuarioMenuItem.Name = "alterarCadastroMeuUsuarioMenuItem";
-            this.alterarCadastroMeuUsuarioMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.alterarCadastroMeuUsuarioMenuItem.Size = new System.Drawing.Size(219, 24);
             this.alterarCadastroMeuUsuarioMenuItem.Text = "Alterar cadastro";
             this.alterarCadastroMeuUsuarioMenuItem.Click += new System.EventHandler(this.alterarCadastroMeuUsuarioMenuItem_Click);
             // 
             // alterarLoginSenhaMeuUsuarioMenuItem
             // 
             this.alterarLoginSenhaMeuUsuarioMenuItem.Name = "alterarLoginSenhaMeuUsuarioMenuItem";
-            this.alterarLoginSenhaMeuUsuarioMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.alterarLoginSenhaMeuUsuarioMenuItem.Size = new System.Drawing.Size(219, 24);
             this.alterarLoginSenhaMeuUsuarioMenuItem.Text = "Alterar login && senha";
             this.alterarLoginSenhaMeuUsuarioMenuItem.Click += new System.EventHandler(this.alterarLoginSenhaMeuUsuarioMenuItem_Click);
             // 
             // sairMenuItem
             // 
             this.sairMenuItem.Name = "sairMenuItem";
-            this.sairMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.sairMenuItem.Size = new System.Drawing.Size(46, 24);
             this.sairMenuItem.Text = "&Sair";
             this.sairMenuItem.Click += new System.EventHandler(this.sairMenuItem_Click);
             // 
@@ -309,15 +250,13 @@
             this.button_AniversariantesBarraDeFerramentas,
             this.button_InserirFuncionarioBarraDeFerramentas,
             this.button_InserirServicoBarraDeFerramentas,
-            this.button_RelatorioDiarioBarraDeFerramentas,
-            this.button_RelatorioEstoqueBarraDeFerramentas,
             this.button_InserirUsuarioBarraDeFerramentas,
             this.toolStripButton1,
             this.button_AbriCaixa,
             this.button_SairBarraDeFerramentas});
-            this.barraDeFerramentas.Location = new System.Drawing.Point(0, 24);
+            this.barraDeFerramentas.Location = new System.Drawing.Point(0, 28);
             this.barraDeFerramentas.Name = "barraDeFerramentas";
-            this.barraDeFerramentas.Size = new System.Drawing.Size(562, 54);
+            this.barraDeFerramentas.Size = new System.Drawing.Size(749, 54);
             this.barraDeFerramentas.TabIndex = 1;
             // 
             // button_InserirClienteBarraDeFerramentas
@@ -358,24 +297,6 @@
             this.button_InserirServicoBarraDeFerramentas.Size = new System.Drawing.Size(51, 51);
             this.button_InserirServicoBarraDeFerramentas.Text = "Inserir serviço";
             this.button_InserirServicoBarraDeFerramentas.Click += new System.EventHandler(this.button_InserirServicoBarraDeFerramentas_Click);
-            // 
-            // button_RelatorioDiarioBarraDeFerramentas
-            // 
-            this.button_RelatorioDiarioBarraDeFerramentas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.button_RelatorioDiarioBarraDeFerramentas.Image = ((System.Drawing.Image)(resources.GetObject("button_RelatorioDiarioBarraDeFerramentas.Image")));
-            this.button_RelatorioDiarioBarraDeFerramentas.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.button_RelatorioDiarioBarraDeFerramentas.Name = "button_RelatorioDiarioBarraDeFerramentas";
-            this.button_RelatorioDiarioBarraDeFerramentas.Size = new System.Drawing.Size(51, 51);
-            this.button_RelatorioDiarioBarraDeFerramentas.Text = "Balanço diário";
-            // 
-            // button_RelatorioEstoqueBarraDeFerramentas
-            // 
-            this.button_RelatorioEstoqueBarraDeFerramentas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.button_RelatorioEstoqueBarraDeFerramentas.Image = ((System.Drawing.Image)(resources.GetObject("button_RelatorioEstoqueBarraDeFerramentas.Image")));
-            this.button_RelatorioEstoqueBarraDeFerramentas.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.button_RelatorioEstoqueBarraDeFerramentas.Name = "button_RelatorioEstoqueBarraDeFerramentas";
-            this.button_RelatorioEstoqueBarraDeFerramentas.Size = new System.Drawing.Size(51, 51);
-            this.button_RelatorioEstoqueBarraDeFerramentas.Text = "Relatório estoque";
             // 
             // button_InserirUsuarioBarraDeFerramentas
             // 
@@ -419,12 +340,13 @@
             // 
             // Form_Index
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 310);
+            this.ClientSize = new System.Drawing.Size(749, 382);
             this.Controls.Add(this.barraDeFerramentas);
             this.Controls.Add(this.menu_principal);
             this.MainMenuStrip = this.menu_principal;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form_Index";
             this.Text = "ArBelSys - Index";
@@ -451,13 +373,6 @@
         private System.Windows.Forms.ToolStripMenuItem servicosMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoServicoMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarServicosMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relatoriosMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem balancoDiarioRelatorioMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relatorioServicosMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relatorioServicosPorClienteMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relatorioServicosPorFuncionariosMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relatorioConvenieciaMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relatorioEstoqueMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estoqueMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entradaEstoqueMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saidaEstoqueMenuItem;
@@ -465,8 +380,6 @@
         private System.Windows.Forms.ToolStripButton button_InserirClienteBarraDeFerramentas;
         private System.Windows.Forms.ToolStripButton button_InserirServicoBarraDeFerramentas;
         private System.Windows.Forms.ToolStripButton button_InserirFuncionarioBarraDeFerramentas;
-        private System.Windows.Forms.ToolStripButton button_RelatorioDiarioBarraDeFerramentas;
-        private System.Windows.Forms.ToolStripButton button_RelatorioEstoqueBarraDeFerramentas;
         private System.Windows.Forms.ToolStripButton button_SairBarraDeFerramentas;
         private System.Windows.Forms.ToolStripMenuItem sairMenuItem;
         private System.Windows.Forms.ToolStripMenuItem meuUsuarioMenuItem;

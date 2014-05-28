@@ -308,3 +308,68 @@ C:\Users\Developed1\Desktop\REPOSITORIO GIT\salao_\Projeto\Projeto4_Junior\obj\D
 =======
 C:\Users\Paulinho\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csprojResolveAssemblyReference.cache
 >>>>>>> 2dbad45cf688f75ef9dbef34645711e8f5f52397
+C:\Users\Developed1\Desktop\REPOSITORIO GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Cliente.Aniversariantes.resources
+C:\Users\Developed1\Desktop\REPOSITORIO GIT\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Cliente.DetalharCliente.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe.config
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.exe
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.pdb
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.pdb
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csprojResolveAssemblyReference.cache
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Caixa.TelaAbrirCaixa.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.AlterarClientePrincipal.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Autenticacao.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Cliente.Aniversariantes.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Cliente.DetalharCliente.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.AlterarProduto.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.CadastroProduto.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.DetalharProduto.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.ListarProdutos.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.AlterarServico.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.FormularioCadastrarServico.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.FormularioListarServico.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.DetalharFuncionario.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.AlterarLoginSenha.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.AlterarUsuario.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.CadastrarUsuario.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_CadastroClientes.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.AlterarFuncionario.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.CadastroFuncionario.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.ListarCliente.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.ListarFuncionario.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.DetalharUsuario.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.ListarUsuario.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Properties.Resources.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_Index.resources
+C:\Users\aluno.EXPERT\Desktop\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe.config
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.exe
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.pdb
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\bin\Debug\Projeto4_Junior.exe
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csprojResolveAssemblyReference.cache
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Caixa.TelaAbrirCaixa.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.AlterarClientePrincipal.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Autenticacao.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Cliente.Aniversariantes.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Cliente.DetalharCliente.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.AlterarProduto.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.CadastroProduto.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.DetalharProduto.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Produtos.ListarProdutos.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.AlterarServico.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.FormularioCadastrarServico.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Servicos.FormularioListarServico.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.DetalharFuncionario.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.AlterarLoginSenha.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.AlterarUsuario.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.CadastrarUsuario.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_CadastroClientes.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.AlterarFuncionario.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.CadastroFuncionario.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.ListarCliente.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Funcionario.ListarFuncionario.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.DetalharUsuario.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.InterfaceGrafica.Usuario.ListarUsuario.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Properties.Resources.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.Form_Index.resources
+F:\CLE SALAO_\salao_\Projeto\Projeto4_Junior\obj\Debug\Projeto4_Junior.csproj.GenerateResource.Cache

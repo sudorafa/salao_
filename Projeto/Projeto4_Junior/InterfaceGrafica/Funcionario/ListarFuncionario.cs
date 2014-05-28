@@ -1,10 +1,13 @@
-﻿using Projeto4_Junior.Negocios;
+﻿using Projeto4_Junior.Banco;
+using Projeto4_Junior.Negocios;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,6 +81,14 @@ namespace Projeto4_Junior.InterfaceGrafica.Funcionario
         private void ListarFuncionario_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PersistenciaFuncionario f = new PersistenciaFuncionario();
+             f.RelatorioFuncionario();
+            // mensagem de arquivo gerado com sucesso.
+            MessageBox.Show("Relatório gerado com sucesso! LOCAL DO ARQUIVO DISCO C.", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

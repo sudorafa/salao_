@@ -12,20 +12,21 @@ namespace Projeto4_Junior.Modelo
         public Decimal ValorTotal { get; set; }
         public String CPFFuncionario { get; set; }
         public String CPFCliente { get; set; }
-        public String Data { get; set; }
+        public DateTime Data { get; set; }
 
 
         public Venda()
         {
 
         }
-        public Venda(int idVenda, Decimal ValorTotal,String CPFFuncionario, String CPFCliente,String data)
+        public Venda(int idVenda, Decimal ValorTotal,String CPFFuncionario, String CPFCliente, DateTime Data)
         {
             this.IdVenda = idVenda;
             this.ValorTotal = ValorTotal;
             this.CPFFuncionario = CPFFuncionario;
             this.CPFCliente = CPFCliente;
-            this.Data = data;
+            this.Data = Data;
+
         }
 
     }

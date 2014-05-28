@@ -1,4 +1,5 @@
-﻿using Projeto4_Junior.Negocios;
+﻿using Projeto4_Junior.Banco;
+using Projeto4_Junior.Negocios;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -180,10 +181,16 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
 
         private void btFinalizarVenda_Click(object sender, EventArgs e)
         {
+            try
+            {
+
             //Validação dos campos
-            String funcionario = (cbFuncionario.SelectedItem as Modelo.ComboboxItem).Value.ToString();
-            String cliente = tbCpfCliente.Text;
-            String total = lbValorTotal.Text;
+            String funcionario = "";
+            String cliente = "";
+            String total = "";
+            funcionario = (cbFuncionario.SelectedItem as Modelo.ComboboxItem).Value.ToString();
+            cliente = tbCpfCliente.Text;
+            total = lbValorTotal.Text;
            
             if (funcionario == "")
             {
@@ -205,13 +212,12 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
                 Modelo.ItensVenda item = new Modelo.ItensVenda();
                 venda.CPFCliente = cliente;
                 venda.CPFFuncionario = funcionario;
-                venda.Data = DateTime.Now.ToString("dd/MM/yyyy");
+                venda.Data = DateTime.Today;
                 venda.ValorTotal = decimal.Parse(total);
 
                 item.IdVenda = fachada.CadastrarVenda(venda);
                 if (item.IdVenda != 0)
                 {
-                    Boolean verifMessagem = true;
                     for (int i = 0; i < dGListaServProd.RowCount; i++)
                     {
                         int idProduto = (int)dGListaServProd.Rows[i].Cells[3].Value;
@@ -225,28 +231,36 @@ namespace Projeto4_Junior.InterfaceGrafica.Caixa
                             item.IdProduto = 0;
                         }
 
-                        Boolean verificar = fachada.CadastrarItensVenda(item);
-
-                        if (verificar == false)
-                        {
-                            fachada.RemoverVendaItem(item.IdVenda);
-                            fachada.RemoverVenda(item.IdVenda);
-                            verifMessagem = false;
+                        fachada.CadastrarItensVenda(item);
                         }
+  
                     }
-
-                    if (verifMessagem)
-                    {
-                        MessageBox.Show("Venda Realizada com Sucesso!!");
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Erro ao Venda Realizada!!");
-                    }
+                    
                 }
-               
+            MessageBox.Show("Venda finalizada com sucesso!");
+            tbBuscarCpfCliente.Text = String.Empty; 
+            tbNomeCliente.Text = String.Empty; 
+            tbCpfCliente.Text =  String.Empty;
+            cbFuncionario.Text =  String.Empty;
+            cbServicos.Text =  String.Empty;
+            cbProdutos.Text =  String.Empty;
+            dGListaServProd.Rows.Clear();
+            lbValorTotal.Text = String.Empty;
             }
+
+            catch (Exception pError)
+            {
+
+                MessageBox.Show("Campos inválidos!");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PersistenciaVenda v = new PersistenciaVenda();
+            v.RelatorioBalacoDiario();
+            MessageBox.Show("Relatório gerado com sucesso! LOCAL DO ARQUIVO DISCO C.", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
     }
 }

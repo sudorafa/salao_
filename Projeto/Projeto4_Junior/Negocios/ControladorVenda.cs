@@ -13,9 +13,9 @@ namespace Projeto4_Junior.Negocios
         {
             return ibanco.CadastrarVenda(venda);
         }
-        public Boolean CadastrarItensVenda(Modelo.ItensVenda item)
+        public void CadastrarItensVenda(Modelo.ItensVenda item)
         {
-            return ibanco.CadastrarItensVenda(item);
+            ibanco.CadastrarItensVenda(item);
         }
 
         public Modelo.Venda BuscarVenda(int idVenda)
@@ -26,10 +26,6 @@ namespace Projeto4_Junior.Negocios
         public void RemoverVenda(int idVenda)
         {
             ibanco.RemoverVenda(idVenda);
-        }
-        public void RemoverVendaItem(int idVenda)
-        {
-            ibanco.RemoverVendaItem(idVenda);
         }
 
         public void AlterarVenda(Modelo.Venda venda)
